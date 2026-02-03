@@ -1961,7 +1961,7 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12, on notera un message paramétré par une clé de message qui est elle-même calculée. Nous avons introduit cette notion au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a>, page <a href="les-vues-thymeleaf.html#refheading9401392526165">169</a>.</li>
+<li>ligne 12, on notera un message paramétré par une clé de message qui est elle-même calculée. Nous avons introduit cette notion au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a>, page <a href="les-vues-thymeleaf.html#refheading9401392526165">170</a>.</li>
 </ul>
 <p>Le code de l&#x27;action [/ajax-02] se poursuit ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2026,7 +2026,7 @@
 <p>Que le résultat soit la vue [vue-02.xml] ou la vue [vue-03.xml], ce résultat HTML est placé dans la zone identifiée par [resultats] dans la vue [vue-01.xml], ceci à cause de l&#x27;attribut [<span style="color: #7f007f">data-ajax-update</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;#resultats&quot;</span></em>] du formulaire.</p>
 <p><a id="refheading95267463420399"></a></p>
 <h3 id="726-le-post-des-valeurs-saisies">7.2.6. Le POST des valeurs saisies</h3>
-<p>On a une difficulté ici avec les valeurs postées. On travaille avec deux cultures [fr-FR] et [en-US] qui écrivent différemment les nombres réels. Nous nous étions attaqués à cette difficulté lorsqu&#x27;il avait fallu dans le pararaphe <a href="validation-javascript-cote-client.html#refheading730632038707144">6.3</a>, page <a href="validation-javascript-cote-client.html#refheading730632038707144">189</a>, poster des réels dans deux cultures différentes. Nous allons reprendre ici des outils utilisés alors. Mais on a une difficulté supplémentaire : on n&#x27;a pas accès à la méthode qui opère le POST des valeurs saisies. C&#x27;est la raison pour laquelle, nous avons ajouté les attributs suivants à la balise du formulaire :</p>
+<p>On a une difficulté ici avec les valeurs postées. On travaille avec deux cultures [fr-FR] et [en-US] qui écrivent différemment les nombres réels. Nous nous étions attaqués à cette difficulté lorsqu&#x27;il avait fallu dans le pararaphe <a href="validation-javascript-cote-client.html#refheading730632038707144">6.3</a>, page <a href="validation-javascript-cote-client.html#refheading730632038707144">190</a>, poster des réels dans deux cultures différentes. Nous allons reprendre ici des outils utilisés alors. Mais on a une difficulté supplémentaire : on n&#x27;a pas accès à la méthode qui opère le POST des valeurs saisies. C&#x27;est la raison pour laquelle, nous avons ajouté les attributs suivants à la balise du formulaire :</p>
 <ul>
 <li>[<span style="color: #7f007f">data-ajax-begin</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;beforeSend&quot;</span></em>] : la fonction jS à exécuter avant de faire le [submit] ;</li>
 <li>[<span style="color: #7f007f">data-ajax-complete</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;afterComplete&quot;</span></em>] : la fonction jS à exécuter lorsque la réponse a été reçue ;</li>
