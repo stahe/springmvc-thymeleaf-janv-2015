@@ -1,0 +1,1169 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduction à Spring MVC et Thymeleaf par l’exemple">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/springmvc-thymeleaf-janv-2015/annexes.html">
+      
+      
+        <link rel="prev" href="etude-de-cas.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>9. Annexes - Introduction à Spring MVC et Thymeleaf par l’exemple</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Introduction à Spring MVC et Thymeleaf par l’exemple";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-annexes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Introduction à Spring MVC et Thymeleaf par l’exemple" class="md-header__button md-logo" aria-label="Introduction à Spring MVC et Thymeleaf par l’exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction à Spring MVC et Thymeleaf par l’exemple
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9. Annexes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/springmvc-thymeleaf-janv-2015" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Introduction à Spring MVC et Thymeleaf par l’exemple" class="md-nav__button md-logo" aria-label="Introduction à Spring MVC et Thymeleaf par l’exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introduction à Spring MVC et Thymeleaf par l’exemple
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/springmvc-thymeleaf-janv-2015" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-bases-de-la-programmation-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Les bases de la programmation Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actions-la-reponse.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Actions : la réponse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actions-le-modele.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Actions : le modèle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-vues-thymeleaf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Les vues Thymeleaf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validation-javascript-cote-client.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Validation Javascript côté client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ajaxification-dune-application-spring-mvc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Ajaxification d'une application Spring MVC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="etude-de-cas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Etude de cas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Annexes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="annexes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Annexes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-installation-dun-jdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. Installation d&#x27;un JDK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-installation-de-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Installation de Maven
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-installation-de-sts-spring-tool-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Installation de STS (Spring Tool Suite)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-installation-dun-serveur-tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. Installation d&#x27;un serveur Tomcat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-installation-de-wampserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. Installation de [WampServer]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-installation-du-plugin-chrome-advanced-rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6. Installation du plugin Chrome [Advanced Rest Client]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-gestion-du-json-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7. Gestion du jSON en Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-installation-de-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8. Installation de [Webstorm]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.8. Installation de [Webstorm]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#981-installation-de-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.1. Installation de [node.js]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#982-installation-de-loutil-bower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.2. Installation de l&#x27;outil [bower]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#983-installation-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.3. Installation de [Git]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#984-configuration-de-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8.4. Configuration de [Webstorm]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-installation-dun-emulateur-pour-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9. Installation d&#x27;un émulateur pour Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a id="refheading256711779844303"></a></p>
+<h1 id="9-annexes">9. Annexes</h1>
+<p><span style="color: #000000"><a id="refheading1633352067866943"></a>Nous présentons ici comment installer les outils utilisés dans ce document sur des machines windows 7 ou 8.</span></p>
+<p><a id="refheading256713779844303"></a></p>
+<h2 id="91-installation-dun-jdk">9.1. Installation d&#x27;un JDK</h2>
+<p><a id="refheading472751712028290"></a>On trouvera à l&#x27;URL [<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>] (octobre 2014), le JDK le plus récent. On nommera par la suite &lt;jdk-install&gt; le dossier d&#x27;installation du JDK.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000229000001BDF10714D0.png" style="display:inline-block; margin:4px;width:10.239cm;height:8.241cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p><a id="refheading256715779844303"></a></p>
+<h2 id="92-installation-de-maven">9.2. Installation de Maven</h2>
+<p><a id="refheading463261712028290"></a>Maven est un outil de gestion des dépendances d&#x27;un projet Java et plus encore. Il est disponible à l&#x27;URL [<a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>].</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000269000000BB1072BA49.png" style="display:inline-block; margin:4px;width:11.419cm;height:3.461cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p>Téléchargez et dézippez l&#x27;archive. Nous appellerons &lt;maven-install&gt; le dossier d&#x27;installation de Maven.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C00000112B26E74FC.png" style="display:inline-block; margin:4px;width:5.239cm;height:3.625cm;" /></td></tr></table>
+
+<ul>
+<li>en [1], le fichier [conf / settings.xml] configure Maven ;</li>
+</ul>
+<p>On y trouve les lignes suivantes :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- localRepository</span></span>
+<span class="odt-code-line">   | The path to the local repository maven will use to store artifacts.</span>
+<span class="odt-code-line">   |</span>
+<span class="odt-code-line">   | Default: ${user.home}/.m2/repository</span>
+<span class="odt-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
+<span class="odt-code-line">--&gt;</span>
+</code></pre></div>
+
+<p>La valeur par défaut de la ligne 4, si comme moi votre {user.home} a un espace dans son chemin (par exemple [C:\Users\Serge Tahé]), peut poser problème à certains logiciels dont IntellijIDEA. On écrira alors quelque chose comme :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- localRepository</span></span>
+<span class="odt-code-line">   | The path to the local repository maven will use to store artifacts.</span>
+<span class="odt-code-line">   |</span>
+<span class="odt-code-line">   | Default: ${user.home}/.m2/repository</span>
+<span class="odt-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
+<span class="odt-code-line">  --&gt;</span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span><span style="background-color:#ff950e;color:#000000">D:\Programs\devjava\maven\.m2\repository</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>et on évitera, ligne 7, un chemin qui contient des espaces.</p>
+<p><a id="refheading179816779844303"></a></p>
+<h2 id="93-installation-de-sts-spring-tool-suite">9.3. Installation de STS (Spring Tool Suite)</h2>
+<p><a id="refheading1633372067866943"></a>Nous allons installer <strong>SpringSource Tool Suite</strong> [<a href="http://www.springsource.com/developer/sts">http://www.springsource.com/developer/sts</a>], un Eclipse pré-équipé avec de nombreux plugins liés au framework Spring et également avec une configuration Maven pré-installée.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048C0000021C5194E00F.png" style="display:inline-block; margin:4px;width:15.399cm;height:7.144cm;" /></td></tr></table>
+
+<ul>
+<li>aller sur le site de  <strong>SpringSource Tool Suite</strong> (STS) [1], pour télécharger la version courante de STS [2A] [2B],</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C500000118202EF169.png" style="display:inline-block; margin:4px;width:16.154cm;height:3.704cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055200000244714F08D4.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.664cm;" /></td></tr></table>
+
+<ul>
+<li>le fichier téléchargé est un installateur qui crée l&#x27;arborescence de fichiers [3A] [3B]. En [4], on lance l&#x27;exécutable,</li>
+<li>en [5], la fenêtre de travail de l&#x27;IDE après avoir fermé la fenêtre de bienvenue. En [6], on fait afficher la fenêtre des serveurs d&#x27;applications,</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020B0000009CEAFE8AE7.png" style="display:inline-block; margin:4px;width:6.92cm;height:2.064cm;" /></td></tr></table>
+
+<ul>
+<li>en [7], la fenêtre des serveurs. Un serveur est enregistré. C&#x27;est un serveur VMware compatible Tomcat.</li>
+</ul>
+<p>Il faut indiquer à STS le dossier d&#x27;installation de Maven :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005480000021C0CD032C3.png" style="display:inline-block; margin:4px;width:17.886cm;height:7.144cm;" /></td></tr></table>
+
+<ul>
+<li>en [1-2], on configure STS ;</li>
+<li>en [3-4], on ajoute une nouvelle installation Maven ;</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005370000021C003F3CE0.png" style="display:inline-block; margin:4px;width:17.662cm;height:7.144cm;" /></td></tr></table>
+
+<ul>
+<li>en [5], on désigne le dossier d&#x27;installation de Maven ;</li>
+<li>en [6], on termine l&#x27;assistant ;</li>
+<li>en [7], on fait de la nouvelle installation Maven, l&#x27;installation par défaut ;</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037400000304D3A11D58.png" style="display:inline-block; margin:4px;width:11.695cm;height:10.213cm;" /></td></tr></table>
+
+<ul>
+<li>en [8-9], on vérifie le dépôt local de Maven, le dossier où il mettra les dépendances qu&#x27;il téléchargera et où STS mettra les artifacts qui seront construits ;</li>
+</ul>
+<p><a id="refheading256717779844303"></a></p>
+<h2 id="94-installation-dun-serveur-tomcat">9.4. Installation d&#x27;un serveur Tomcat</h2>
+<p>Les serveurs Tomcat sont disponibles à l&#x27;URL [<a href="http://tomcat.apache.org/download-80.cgi">http://tomcat.apache.org/download-80.cgi</a>]. Les exemples de ce document ont été testés avec la version 8.0.9 disponible à l&#x27;URL [<a href="http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/">http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/</a>].</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000472000001C117418743.png" style="display:inline-block; margin:4px;width:15.055cm;height:5.941cm;" /></td></tr></table>
+
+<p>On télécharge [1] le zip qui convient au poste de travail. Une fois dézippé on obtient l&#x27;arborescence [2]. Ceci fait, on peut ajouter ce serveur aux serveurs de STS :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E2000002C7DCD7D3AC.png" style="display:inline-block; margin:4px;width:13.15cm;height:9.407cm;" /></td></tr></table>
+
+<ul>
+<li>en [1-3], on ajoute un nouveau serveur dans STS ; (pour avoir la feneêtre des serveurs faire Window / Show view / Other / Server / Servers) ;</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000521000001EA75FE7CCC.png" style="display:inline-block; margin:4px;width:17.371cm;height:6.482cm;" /></td></tr></table>
+
+<ul>
+<li>en [5], choisir un serveur Tomcat 8 ;</li>
+<li>en [6], donner un nom à ce serveur ;</li>
+<li>en [8], indiquer le dossier d&#x27;installation du Tomcat téléchargé précédemment ;</li>
+<li>en [9], le nouveau serveur ;</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000536000002195B1731A7.png" style="display:inline-block; margin:4px;width:17.648cm;height:7.105cm;" /></td></tr></table>
+
+<ul>
+<li>en [11-12], lancer le serveur Tomcat 8 ;</li>
+<li>en [13-14], sa fenêtre de logs ;</li>
+<li>en [15], pour l&#x27;arrêter ;</li>
+</ul>
+<p><a id="refheading256719779844303"></a></p>
+<h2 id="95-installation-de-wampserver">9.5. Installation de [WampServer]</h2>
+<p><a id="refheading78368566070260"></a>[WampServer] est <a id="wampserver"></a>un ensemble de logiciels pour développer en PHP / MySQL / Apache sur une machine Windows. Nous l&#x27;utiliserons uniquement pour le SGBD MySQL.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001B8858E2AC6.png" style="display:inline-block; margin:4px;width:16.986cm;height:5.821cm;" /></td></tr></table>
+
+<ul>
+<li>sur le site de [WampServer] [1], choisir la version qui convient [2],</li>
+<li>l&#x27;exécutable téléchargé est un installateur. Diverses informations sont demandées au cours de l&#x27;installation. Elles ne concernent pas MySQL. On peut donc les ignorer. La fenêtre [3] s&#x27;affiche à la fin de l&#x27;installation. On lance [WampServer],</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000241000001B29F9F0384.png" style="display:inline-block; margin:4px;width:7.634cm;height:5.741cm;" /></td></tr></table>
+
+<ul>
+<li>en [4], l&#x27;icône de [WampServer] s&#x27;installe dans la barre des tâches en bas et à droite de l&#x27;écran [4],</li>
+<li>lorsqu&#x27;on clique dessus, le menu [5] s&#x27;affiche. Il permet de gérer le serveur Apache et le SGBD MySQL. Pour gérer celui-ci, on utiliser l&#x27;option [PhpPmyAdmin],</li>
+<li>on obtient alors la fenêtre ci-dessous,</li>
+</ul>
+<p><img src="images/10000000000003C600000186DE03B7E4.png" style="width:17.729cm;height:7.156cm;" alt="Image" /></p>
+<p>Nous donnerons ici peu de détails sur l&#x27;utilisation de [PhpMyAdmin]. Le document donne les informations à connaître lorsque c&#x27;est nécessaire.</p>
+<p><a id="refheading179814779844303"></a></p>
+<h2 id="96-installation-du-plugin-chrome-advanced-rest-client">9.6. Installation du plugin Chrome [Advanced Rest Client]</h2>
+<p><a id="refheading2334521890746156"></a>Dans ce document, on utilise le navigateur <strong>Chrome</strong> de Google (<a href="http://www.google.fr/intl/fr/chrome/browser/">http://www.google.fr/intl/fr/chrome/browser/</a> ). On lui ajoutera l&#x27;extension [Advanced Rest Client]. On pourra procéder ainsi :</p>
+<p><a id="advanced-rest-client1"></a></p>
+<ul>
+<li>aller sur le site de [Google Web store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) avec le navigateur Chrome ;</li>
+<li>chercher l&#x27;application [Advanced Rest Client] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<ul>
+<li>l&#x27;application est alors disponible au téléchargement :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" /></td></tr></table>
+
+<ul>
+<li>pour l&#x27;obtenir, il vous faudra créer un compte Google. [Google Web Store] demande ensuite confirmation [1] :</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050900000222BD991AFC.png" style="display:inline-block; margin:4px;width:17.053cm;height:7.223cm;" /></td></tr></table>
+
+<ul>
+<li>en [2], l&#x27;extension ajoutée est disponible dans l&#x27;option [Applications] [3]. Cette option est affichée sur chaque nouvel onglet que vous créez (CTRL-T) dans le navigateur.</li>
+</ul>
+<p><a id="refheading191922103626402"></a>
+<a id="json"></a></p>
+<h2 id="97-gestion-du-json-en-java">9.7. Gestion du jSON en Java</h2>
+<p>De façon transparente pour le développeur le framework [Spring MVC] utilise la bibliothèque jSON [Jackson]. Pour illustrer ce qu&#x27;est le jSON (JavaScript Object Notation), nous présentons ici un programme qui sérialise des objets en jSON et fait l&#x27;inverse en désérialisant les chaînes jSON produites pour recréer les objets initiaux.</p>
+<p>La bibliothèque &#x27;Jackson&#x27; permet de construire :</p>
+<ul>
+<li>la chaîne jSON d&#x27;un objet : <em>new ObjectMapper().writeValueAsString(object)</em> ;</li>
+<li>un objet à partir d&#x27;un chaîne jSON : <em>new ObjectMapper().readValue(jsonString, Object.class)</em>.</li>
+</ul>
+<p>Les deux méthodes sont susceptibles de lancer une <em>IOException</em>. Voici un exemple.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D5000000EFB3DEB6F9.png" style="display:inline-block; margin:4px;width:3.941cm;height:4.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p>Le projet ci-dessus est un projet Maven avec le fichier [pom.xml] suivant ;</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span>
+<span class="odt-code-line">         <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="odt-code-line">         <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.pam</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">json</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">1.0-SNAPSHOT</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">com.fasterxml.jackson.core</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">jackson-databind</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.3.3</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<ul>
+<li>lignes 12-16 : la dépendance qui amène la bibliothèque &#x27;Jackson&#x27; ;</li>
+</ul>
+<p>La classe [Personne] est la suivante :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Personne {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// data</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String nom;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String prenom;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> age;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructeurs</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne(String nom, String prénom, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> âge) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.nom = nom;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.prenom = prénom;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.age = âge;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// signature</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> String.format(</span><span style="color:#2a00ff">&quot;Personne[%s, %s, %d]&quot;</span><span style="color:#000000">, nom, prenom, age);</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters et setters</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>La classe [Main] est la suivante :</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.databind.ObjectMapper;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.IOException;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.HashMap;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Main {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// l&#x27;outil de sérialisation / désérialisation</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> ObjectMapper mapper = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ObjectMapper();</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String[] args) </span><span style="font-weight:bold;color:#7f0055">throws</span><span style="color:#000000"> IOException {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// création d&#x27;une personne</span></span>
+<span class="odt-code-line"><span style="color:#000000">    Personne paul = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Denis&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Paul&quot;</span><span style="color:#000000">, 40);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage jSON</span></span>
+<span class="odt-code-line">    String json = mapper.writeValueAsString(paul);</span>
+<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json=&quot;</span><span style="color:#000000"> + json);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// instanciation Personne à partir du Json</span></span>
+<span class="odt-code-line"><span style="color:#000000">    Personne p = mapper.readValue(json, Personne.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage personne</span></span>
+<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Personne=&quot;</span><span style="color:#000000"> + p);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// un tableau</span></span>
+<span class="odt-code-line"><span style="color:#000000">    Personne virginie = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Radot&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Virginie&quot;</span><span style="color:#000000">, 20);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    Personne[] personnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne[]{paul, virginie};</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage Json</span></span>
+<span class="odt-code-line">    json = mapper.writeValueAsString(personnes);</span>
+<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json personnes=&quot;</span><span style="color:#000000"> + json);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// dictionnaire</span></span>
+<span class="odt-code-line"><span style="color:#000000">    Map&lt;String, Personne&gt; hpersonnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashMap&lt;String, Personne&gt;();</span></span>
+<span class="odt-code-line"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, paul);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;2&quot;</span><span style="color:#000000">, virginie);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage Json</span></span>
+<span class="odt-code-line">    json = mapper.writeValueAsString(hpersonnes);</span>
+<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json hpersonnes=&quot;</span><span style="color:#000000"> + json);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>L&#x27;exécution de cette classe produit l&#x27;affichage écran suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Json={&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40}
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Personne=Personne[Denis, Paul, 40]
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Json personnes=[{&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40},{&quot;nom&quot;:&quot;Radot&quot;,&quot;prenom&quot;:&quot;Virginie&quot;,&quot;age&quot;:20}]
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Json hpersonnes={&quot;2&quot;:{&quot;nom&quot;:&quot;Radot&quot;,&quot;prenom&quot;:&quot;Virginie&quot;,&quot;age&quot;:20},&quot;1&quot;:{&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40}}
+</code></pre></div></td></tr></table></div>
+<p>De l&#x27;exemple on retiendra :</p>
+<ul>
+<li>l&#x27;objet [ObjectMapper] nécessaire aux transformations jSON / Object : ligne 11 ;</li>
+<li>la transformation [Personne] --&gt; jSON : ligne 17 ;</li>
+<li>la transformation jSON --&gt; [Personne] : ligne 20 ;</li>
+<li>l&#x27;exception [IOException] lancée par les deux méthodes : ligne 13.</li>
+</ul>
+<p><a id="refheading2462611020423450"></a></p>
+<h2 id="98-installation-de-webstorm">9.8. Installation de [Webstorm]</h2>
+<p><span style="color: #000000"><a id="refheading1633392067866943"></a>[WebStorm] (WS) est l&#x27;IDE de JetBrains pour développer des applications HTML / CSS / JS. Je l&#x27;ai trouvé parfait pour développer des applications Angular. Le site de téléchargement est [<a href="http://www.jetbrains.com/webstorm/download/">http://www.jetbrains.com/webstorm/download/</a>]. C&#x27;est un IDE payant mais une version d&#x27;évaluation de 30 jours est téléchargeable. Il existe une version personnelle et une version étudiante peu onéreuses.</span></p>
+<p><span style="color: #000000">Pour installer des bibliothèques JS au sein d&#x27;une application, WS utilise un outil appelé [bower]. Cet outil est un module de [node.js], un ensemble de bibliothèques JS. Par ailleurs, les bibliothèques JS sont cherchées sur un site Git, nécessitant un client Git sur le poste qui télécharge.</span></p>
+<p><a id="refheading2471091020423450"></a></p>
+<h3 id="981-installation-de-nodejs">9.8.1. Installation de [node.js]</h3>
+<p><span style="color: #000000"><a id="refheading1633412067866943"></a>Le site de téléchargement de [node.js] est [<a href="http://nodejs.org/">http://nodejs.org/</a>]. Téléchargez l&#x27;installateur puis exécutez-le. Il n&#x27;y a rien de plus à faire pour le moment.</span></p>
+<p><a id="refheading2471111020423450"></a></p>
+<h3 id="982-installation-de-loutil-bower">9.8.2. Installation de l&#x27;outil [bower]</h3>
+<p><span style="color: #000000"><a id="refheading1633432067866943"></a>L&#x27;installation de l&#x27;outil [bower] qui va permettre le téléchargement des bibliothèques Javascript peut se faire de différentes façons. Nous allons la faire à partir de la console :</span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">C:\Users\Serge Tahé&gt;<span style="color:#ff3333">npm install -g bower</span></span>
+<span class="odt-code-line">C:\Users\Serge Tahé\AppData\Roaming\npm\bower -&gt; C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower\bin\bower</span>
+<span class="odt-code-line">bower@1.3.7 C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower</span>
+<span class="odt-code-line">├── stringify-object@0.2.1</span>
+<span class="odt-code-line">├── is-root@0.1.0</span>
+<span class="odt-code-line">├── junk@0.3.0</span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line">├── insight@0.3.1 (object-assign@0.1.2, async@0.2.10, lodash.debounce@2.4.1, req</span>
+<span class="odt-code-line">uest@2.27.0, configstore@0.2.3, inquirer@0.4.1)</span>
+<span class="odt-code-line">├── mout@0.9.1</span>
+<span class="odt-code-line">└── inquirer@0.5.1 (readline2@0.1.0, mute-stream@0.0.4, through@2.3.4, async@0.8</span>
+<span class="odt-code-line">.0, lodash@2.4.1, cli-color@0.3.2)</span>
+</code></pre></div>
+
+<ul>
+<li><span style="color: #000000">ligne 1 : la commande [node.js] qui installe le module [bower]. Pour que la commande marche, il faut que l&#x27;exécutable [npm] soit dans le PATH de la machine (voir paragraphe ci-après) ;</span></li>
+</ul>
+<p><a id="refheading2471131020423450"></a></p>
+<h3 id="983-installation-de-git">9.8.3. Installation de [Git]</h3>
+<p><span style="color: #000000"><a id="refheading1633452067866943"></a>Git est un système de gestion de versions de logiciel. Il existe une version windows appelée [msysgit] et disponible à l&#x27;URL [<a href="http://msysgit.github.io/">http://msysgit.github.io/</a>]. Nous n&#x27;allons pas utiliser [msysgit] pour gérer des versions de notre application mais simplement pour télécharger des bibliothèques JS qui se trouvent sur des sites de type [https://github.com] qui nécessitent un protocole d&#x27;accès spécial et qui est fourni par le client [msysgit]</span></p>
+<p><span style="color: #000000">L&#x27;assistant d&#x27;installation propose différentes étapes dont les suivantes :</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D1000000F3D98AAFA0.png" style="display:inline-block; margin:4px;width:8.64cm;height:4.5cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE000000E12ECC76E3.png" style="display:inline-block; margin:4px;width:7.96cm;height:4.17cm;" /></td></tr></table>
+
+<p><span style="color: #000000">Pour les autres étapes de l&#x27;installation, vous pouvez accepter les valeurs par défaut proposées.</span></p>
+<p><span style="color: #000000">Une fois, l&#x27;installation de Git terminée, vérifiez que l&#x27;exécutable est dans le PATH de votre machine : [Panneau de configuration / Système et sécurité / Système / Paramètres systèmes avancés] :</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C000001DAAECF1C48.png" style="display:inline-block; margin:4px;width:7.331cm;height:8.781cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A000000A2C58A797A.png" style="display:inline-block; margin:4px;width:6.699cm;height:3cm;" /></td></tr></table>
+
+<p><span style="color: #000000">La variable PATH ressemble à ceci :</span></p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">D:\Programs\devjava\java\jdk1.7.0\bin;D:\Programs\ActivePerl\Perl64\site\bin;D:\Programs\ActivePerl\Perl64\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\server\bin;...;<span style="color:#ff3333">D:\Programs\javascript\node.js\;D:\Programs\utilitaires\Git\cmd</span></span>
+</code></pre></div>
+
+<p><span style="color: #000000">Vérifiez que :</span></p>
+<ul>
+<li><span style="color: #000000">le chemin du dossier d&#x27;installation de [node.js] est bien présent (ici <span style="color: #ff3333">D:\Programs\javascript\node.js</span>) ;</span></li>
+<li><span style="color: #000000">le chemin de l&#x27;excéutable du client Git est bien présent (ici <span style="color: #ff3333">D:\Programs\utilitaires\Git\cmd</span>) ;</span></li>
+</ul>
+<p><a id="refheading2471151020423450"></a></p>
+<h3 id="984-configuration-de-webstorm">9.8.4. Configuration de [Webstorm]</h3>
+<p><span style="color: #000000"><a id="refheading1633472067866943"></a>Vérifions maintenant la configuration de [Webstorm]</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F000001D0C3812AD7.png" style="display:inline-block; margin:4px;width:8.64cm;height:6.971cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000EE0387A516.png" style="display:inline-block; margin:4px;width:5.791cm;height:4.41cm;" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000533000001D872716BAF.png" style="display:inline-block; margin:4px;width:17.609cm;height:6.244cm;" /></td></tr></table>
+
+<p><span style="color: #000000">Ci-dessus, sélectionnez l&#x27;option [1]. La liste des modules [node.js] déjà installés apparaît en [2]. Cette liste ne devrait contenir que la ligne [3] du module [bower] si vous avez suivi le processus d&#x27;installation précédent.</span></p>
+<p><a id="refheading2503261296810485"></a></p>
+<h2 id="99-installation-dun-emulateur-pour-android">9.9. Installation d&#x27;un émulateur pour Android</h2>
+<p><a id="refheading454551405398942"></a>Les émulateurs fournis avec le SDK d&#x27;Android sont lents ce qui décourage de les utiliser. L&#x27;entreprise [<a href="http://www.genymotion.com/features/">Genymotion</a>] offre un émulateur beaucoup plus performant. Celui-ci est disponible à l&#x27;URL [<a href="https://cloud.genymotion.com/page/launchpad/download/">https://cloud.genymotion.com/page/launchpad/download/</a>] </p>
+<p>(février 2014).</p>
+<p>Vous aurez à vous enregistrer pour obtenir une version à usage personnel. Téléchargez le produit [Genymotion] avec la machine virtuelle VirtualBox ;</p>
+<p><img src="images/10000000000002D9000000C41915058C.png" style="width:13.501cm;height:3.63cm;" alt="Image" /></p>
+<p>Installez puis lancez [Genymotion]. Téléchargez ensuite une image pour une tablette ou un téléphone :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005310000017E3344E618.png" style="display:inline-block; margin:4px;width:17.582cm;height:5.054cm;" /></td></tr></table>
+
+<ul>
+<li>en [1], ajoutez un terminal virtuel ;</li>
+<li>en [2], choisissez un ou plusieurs terminaux à installer. Vous pouvez affiner la liste affichée en précisant la version d&#x27;Android désirée [3] ainsi que le modèle de terminal [4] ;</li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022900000194343E06BE.png" style="display:inline-block; margin:4px;width:7.317cm;height:5.345cm;" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">une fois le téléchargement terminé, vous obtenez en [5] la liste des terminaux virtuels dont vous disposez pour tester vos applications Android ;</span></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
