@@ -940,7 +940,7 @@
 <p><a id="refheading1401771644545772"></a></p>
 <h1 id="6-validation-javascript-cote-client">6. <span style="color: #000000">Validation Javascript côté client</span></h1>
 <p><span style="color: #000000">Dans le chapitre précédent nous nous sommes intéressés à la validation côté serveur. Revenons à l&#x27;architecture d&#x27;une application Spring MVC :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049500000166512A9DB4.png" style="display:inline-block; margin:4px;width:15.519cm;height:4.736cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049500000166512A9DB4.png" style="display:inline-block; margin:4px;width:15.519cm;height:4.736cm;" class="odt-zoomable" data-zoom-src="images/100000000000049500000166512A9DB4.png" /></td></tr></table>
 
 <p><span style="color: #000000">BD</span></p>
 <p><span style="color: #000000">Pour l&#x27;instant, les pages envoyées au client ne contenaient pas de Javascript. Nous abordons maintenant cette technologie qui va nous permettre dans un premier temps de faire des validations côté client. Le principe est le suivant :</span></p>
@@ -953,10 +953,10 @@
 <p><a id="refheading1401791644545772"></a></p>
 <h2 id="61-les-fonctionnalites-du-projet">6.1. <span style="color: #000000">Les fonctionnalités du projet</span></h2>
 <p><span style="color: #000000">Nous présentons quelques vues du projet pour présenter ses fonctionnalités. La page initiale est obtenue avec l&#x27;URL [http://localhost:8080/js01.html]</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EE000002DB3C577C51.png" style="display:inline-block; margin:4px;width:13.891cm;height:13.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EE000002DB3C577C51.png" style="display:inline-block; margin:4px;width:13.891cm;height:13.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000002EE000002DB3C577C51.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les validations ont été mises en place des deux côtés : client et serveur. Comme le POST n&#x27;a lieu que si les valeurs ont été considérées comme valides côté client, les validations côté serveur réussissent tout le temps. On a donc offert un lien pour désactiver les validations côté client. Lorsqu&#x27;on est dans ce mode, on retrouve le mode de fonctionnement que nous avons déjà étudié. Voici un exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b><b>2</b><b>3</b></p><img src="images/10000000000003D900000348EDE18116.png" style="display:inline-block; margin:4px;width:16.94cm;height:14.439cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b><b>2</b><b>3</b></p><img src="images/10000000000003D900000348EDE18116.png" style="display:inline-block; margin:4px;width:16.94cm;height:14.439cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D900000348EDE18116.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], les valeurs saisies ;</span></li>
@@ -969,7 +969,7 @@
 </li>
 </ul>
 <p><span style="color: #000000">Maintenant, autorisons la validation côté client :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057C000003F25D692131.png" style="display:inline-block; margin:4px;width:17.999cm;height:12.947cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057C000003F25D692131.png" style="display:inline-block; margin:4px;width:17.999cm;height:12.947cm;" class="odt-zoomable" data-zoom-src="images/100000000000057C000003F25D692131.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], les valeurs saisies. On peut remarquer que les saisies erronées ont un style particulier ;</span></li>
@@ -981,10 +981,10 @@
 <p><a id="refheading1401831644545772"></a></p>
 <h3 id="621-configuration">6.2.1. <span style="color: #000000">Configuration</span></h3>
 <p><span style="color: #000000">Nous commençons par créer un nouveau projet Maven [springmvc-validation-client] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000003590C0FBC72.png" style="display:inline-block; margin:4px;width:16.445cm;height:11.338cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000003590C0FBC72.png" style="display:inline-block; margin:4px;width:16.445cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB000003590C0FBC72.png" /></td></tr></table>
 
 <p><span style="color: #000000">Nous faisons évoluer le projet de la façon suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF000000A872949233.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF000000A872949233.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000A872949233.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">La classe [Config] configure le projet. Elle est identique à ce qu&#x27;elle était dans les projets précédents :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1264,7 +1264,7 @@
 <p><a id="refheading1401851644545772"></a></p>
 <h3 id="622-le-modele-du-formulaire">6.2.2. <span style="color: #000000">Le modèle du formulaire</span></h3>
 <p><span style="color: #000000">Continuons l&#x27;exploration du projet :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E200000092371EACA8.png" style="display:inline-block; margin:4px;width:4.189cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E200000092371EACA8.png" style="display:inline-block; margin:4px;width:4.189cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E200000092371EACA8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">La classe [Form01] est la classe qui va réceptionner les valeurs postées. Elle est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1372,7 +1372,7 @@
 <p><a id="refheading1401871644545772"></a></p>
 <h3 id="623-le-controleur">6.2.3. Le contrôleur</h3>
 <p><span style="color: #000000">Le contrôleur [JsController] est le suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000921D8373D4.png" style="display:inline-block; margin:4px;width:4.189cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000921D8373D4.png" style="display:inline-block; margin:4px;width:4.189cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E2000000921D8373D4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.controllers;</span></span>
@@ -1451,7 +1451,7 @@
 <li><span style="color: #000000">ligne 2 : l&#x27;annotation [</span><span style="color: #646464">@Valid</span><span style="color: #000000"> Form01 </span><span style="color: #6a3e3e">formulaire</span><span style="color: #000000">] fait que les valeurs postées vont être soumises aux validateurs de la classe [Form01]. Nous savons qu&#x27;il existe une validation spécifique [double1+double2] dans l&#x27;intervalle [10,13]. Lorsqu&#x27;on arrive à la ligne 3, cette validation n&#x27;a pas été faite ;</span></li>
 <li><span style="color: #000000">ligne 3 : on crée l&#x27;objet [Form01Validator] suivant :</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F0000000A20D37E633.png" style="display:inline-block; margin:4px;width:4.45cm;height:3cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F0000000A20D37E633.png" style="display:inline-block; margin:4px;width:4.45cm;height:3cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000A20D37E633.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.validators;</span></span>
@@ -1709,7 +1709,7 @@
 <p><a id="refheading1401911644545772"></a></p>
 <h3 id="625-la-feuille-de-style">6.2.5. La feuille de style</h3>
 <p>Ci-dessus, on rencontre des classes CSS telles que [<span style="color: #7f007f">class</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;field-validation-valid&quot;</span></em>]. Certaine de ces classes sont utilisées par la bibliothèque Javascript de validation. Elles sont définies dans le fichier [form01.css] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CB000000BB3D06E595.png" style="display:inline-block; margin:4px;width:3.761cm;height:3.461cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CB000000BB3D06E595.png" style="display:inline-block; margin:4px;width:3.761cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CB000000BB3D06E595.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#3f7f7f">@CHARSET</span> <span style="font-style:italic;color:#2a00e1">&quot;UTF-8&quot;</span><span style="color:#000000">;</span></span>
@@ -1773,7 +1773,7 @@
 <h3 id="631-rudiments-de-jquery-et-de-javascript">6.3.1. Rudiments de jQuery et de Javascript</h3>
 <p><span style="color: #000000">La validation côté client se fait avec du Javascript. Nous allons nous aider du framework jQuery qui apporte de nombreuses fonctions facilitant le développement Javascript. Nous présentons les rudiments de jQuery à connaître pour comprendre les scripts de ce chapitre et des suivants.</span></p>
 <p><span style="color: #000000">Nous créons un fichier statique HTML [JQuery-01.html] que l&#x27;on place dans un dossier [static / vues] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D8000000EFEEDD2B9E.png" style="display:inline-block; margin:4px;width:4.001cm;height:4.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D8000000EFEEDD2B9E.png" style="display:inline-block; margin:4px;width:4.001cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D8000000EFEEDD2B9E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Ce fichier aura le contenu suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1798,39 +1798,39 @@
 <li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<strong>id</strong> [element1]. Nous allons jouer avec cet élément.</span></li>
 </ul>
 <p><span style="color: #000000">Il nous faut télécharger le fichier [<em><span style="color: #2a00ff">jquery-1.11.1.min.js</span></em>]. On le trouvera la dernière version de jQuery à l&#x27;URL [<a href="http://jquery.com/download/">http://jquery.com/download/</a>] :</span></p>
-<p><img src="images/10000000000001F90000010A4C7D4D57.png" style="width:9.35cm;height:4.93cm;" alt="Image" /></p>
+<p><img src="images/10000000000001F90000010A4C7D4D57.png" style="width:9.35cm;height:4.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F90000010A4C7D4D57.png" /></p>
 <p><span style="color: #000000">On placera le fichier téléchargé dans le dossier [static / js] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BE000000B751B5C5DD.png" style="display:inline-block; margin:4px;width:3.521cm;height:3.39cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BE000000B751B5C5DD.png" style="display:inline-block; margin:4px;width:3.521cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BE000000B751B5C5DD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Ceci fait, on demande la vue statique [jQuery-01.html] avec Chrome [1-2] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051F0000011876DA3602.png" style="display:inline-block; margin:4px;width:17.344cm;height:3.704cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051F0000011876DA3602.png" style="display:inline-block; margin:4px;width:17.344cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000051F0000011876DA3602.png" /></td></tr></table>
 
 <p><span style="color: #000000">Avec Google Chrome, faire [Ctrl-Maj-I] pour faire apparaître les outils de développement [3]. L&#x27;onglet [Console] [4] permet d&#x27;exécuter du code Javascript. Nous donnons dans ce qui suit des commandes Javascript à taper et nous en donnons une explication.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>JS</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>résultat</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1], donc normalement une collection de 0 ou 1 élément parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1], donc normalement une collection de 0 ou 1 élément parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$(&quot;#element1&quot;).text(&quot;blabla&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments de la collection. Ceci a pour effet de changer le contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments de la collection. Ceci a pour effet de changer le contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$(&quot;#element1&quot;).hide()
 </code></pre></div>
-</div><p style="margin:0;">cache les éléments de la collection. Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">cache les éléments de la collection. Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous permet de voir que l&#x27;élément d&#x27;id [element1] a l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous permet de voir que l&#x27;élément d&#x27;id [element1] a l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$(&quot;#element1&quot;).show()
 </code></pre></div>
-</div><p style="margin:0;">: affiche les éléments de la collection. Le texte [blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affiche les éléments de la collection. Le texte [blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$(&quot;#element1&quot;).attr(&#39;style&#39;,&#39;color: red&#39;)
 </code></pre></div>
-</div><p style="margin:0;">: fixe un attribut à tous les éléments de la collection. L&#x27;attribut est ici [style] et sa valeur [color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: fixe un attribut à tous les éléments de la collection. L&#x27;attribut est ici [style] et sa valeur [color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Tableau
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE0000011645A3961D.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Dictionnaire
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A0000000F3CAFDC489.png" style="display:inline-block; margin:4px;width:7.699cm;height:4.5cm;" /></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A0000000F3CAFDC489.png" style="display:inline-block; margin:4px;width:7.699cm;height:4.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A0000000F3CAFDC489.png" /></td></tr></table>
 
 <p><span style="color: #000000">On notera que l&#x27;URL du navigateur n&#x27;a pas changé pendant toutes ces manipulations. Il n&#x27;y a pas eu d&#x27;échanges avec le serveur web. Tout se passe à l&#x27;intérieur du navigateur. Maintenant, visualisons le code source de la page :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1856,28 +1856,28 @@
 <h3 id="632-les-bibliotheques-js-de-validation">6.3.2. Les bibliothèques jS de validation</h3>
 <p><span style="color: #000000">Nous allons utiliser des bibliothèques de l&#x27;écosystème jQuery. Gravite autour de jQuery, un certain nombre de projets qui donnent naissance à leur tour à des bibliothèques. Nous allons utiliser la bibliothèque de validation [jquery.validate.unobstrusive] créée par Microsoft et donnée à la fondation jQuery. Nous la désignerons par la suite par bibliothèque MS de validation ou plus simplement bibliothèque MS. Pour l&#x27;obtenir, il faut un environnement Microsoft Visual Studio. Je n&#x27;ai pas vu comment l&#x27;obtenir autrement. On peut utiliser une version gratuite de type [Visual Studio Community] [<a href="http://www.visualstudio.com/en-us/news/vs2013-community-vs.aspx">http://www.visualstudio.com/en-us/news/vs2013-community-vs.aspx</a>] (déc 2014). Le lecteur pas intéressé à suivre la démarche qui suit peut récupérer cette bibliothèque et celles sur lesquelles elle s&#x27;appuie dans les exemples présents sur le site de ce document.</span></p>
 <p><span style="color: #000000">On crée un projet console avec Visual Studio [1-4] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD0000009432A70809.png" style="display:inline-block; margin:4px;width:8.64cm;height:2.873cm;" /><img src="images/10000000000001B5000000DB6A54A84E.png" style="display:inline-block; margin:4px;width:8.089cm;height:4.06cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD0000009432A70809.png" style="display:inline-block; margin:4px;width:8.64cm;height:2.873cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BD0000009432A70809.png" /><img src="images/10000000000001B5000000DB6A54A84E.png" style="display:inline-block; margin:4px;width:8.089cm;height:4.06cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B5000000DB6A54A84E.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000001B257DDF354.png" style="display:inline-block; margin:4px;width:15.901cm;height:5.741cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000001B257DDF354.png" style="display:inline-block; margin:4px;width:15.901cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B2000001B257DDF354.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [5], le projet console ;</span></li>
 <li><span style="color: #000000">en [6-7] : on va ajouter des packages [NuGet] au projet. [NuGet] est une fonction de Visual Studio permettant de télécharger des bibliothèques sous formes de DLL mais également des bibliothèques jS. </span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047F0000021E7EE2D241.png" style="display:inline-block; margin:4px;width:15.228cm;height:7.17cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047F0000021E7EE2D241.png" style="display:inline-block; margin:4px;width:15.228cm;height:7.17cm;" class="odt-zoomable" data-zoom-src="images/100000000000047F0000021E7EE2D241.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [9-10], faites une recherche avec le mot clé [jQuery] ;</span></li>
 <li><span style="color: #000000">en [11-13], téléchargez dans l&#x27;ordre indiqué les bibliothèques jS nécessaires à la validation côté client ;</span></li>
 <li><span style="color: #000000">en [14], téléchargez également la bibliothèque [Microsoft jQuery Unobtrusive Ajax] que nous allons utiliser prochainement ;</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000186DE36BE4C.png" style="display:inline-block; margin:4px;width:15.492cm;height:5.159cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000186DE36BE4C.png" style="display:inline-block; margin:4px;width:15.492cm;height:5.159cm;" class="odt-zoomable" data-zoom-src="images/100000000000049300000186DE36BE4C.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [15-16], faites une recherche de packages avec le mot clé [globalize] ;</span></li>
 <li><span style="color: #000000">en [17], téléchargez la bibliothèque [jQuery.Validation.Globalize] ;</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042E00000210ED76AE71.png" style="display:inline-block; margin:4px;width:14.155cm;height:6.985cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042E00000210ED76AE71.png" style="display:inline-block; margin:4px;width:14.155cm;height:6.985cm;" class="odt-zoomable" data-zoom-src="images/100000000000042E00000210ED76AE71.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ces divers téléchargements ont installé un certain nombre de bibliothèques jS dans le dossier [Scripts] du projet [18]. Ils ne sont pas tous utiles. Chaque fichier vient en deux exemplaires :</span></p>
 <ul>
@@ -1886,7 +1886,7 @@
 </ul>
 <p><span style="color: #000000">Les version [min.map] ne sont pas indispensables. Dans le dossier [cultures], on peut ne conserver que les cultures gérées par l&#x27;application.</span></p>
 <p><span style="color: #000000">Avec l&#x27;explorateur Windows, on copie ces fichiers dans le dossier [static / js / jquery] du projet [springmvc-validation-client] et on ne garde que les fichiers utiles [20] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EE00000318D75CC837.png" style="display:inline-block; margin:4px;width:6.535cm;height:10.478cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EE00000318D75CC837.png" style="display:inline-block; margin:4px;width:6.535cm;height:10.478cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EE00000318D75CC837.png" /></td></tr></table>
 
 <p><span style="color: #000000">En [21], on ne garde que deux cultures :</span></p>
 <ul>
@@ -1993,13 +1993,13 @@
 </code></pre></div>
 
 <p><span style="color: #000000">change la culture du client à partir de la locale transmise par le serveur. Cela n&#x27;internationalise pas les messages affichés par la page. Cela change seulement la façon d&#x27;interpréter certaines informations qui dépendent de la culture d&#x27;un pays. Avec la culture [fr_FR], le nombre réel [12,78] est valide alors qu&#x27;il est invalide avec le culture [en-US]. Il faut alors écrire [12.78]. De même la date [12/01/2014] est une date valide dans la culture [fr-FR] alors que dans la culture [en-US] il faut écrire [01/12/2014]. Les fichiers du dossier [jquery / globalize] gèrent ce genre de problèmes :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000111000000C1EFE05554.png" style="display:inline-block; margin:4px;width:5.05cm;height:3.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000111000000C1EFE05554.png" style="display:inline-block; margin:4px;width:5.05cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/1000000000000111000000C1EFE05554.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">L&#x27;internationalisation des messages d&#x27;erreur est gérée uniquement côté serveur. Nous allons voir que la page HTML / jS transporte avec elle des messages d&#x27;erreur correspondant à la locale gérée par le serveur : en français pour la locale [fr_FR] et en anglais pour la locale [en_US].</span></p>
 <p><a id="refheading730712038707144"></a></p>
 <h3 id="635-les-fichiers-de-messages">6.3.5. Les fichiers de messages</h3>
 <p>La vue [vue-01.xml] utilise les messages internationalisés suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D900000076E3D33A54.png" style="display:inline-block; margin:4px;width:4.02cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D900000076E3D33A54.png" style="display:inline-block; margin:4px;width:4.02cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D900000076E3D33A54.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong>[messages_fr.properties]</strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2126,7 +2126,7 @@
 </code></pre></div>
 
 <p>dont certains sont représentés ci-dessous [1] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000495000001A044AC368D.png" style="display:inline-block; margin:4px;width:15.519cm;height:5.503cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000495000001A044AC368D.png" style="display:inline-block; margin:4px;width:15.519cm;height:5.503cm;" class="odt-zoomable" data-zoom-src="images/1000000000000495000001A044AC368D.png" /></td></tr></table>
 
 <p>Examinons les deux liens qui permettent de changer la locale en français ou en anglais :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2278,7 +2278,7 @@
 </code></pre></div>
 
 <p>Ce code affiche le fragment [1] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047C000000D46E02E42D.png" style="display:inline-block; margin:4px;width:15.187cm;height:2.805cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047C000000D46E02E42D.png" style="display:inline-block; margin:4px;width:15.187cm;height:2.805cm;" class="odt-zoomable" data-zoom-src="images/100000000000047C000000D46E02E42D.png" /></td></tr></table>
 
 <p>Le message d&#x27;erreur [2] provient de l&#x27;attribut [<span style="color: #7f007f">th:attr</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;data-val-required=#{NotNull}&quot;</span></em>] de la ligne 5. [<em><span style="color: #2a00ff">#{NotNull}</span></em>] est un message localisé. Selon la locale côté serveur, la ligne 5 génère la balise :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2306,7 +2306,7 @@
 </code></pre></div>
 
 <p>Si le Javascript est actif sur le navigateur, le clic sur le bouton va déclencher l&#x27;exécution de la méthode [postForm01]. Si cette fonction rend le booléen [False] alors le <em>submit</em> n&#x27;aura pas lieu. Si elle rend autre chose, alors il aura lieu. Cette fonction se trouve dans le fichier [local.js] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000F071283D0C.png" style="display:inline-block; margin:4px;width:4.761cm;height:4.45cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000F071283D0C.png" style="display:inline-block; margin:4px;width:4.761cm;height:4.45cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000F071283D0C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Il est importé par la vue [vue-01.xml] par la ligne 6 ci-dessous :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2459,7 +2459,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La fonction [</span><span style="color: #000000">clearServerErrors</span><span style="color: #000000">] a pour but l&#x27;effacement des messages présents dans la colonne 4 de la vue [vue-01.xml] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051C000003C38EF26074.png" style="display:inline-block; margin:4px;width:17.304cm;height:12.741cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051C000003C38EF26074.png" style="display:inline-block; margin:4px;width:17.304cm;height:12.741cm;" class="odt-zoomable" data-zoom-src="images/100000000000051C000003C38EF26074.png" /></td></tr></table>
 
 <p><span style="color: #000000">Dans la copie d&#x27;écran ci-dessus, on a cliqué sur le lien [English]. Nous avons vu que cela provoquait un POST des valeurs saisies sans que les validateurs jS soient déclenchés. Au retour du POST, la colonne [Server Validation] se remplit des éventuels messages d&#x27;erreur. Si maintenant on clique sur le bouton [Validate] [2] avec les validateurs jS activés [3], alors la colonne [Client Validation] [4] va se remplir de messages. Si on ne fait rien, ceux qui étaient présents dans la colonne [Server Validation] vont rester ce qui va créer de la confusion puisque dans le cas d&#x27;erreurs détectées par les validateurs jS, le serveur n&#x27;est pas sollicité. Pour éviter cela, on efface la colonne [Server Validation] dans la fonction [postForm01]. C&#x27;est la fonction [] qui fait ce travail :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
@@ -2495,7 +2495,7 @@
 <p><a id="refheading730772038707144"></a></p>
 <h3 id="638-validateur-required">6.3.8. <span style="color: #000000">Validateur [required]</span></h3>
 <p><span style="color: #000000">Examinons le premier élément du formulaire :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045A000000CBCD05E73D.png" style="display:inline-block; margin:4px;width:14.737cm;height:2.686cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045A000000CBCD05E73D.png" style="display:inline-block; margin:4px;width:14.737cm;height:2.686cm;" class="odt-zoomable" data-zoom-src="images/100000000000045A000000CBCD05E73D.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2570,7 +2570,7 @@
 </ul>
 <p><a id="refheading730792038707144"></a></p>
 <h3 id="639-validateur-assertfalse">6.3.9. <span style="color: #000000">Validateur [assertfalse]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DD0000006AA372DFCF.png" style="display:inline-block; margin:4px;width:13.085cm;height:1.402cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DD0000006AA372DFCF.png" style="display:inline-block; margin:4px;width:13.085cm;height:1.402cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DD0000006AA372DFCF.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2618,7 +2618,7 @@
 
 <p>On a des validateurs [<span style="color: #7f007f">data-val</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;true&quot;</span></em>]. On en a deux. Un validateur nommé [required] [<span style="color: #7f007f">data-val-required</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;Le champ est obligatoire&quot;</span></em>] et un autre nommé [assertfalse] [<span style="color: #7f007f">data-val-assertfalse</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;Seule la valeur False est acceptée&quot;</span></em>]. On rappelle que la valeur de l&#x27;attribut [data-val-X] est le message d&#x27;erreur du validateur X.</p>
 <p>Nous avons vu le validateur [required]. La nouveauté ici est qu&#x27;on peut attacher plusieurs validateurs à une valeur saisie. Si le validateur [required] est connu de la bibliothèque MS (Microsoft) de validation, ce n&#x27;est pas le cas du validateur [assertFalse]. Nous allons donc apprendre à créer un nouveau validateur. Nous allons en créer plusieurs et ils seront placés dans un fichier [client-validation.js] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C6000000A30CFE0375.png" style="display:inline-block; margin:4px;width:3.671cm;height:3.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C6000000A30CFE0375.png" style="display:inline-block; margin:4px;width:3.671cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C6000000A30CFE0375.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ce fichier, comme les autres, est importé par la vue [vue-01.xml] (ligne 6 ci-dessous) :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2713,7 +2713,7 @@
 
 <p>Ce code utilise la bibliothèque jSON JSON3 [<a href="http://bestiejs.github.io/json3/">http://bestiejs.github.io/json3/</a>]. Si on active les logs (ligne 3), on obtient les affichages suivants dans la console :</p>
 <p>Au chargement initial de la page, on a les logs suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002030000003F98121BE1.png" style="display:inline-block; margin:4px;width:9.541cm;height:1.169cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002030000003F98121BE1.png" style="display:inline-block; margin:4px;width:9.541cm;height:1.169cm;" class="odt-zoomable" data-zoom-src="images/10000000000002030000003F98121BE1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La fonction jS [<span style="color: #000000">$.validator.unobtrusive.adapters.add</span>] a été exécutée. On apprend les choses suivantes :</p>
 <ul>
@@ -2722,10 +2722,10 @@
 <li>[options.messages] est un objet qui contient les autres messages d&#x27;erreur de l&#x27;élément validé. Ici on retrouve le message d&#x27;erreur que nous avons mis dans l&#x27;attribut [data-val-required] ;</li>
 </ul>
 <p>Maintenant donnons une valeur erronée au champ [assertFalse] et validons :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EA0000001C57D98A06.png" style="display:inline-block; margin:4px;width:13.809cm;height:0.52cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EA0000001C57D98A06.png" style="display:inline-block; margin:4px;width:13.809cm;height:0.52cm;" class="odt-zoomable" data-zoom-src="images/10000000000002EA0000001C57D98A06.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On obtient alors les logs suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000027C00000079E58942DA.png" style="display:inline-block; margin:4px;width:11.779cm;height:2.24cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000027C00000079E58942DA.png" style="display:inline-block; margin:4px;width:11.779cm;height:2.24cm;" class="odt-zoomable" data-zoom-src="images/100000000000027C00000079E58942DA.png" /></td></tr></table>
 
 <p>On y voit les choses suivantes :</p>
 <ul>
@@ -2747,7 +2747,7 @@
 <p><a id="refheading730812038707144"></a></p>
 <h3 id="6310-validateur-asserttrue">6.3.10. Validateur [asserttrue]</h3>
 <p>Ce validateur est bien évidemment analogue au validateur [assertFalse].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004340000007E9B465719.png" style="display:inline-block; margin:4px;width:14.235cm;height:1.667cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004340000007E9B465719.png" style="display:inline-block; margin:4px;width:14.235cm;height:1.667cm;" class="odt-zoomable" data-zoom-src="images/10000000000004340000007E9B465719.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -2791,7 +2791,7 @@
 
 <p><a id="refheading730832038707144"></a></p>
 <h3 id="6311-validateurs-date-et-past">6.3.11. Validateurs [date] et [past]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BF0000008ED97C8F34.png" style="display:inline-block; margin:4px;width:16.074cm;height:1.879cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BF0000008ED97C8F34.png" style="display:inline-block; margin:4px;width:16.074cm;height:1.879cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BF0000008ED97C8F34.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2873,7 +2873,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Avant d&#x27;expliquer le code, regardons les logs lorsqu&#x27;on saisit une date postérieure à celle d&#x27;aujourd&#x27;hui :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001720000002CAAFE178C.png" style="display:inline-block; margin:4px;width:6.849cm;height:0.81cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001720000002CAAFE178C.png" style="display:inline-block; margin:4px;width:6.849cm;height:0.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000001720000002CAAFE178C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">La première chose à remarquer est que la date à valider arrive comme une chaîne de caractères de format [aaaa-mm-jj]. Ce qui explique les lignes suivantes :</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-js">
@@ -2887,13 +2887,13 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Voici sur une console l&#x27;évaluation de l&#x27;expression [<strong><span style="color: #7f0055">new</span></strong> Date().toISOString().substring(0, 10)] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000131000000637E2DE466.png" style="display:inline-block; margin:4px;width:5.65cm;height:1.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000131000000637E2DE466.png" style="display:inline-block; margin:4px;width:5.65cm;height:1.829cm;" class="odt-zoomable" data-zoom-src="images/1000000000000131000000637E2DE466.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">La chaîne de caractères [value] doit précéder <strong>alphabétiquement</strong> la chaine [<strong><span style="color: #7f0055">new</span></strong> Date().toISOString().substring(0, 10)] pour être valide.</span></p>
 <p><span style="color: #000000">On notera que la version de Chrome utilisée fournit la date au format [yyyy-mm-dd]. Pour un navigateur où ce ne serait pas le cas, il faudrait indiquer explicitement à l&#x27;utilisateur d&#x27;utiliser ce format de saisie.</span></p>
 <p><a id="refheading730852038707144"></a></p>
 <h3 id="6312-validateur-future">6.3.12. Validateur [future]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D70000008B59F42E9C.png" style="display:inline-block; margin:4px;width:16.392cm;height:1.84cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D70000008B59F42E9C.png" style="display:inline-block; margin:4px;width:16.392cm;height:1.84cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D70000008B59F42E9C.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2939,7 +2939,7 @@
 
 <p><a id="refheading730872038707144"></a></p>
 <h3 id="6313-validateurs-int-et-max">6.3.13. Validateurs [int] et [max]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044F0000007B55F11A19.png" style="display:inline-block; margin:4px;width:14.593cm;height:1.628cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044F0000007B55F11A19.png" style="display:inline-block; margin:4px;width:14.593cm;height:1.628cm;" class="odt-zoomable" data-zoom-src="images/100000000000044F0000007B55F11A19.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3107,7 +3107,7 @@
 
 <p><a id="refheading730892038707144"></a></p>
 <h3 id="6314-validateur-min">6.3.14. Validateur [min]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044100000082739FE58C.png" style="display:inline-block; margin:4px;width:14.407cm;height:1.72cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044100000082739FE58C.png" style="display:inline-block; margin:4px;width:14.407cm;height:1.72cm;" class="odt-zoomable" data-zoom-src="images/100000000000044100000082739FE58C.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3201,7 +3201,7 @@
 
 <p><a id="refheading730912038707144"></a></p>
 <h3 id="6315-validateur-regex">6.3.15. Validateur [regex]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004540000007E728056E7.png" style="display:inline-block; margin:4px;width:14.658cm;height:1.667cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004540000007E728056E7.png" style="display:inline-block; margin:4px;width:14.658cm;height:1.667cm;" class="odt-zoomable" data-zoom-src="images/10000000000004540000007E728056E7.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3235,7 +3235,7 @@
 <p><span style="color: #000000">Cette balise introduit le validateur [regex] [<span style="color: #7f007f">data-val-regex</span>=<em><span style="color: #2a00ff">&quot;La chaîne doit avoir entre 4 et 6 caractères&quot;</span></em>] avec son paramètre [pattern] [<span style="color: #7f007f">data-val-regex-pattern</span>=<em><span style="color: #2a00ff">&quot;^.{4,6}$&quot;</span></em>]. Le paramètre [pattern] est l&#x27;expression régulière que doit vérifier la valeur à valider. Ici l&#x27;expression régulière vérifie que la chaîne a entre 4 et 6 caractères quelconques. Le validateur [regex] est prédéfini dans la bibliothèque de validation MS. Il n&#x27;y a donc rien à ajouter dans le fichier [client-validation.js].</span></p>
 <p><a id="refheading730932038707144"></a></p>
 <h3 id="6316-validateur-email">6.3.16. Validateur [email]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A200000087620258F1.png" style="display:inline-block; margin:4px;width:12.303cm;height:1.787cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A200000087620258F1.png" style="display:inline-block; margin:4px;width:12.303cm;height:1.787cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A200000087620258F1.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3270,7 +3270,7 @@
 <p><span style="color: #000000">Cette balise introduit le validateur [<span style="color: #7f007f">email</span>] [<em><span style="color: #7f007f">data-val-email</span></em><em>=</em><em><span style="color: #2a00ff">&quot;Adresse mail invalide&quot;</span></em>]. Le validateur [email] est prédéfini dans la bibliothèque de validation MS. Il n&#x27;y a donc rien à ajouter dans le fichier [client-validation.js].</span></p>
 <p><a id="refheading730952038707144"></a></p>
 <h3 id="6317-validateur-range">6.3.17. Validateur [range]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045A0000008CE22340A2.png" style="display:inline-block; margin:4px;width:14.737cm;height:1.852cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045A0000008CE22340A2.png" style="display:inline-block; margin:4px;width:14.737cm;height:1.852cm;" class="odt-zoomable" data-zoom-src="images/100000000000045A0000008CE22340A2.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3369,7 +3369,7 @@
 
 <p><a id="refheading730972038707144"></a></p>
 <h3 id="6318-validateur-number">6.3.18. Validateur [number]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000466000000852E2319F4.png" style="display:inline-block; margin:4px;width:14.896cm;height:1.76cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000466000000852E2319F4.png" style="display:inline-block; margin:4px;width:14.896cm;height:1.76cm;" class="odt-zoomable" data-zoom-src="images/1000000000000466000000852E2319F4.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3582,7 +3582,7 @@
 
 <p><a id="refheading730992038707144"></a></p>
 <h3 id="6319-validateur-custom3">6.3.19. Validateur [custom3]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041E00000073B194D438.png" style="display:inline-block; margin:4px;width:13.944cm;height:1.522cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041E00000073B194D438.png" style="display:inline-block; margin:4px;width:13.944cm;height:1.522cm;" class="odt-zoomable" data-zoom-src="images/100000000000041E00000073B194D438.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3707,7 +3707,7 @@
 
 <p><a id="refheading731012038707144"></a></p>
 <h3 id="6320-validateur-url">6.3.20. Validateur [url]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C600000086B2680E6C.png" style="display:inline-block; margin:4px;width:12.779cm;height:1.773cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C600000086B2680E6C.png" style="display:inline-block; margin:4px;width:12.779cm;height:1.773cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C600000086B2680E6C.png" /></td></tr></table>
 
 <p><span style="color: #000000">La ligne [1] est générée par la séquence suivante de la vue [vue-01.xml] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3752,7 +3752,7 @@
 </code></pre></div>
 
 <p>Ces deux liens ne sont pas visibles en même temps :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD0000008BF7AE3B14.png" style="display:inline-block; margin:4px;width:8.241cm;height:2.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C3000000B6DD22047F.png" style="display:inline-block; margin:4px;width:3.611cm;height:3.371cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD0000008BF7AE3B14.png" style="display:inline-block; margin:4px;width:8.241cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BD0000008BF7AE3B14.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C3000000B6DD22047F.png" style="display:inline-block; margin:4px;width:3.611cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C3000000B6DD22047F.png" /></td></tr></table>
 
 <p>La traduction HTML de ces liens est la suivante :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">

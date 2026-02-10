@@ -862,10 +862,10 @@
 <p><a id="refheading1400931644545772"></a></p>
 <h1 id="4-actions-le-modele">4. Actions : le modèle</h1>
 <p>Revenons à l&#x27;architecture d&#x27;une application Spring MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047500000160853F59A5.png" style="display:inline-block; margin:4px;width:15.095cm;height:4.657cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047500000160853F59A5.png" style="display:inline-block; margin:4px;width:15.095cm;height:4.657cm;" class="odt-zoomable" data-zoom-src="images/100000000000047500000160853F59A5.png" /></td></tr></table>
 
 <p>Dans le chapitre précédent, nous avons regardé le processus qui amène la requête [1] au contrôleur et à l&#x27;action [2a] qui vont la traiter, un mécanisme qu&#x27;on appelle le routage. Nous avons présenté par ailleurs les différentes réponses que peut faire une action au navigateur. Nous avons pour l&#x27;instant présenté des actions qui n&#x27;exploitaient pas la requête qui leur était présentée. Une requête [1] transporte avec elle diverses informations que Spring MVC présente [2a] à l&#x27;action sous forme d&#x27;un <strong>modèle</strong>. On ne confondra pas ce terme avec le modèle <strong>M</strong> d&#x27;une vue <strong>V</strong> [2c] qui est produit par l&#x27;action :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055400000088F8F588B2.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.794cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055400000088F8F588B2.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.794cm;" class="odt-zoomable" data-zoom-src="images/100000000000055400000088F8F588B2.png" /></td></tr></table>
 
 <ul>
 <li>la requête HTTP du client arrive en [1] ;</li>
@@ -877,7 +877,7 @@
 <p>Ce chapitre étudie les mécanismes de liaison entre les informations transportées par la requête, qui sont par nature des chaînes de caractères et le modèle de l&#x27;action qui peut être une classe avec des propriétés de divers types.</p>
 <p><strong>Note</strong> : le terme [Modèle d&#x27;action] n&#x27;est pas un terme reconnu.</p>
 <p>Nous créons un nouveau contrôleur pour ces nouvelles actions :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000000BA46DC9B89.png" style="display:inline-block; margin:4px;width:5.039cm;height:3.44cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000000BA46DC9B89.png" style="display:inline-block; margin:4px;width:5.039cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/1000000000000110000000BA46DC9B89.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le contrôleur [ActionModelController] sera pour l&#x27;instant le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -910,7 +910,7 @@
 <li>ligne 4 : l&#x27;action admet deux paramètres nommé [nom] et [age]. Ils seront initialisés avec des paramètres portant ces mêmes noms dans la requête HTTP GET ;</li>
 </ul>
 <p>Les résultats sont les suivants dans Chrome [1-3] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005160000027A6FAB3A80.png" style="display:inline-block; margin:4px;width:17.224cm;height:8.387cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005160000027A6FAB3A80.png" style="display:inline-block; margin:4px;width:17.224cm;height:8.387cm;" class="odt-zoomable" data-zoom-src="images/10000000000005160000027A6FAB3A80.png" /></td></tr></table>
 
 <ul>
 <li>en [1], la requête GET avec les paramètres [nom] et [age] ;</li>
@@ -932,7 +932,7 @@
 <li>ligne 4 : l&#x27;action admet deux paramètres nommé [nom] et [age]. Ils seront initialisés avec des paramètres portant ces mêmes noms dans la requête HTTP POST ;</li>
 </ul>
 <p>Les résultats avec [Advanced rest Client] sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EC0000033A572897C3.png" style="display:inline-block; margin:4px;width:16.669cm;height:10.927cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EC0000033A572897C3.png" style="display:inline-block; margin:4px;width:16.669cm;height:10.927cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EC0000033A572897C3.png" /></td></tr></table>
 
 <ul>
 <li>en [1-3], la requête POST avec les paramètres [nom] et [age] ;</li>
@@ -955,7 +955,7 @@
 <li>ligne 2 : l&#x27;action admet un paramètre nommé [<strong>nom[]</strong>]. Il sera initialisé ici avec tous les paramètres portant ce nom que ce soit dans un GET ou un POST, puisqu&#x27;ici le type de la requête n&#x27;a pas été précisé ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F20000032CB7222D62.png" style="display:inline-block; margin:4px;width:16.748cm;height:10.742cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F20000032CB7222D62.png" style="display:inline-block; margin:4px;width:16.748cm;height:10.742cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F20000032CB7222D62.png" /></td></tr></table>
 
 <ul>
 <li>par un POST [1], on envoie les paramètres [2] ;</li>
@@ -998,14 +998,14 @@
 <li>ligne 4 : l&#x27;action rend un type [Personne] qui va donc être sérialisée en chaîne de caractères avant d&#x27;être envoyé au client. On a vu que par défaut, la sérialisation effectuée était une sérialisation jSON. Le client devrait donc recevoir la chaîne jSON d&#x27;une personne ;</li>
 </ul>
 <p>Voici un exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B5000001D2B1D08572.png" style="display:inline-block; margin:4px;width:15.942cm;height:6.165cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B5000001D2B1D08572.png" style="display:inline-block; margin:4px;width:15.942cm;height:6.165cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B5000001D2B1D08572.png" /></td></tr></table>
 
 <ul>
 <li>en [1], les paramètres [id, nom, age] pour construire un objet [Personne] ;</li>
 <li>en [2], la chaîne jSON de cette personne ;</li>
 </ul>
 <p>Que se passe-t-il si on n&#x27;envoie pas tous les champs d&#x27;une personne ? Essayons :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000484000001CCA97B1FFE.png" style="display:inline-block; margin:4px;width:15.293cm;height:6.085cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000484000001CCA97B1FFE.png" style="display:inline-block; margin:4px;width:15.293cm;height:6.085cm;" class="odt-zoomable" data-zoom-src="images/1000000000000484000001CCA97B1FFE.png" /></td></tr></table>
 
 <ul>
 <li>en [2], seul le paramètre [id] a été initialisé ;</li>
@@ -1031,7 +1031,7 @@
 <li>ligne 7 : la réponse sera la chaîne jSON de ce dictionnaire ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017D0000008E09076E4D.png" style="display:inline-block; margin:4px;width:7.05cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017D0000008E09076E4D.png" style="display:inline-block; margin:4px;width:7.05cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000017D0000008E09076E4D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1401051644545772"></a></p>
 <h2 id="46-m06-recuperer-des-elements-durl-et-des-parametres">4.6. [/m06] : récupérer des éléments d&#x27;URL et des paramètres</h2>
@@ -1054,10 +1054,10 @@
 <li>ligne 8 : qui forme la réponse du client qui recevra donc la chaîne jSON de ce dictionnaire ;</li>
 </ul>
 <p>Voici les résultats :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E20000008DF351F848.png" style="display:inline-block; margin:4px;width:8.931cm;height:2.611cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E20000008DF351F848.png" style="display:inline-block; margin:4px;width:8.931cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E20000008DF351F848.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On notera le / à la fin du chemin [http://localhost:8080/m06/100/x/200.43/]. Sans lui, on obtient le résultat incorrect suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D90000008EEF4BCFB7.png" style="display:inline-block; margin:4px;width:8.759cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D90000008EEF4BCFB7.png" style="display:inline-block; margin:4px;width:8.759cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D90000008EEF4BCFB7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1401071644545772"></a></p>
 <h2 id="47-m07-acceder-a-la-totalite-de-la-requete">4.7. [/m07] : accéder à la totalité de la requête</h2>
@@ -1082,12 +1082,12 @@
 <li>lignes 5-10 : on récupère tous les entêtes HTTP de la requête pour les assembler dans une chaîne de caractères qu&#x27;on envoie au client (ligne 11) ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000451000001E9E122A639.png" style="display:inline-block; margin:4px;width:14.619cm;height:6.47cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000451000001E9E122A639.png" style="display:inline-block; margin:4px;width:14.619cm;height:6.47cm;" class="odt-zoomable" data-zoom-src="images/1000000000000451000001E9E122A639.png" /></td></tr></table>
 
 <ul>
 <li>en [1], les entêtes HTTP de la requête ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004600000012173A51CEE.png" style="display:inline-block; margin:4px;width:14.817cm;height:3.824cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004600000012173A51CEE.png" style="display:inline-block; margin:4px;width:14.817cm;height:3.824cm;" class="odt-zoomable" data-zoom-src="images/10000000000004600000012173A51CEE.png" /></td></tr></table>
 
 <ul>
 <li>en [2], la réponse. On y retrouve bien tous les entêtes HTTP de la requête.</li>
@@ -1109,7 +1109,7 @@
 <li>ligne 4 : ajout d&#x27;un texte dans le flux de la réponse au client ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049700000248C34C4478.png" style="display:inline-block; margin:4px;width:15.545cm;height:7.726cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049700000248C34C4478.png" style="display:inline-block; margin:4px;width:15.545cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/100000000000049700000248C34C4478.png" /></td></tr></table>
 
 <ul>
 <li>en [2], on voit que l&#x27;entête HTTP [Content-Type] n&#x27;a pas été envoyé ;</li>
@@ -1131,12 +1131,12 @@
 <li>ligne 4 : on rend le texte de cet entête ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048F0000022D83FF06D2.png" style="display:inline-block; margin:4px;width:15.439cm;height:7.37cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048F0000022D83FF06D2.png" style="display:inline-block; margin:4px;width:15.439cm;height:7.37cm;" class="odt-zoomable" data-zoom-src="images/100000000000048F0000022D83FF06D2.png" /></td></tr></table>
 
 <ul>
 <li>en [2], l&#x27;entête HTTP [User-Agent] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042B000000C5AF246BC5.png" style="display:inline-block; margin:4px;width:14.116cm;height:2.607cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042B000000C5AF246BC5.png" style="display:inline-block; margin:4px;width:14.116cm;height:2.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000042B000000C5AF246BC5.png" /></td></tr></table>
 
 <ul>
 <li>en [3], l&#x27;action [/m08] a correctement récupéré cet entête ;</li>
@@ -1163,7 +1163,7 @@
 <li>ligne 3 : l&#x27;action ne rend rien. Par ailleurs, elle n&#x27;écrit rien dans le corps de la réponse. C&#x27;est donc un document vide que va recevoir le client. La réponse n&#x27;est utilisée que pour y ajouter l&#x27;entête HTTP d&#x27;un cookie ;</li>
 </ul>
 <p>Voyons les résultats :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB0000023B09E402B8.png" style="display:inline-block; margin:4px;width:16.445cm;height:7.555cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB0000023B09E402B8.png" style="display:inline-block; margin:4px;width:16.445cm;height:7.555cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB0000023B09E402B8.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : la requête ;</li>
@@ -1184,7 +1184,7 @@
 <li>ligne 4 : cette valeur sera la réponse faite au client ;</li>
 </ul>
 <p>Voyons les résultats :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A000002561C68F025.png" style="display:inline-block; margin:4px;width:15.584cm;height:7.911cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A000002561C68F025.png" style="display:inline-block; margin:4px;width:15.584cm;height:7.911cm;" class="odt-zoomable" data-zoom-src="images/100000000000049A000002561C68F025.png" /></td></tr></table>
 
 <ul>
 <li>en [2], on voit que le navigateur renvoie le cookie ;</li>
@@ -1206,7 +1206,7 @@
 <li>ligne 4 : on renvoie ce corps au client ;</li>
 </ul>
 <p>Voici un premier exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048D000002709CE5E893.png" style="display:inline-block; margin:4px;width:15.413cm;height:8.255cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048D000002709CE5E893.png" style="display:inline-block; margin:4px;width:15.413cm;height:8.255cm;" class="odt-zoomable" data-zoom-src="images/100000000000048D000002709CE5E893.png" /></td></tr></table>
 
 <ul>
 <li>en [2], les valeurs postées ;</li>
@@ -1214,14 +1214,14 @@
 <li>en [4], la réponse du serveur ;</li>
 </ul>
 <p>Les paramètres postés n&#x27;ont pas toujours la forme simple [p1=v1&amp;p2=v2] qu&#x27;on a souvent utilisée jusqu&#x27;ici. Prenons un cas plus complexe :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051600000267331F7281.png" style="display:inline-block; margin:4px;width:17.224cm;height:8.137cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051600000267331F7281.png" style="display:inline-block; margin:4px;width:17.224cm;height:8.137cm;" class="odt-zoomable" data-zoom-src="images/100000000000051600000267331F7281.png" /></td></tr></table>
 
 <ul>
 <li>en [2-3] : on rentre les valeurs postées sous la forme [clé:value] ;</li>
 <li>en [5], la chaîne qui a été postée ;</li>
 </ul>
 <p>Avec le type [Content-Type: application/x-www-form-urlencoded], la chaîne postée doit avoir la forme [p1=v1&amp;p2=v2]. Si on veut poster n&#x27;importe quoi, on prendra le type [Content-Type: text/plain]. Voici un exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE0000023027CFBE7B.png" style="display:inline-block; margin:4px;width:16.06cm;height:7.408cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE0000023027CFBE7B.png" style="display:inline-block; margin:4px;width:16.06cm;height:7.408cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE0000023027CFBE7B.png" /></td></tr></table>
 
 <ul>
 <li>en [2-3], on crée l&#x27;entête HTTP [Content-Type]. Par défaut [5], c&#x27;est lui qui sera utilisé au lieu de celui défini en [6]. L&#x27;attribut [charset=utf-8] est important. Sans lui, on perd les caractères accentués de la chaîne postée ;</li>
@@ -1244,7 +1244,7 @@
 <li>ligne 4 : on utilise la méthode [Personne].toString() pour retourner quelque chose qui ne soit pas la chaîne jSON envoyée ;</li>
 </ul>
 <p>Voici un exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A0000025D9F7E9C58.png" style="display:inline-block; margin:4px;width:15.584cm;height:8.005cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A0000025D9F7E9C58.png" style="display:inline-block; margin:4px;width:15.584cm;height:8.005cm;" class="odt-zoomable" data-zoom-src="images/100000000000049A0000025D9F7E9C58.png" /></td></tr></table>
 
 <ul>
 <li>en [2], la chaîne jSON postée ;</li>
@@ -1266,7 +1266,7 @@
 <li>ligne 4 : on désérialise la chaîne jSON en un objet [Personne] (cf paragraphe <a href="annexes.html#refheading191922103626402">9.7</a>, page <a href="annexes.html#refheading191922103626402">542</a>) ;</li>
 </ul>
 <p>Les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046D0000025DD44FC4CC.png" style="display:inline-block; margin:4px;width:14.99cm;height:8.005cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046D0000025DD44FC4CC.png" style="display:inline-block; margin:4px;width:14.99cm;height:8.005cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D0000025DD44FC4CC.png" /></td></tr></table>
 
 <ul>
 <li>en [3], bien mettre [text/plain] ;</li>
@@ -1274,14 +1274,14 @@
 <p><a id="refheading1401191644545772"></a></p>
 <h2 id="413-m15-recuperer-la-session">4.13. [/m15] : récupérer la session</h2>
 <p>Revenons sur l&#x27;architecture d&#x27;exécution d&#x27;une action :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000341000000F0B921240E.png" style="display:inline-block; margin:4px;width:11.021cm;height:3.175cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000341000000F0B921240E.png" style="display:inline-block; margin:4px;width:11.021cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/1000000000000341000000F0B921240E.png" /></td></tr></table>
 
 <p>La classe du contrôleur est instanciée au début de la requête du client et détruite à la la fin de celle-ci. Aussi ne peut-elle servir à mémoriser des données entre deux requêtes même si elle est appelée de façon répétée. On peut vouloir mémoriser deux types de données :</p>
 <ul>
 <li>des données <strong>partagées par tous les utilisateurs</strong> de l&#x27;application web. Ce sont en général des données en lecture seule ;</li>
 <li>des données partagées par les requêtes d&#x27;<strong>un même client</strong>. Ces données sont mémorisées dans un objet appelé <strong>Session</strong>. On parle alors de <strong>session client</strong> pour désigner la mémoire du client. Toutes les requêtes d&#x27;un client ont accès à cette session. Elles peuvent y stocker et y lire des informations.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000481000001023AFBBC32.png" style="display:inline-block; margin:4px;width:15.254cm;height:3.413cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000481000001023AFBBC32.png" style="display:inline-block; margin:4px;width:15.254cm;height:3.413cm;" class="odt-zoomable" data-zoom-src="images/1000000000000481000001023AFBBC32.png" /></td></tr></table>
 
 <p>Ci-dessus, nous montrons les types de mémoire auxquels a accès une action :</p>
 <ul>
@@ -1322,14 +1322,14 @@
 <li><span style="color: #000000">...</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D000002B6164A22B6.png" style="display:inline-block; margin:4px;width:17.318cm;height:9.181cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D000002B6164A22B6.png" style="display:inline-block; margin:4px;width:17.318cm;height:9.181cm;" class="odt-zoomable" data-zoom-src="images/100000000000051D000002B6164A22B6.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], on obtient bien la 1ère valeur du compteur ;</span></li>
 <li><span style="color: #000000">en [2], le serveur a envoyé un cookie de session. Il a la clé [JSESSIONID] et pour valeur une chaîne de caractères unique pour chaque utilisateur. On se rappelle que le navigateur renvoie systématiquement les cookies qu&#x27;il reçoit. Ainsi lorsqu&#x27;on va demander l&#x27;action [/m15] une seconde fois, le client va renvoyer ce cookie, ce qui va permettre au serveur de le reconnaître et de le rattacher à sa session. C&#x27;est de cette façon que la mémoire de l&#x27;utilisateur est maintenue ;</span></li>
 </ul>
 <p><span style="color: #000000">Voyons la seconde demande :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E3000002A44227A467.png" style="display:inline-block; margin:4px;width:16.551cm;height:8.943cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E3000002A44227A467.png" style="display:inline-block; margin:4px;width:16.551cm;height:8.943cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E3000002A44227A467.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [3], on voit que le client renvoie le cookie de session. On peut remarquer que dans la réponse du serveur, il n&#x27;y a plus ce cookie de session. C&#x27;est désormais le client qui l&#x27;envoie pour se faire reconnaître ;</span></li>
@@ -1338,7 +1338,7 @@
 <p><a id="refheading1401211644545772"></a></p>
 <h2 id="414-m16-recuperer-un-objet-de-portee-session">4.14. [/m16] : récupérer un objet de portée [session]</h2>
 <p><span style="color: #000000">On peut vouloir mettre toutes les données de la session d&#x27;un utilisateur dans un unique objet et mettre uniquement celui-ci dans la session. Nous suivons cette voie. Nous mettons le compteur dans l&#x27;objet [SessionModel] suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000120000000CC6F655A03.png" style="display:inline-block; margin:4px;width:5.609cm;height:3.974cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000120000000CC6F655A03.png" style="display:inline-block; margin:4px;width:5.609cm;height:3.974cm;" class="odt-zoomable" data-zoom-src="images/1000000000000120000000CC6F655A03.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> istia.st.sprinmvc.models;</span>
@@ -1418,22 +1418,22 @@
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
 <p><u><strong><span style="color: #000000">La 1ère fois</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F6000002BAC9DFE3E4.png" style="display:inline-block; margin:4px;width:16.801cm;height:9.234cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F6000002BAC9DFE3E4.png" style="display:inline-block; margin:4px;width:16.801cm;height:9.234cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F6000002BAC9DFE3E4.png" /></td></tr></table>
 
 <p><u><strong><span style="color: #000000">La seconde fois</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F7000002BD1B5D81C0.png" style="display:inline-block; margin:4px;width:16.815cm;height:9.275cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F7000002BD1B5D81C0.png" style="display:inline-block; margin:4px;width:16.815cm;height:9.275cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F7000002BD1B5D81C0.png" /></td></tr></table>
 
 <p><span style="color: #000000">Maintenant, prenons un autre navigateur qui va symboliser un deuxième utilisateur. Nous prenons ici un navigateur Opera :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000527000001EEB66F7A14.png" style="display:inline-block; margin:4px;width:17.45cm;height:6.535cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000527000001EEB66F7A14.png" style="display:inline-block; margin:4px;width:17.45cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/1000000000000527000001EEB66F7A14.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ci-dessus en [1], ce deuxième utilisateur récupère une valeur de compteur à 1. Ce qui montre, que sa session et celle du premier utilisateur sont différentes. Si on regarde les échanges client / serveur (Ctrl-Maj-I pour Opera également), on voit en [2] que ce second utilisateur a un cookie de session différente de celui du 1er utilisateur. C&#x27;est ce qui assure l&#x27;indépendance des sessions.</span></p>
 <p><a id="refheading1401231644545772"></a></p>
 <h2 id="415-m17-recuperer-un-objet-de-portee-application">4.15. [/m17] : récupérer un objet de portée [application]</h2>
 <p>Revenons sur l&#x27;architecture d&#x27;exécution d&#x27;une action :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046B000001010E0973C4.png" style="display:inline-block; margin:4px;width:14.963cm;height:3.401cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046B000001010E0973C4.png" style="display:inline-block; margin:4px;width:14.963cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/100000000000046B000001010E0973C4.png" /></td></tr></table>
 
 <p><span style="color: #000000">Nous savons comment construire la session de l&#x27;utilisateur. Nous allons maintenant construire un objet de portée [application] dont le contenu sera en lecture seule et accessible à tous les utilisateurs. Nous introduisons la classe [ApplicationModel] qui sera l&#x27;objet de portée [application] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000116000000DE0F46487C.png" style="display:inline-block; margin:4px;width:5.151cm;height:4.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000116000000DE0F46487C.png" style="display:inline-block; margin:4px;width:5.151cm;height:4.11cm;" class="odt-zoomable" data-zoom-src="images/1000000000000116000000DE0F46487C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> istia.st.springmvc.models;</span>
@@ -1481,7 +1481,7 @@
 <li>ligne 7 : on rend le compteur de portée [application] après l&#x27;avoir incrémenté ;</li>
 </ul>
 <p>Voici deux exemples, l&#x27;un avec Chrome, l&#x27;autre avec Opera :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F00000088AEC89E1E.png" style="display:inline-block; margin:4px;width:6.2cm;height:2.521cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012C00000067E1B73119.png" style="display:inline-block; margin:4px;width:5.549cm;height:1.91cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F00000088AEC89E1E.png" style="display:inline-block; margin:4px;width:6.2cm;height:2.521cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F00000088AEC89E1E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012C00000067E1B73119.png" style="display:inline-block; margin:4px;width:5.549cm;height:1.91cm;" class="odt-zoomable" data-zoom-src="images/100000000000012C00000067E1B73119.png" /></td></tr></table>
 
 <p>Ci-dessus, on voit que les deux navigateurs ont travaillé avec le même compteur, ce qui n&#x27;était pas le cas avec la session. Ces deux navigateurs symbolisent deux utilisateurs différents qui ont accès tous les deux aux données de portée [application]. De façon générale, on évitera de mettre dans les objets de portée [application] des informations en lecture / écriture comme il a été fait ci-dessus avec le compteur. En effet, les threads d&#x27;exécution des différents utilisateurs accèdent en même temps aux données de portée [application]. S&#x27;il y a des informations en écriture, il faut synchroniser les accès en écriture comme il a été fait ci-dessus avec le type [AtomicLong]. Les accès concurrents sont sources d&#x27;erreurs de programmation. Aussi préfèrera-t-on ne mettre que des informations en lecture seule dans les objets de portée [application].</p>
 <p><a id="refheading1401251644545772"></a></p>
@@ -1543,7 +1543,7 @@
 <li>pas visible dans l&#x27;exemple d&#x27;exécution qui va suivre, mais une information annotée avec [<span style="color: #646464">@ModelAttribute</span>] fait automatiquement partie du modèle M transmis à la vue V ;</li>
 </ul>
 <p>Voici un exemple d&#x27;exécution. Tout d&#x27;abord, on met la clé [container] dans la session avec l&#x27;action [/m18] [1]. Ensuite, on appelle deux fois l&#x27;action [/m19] pour voir le compteur s&#x27;incrémenter.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000531000000D21C6A9769.png" style="display:inline-block; margin:4px;width:17.582cm;height:2.778cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000531000000D21C6A9769.png" style="display:inline-block; margin:4px;width:17.582cm;height:2.778cm;" class="odt-zoomable" data-zoom-src="images/1000000000000531000000D21C6A9769.png" /></td></tr></table>
 
 <p><a id="refheading1401271644545772"></a></p>
 <h2 id="417-m20-m23-injection-dinformations-avec-modelattribute">4.17. [/m20-/m23] : injection d&#x27;informations avec [@ModelAttribute]</h2>
@@ -1576,7 +1576,7 @@
 <li>ligne 18 : on rend l&#x27;objet [personne] pour vérification. Celui-ci sera sérialisé en jSON avant d&#x27;être envoyé au client.</li>
 </ul>
 <p>Voici un exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000008319673040.png" style="display:inline-block; margin:4px;width:6.02cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000008319673040.png" style="display:inline-block; margin:4px;width:6.02cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000001450000008319673040.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Maintenant, examinons l&#x27;action suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1593,7 +1593,7 @@
 <li>ligne 4 : on veut voir ce qu&#x27;il y a dedans. On le sérialise en chaîne de caractères pour l&#x27;envoyer au client. Ici, la méthode [Personne.toString] va être utilisée. Il faut donc qu&#x27;elle existe ;</li>
 </ul>
 <p>Voici une exécution :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000000899A2DDC32.png" style="display:inline-block; margin:4px;width:5.96cm;height:2.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000000899A2DDC32.png" style="display:inline-block; margin:4px;width:5.96cm;height:2.54cm;" class="odt-zoomable" data-zoom-src="images/1000000000000142000000899A2DDC32.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ci-dessus, on voit que les instructions :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1624,7 +1624,7 @@
 <li><span style="color: #000000">ligne 4 : on retourne le modèle pour voir si l&#x27;attribut de modèle de clé [param1] en fait partie ;</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034300000099E2890AE1.png" style="display:inline-block; margin:4px;width:15.431cm;height:2.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034300000099E2890AE1.png" style="display:inline-block; margin:4px;width:15.431cm;height:2.829cm;" class="odt-zoomable" data-zoom-src="images/100000000000034300000099E2890AE1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">L&#x27;attribut de modèle [param1] est bien présent dans le modèle mais la méthode [toString] de la valeur associée ne donne pas d&#x27;indication sur cette valeur.</span></p>
 <p><span style="color: #000000">Considérons maintenant l&#x27;action suivante, où nous mettons explicitement une information dans le modèle :</span></p>
@@ -1641,7 +1641,7 @@
 <li><span style="color: #000000">ligne 4 : la valeur [p2] récupérée ligne 3 est mise dans le modèle associée à la clé [param2] :</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B0000007CE793DBCC.png" style="display:inline-block; margin:4px;width:6.421cm;height:2.3cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B0000007CE793DBCC.png" style="display:inline-block; margin:4px;width:6.421cm;height:2.3cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B0000007CE793DBCC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les règles changent si le paramètre de l&#x27;action est un objet. Voici un premier exemple :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1653,7 +1653,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">L&#x27;action ne modifie pas le modèle qu&#x27;on lui a donné. Le résultat est le suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000033F000000B47FCCE3AC.png" style="display:inline-block; margin:4px;width:15.39cm;height:3.33cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000033F000000B47FCCE3AC.png" style="display:inline-block; margin:4px;width:15.39cm;height:3.33cm;" class="odt-zoomable" data-zoom-src="images/100000000000033F000000B47FCCE3AC.png" /></td></tr></table>
 
 <p><span style="color: #000000">On constate que l&#x27;annotation [<span style="color: #646464">@ModelAttribute</span>(<span style="color: #2a00ff">&quot;unePersonne&quot;</span>) Personne <span style="color: #6a3e3e">p1</span>] a mis la personne [p1] dans le modèle, associée à la clé [unePersonne].</span></p>
 <p><span style="color: #000000">Considérons maintenant l&#x27;action suivante :</span></p>
@@ -1670,13 +1670,13 @@
 <li><span style="color: #000000">ligne 4 : on n&#x27;a pas mis l&#x27;annotation [@<span style="color: #646464">ModelAttribute</span>] ;</span></li>
 </ul>
 <p><span style="color: #000000">Le résultat est le suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034F000000A5D51B8A34.png" style="display:inline-block; margin:4px;width:15.679cm;height:3.06cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034F000000A5D51B8A34.png" style="display:inline-block; margin:4px;width:15.679cm;height:3.06cm;" class="odt-zoomable" data-zoom-src="images/100000000000034F000000A5D51B8A34.png" /></td></tr></table>
 
 <p><span style="color: #000000">On constate que la présence du paramètre [Personne <span style="color: #6a3e3e">p1</span>] a mis la personne [p1] dans le modèle, associée à la clé [personne] qui est le nom de la classe [Personne] avec le 1er caractère en minuscule.</span></p>
 <p><a id="refheading1401291644545772"></a></p>
 <h2 id="418-m24-validation-du-modele-de-laction">4.18. <span style="color: #000000">[/m24] : validation du modèle de l&#x27;action</span></h2>
 <p><span style="color: #000000">Considérons le modèle d&#x27;action [ActionModel01] suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000107000000F10920E36B.png" style="display:inline-block; margin:4px;width:4.851cm;height:4.461cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000107000000F10920E36B.png" style="display:inline-block; margin:4px;width:4.851cm;height:4.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000107000000F10920E36B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.models;</span></span>
@@ -1750,7 +1750,7 @@
 </li>
 </ul>
 <p><span style="color: #000000">Voici quelques exemples d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030F000000E4A5F165CD.png" style="display:inline-block; margin:4px;width:14.46cm;height:4.219cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030F000000E4A5F165CD.png" style="display:inline-block; margin:4px;width:14.46cm;height:4.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000030F000000E4A5F165CD.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ci-dessus, on voit que :</span></p>
 <ul>
@@ -1759,16 +1759,16 @@
 </ul>
 <p><span style="color: #000000">On notera les codes de l&#x27;erreur sur le champ [a] : [typeMismatch.actionModel01.a - typeMismatch.a - typeMismatch.java.lang.Integer - typeMismatch]. Nous reviendrons sur ces codes d&#x27;erreur lorsqu&#x27;il faudra personnaliser le message de l&#x27;erreur. On notera que le code de l&#x27;erreur est [typeMismatch].</span></p>
 <p><span style="color: #000000">Un autre exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F3000000A64F37A4DB.png" style="display:inline-block; margin:4px;width:13.981cm;height:3.069cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F3000000A64F37A4DB.png" style="display:inline-block; margin:4px;width:13.981cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F3000000A64F37A4DB.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ici, on n&#x27;a pas passé les paramètres [a] et [b]. Les validateurs [@NotNull] du modèle d&#x27;action [ActionModel01] ont alors joué leur rôle ;</span></p>
 <p><span style="color: #000000">Enfin, des valeurs correctes :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD0000008A95AD991E.png" style="display:inline-block; margin:4px;width:7.939cm;height:2.559cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD0000008A95AD991E.png" style="display:inline-block; margin:4px;width:7.939cm;height:2.559cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AD0000008A95AD991E.png" /></td></tr></table>
 
 <p><a id="refheading1401311644545772"></a></p>
 <h2 id="419-m24-personnalisation-des-messages-derreur">4.19. [m/24] : personnalisation des messages d&#x27;erreur</h2>
 <p><span style="color: #000000">Revenons à une copie d&#x27;écran de l&#x27;exemple précédent :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030F000000E4A5F165CD.png" style="display:inline-block; margin:4px;width:14.46cm;height:4.219cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030F000000E4A5F165CD.png" style="display:inline-block; margin:4px;width:14.46cm;height:4.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000030F000000E4A5F165CD.png" /></td></tr></table>
 
 <p><span style="color: #000000">Nous voyons ci-dessus les messages d&#x27;erreur par défaut. Il est clair que nous ne pouvons les garder dans une application réelle. Il est possible de définir ces messages d&#x27;erreur. Pour cela, nous allons nous aider des codes de l&#x27;erreur. Ci-dessus, nous voyons que l&#x27;erreur pour le champ [a] a les codes suivants : [typeMismatch.actionModel01.a - typeMismatch.a - typeMismatch.java.lang.Integer - typeMismatch]. Ces codes d&#x27;erreur vont du plus précis au moins précis :</span></p>
 <ul>
@@ -1779,7 +1779,7 @@
 </ul>
 <p><span style="color: #000000">On remarque également que le code d&#x27;erreur sur le champ [a] obtenu par [error.getCode()] est [typeMismatch] (cf copie d&#x27;écran ci-dessus).</span></p>
 <p><span style="color: #000000">Nous allons placer les messages d&#x27;erreur dans un fichier de propriétés :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EC000000A6063F2F7C.png" style="display:inline-block; margin:4px;width:4.369cm;height:3.069cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EC000000A6063F2F7C.png" style="display:inline-block; margin:4px;width:4.369cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EC000000A6063F2F7C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le fichier [messages.properties] ci-dessus sera le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1806,7 +1806,7 @@
 <li><span style="color: #000000">du paramètre [b] incorrect, c&#x27;est le code [</span><span style="color: #000000">typeMismatch] qui sera utilisé ;</span></li>
 </ul>
 <p><span style="color: #000000">Pour que le fichier [messages.properties] soit utilisé, il faut configurer Spring :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000B603AEEC0C.png" style="display:inline-block; margin:4px;width:4.979cm;height:3.371cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000B603AEEC0C.png" style="display:inline-block; margin:4px;width:4.979cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/100000000000010D000000B603AEEC0C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Nous enlevons les annotations de configuration de la classe [Application] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1862,7 +1862,7 @@
 </li>
 </ul>
 <p><span style="color: #000000">Dans le projet STS, il faut mettre le dossier [i18n] dans le dossier des ressources car celui-ci est mis dans le Classpath du projet :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000B65DBE90A1.png" style="display:inline-block; margin:4px;width:4.979cm;height:3.371cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000B65DBE90A1.png" style="display:inline-block; margin:4px;width:4.979cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/100000000000010D000000B65DBE90A1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Pour exploiter ce fichier, nous créons la nouvelle action suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1934,7 +1934,7 @@
 <li><em><span style="color: #000000">lignes 37-38 : on construit la chaîne d&#x27;erreur. Dans celle-ci, on inclut la locale et le message d&#x27;erreur trouvé ;</span></em></li>
 </ul>
 <p><em><span style="color: #000000">Voici des exemples d&#x27;exécution :</span></em></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D3000000822C968A9B.png" style="display:inline-block; margin:4px;width:13.39cm;height:2.409cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D3000000822C968A9B.png" style="display:inline-block; margin:4px;width:13.39cm;height:2.409cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D3000000822C968A9B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><em><span style="color: #000000">On voit que :</span></em></p>
 <ul>
@@ -1946,7 +1946,7 @@
 </code></pre></div>
 
 <p><em><span style="color: #000000">Un autre exemple :</span></em></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028B0000008719E44712.png" style="display:inline-block; margin:4px;width:12.051cm;height:2.499cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028B0000008719E44712.png" style="display:inline-block; margin:4px;width:12.051cm;height:2.499cm;" class="odt-zoomable" data-zoom-src="images/100000000000028B0000008719E44712.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><em><span style="color: #000000">On voit que :</span></em></p>
 <ul>
@@ -2034,7 +2034,7 @@
 <li><span style="color: #000000">en envoyant un cookie nommé [lang]. Ce cookie est automatiquement créé à l&#x27;issue de la méthode précédente ;</span></li>
 </ul>
 <p><span style="color: #000000">Pour exploiter cette locale, nous allons créer des fichiers de messages pour les locales [fr] et [en] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DC000000977AF696E4.png" style="display:inline-block; margin:4px;width:4.069cm;height:2.799cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DC000000977AF696E4.png" style="display:inline-block; margin:4px;width:4.069cm;height:2.799cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DC000000977AF696E4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le fichier [messages_fr.properties] est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2052,10 +2052,10 @@
 
 <p><span style="color: #000000">Le fichier [messages.properties] est une recopie du fichier [messages_en.properties]. On rappelle que le fichier [messages.properties] est utilisé lorsqu&#x27;aucun fichier correspondant à la locale de la requête n&#x27;est trouvé. Dans notre cas, si l&#x27;utilisateur envoie un paramètre [lang=en], comme le fichier [messages_en.properties] n&#x27;existe pas, c&#x27;est le fichier [messages.properties] qui sera utilisé. L&#x27;utilisateur aura donc des messages en anglais.</span></p>
 <p><span style="color: #000000">Essayons. Tout d&#x27;abord, dans l&#x27;environnement de déceloppement de Chrome (Ctrl-Maj-I), vérifiez vos cookies :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003720000012DD13E6D32.png" style="display:inline-block; margin:4px;width:16.33cm;height:5.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003720000012DD13E6D32.png" style="display:inline-block; margin:4px;width:16.33cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000003720000012DD13E6D32.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Si vous avez un cookie nommé [lang], supprimez-le. Puis avec Chrome, demandez l&#x27;URL [http://localhost:8080/m25] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028700000084796BC864.png" style="display:inline-block; margin:4px;width:11.98cm;height:2.439cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028700000084796BC864.png" style="display:inline-block; margin:4px;width:11.98cm;height:2.439cm;" class="odt-zoomable" data-zoom-src="images/100000000000028700000084796BC864.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le navigateur a envoyé les entêtes HTTP suivants :</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -2079,7 +2079,7 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
 </code></pre></div></td></tr></table></div>
 <p>On voie que dans ces entêtes, il n&#x27;y a pas de cookie [lang]. Notre code dans ce cas, utilise la locale [fr]. C&#x27;est ce que montre la copie d&#x27;écran. Essayons un autre cas :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A6000000EBC3DCB4C3.png" style="display:inline-block; margin:4px;width:12.356cm;height:3.11cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A6000000EBC3DCB4C3.png" style="display:inline-block; margin:4px;width:12.356cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A6000000EBC3DCB4C3.png" /></td></tr></table>
 
 <ul>
 <li>en [1], on a passé le paramètre [lang=en] pour passer la locale à [en] ;</li>
@@ -2087,13 +2087,13 @@
 <li>en [3], le message est passé en anglais ;</li>
 </ul>
 <p>Regardons maintenant les échanges HTTP :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000022855F0DE78.png" style="display:inline-block; margin:4px;width:7.68cm;height:10.22cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000022855F0DE78.png" style="display:inline-block; margin:4px;width:7.68cm;height:10.22cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000022855F0DE78.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On voit ci-dessus que le serveur a renvoyé un cookie [lang]. Cela a une conséquence importante : la locale de la prochaine requête sera [en] de nouveau à cause du cookie [lang] qui va être renvoyé par le navigateur. On devrait donc garder les messages en anglais. Vérifions-le :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023C0000007AE8C74701.png" style="display:inline-block; margin:4px;width:10.59cm;height:2.26cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023C0000007AE8C74701.png" style="display:inline-block; margin:4px;width:10.59cm;height:2.26cm;" class="odt-zoomable" data-zoom-src="images/100000000000023C0000007AE8C74701.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ci-dessus, on voit que la locale est restée à [en]. A cause du cookie qu&#x27;envoie systématiquement le navigateur, elle le restera tant que l&#x27;utilisateur ne la changera pas en envoyant le paramètre [lang] comme suit :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F0000007F0F0215B9.png" style="display:inline-block; margin:4px;width:10.94cm;height:2.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F0000007F0F0215B9.png" style="display:inline-block; margin:4px;width:10.94cm;height:2.35cm;" class="odt-zoomable" data-zoom-src="images/100000000000024F0000007F0F0215B9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1401351644545772"></a></p>
 <h2 id="421-m26-injection-de-la-locale-dans-le-modele-de-laction">4.21. [/m26] : injection de la locale dans le modèle de l&#x27;action</h2>
@@ -2116,9 +2116,9 @@
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017A000000761F0BF5A4.png" style="display:inline-block; margin:4px;width:7.001cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001820000007563881BAD.png" style="display:inline-block; margin:4px;width:7.151cm;height:2.17cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017A000000761F0BF5A4.png" style="display:inline-block; margin:4px;width:7.001cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000017A000000761F0BF5A4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001820000007563881BAD.png" style="display:inline-block; margin:4px;width:7.151cm;height:2.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000001820000007563881BAD.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025D0000007B40E6ED69.png" style="display:inline-block; margin:4px;width:11.201cm;height:2.281cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025D0000007B40E6ED69.png" style="display:inline-block; margin:4px;width:11.201cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000025D0000007B40E6ED69.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On voit ci-dessus qu&#x27;il n&#x27;y a pas de vérification de la validité de la locale demandée. Mais néanmoins, la requête suivante du navigateur provoque une exception côté serveur car le cookie de locale qu&#x27;il reçoit est incorrect.</p>
 <p><a id="refheading1401371644545772"></a></p>
@@ -2155,7 +2155,7 @@
 <li>ligne 14 : s&#x27;il n&#x27;y a pas d&#x27;erreurs, on rend la chaîne jSON des valeurs postées ;</li>
 </ul>
 <p>Ligne 3, on utilise le modèle d&#x27;action [ActionModel02] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000113000000EE0B03C36F.png" style="display:inline-block; margin:4px;width:5.091cm;height:4.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000113000000EE0B03C36F.png" style="display:inline-block; margin:4px;width:5.091cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/1000000000000113000000EE0B03C36F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.models;</span></span>
@@ -2243,10 +2243,10 @@
 <li><span style="color: #000000">[org.hibernate.validator.constraints] aux lignes 15-19 ;</span></li>
 </ul>
 <p><span style="color: #000000">Les dépendances Maven de ces deux packages sont présentes dans le projet :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F50000006F1CF8DF07.png" style="display:inline-block; margin:4px;width:4.54cm;height:2.05cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F50000006F1CF8DF07.png" style="display:inline-block; margin:4px;width:4.54cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F50000006F1CF8DF07.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Ici, nous n&#x27;allons pas utiliser de messages internationalisés mais des messages définis à l&#x27;intérieur de la contrainte avec l&#x27;attribut [message]. Pour tester cette action, nous allons utiliser [Advanced Rest Client] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002680000025E65D60503.png" style="display:inline-block; margin:4px;width:8.149cm;height:8.017cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002680000025E65D60503.png" style="display:inline-block; margin:4px;width:8.149cm;height:8.017cm;" class="odt-zoomable" data-zoom-src="images/10000000000002680000025E65D60503.png" /></td></tr></table>
 
 <ul>
 <li>en [1-2], la requête POST ;</li>
@@ -2263,24 +2263,24 @@
 <ul>
 <li>en [6], mettre une valeur erronée pour voir un message d&#x27;erreur. Ci-dessus, la contrainte [@<span style="color: #646464">AssertFalse</span>] exige que le champ [assertFalse] ait la valeur [false] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005660000014FD5854C48.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.362cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005660000014FD5854C48.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.362cm;" class="odt-zoomable" data-zoom-src="images/10000000000005660000014FD5854C48.png" /></td></tr></table>
 
 <ul>
 <li>en [7], la réponse du serveur : la contrainte [@NotNull] des champs vides a été déclenchée et le message d&#x27;erreur associé, rendu ;</li>
 <li>en [8], le message du champ [assertFalse] pour lequel la contrainte [@<span style="color: #646464">AssertFalse</span>] n&#x27;était pas vérifiée ainsi que les codes de cette erreur. On rappelle que ces codes peuvent être associés à des messages internationalisés ;</li>
 </ul>
 <p>Voici un autre exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000151000001A8AD1834DB.png" style="display:inline-block; margin:4px;width:6.241cm;height:7.83cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000151000001A8AD1834DB.png" style="display:inline-block; margin:4px;width:6.241cm;height:7.83cm;" class="odt-zoomable" data-zoom-src="images/1000000000000151000001A8AD1834DB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><img src="images/10000000000004F6000001544612FFF2.png" style="width:17.729cm;height:4.77cm;" alt="Image" /></p>
+<p><img src="images/10000000000004F6000001544612FFF2.png" style="width:17.729cm;height:4.77cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F6000001544612FFF2.png" /></p>
 <p>Le lecteur est invité à tester les différents cas d&#x27;erreur jusqu&#x27;au POST de données toutes valides :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A4000003438E9FBE69.png" style="display:inline-block; margin:4px;width:7.781cm;height:15.46cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015900000191FD7A3ACF.png" style="display:inline-block; margin:4px;width:6.391cm;height:7.459cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A4000003438E9FBE69.png" style="display:inline-block; margin:4px;width:7.781cm;height:15.46cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A4000003438E9FBE69.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015900000191FD7A3ACF.png" style="display:inline-block; margin:4px;width:6.391cm;height:7.459cm;" class="odt-zoomable" data-zoom-src="images/100000000000015900000191FD7A3ACF.png" /></td></tr></table>
 
 <p><strong>Note</strong> : le format des dates est le format anglo-saxon : <strong>mm/jj/aaaa</strong>.</p>
 <p><a id="refheading1401391644545772"></a></p>
 <h2 id="423-m28-externalisation-des-messages-derreur">4.23. [/m28] : externalisation des messages d&#x27;erreur</h2>
 <p>Dans la classe [ActionModel02], nous avons mis les messages en &#x27;dur&#x27;. Il est préférable de les externaliser dans des fichiers de messages. Nous suivons l&#x27;exemple de l&#x27;action [/m25]. Nous créons le nouveau modèle d&#x27;action [ActionModel03] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F4000000DFF4AF3610.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.129cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F4000000DFF4AF3610.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.129cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000DFF4AF3610.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.models;</span></span>
@@ -2362,7 +2362,7 @@
 </code></pre></div>
 
 <p>Les messages d&#x27;erreur sont externalisés dans les fichiers [messages.properties] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000FC0AB569E0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.671cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000FC0AB569E0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000FC0AB569E0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le fichier [messages_fr.properties] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2388,7 +2388,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>code=message
 </code></pre></div>
 <p>Les codes ne peuvent être quelconques. Ce sont ceux affichés dans l&#x27;action [/m27] précédente. Par exemple :</p>
-<p><img src="images/10000000000004410000001A426834AE.png" style="width:17.729cm;height:0.422cm;" alt="Image" /></p>
+<p><img src="images/10000000000004410000001A426834AE.png" style="width:17.729cm;height:0.422cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004410000001A426834AE.png" /></p>
 <p>Dans les fichiers de messages, il faut pour le champ [int1014] utiliser l&#x27;un des quatre codes ci-dessus.</p>
 <p>Le fichier [messages_en.properties] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2457,10 +2457,10 @@
 
 <p>On a déjà commenté ce type de code. La seule chose réellement importante est la ligne 23 : le message d&#x27;erreur récupéré dépend de la locale de la requête.</p>
 <p>Voici un exemple en français :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000150000001AF14AF6190.png" style="display:inline-block; margin:4px;width:6.219cm;height:7.98cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB0000014D3012AB5D.png" style="display:inline-block; margin:4px;width:9.089cm;height:6.16cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000150000001AF14AF6190.png" style="display:inline-block; margin:4px;width:6.219cm;height:7.98cm;" class="odt-zoomable" data-zoom-src="images/1000000000000150000001AF14AF6190.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB0000014D3012AB5D.png" style="display:inline-block; margin:4px;width:9.089cm;height:6.16cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000014D3012AB5D.png" /></td></tr></table>
 
 <p>et maintenant en anglais :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000134000001B0207EA3C2.png" style="display:inline-block; margin:4px;width:5.701cm;height:7.98cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018D00000157FAFA354B.png" style="display:inline-block; margin:4px;width:7.35cm;height:6.35cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000134000001B0207EA3C2.png" style="display:inline-block; margin:4px;width:5.701cm;height:7.98cm;" class="odt-zoomable" data-zoom-src="images/1000000000000134000001B0207EA3C2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018D00000157FAFA354B.png" style="display:inline-block; margin:4px;width:7.35cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/100000000000018D00000157FAFA354B.png" /></td></tr></table>
 
 
 
