@@ -896,7 +896,7 @@
 <p><a id="refheading1882601168461456"></a></p>
 <h1 id="1-introduction">1. Introduction</h1>
 <p>Le PDF de ce document est disponible |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQDne1CBLAm-Qpq5wd0R_Jj1ARfqlc9vwJXxLZ-7XCpTCWo?e=QoddP1">ICI</a>|.</p>
-<p>Les exemples de ce document sont disponibles |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQB7sRRDjYjYRbTAIOnh-OHRASdwUrkt5LzvS7xxvh5CHfw?e=I2UtfL">ICI</a>|.</p>
+<p>Les exemples de ce document sont disponibles |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQDwyiWIhkY5QJP6RiV5yBucAfDKnSJ4ZZ37b8kGPm8GPpo?e=9oeBR2">ICI</a>|.</p>
 <p>Nous nous proposons ici d&#x27;introduire à l&#x27;aide d&#x27;exemples les notions importantes de <strong>Spring MVC</strong>, un framework Web Java qui fournit un cadre pour développer des applications Web selon le modèle MVC (Modèle – Vue – Contrôleur).  Spring MVC est une branche de l&#x27;écosystème Spring [<a href="http://projects.spring.io/spring-framework/">http://projects.spring.io/spring-framework/</a>]. Nous présentons également le moteur de vues <strong>Thymeleaf</strong> [<a href="http://www.thymeleaf.org/">http://www.thymeleaf.org/</a>].</p>
 <p>Ce cours est à destination de lecteurs ayant une vraie maîtrise du langage Java. Il n&#x27;est pas nécessaire de connaître la programmation web.</p>
 <p><strong>Bien que détaillé, ce document est probablement incomplet</strong>. Spring est un framework immense avec de nombreuses ramifications. Pour approfondir Spring MVC, on pourra utiliser les références suivantes :</p>
@@ -976,22 +976,39 @@
 
 <p>Le traitement d&#x27;une demande d&#x27;un client se déroule de la façon suivante :</p>
 <ol>
-<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </em>Le [Front Controller] utilise un fichier de configuration ou des annotations Java pour &quot; router &quot; la demande vers le bon contrôleur et la bonne action au sein de ce contrôleur. Pour cela, il utilise le champ [Action] de l&#x27;URL. Le reste de l&#x27;URL [<em>/param1/param2/...</em>] est formé de paramètres facultatifs qui seront transmis à l&#x27;action. Le <strong>C</strong> de MVC est ici la chaîne [Front Controller, Contrôleur, Action]. Si aucun contrôleur ne peut traiter l&#x27;action demandée, le serveur Web répondra que l&#x27;URL demandée n&#x27;a pas été trouvée.</li>
-<li><strong>traitement</strong> </li>
-<li>l&#x27;action choisie peut exploiter les paramètres <em>parami</em> que le [Front Controller] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :<ul>
-<li>du chemin [<em>/param1/param2/...</em>] de l&#x27;URL,</li>
-<li>des paramètres [<em>p1=v1&amp;p2=v2</em>] de l&#x27;URL<em>,</em></li>
-<li>de paramètres postés par le navigateur avec sa demande ;</li>
-</ul>
-</li>
-<li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [métier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :<ul>
-<li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement</li>
-<li>une page de confirmation sinon</li>
-</ul>
-</li>
-<li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <strong>modèle de la vue</strong>. C&#x27;est le <strong>M</strong> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <strong>V</strong> de s&#x27;afficher [3] ;</li>
-<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.</li>
+<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;...</em> Le [Front Controller] utilise un fichier de configuration ou des annotations Java pour &quot; router &quot; la demande vers le bon contrôleur et la bonne action au sein de ce contrôleur. Pour cela, il utilise le champ [Action] de l&#x27;URL. Le reste de l&#x27;URL [<em>/param1/param2/...</em>] est formé de paramètres facultatifs qui seront transmis à l&#x27;action. Le <strong>C</strong> de MVC est ici la chaîne [Front Controller, Contrôleur, Action]. Si aucun contrôleur ne peut traiter l&#x27;action demandée, le serveur Web répondra que l&#x27;URL demandée n&#x27;a pas été trouvée.</li>
 </ol>
+<ol start="2">
+  <li><b>traitement</b> 
+  </li>
+</ol>
+<ul>
+  <li>l&#x27;action choisie peut exploiter les paramètres <i>parami</i> que le [Front Controller] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :
+    <ul>
+      <li>du chemin [<i>/param1/param2/...</i>] de l&#x27;URL,
+      </li>
+      <li>des paramètres [<i>p1=v1&amp;p2=v2</i>] de l&#x27;URL<i>,</i>
+      </li>
+      <li>de paramètres postés par le navigateur avec sa demande ;
+      </li>
+    </ul>
+  </li>
+  <li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [métier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :
+    <ul>
+      <li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement
+      </li>
+      <li>une page de confirmation sinon
+      </li>
+    </ul>
+  </li>
+  <li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <b>modèle de la vue</b>. C&#x27;est le <b>M</b> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <b>V</b> de s&#x27;afficher [3] ;
+  </li>
+</ul>
+<ol>
+  <li><b>réponse</b> - la vue <b>V</b> choisie utilise le modèle <b>M</b> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.
+  </li>
+</ol>
+
 <p>Maintenant, précisons le lien entre architecture web MVC et architecture en couches. Selon la définition qu&#x27;on donne au <strong>modèle</strong>, ces deux concepts sont liés ou non. Prenons une application web Spring MVC à une couche :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000040400000165023E1DEC.png" style="display:inline-block; margin:4px;width:13.6cm;height:4.724cm;" class="odt-zoomable" data-zoom-src="images/100000000000040400000165023E1DEC.png" /></td></tr></table>
 
@@ -1006,9 +1023,12 @@
 
 <p>Beaucoup d&#x27;auteurs considèrent que ce qui est à droite de la couche [Web] forme le modèle M du MVC. Pour éviter les ambigüités on peut parler :</p>
 <ul>
-<li>du <strong>modèle du domaine</strong> lorsqu&#x27;on désigne tout ce qui est à droite de la couche [Web]</li>
-<li>du <strong>modèle de la vue</strong> lorsqu&#x27;on désigne les données affichées par une vue V</li>
+  <li>du <b>modèle du domaine</b> lorsqu&#x27;on désigne tout ce qui est à droite de la couche [Web]
+  </li>
+  <li>du <b>modèle de la vue</b> lorsqu&#x27;on désigne les données affichées par une vue V
+  </li>
 </ul>
+
 <p>Dans la suite, le terme &quot; modèle M &quot; désignera exclusivement le <strong>modèle d&#x27;une vue</strong> V.</p>
 <p><a id="refheading570191429907001"></a></p>
 <h2 id="16-un-premier-projet-spring-mvc">1.6. Un premier projet Spring MVC</h2>
@@ -1019,17 +1039,25 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004220000017A264E91D8.png" style="display:inline-block; margin:4px;width:13.996cm;height:5.001cm;" class="odt-zoomable" data-zoom-src="images/10000000000004220000017A264E91D8.png" /></td></tr></table>
 
 <ul>
-<li>en [1], nous importons l&#x27;un des guides Spring ;</li>
+  <li>en [1], nous importons l&#x27;un des guides Spring ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B8000004090DFFBE39.png" style="display:inline-block; margin:4px;width:17.999cm;height:12.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B8000004090DFFBE39.png" /></td></tr></table>
 
 <ul>
-<li>en [2], nous choisissons l&#x27;exemple [Serving Web Content] ;</li>
-<li>en [3], on choisit le projet Maven ;</li>
-<li>en [4], on prend la version finale du guide ;</li>
-<li>en [5], on valide ;</li>
-<li>en [6], le projet importé ;</li>
+  <li>en [2], nous choisissons l&#x27;exemple [Serving Web Content] ;
+  </li>
+  <li>en [3], on choisit le projet Maven ;
+  </li>
+  <li>en [4], on prend la version finale du guide ;
+  </li>
+  <li>en [5], on valide ;
+  </li>
+  <li>en [6], le projet importé ;
+  </li>
 </ul>
+
 <p>Examinons le projet, d&#x27;abord sa configuration Maven.</p>
 <p><a id="refheading570231429907001"></a></p>
 <h3 id="162-configuration-maven">1.6.2. Configuration Maven</h3>
@@ -1088,19 +1116,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-8 : les propriétés du projet Maven. Manque une balise [&lt;packaging&gt;] indiquant le type du fichier produit par la compilation Maven. En l&#x27;absence de celle-ci, c&#x27;est le type [jar] qui est utilisé. L&#x27;application est donc une application exécutable de type console, et non une application web où le packaging serait alors [war] ;</li>
-<li>lignes 10-14 : le projet Maven a un projet parent [<span style="color: #000000">spring-boot-starter-parent</span>] C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;</li>
-<li>lignes 17-20 : l&#x27;artifact [spring-boot-starter-thymeleaf] amène avec lui les bibliothèques nécessaires à un projet spring MVC utilisé conjointement avec un moteur de vues appelé [Thymeleaf]. Cet artifact amène avec lui un très grand de bibliothèques dont celles d&#x27;un serveur Tomcat embarqué. C&#x27;est sur ce serveur que l&#x27;application sera exécutée ;</li>
+  <li>lignes 6-8 : les propriétés du projet Maven. Manque une balise [&lt;packaging&gt;] indiquant le type du fichier produit par la compilation Maven. En l&#x27;absence de celle-ci, c&#x27;est le type [jar] qui est utilisé. L&#x27;application est donc une application exécutable de type console, et non une application web où le packaging serait alors [war] ;
+  </li>
+  <li>lignes 10-14 : le projet Maven a un projet parent [<span style="color: #000000">spring-boot-starter-parent</span>] C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;
+  </li>
+  <li>lignes 17-20 : l&#x27;artifact [spring-boot-starter-thymeleaf] amène avec lui les bibliothèques nécessaires à un projet spring MVC utilisé conjointement avec un moteur de vues appelé [Thymeleaf]. Cet artifact amène avec lui un très grand de bibliothèques dont celles d&#x27;un serveur Tomcat embarqué. C&#x27;est sur ce serveur que l&#x27;application sera exécutée ;
+  </li>
 </ul>
+
 <p>Les bibliothèques amenées par cette configuration sont très nombreuses :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000001444D595CD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:6.001cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000001444D595CD8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011B000001148B127233.png" style="display:inline-block; margin:4px;width:5.35cm;height:5.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B000001148B127233.png" /></td></tr></table>
 
 <p>Ci-dessus on voit les archives du serveur Tomcat.</p>
 <p>Spring Boot est une branche de l&#x27;écosystème Spring [<a href="http://projects.spring.io/spring-boot/">http://projects.spring.io/spring-boot/</a>]. Ce projet vise à diminuer au maximum la configuration des projets Spring. Pour cela, Spring Boot fait de l&#x27;auto-configuration à partir des dépendances présentes dans le Classpath du projet. Spring Boot fournit de nombreuses dépendances prêtes à l&#x27;emploi. Ainsi la dépendance [<span style="color: #000000">spring-boot-starter-thymeleaf</span>] trouvée dans le projet Maven précédent amène toutes les dépendances nécessaires à une application Spring MVC utilisant le moteur de vues [Thymeleaf]. Avec ces deux caractéristiques :</p>
 <ul>
-<li>dépendances prêtes à l&#x27;emploi ;</li>
-<li>auto-configuration faite à partir de ces dépendances et de valeurs par défaut &#x27;raisonnables&#x27;, on peut avoir très rapidement une application Spring MVC opérationnelle. C&#x27;est le cas du projet étudié ici ;</li>
+  <li>dépendances prêtes à l&#x27;emploi ;
+  </li>
+  <li>auto-configuration faite à partir de ces dépendances et de valeurs par défaut &#x27;raisonnables&#x27;, on peut avoir très rapidement une application Spring MVC opérationnelle. C&#x27;est le cas du projet étudié ici ;
+  </li>
 </ul>
+
 <p><a id="refheading570251429907001"></a></p>
 <h3 id="163-larchitecture-dune-application-spring-mvc">1.6.3. L&#x27;architecture d&#x27;une application Spring MVC</h3>
 <p>Spring MVC implémente le modèle d&#x27;architecture dit MVC (Modèle – Vue – Contrôleur) :</p>
@@ -1108,22 +1143,38 @@
 
 <p>Le traitement d&#x27;une demande d&#x27;un client se déroule de la façon suivante :</p>
 <ol>
-<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </em>La [Dispatcher Servlet] est la classe de Spring qui traite les URL entrantes. Elle &quot;route&quot; l&#x27;URL vers l&#x27;action qui doit la traiter. Ces actions sont des méthodes de classes particulières appelées [Contrôleurs]. Le <strong>C</strong> de MVC est ici la chaîne [Dispatcher Servlet, Contrôleur, Action]. Si aucune action n&#x27;a été configurée pour traiter l&#x27;URL entrante, la servlet [Dispatcher Servlet] répondra que l&#x27;URL demandée n&#x27;a pas été trouvée (erreur 404 NOT FOUND) ;</li>
-<li><strong>traitement</strong> </li>
-<li>l&#x27;action choisie peut exploiter les paramètres <em>parami</em> que la servlet [Dispatcher Servlet] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :<ul>
-<li>du chemin [<em>/param1/param2/...</em>] de l&#x27;URL,</li>
-<li>des paramètres [<em>p1=v1&amp;p2=v2</em>] de l&#x27;URL<em>,</em></li>
-<li>de paramètres postés par le navigateur avec sa demande ;</li>
-</ul>
-</li>
-<li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [metier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :<ul>
-<li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement</li>
-<li>une page de confirmation sinon</li>
-</ul>
-</li>
-<li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <strong>modèle de la vue</strong>. C&#x27;est le <strong>M</strong> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <strong>V</strong> de s&#x27;afficher [3] ;</li>
-<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.</li>
+  <li><b>demande</b> - les URL demandées sont de la forme <i>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </i>La [Dispatcher Servlet] est la classe de Spring qui traite les URL entrantes. Elle &quot;route&quot; l&#x27;URL vers l&#x27;action qui doit la traiter. Ces actions sont des méthodes de classes particulières appelées [Contrôleurs]. Le <b>C</b> de MVC est ici la chaîne [Dispatcher Servlet, Contrôleur, Action]. Si aucune action n&#x27;a été configurée pour traiter l&#x27;URL entrante, la servlet [Dispatcher Servlet] répondra que l&#x27;URL demandée n&#x27;a pas été trouvée (erreur 404 NOT FOUND) ;
+  </li>
+  <li><b>traitement</b> 
+  </li>
 </ol>
+<ul>
+  <li>l&#x27;action choisie peut exploiter les paramètres <i>parami</i> que la servlet [Dispatcher Servlet] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :
+    <ul>
+      <li>du chemin [<i>/param1/param2/...</i>] de l&#x27;URL,
+      </li>
+      <li>des paramètres [<i>p1=v1&amp;p2=v2</i>] de l&#x27;URL<i>,</i>
+      </li>
+      <li>de paramètres postés par le navigateur avec sa demande ;
+      </li>
+    </ul>
+  </li>
+  <li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [metier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :
+    <ul>
+      <li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement
+      </li>
+      <li>une page de confirmation sinon
+      </li>
+    </ul>
+  </li>
+  <li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <b>modèle de la vue</b>. C&#x27;est le <b>M</b> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <b>V</b> de s&#x27;afficher [3] ;
+  </li>
+</ul>
+<ol>
+  <li><b>réponse</b> - la vue <b>V</b> choisie utilise le modèle <b>M</b> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.
+  </li>
+</ol>
+
 <p>Nous allons regarder ces différents éléments dans le projet étudié.</p>
 <p><a id="refheading570271429907001"></a></p>
 <h3 id="164-le-controleur-c">1.6.4. Le contrôleur C</h3>
@@ -1151,16 +1202,24 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : l&#x27;annotation [@<strong>Controller</strong>] fait de la classe [<span style="color: #000000">GreetingController</span>] un contrôleur Spring, ç-à-d que ses méthodes sont enregistrées pour traiter des URL. Un contrôleur Spring est un <strong>singleton</strong>. Il est créé en un unique exemplaire ;</li>
-<li>ligne 11 : l&#x27;annotation [@<strong>RequestMapping</strong>] indique l&#x27;URL que traite la méthode, ici l&#x27;URL [/greeting]. Nous verrons ultérieurement que cette URL peut être paramétrée et qu&#x27;il est possible de récupérer ces paramètres ;</li>
-<li>ligne 12 : la méthode admet deux paramètres :<ul>
-<li>[String name] : ce paramètre est initialisé par un paramètre de nom [name] dans la requête traitée, par exemple [/greeting?name=alfonse]. Ce paramètre est facultatif [<span style="color: #000000">required=</span><strong><span style="color: #7f0055">false</span></strong>] et lorsqu&#x27;il n&#x27;est pas là, le paramètre [name] prendra la valeur &#x27;World&#x27; [<span style="color: #000000">defaultValue=</span><span style="color: #2a00ff">&quot;World&quot;</span>],</li>
-<li>[Model model] est un modèle de vue. Il arrive vide et c&#x27;est le rôle de l&#x27;action (la méthode <em>greeting</em>) de le remplir. C&#x27;est ce modèle qui sera transmis à la vue que va faire afficher l&#x27;action. C&#x27;est donc un modèle de vue ;</li>
+  <li>ligne 8 : l&#x27;annotation [@<b>Controller</b>] fait de la classe [<span style="color: #000000">GreetingController</span>] un contrôleur Spring, ç-à-d que ses méthodes sont enregistrées pour traiter des URL. Un contrôleur Spring est un <b>singleton</b>. Il est créé en un unique exemplaire ;
+  </li>
+  <li>ligne 11 : l&#x27;annotation [@<b>RequestMapping</b>] indique l&#x27;URL que traite la méthode, ici l&#x27;URL [/greeting]. Nous verrons ultérieurement que cette URL peut être paramétrée et qu&#x27;il est possible de récupérer ces paramètres ;
+  </li>
+  <li>ligne 12 : la méthode admet deux paramètres :
+    <ul>
+      <li>[String name] : ce paramètre est initialisé par un paramètre de nom [name] dans la requête traitée, par exemple [/greeting?name=alfonse]. Ce paramètre est facultatif [<span style="color: #000000">required=</span><b><span style="color: #7f0055">false</span></b>] et lorsqu&#x27;il n&#x27;est pas là, le paramètre [name] prendra la valeur &#x27;World&#x27; [<span style="color: #000000">defaultValue=</span><span style="color: #2a00ff">&quot;World&quot;</span>],
+      </li>
+      <li>[Model model] est un modèle de vue. Il arrive vide et c&#x27;est le rôle de l&#x27;action (la méthode <i>greeting</i>) de le remplir. C&#x27;est ce modèle qui sera transmis à la vue que va faire afficher l&#x27;action. C&#x27;est donc un modèle de vue ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 13 : la valeur de [name] est mis dans le modèle de la vue. La classe [Model] se comporte comme un dictionnaire ;
+  </li>
+  <li>ligne 14 : la méthode rend le nom de la vue qui doit afficher le modèle construit. Le nom exact de la vue dépend de la configuration de [Thymeleaf]. En l&#x27;absence de celle-ci, la vue affichée ici sera la vue [/templates/greeting.html] ou le dossier [templates] doit être à la racine du Classpath du projet ;
+  </li>
 </ul>
-</li>
-<li>ligne 13 : la valeur de [name] est mis dans le modèle de la vue. La classe [Model] se comporte comme un dictionnaire ;</li>
-<li>ligne 14 : la méthode rend le nom de la vue qui doit afficher le modèle construit. Le nom exact de la vue dépend de la configuration de [Thymeleaf]. En l&#x27;absence de celle-ci, la vue affichée ici sera la vue [/templates/greeting.html] ou le dossier [templates] doit être à la racine du Classpath du projet ;</li>
-</ul>
+
 <p>Examinons notre projet Eclipse :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F300000263D59802BF.png" style="display:inline-block; margin:4px;width:13.376cm;height:8.084cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F300000263D59802BF.png" /></td></tr></table>
 
@@ -1183,9 +1242,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;espace de noms des balises Thymeleaf ;</li>
-<li>ligne 8 : une balise &lt;p&gt; (paragraphe) avec un attribut Thymeleaf. L&#x27;attribut [th:text] fixe le contenu du paragraphe. A l&#x27;intérieur de la chaîne de caractères on a l&#x27;expression [${name}]. Cela signifie qu&#x27;on veut la valeur de l&#x27;attribut [name] du modèle de la vue. Or on se souvient que cet attribut a été placé dans le modèle par l&#x27;action :</li>
+  <li>ligne 2 : l&#x27;espace de noms des balises Thymeleaf ;
+  </li>
+  <li>ligne 8 : une balise &lt;p&gt; (paragraphe) avec un attribut Thymeleaf. L&#x27;attribut [th:text] fixe le contenu du paragraphe. A l&#x27;intérieur de la chaîne de caractères on a l&#x27;expression [${name}]. Cela signifie qu&#x27;on veut la valeur de l&#x27;attribut [name] du modèle de la vue. Or on se souvient que cet attribut a été placé dans le modèle par l&#x27;action :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#6a3e3e">model</span><span style="color:#000000">.addAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">, </span><span style="color:#6a3e3e">name</span><span style="color:#000000">);</span></span>
 </code></pre></div>
@@ -1215,12 +1277,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11 : la classe est exécutable avec une méthode [main] propre aux applications console. La classe [SpringApplication] de la ligne 12 va lancer le serveur Tomcat présent dans les dépendances et déployer le service web dessus ;</li>
-<li>ligne 4 : on voit que la classe [SpringApplication] appartient au projet [Spring Boot] ;</li>
-<li>ligne 12 : le premier paramètre est la classe qui configure le projet, le second d&#x27;éventuels paramètres ;</li>
-<li>ligne 8 : l&#x27;annotation [@EnableAutoConfiguration] demande à Spring Boot de faire la configuration du projet ;</li>
-<li>ligne 7 : l&#x27;annotation [@ComponentScan] fait que le dossier qui contient la classe [Application] va être exploré pour rechercher les composants Spring. Un sera trouvé, la classe [GreetingController] qui a l&#x27;annotation [@Controller] qui en fait un composant Spring ;</li>
+  <li>ligne 11 : la classe est exécutable avec une méthode [main] propre aux applications console. La classe [SpringApplication] de la ligne 12 va lancer le serveur Tomcat présent dans les dépendances et déployer le service web dessus ;
+  </li>
+  <li>ligne 4 : on voit que la classe [SpringApplication] appartient au projet [Spring Boot] ;
+  </li>
+  <li>ligne 12 : le premier paramètre est la classe qui configure le projet, le second d&#x27;éventuels paramètres ;
+  </li>
+  <li>ligne 8 : l&#x27;annotation [@EnableAutoConfiguration] demande à Spring Boot de faire la configuration du projet ;
+  </li>
+  <li>ligne 7 : l&#x27;annotation [@ComponentScan] fait que le dossier qui contient la classe [Application] va être exploré pour rechercher les composants Spring. Un sera trouvé, la classe [GreetingController] qui a l&#x27;annotation [@Controller] qui en fait un composant Spring ;
+  </li>
 </ul>
+
 <p>Exécutons le projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002100000014566557274.png" style="display:inline-block; margin:4px;width:9.781cm;height:6.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000002100000014566557274.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1280,10 +1348,14 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a>2014-11-27 16:48:18.493  INFO 3908 --- [           main] hello.Application                        : Started Application in 6.833 seconds (JVM running for 8.658)
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 13 : le serveur Tomcat démarre sur le port 8080 (ligne 12) ;</li>
-<li>ligne 17 : la servlet [DispatcherServlet] est présente ;</li>
-<li>ligne 20 : la méthode [hello.GreetingController.greeting] a été découverte ainsi que l&#x27;URL qu&#x27;elle traite [/greeting] ;</li>
+  <li>ligne 13 : le serveur Tomcat démarre sur le port 8080 (ligne 12) ;
+  </li>
+  <li>ligne 17 : la servlet [DispatcherServlet] est présente ;
+  </li>
+  <li>ligne 20 : la méthode [hello.GreetingController.greeting] a été découverte ainsi que l&#x27;URL qu&#x27;elle traite [/greeting] ;
+  </li>
 </ul>
+
 <p>Pour tester l&#x27;application web, on demande l&#x27;URL [http://localhost:8080/greeting] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015F00000092D1A4EF79.png" style="display:inline-block; margin:4px;width:6.5cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/100000000000015F00000092D1A4EF79.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000095777C6898.png" style="display:inline-block; margin:4px;width:7.789cm;height:2.76cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000095777C6898.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1291,16 +1363,26 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000541000004931A07F1C9.png" style="display:inline-block; margin:4px;width:17.794cm;height:15.492cm;" class="odt-zoomable" data-zoom-src="images/1000000000000541000004931A07F1C9.png" /></td></tr></table>
 
 <ul>
-<li>en [1], l&#x27;URL demandée ;</li>
-<li>en [2], la méthode GET est utilisée ;</li>
-<li>en [3], le serveur a indiqué qu&#x27;il envoyait une réponse au format HTML ;</li>
-<li>en [4], la réponse HTML ;</li>
-<li>en [5], on demande la même URL mais cette fois-ci avec un POST ;</li>
-<li>en [7], les informations sont envoyées au serveur sous la forme [urlencoded] ;</li>
-<li>en [6], le paramètre <strong>name</strong> avec sa valeur ;</li>
-<li>en [8], le navigateur indique au serveur qu&#x27;il lui envoie des informations [urlencoded] ;</li>
-<li>en [9], la réponse HTML du serveur ;</li>
+  <li>en [1], l&#x27;URL demandée ;
+  </li>
+  <li>en [2], la méthode GET est utilisée ;
+  </li>
+  <li>en [3], le serveur a indiqué qu&#x27;il envoyait une réponse au format HTML ;
+  </li>
+  <li>en [4], la réponse HTML ;
+  </li>
+  <li>en [5], on demande la même URL mais cette fois-ci avec un POST ;
+  </li>
+  <li>en [7], les informations sont envoyées au serveur sous la forme [urlencoded] ;
+  </li>
+  <li>en [6], le paramètre <b>name</b> avec sa valeur ;
+  </li>
+  <li>en [8], le navigateur indique au serveur qu&#x27;il lui envoie des informations [urlencoded] ;
+  </li>
+  <li>en [9], la réponse HTML du serveur ;
+  </li>
 </ul>
+
 <p><a id="arret-application"></a>Pour arrêter l&#x27;application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000813AE15452.png" style="display:inline-block; margin:4px;width:4.189cm;height:2.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E2000000813AE15452.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A000000077A7321E38.png" style="display:inline-block; margin:4px;width:2.96cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A000000077A7321E38.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A30000006C0CD40C98.png" style="display:inline-block; margin:4px;width:3.02cm;height:2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A30000006C0CD40C98.png" /></td></tr></table>
 
@@ -1323,22 +1405,31 @@
 </code></pre></div>
 
 <ul>
-<li>les lignes 7-10 définissent le plugin qui va créer l&#x27;archive exécutable ;</li>
-<li>la ligne 2     définit la classe exécutable du projet ;</li>
+  <li>les lignes 7-10 définissent le plugin qui va créer l&#x27;archive exécutable ;
+  </li>
+  <li>la ligne 2     définit la classe exécutable du projet ;
+  </li>
 </ul>
+
 <p>On procède ainsi :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E90000016337141E69.png" style="display:inline-block; margin:4px;width:9.857cm;height:4.697cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E90000016337141E69.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on exécute une cible Maven ;</li>
+  <li>en [1] : on exécute une cible Maven ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000040B00000359928CD4A6.png" style="display:inline-block; margin:4px;width:13.693cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/100000000000040B00000359928CD4A6.png" /></td></tr></table>
 
 <ul>
-<li>en [2] : il y a deux cibles (goals) : [clean] pour supprimer le dossier [target] du projet Maven, [package] pour le régénérer ;</li>
-<li>en [3] : le dossier [target] généré le sera dans ce dossier ;</li>
-<li>en [4] : on génère la cible ;</li>
+  <li>en [2] : il y a deux cibles (goals) : [clean] pour supprimer le dossier [target] du projet Maven, [package] pour le régénérer ;
+  </li>
+  <li>en [3] : le dossier [target] généré le sera dans ce dossier ;
+  </li>
+  <li>en [4] : on génère la cible ;
+  </li>
 </ul>
+
 <p><strong>Note</strong> : pour que la génération réussisse, il faut que la JVM utilisée par STS soit un <strong>JDK</strong> [Window / Preferences / Java / Installed JREs] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E000000B99A9DF91E.png" style="display:inline-block; margin:4px;width:6.78cm;height:3.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E000000B99A9DF91E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1364,8 +1455,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : l&#x27;archive générée ;</li>
+  <li>ligne 12 : l&#x27;archive générée ;
+  </li>
 </ul>
+
 <p>Cette archive est exécutée de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">gs-serving-web-content-complete\target&gt;<span style="background-color:#ff950e">java -jar gs-serving-web-content-0.1.0.jar</span></span>
@@ -1453,10 +1546,14 @@
 
 <p>Les modifications sont à faire à deux endroits :</p>
 <ul>
-<li>ligne 9 : il faut indiquer qu&#x27;on va générer une archive war (Web ARchive) ;</li>
-<li>lignes 24-28 : il faut ajouter une dépendance sur l&#x27;artifact [<span style="color: #ff3333">spring-boot-starter-tomcat</span>]. Cet artifact amène toutes les classes de Tomcat dans les dépendances du projet ;</li>
-<li>ligne 27 : cet artifact est [provided], ç-à-d que les archives correspondantes ne seront pas placées dans le war généré. En effet, ces archives seront trouvées sur le serveur Tomcat sur lequel s&#x27;exécutera l&#x27;application ;</li>
+  <li>ligne 9 : il faut indiquer qu&#x27;on va générer une archive war (Web ARchive) ;
+  </li>
+  <li>lignes 24-28 : il faut ajouter une dépendance sur l&#x27;artifact [<span style="color: #ff3333">spring-boot-starter-tomcat</span>]. Cet artifact amène toutes les classes de Tomcat dans les dépendances du projet ;
+  </li>
+  <li>ligne 27 : cet artifact est [provided], ç-à-d que les archives correspondantes ne seront pas placées dans le war généré. En effet, ces archives seront trouvées sur le serveur Tomcat sur lequel s&#x27;exécutera l&#x27;application ;
+  </li>
 </ul>
+
 <p>En fait, si on regarde les dépendances actuelles du projet, on constate que la dépendance [<span style="color: #ff3333">spring-boot-starter-tomcat</span>] est déjà présente :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000016EB6851851.png" style="display:inline-block; margin:4px;width:5.609cm;height:6.316cm;" class="odt-zoomable" data-zoom-src="images/10000000000001450000016EB6851851.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1482,17 +1579,24 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe [<span style="color: #000000">ApplicationInitializer</span>] étend la classe [<span style="color: #000000">SpringBootServletInitializer</span>] ;</li>
-<li>ligne 9 : la méthode [configure] est redéfinie (ligne 8) ;</li>
-<li>ligne 10 : on fournit la classe qui configure le projet ;</li>
+  <li>ligne 6 : la classe [<span style="color: #000000">ApplicationInitializer</span>] étend la classe [<span style="color: #000000">SpringBootServletInitializer</span>] ;
+  </li>
+  <li>ligne 9 : la méthode [configure] est redéfinie (ligne 8) ;
+  </li>
+  <li>ligne 10 : on fournit la classe qui configure le projet ;
+  </li>
 </ul>
+
 <p>Pour exécuter le projet, on peut procéder ainsi :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053600000154E1918E25.png" style="display:inline-block; margin:4px;width:17.648cm;height:4.498cm;" class="odt-zoomable" data-zoom-src="images/100000000000053600000154E1918E25.png" /></td></tr></table>
 
 <ul>
-<li>en [1], on exécute le projet sur l&#x27;un des serveurs enregistrés dans l&#x27;IDE Eclipse ;</li>
-<li>en [2], on choisit ci-dessus [Tomcat v8.0] ;</li>
+  <li>en [1], on exécute le projet sur l&#x27;un des serveurs enregistrés dans l&#x27;IDE Eclipse ;
+  </li>
+  <li>en [2], on choisit ci-dessus [Tomcat v8.0] ;
+  </li>
 </ul>
+
 <p>Ceci fait, on peut demander l&#x27;URL [http://localhost:8080/gs-rest-service/greeting/?name=Mitchell] dans un navigateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022B0000008EA361FFF2.png" style="display:inline-block; margin:4px;width:10.28cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000022B0000008EA361FFF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1506,17 +1610,25 @@
 
 <p><a id="refheading5702114299070011"></a></p>
 <ul>
-<li>en [1], nous importons l&#x27;un des guides Spring ;</li>
+  <li>en [1], nous importons l&#x27;un des guides Spring ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BA000002EFDC854CFE.png" style="display:inline-block; margin:4px;width:16.007cm;height:9.936cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BA000002EFDC854CFE.png" /></td></tr></table>
 
 <ul>
-<li>en [2], nous choisissons l&#x27;exemple [Rest Service] ;</li>
-<li>en [3], on choisit le projet Maven ;</li>
-<li>en [4], on prend la version finale du guide ;</li>
-<li>en [5], on valide ;</li>
-<li>en [6], le projet importé ;</li>
+  <li>en [2], nous choisissons l&#x27;exemple [Rest Service] ;
+  </li>
+  <li>en [3], on choisit le projet Maven ;
+  </li>
+  <li>en [4], on prend la version finale du guide ;
+  </li>
+  <li>en [5], on valide ;
+  </li>
+  <li>en [6], le projet importé ;
+  </li>
 </ul>
+
 <p>Les services web accessibles via des URL standard et qui délivrent du texte jSON sont souvent appelés des services REST (REpresentational State Transfer). Dans ce document, je me contenterai d&#x27;appeler le service que nous allons construire, un service web / jSON. Un service est dit Restful s&#x27;il respecte certaines règles. Je n&#x27;ai pas cherché à respecter celles-ci.</p>
 <p>Examinons maintenant le projet importé, d&#x27;abord sa configuration Maven.</p>
 <p><a id="refheading15916779844303"></a></p>
@@ -1574,10 +1686,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-8 : les propriétés du projet Maven. Manque une balise [&lt;packaging&gt;] indiquant le type du fichier produit par la compilation Maven. En l&#x27;absence de celle-ci, c&#x27;est le type [jar] qui est utilisé. L&#x27;application est donc une application exécutable de type console, et non une application web où le packaging serait alors [war] ;</li>
-<li>lignes 10-14 : le projet Maven a un projet parent [<span style="color: #000000">spring-boot-starter-parent</span>]. C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;</li>
-<li>lignes 17-20 : l&#x27;artifact [spring-boot-starter-web] amène avec lui les bibliothèques nécessaires à un projet Spring MVC de type service web où il n&#x27;y a pas de vues générées. Cet artifact amène avec lui un très grand de bibliothèques dont celles d&#x27;un serveur Tomcat embarqué. C&#x27;est sur ce serveur que l&#x27;application sera exécutée ;</li>
+  <li>lignes 6-8 : les propriétés du projet Maven. Manque une balise [&lt;packaging&gt;] indiquant le type du fichier produit par la compilation Maven. En l&#x27;absence de celle-ci, c&#x27;est le type [jar] qui est utilisé. L&#x27;application est donc une application exécutable de type console, et non une application web où le packaging serait alors [war] ;
+  </li>
+  <li>lignes 10-14 : le projet Maven a un projet parent [<span style="color: #000000">spring-boot-starter-parent</span>]. C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;
+  </li>
+  <li>lignes 17-20 : l&#x27;artifact [spring-boot-starter-web] amène avec lui les bibliothèques nécessaires à un projet Spring MVC de type service web où il n&#x27;y a pas de vues générées. Cet artifact amène avec lui un très grand de bibliothèques dont celles d&#x27;un serveur Tomcat embarqué. C&#x27;est sur ce serveur que l&#x27;application sera exécutée ;
+  </li>
 </ul>
+
 <p>Les bibliothèques amenées par cette configuration sont très nombreuses :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013900000130C601B465.png" style="display:inline-block; margin:4px;width:5.791cm;height:5.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000013900000130C601B465.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F700000110A13A7F1F.png" style="display:inline-block; margin:4px;width:4.57cm;height:5.039cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F700000110A13A7F1F.png" /></td></tr></table>
 
@@ -1589,29 +1705,48 @@
 
 <p>Le traitement d&#x27;une demande d&#x27;un client se déroule de la façon suivante :</p>
 <ol>
-<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </em>La [Dispatcher Servlet] est la classe de Spring qui traite les URL entrantes. Elle &quot;route&quot; l&#x27;URL vers l&#x27;action qui doit la traiter. Ces actions sont des méthodes de classes particulières appelées [Contrôleurs]. Le <strong>C</strong> de MVC est ici la chaîne [Dispatcher Servlet, Contrôleur, Action]. Si aucune action n&#x27;a été configurée pour traiter l&#x27;URL entrante, la servlet [Dispatcher Servlet] répondra que l&#x27;URL demandée n&#x27;a pas été trouvée (erreur 404 NOT FOUND) ;</li>
-<li><strong>traitement</strong> </li>
-<li>l&#x27;action choisie peut exploiter les paramètres <em>parami</em> que la servlet [Dispatcher Servlet] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :<ul>
-<li>du chemin [<em>/param1/param2/...</em>] de l&#x27;URL,</li>
-<li>des paramètres [<em>p1=v1&amp;p2=v2</em>] de l&#x27;URL<em>,</em></li>
-<li>de paramètres postés par le navigateur avec sa demande ;</li>
-</ul>
-</li>
-<li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [metier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :<ul>
-<li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement</li>
-<li>une page de confirmation sinon</li>
-</ul>
-</li>
-<li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <strong>modèle de la vue</strong>. C&#x27;est le <strong>M</strong> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <strong>V</strong> de s&#x27;afficher [3] ;</li>
-<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.</li>
+  <li><b>demande</b> - les URL demandées sont de la forme <i>http://machine:port/contexte/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </i>La [Dispatcher Servlet] est la classe de Spring qui traite les URL entrantes. Elle &quot;route&quot; l&#x27;URL vers l&#x27;action qui doit la traiter. Ces actions sont des méthodes de classes particulières appelées [Contrôleurs]. Le <b>C</b> de MVC est ici la chaîne [Dispatcher Servlet, Contrôleur, Action]. Si aucune action n&#x27;a été configurée pour traiter l&#x27;URL entrante, la servlet [Dispatcher Servlet] répondra que l&#x27;URL demandée n&#x27;a pas été trouvée (erreur 404 NOT FOUND) ;
+  </li>
+  <li><b>traitement</b> 
+  </li>
 </ol>
+<ul>
+  <li>l&#x27;action choisie peut exploiter les paramètres <i>parami</i> que la servlet [Dispatcher Servlet] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :
+    <ul>
+      <li>du chemin [<i>/param1/param2/...</i>] de l&#x27;URL,
+      </li>
+      <li>des paramètres [<i>p1=v1&amp;p2=v2</i>] de l&#x27;URL<i>,</i>
+      </li>
+      <li>de paramètres postés par le navigateur avec sa demande ;
+      </li>
+    </ul>
+  </li>
+  <li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [metier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :
+    <ul>
+      <li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement
+      </li>
+      <li>une page de confirmation sinon
+      </li>
+    </ul>
+  </li>
+  <li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <b>modèle de la vue</b>. C&#x27;est le <b>M</b> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <b>V</b> de s&#x27;afficher [3] ;
+  </li>
+</ul>
+<ol>
+  <li><b>réponse</b> - la vue <b>V</b> choisie utilise le modèle <b>M</b> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.
+  </li>
+</ol>
+
 <p>Pour un service web / jSON, l&#x27;architecture précédente est légèrement modifiée :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047800000166007926FB.png" style="display:inline-block; margin:4px;width:15.134cm;height:4.736cm;" class="odt-zoomable" data-zoom-src="images/100000000000047800000166007926FB.png" /></td></tr></table>
 
 <ul>
-<li>en [4a], le modèle qui est une classe Java est transformé en chaîne jSON par une bibliothèque jSON ;</li>
-<li>en [4b], cette chaîne jSON est envoyée au navigateur ;</li>
+  <li>en [4a], le modèle qui est une classe Java est transformé en chaîne jSON par une bibliothèque jSON ;
+  </li>
+  <li>en [4b], cette chaîne jSON est envoyée au navigateur ;
+  </li>
 </ul>
+
 <p><a id="refheading15920779844303"></a></p>
 <h3 id="174-le-controleur-c">1.7.4. Le contrôleur C</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000ED000000AB6C6D3DB3.png" style="display:inline-block; margin:4px;width:4.39cm;height:3.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000AB6C6D3DB3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1640,11 +1775,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : l&#x27;annotation [@<strong>RestController</strong>] fait de la classe [<span style="color: #000000">GreetingController</span>] un contrôleur Spring, ç-à-d que ses méthodes sont enregistrées pour traiter des URL. Nous avons vu l&#x27;annotation similaire [@<strong>Controller</strong>]. Le résultat des méthodes de ce contrôleur était un type [String] qui était le nom de la vue à afficher. Ici c&#x27;est différent. Les méthodes d&#x27;un contrôleur de type [@<strong>RestController</strong>] rendent des objets qui sont sérialisés pour être envoyés au navigateur. Le type de sérialisation opérée dépend de la configuration de Spring MVC. Ici, ils seront sérialisés en jSON. C&#x27;est la présence d&#x27;une bibliothèque jSON dans les dépendances du projet qui fait que Spring Boot va, par autoconfiguration, configurer le projet de cette façon ;</li>
-<li>ligne 14 : l&#x27;annotation [@<strong>RequestMapping</strong>] indique l&#x27;URL que traite la méthode, ici l&#x27;URL [/greeting] ;</li>
-<li>ligne 15 : nous avons déjà expliqué l&#x27;annotation [<span style="color: #646464">@RequestParam</span>]. Le résultat rendu par la méthode est un objet de type [Greeting].</li>
-<li>ligne 12 : un entier long de type atomique. Cela signifie qu&#x27;il supporte la concurrence d&#x27;accès. Plusieurs threads peuvent vouloir incrémenter la variable [counter] en même temps. Cela se fera proprement. Un thread ne peut lire la valeur du compteur que si le thread en train de le modifier a terminé sa modification.</li>
+  <li>ligne 9 : l&#x27;annotation [@<b>RestController</b>] fait de la classe [<span style="color: #000000">GreetingController</span>] un contrôleur Spring, ç-à-d que ses méthodes sont enregistrées pour traiter des URL. Nous avons vu l&#x27;annotation similaire [@<b>Controller</b>]. Le résultat des méthodes de ce contrôleur était un type [String] qui était le nom de la vue à afficher. Ici c&#x27;est différent. Les méthodes d&#x27;un contrôleur de type [@<b>RestController</b>] rendent des objets qui sont sérialisés pour être envoyés au navigateur. Le type de sérialisation opérée dépend de la configuration de Spring MVC. Ici, ils seront sérialisés en jSON. C&#x27;est la présence d&#x27;une bibliothèque jSON dans les dépendances du projet qui fait que Spring Boot va, par autoconfiguration, configurer le projet de cette façon ;
+  </li>
+  <li>ligne 14 : l&#x27;annotation [@<b>RequestMapping</b>] indique l&#x27;URL que traite la méthode, ici l&#x27;URL [/greeting] ;
+  </li>
+  <li>ligne 15 : nous avons déjà expliqué l&#x27;annotation [<span style="color: #646464">@RequestParam</span>]. Le résultat rendu par la méthode est un objet de type [Greeting].
+  </li>
+  <li>ligne 12 : un entier long de type atomique. Cela signifie qu&#x27;il supporte la concurrence d&#x27;accès. Plusieurs threads peuvent vouloir incrémenter la variable [counter] en même temps. Cela se fera proprement. Un thread ne peut lire la valeur du compteur que si le thread en train de le modifier a terminé sa modification.
+  </li>
 </ul>
+
 <p><a id="refheading15922779844303"></a></p>
 <h3 id="175-le-modele-m">1.7.5. Le modèle M</h3>
 <p><a id="refheading570291429907001"></a>Le modèle M produit par la méthode précédente est l&#x27;objet [Greeting] suivant :</p>
@@ -1763,10 +1903,14 @@
 <a id="__codelineno-2-27" name="__codelineno-2-27"></a>2014-11-28 15:22:58.319  INFO 3152 --- [           main] hello.Application                        : Started Application in 3.788 seconds (JVM running for 4.424)
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 13 : le serveur Tomcat démarre sur le port 8080 (ligne 12) ;</li>
-<li>ligne 17 : la servlet [DispatcherServlet] est présente ;</li>
-<li>ligne 20 : la méthode [GreetingController.greeting] a été découverte ;</li>
+  <li>ligne 13 : le serveur Tomcat démarre sur le port 8080 (ligne 12) ;
+  </li>
+  <li>ligne 17 : la servlet [DispatcherServlet] est présente ;
+  </li>
+  <li>ligne 20 : la méthode [GreetingController.greeting] a été découverte ;
+  </li>
 </ul>
+
 <p>Pour tester l&#x27;application web, on demande l&#x27;URL [http://localhost:8080/greeting] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000145000000802108509F.png" style="display:inline-block; margin:4px;width:5.609cm;height:2.208cm;" class="odt-zoomable" data-zoom-src="images/1000000000000145000000802108509F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F00000085614557B2.png" style="display:inline-block; margin:4px;width:7.68cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F00000085614557B2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1776,16 +1920,26 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000541000004BF767E3B13.png" style="display:inline-block; margin:4px;width:17.794cm;height:16.074cm;" class="odt-zoomable" data-zoom-src="images/1000000000000541000004BF767E3B13.png" /></td></tr></table>
 
 <ul>
-<li>en [1], l&#x27;URL demandée ;</li>
-<li>en [2], la méthode GET est utilisée ;</li>
-<li>en [3], la réponse jSON ;</li>
-<li>en [4], le serveur a indiqué qu&#x27;il envoyait une réponse au format jSON ;</li>
-<li>en [5], on demande la même URL mais cette fois-ci avec un POST ;</li>
-<li>en [7], les informations sont envoyées au serveur sous la forme [urlencoded] ;</li>
-<li>en [6], le paramètre <strong>name</strong> avec sa valeur ;</li>
-<li>en [8], le navigateur indique au serveur qu&#x27;il lui envoie des informations [urlencoded] ;</li>
-<li>en [9], la réponse jSON du serveur ;</li>
+  <li>en [1], l&#x27;URL demandée ;
+  </li>
+  <li>en [2], la méthode GET est utilisée ;
+  </li>
+  <li>en [3], la réponse jSON ;
+  </li>
+  <li>en [4], le serveur a indiqué qu&#x27;il envoyait une réponse au format jSON ;
+  </li>
+  <li>en [5], on demande la même URL mais cette fois-ci avec un POST ;
+  </li>
+  <li>en [7], les informations sont envoyées au serveur sous la forme [urlencoded] ;
+  </li>
+  <li>en [6], le paramètre <b>name</b> avec sa valeur ;
+  </li>
+  <li>en [8], le navigateur indique au serveur qu&#x27;il lui envoie des informations [urlencoded] ;
+  </li>
+  <li>en [9], la réponse jSON du serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading15928779844303"></a></p>
 <h3 id="178-creation-dune-archive-executable">1.7.8. Création d&#x27;une archive exécutable</h3>
 <p><a id="refheading5703514299070011"></a>Comme nous l&#x27;avons fait pour le projet précédent, nous créons une archive exécutable :</p>
@@ -1794,11 +1948,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FD00000359F9AE9EA5.png" style="display:inline-block; margin:4px;width:13.508cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FD00000359F9AE9EA5.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on exécute une cible Maven ;</li>
-<li>en [2] : il y a deux cibles (goals) : [clean] pour supprimer le dossier [target] du projet Maven, [package] pour le régénérer ;</li>
-<li>en [3] : le dossier [target] généré, le sera dans ce dossier ;</li>
-<li>en [4] : on génère la cible ;</li>
+  <li>en [1] : on exécute une cible Maven ;
+  </li>
+  <li>en [2] : il y a deux cibles (goals) : [clean] pour supprimer le dossier [target] du projet Maven, [package] pour le régénérer ;
+  </li>
+  <li>en [3] : le dossier [target] généré, le sera dans ce dossier ;
+  </li>
+  <li>en [4] : on génère la cible ;
+  </li>
 </ul>
+
 <p>Dans les logs qui apparaissent dans la console, il est important de voir apparaître le plugin [<span style="color: #000000">spring-boot-maven-plugin</span>]. C&#x27;est lui qui génère l&#x27;archive exécutable.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">maven</span><span class="o">-</span><span class="n">plugin</span><span class="p">:</span><span class="mf">1.1.0</span><span class="p">.</span><span class="na">RELEASE</span><span class="p">:</span><span class="n">repackage</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="p">)</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="n">gs</span><span class="o">-</span><span class="n">rest</span><span class="o">-</span><span class="n">service</span><span class="w"> </span><span class="o">---</span>
 </code></pre></div>
@@ -1816,8 +1975,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : l&#x27;archive générée ;</li>
+  <li>ligne 5 : l&#x27;archive générée ;
+  </li>
 </ul>
+
 <p>Cette archive est exécutée de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">D:\Temp\wksSTS\gs-rest-service-complete\target&gt;<span style="background-color:#ff950e">java -jar gs-rest-service-0.1.0.jar</span></span>
@@ -1860,8 +2021,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : il faut indiquer qu&#x27;on va générer une archive war (Web ARchive) ;</li>
+  <li>ligne 9 : il faut indiquer qu&#x27;on va générer une archive war (Web ARchive) ;
+  </li>
 </ul>
+
 <p>Il faut par ailleurs configurer l&#x27;application web. En l&#x27;absence de fichier [web.xml], cela se fait avec une classe héritant de [<span style="color: #000000">SpringBootServletInitializer</span>] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000D1A9F9B1A9.png" style="display:inline-block; margin:4px;width:4.78cm;height:3.87cm;" class="odt-zoomable" data-zoom-src="images/1000000000000102000000D1A9F9B1A9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1883,16 +2046,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe [<span style="color: #000000">ApplicationInitializer</span>] étend la classe [<span style="color: #000000">SpringBootServletInitializer</span>] ;</li>
-<li>ligne 9 : la méthode [configure] est redéfinie (ligne 8) ;</li>
-<li>ligne 10 : on fournit la classe qui configure le projet ;</li>
+  <li>ligne 6 : la classe [<span style="color: #000000">ApplicationInitializer</span>] étend la classe [<span style="color: #000000">SpringBootServletInitializer</span>] ;
+  </li>
+  <li>ligne 9 : la méthode [configure] est redéfinie (ligne 8) ;
+  </li>
+  <li>ligne 10 : on fournit la classe qui configure le projet ;
+  </li>
 </ul>
+
 <p>Pour exécuter le projet, on peut procéder ainsi :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E20000015106D662F3.png" style="display:inline-block; margin:4px;width:16.536cm;height:4.459cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E20000015106D662F3.png" /></td></tr></table>
 
 <ul>
-<li>en [1-2], on exécute le projet sur l&#x27;un des serveurs enregistrés dans l&#x27;IDE Eclipse ;</li>
+  <li>en [1-2], on exécute le projet sur l&#x27;un des serveurs enregistrés dans l&#x27;IDE Eclipse ;
+  </li>
 </ul>
+
 <p>Ceci fait, on peut demander l&#x27;URL [http://localhost:8080/gs-rest-service/greeting/?name=Mitchell] dans un navigateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022B0000008EA361FFF2.png" style="display:inline-block; margin:4px;width:10.28cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000022B0000008EA361FFF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1900,9 +2069,12 @@
 <h2 id="18-conclusion">1.8. Conclusion</h2>
 <p>Nous avons introduit deux types de projets Spring MVC :</p>
 <ul>
-<li>un projet où l&#x27;application web envoie un flux HTML au navigateur. Ce flux est généré par le moteur de vues [Thymeleaf] ;</li>
-<li>un projet où l&#x27;application web envoie un flux jSON au navigateur ;</li>
+  <li>un projet où l&#x27;application web envoie un flux HTML au navigateur. Ce flux est généré par le moteur de vues [Thymeleaf] ;
+  </li>
+  <li>un projet où l&#x27;application web envoie un flux jSON au navigateur ;
+  </li>
 </ul>
+
 <p>Dans le premier cas, deux dépendances Maven sont nécessaires au projet :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">parent</span><span style="color:#008080">&gt;</span></span>
@@ -1938,8 +2110,10 @@
 <p>Les dépendances amenées en cascade par ces configurations sont très nombreuses et beaucoup sont inutiles. Pour la mise en exploitation de l&#x27;application, on utilisera une configuration Maven manuelle où seront présentes les seules dépendances nécessaires au projet.</p>
 <p>Nous allons maintenant revenir aux bases de la programmation web en présentant deux notions de base :</p>
 <ul>
-<li>le dialogue HTTP (HyperText Transfer Protocol) entre un navigateur et une application web ;</li>
-<li>le langage HTML (HyperText Markup Language) que le navigateur interprète pour afficher une page qu&#x27;il a reçue ;</li>
+  <li>le dialogue HTTP (HyperText Transfer Protocol) entre un navigateur et une application web ;
+  </li>
+  <li>le langage HTML (HyperText Markup Language) que le navigateur interprète pour afficher une page qu&#x27;il a reçue ;
+  </li>
 </ul>
 
 

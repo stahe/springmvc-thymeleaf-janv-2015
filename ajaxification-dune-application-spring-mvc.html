@@ -1378,24 +1378,36 @@
 
 <p><span style="color: #000000">Pour passer d&#x27;une vue [Vue1] à une vue [Vue2], le navigateur :</span></p>
 <ul>
-<li><span style="color: #000000">émet une requête vers l&#x27;application web ;</span></li>
-<li><span style="color: #000000">reçoit la vue [Vue2] et l&#x27;affiche à la place de la vue [Vue1].</span></li>
+  <li><span style="color: #000000">émet une requête vers l&#x27;application web ;</span>
+  </li>
+  <li><span style="color: #000000">reçoit la vue [Vue2] et l&#x27;affiche à la place de la vue [Vue1].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">C&#x27;est le schéma classique :</span></p>
 <ul>
-<li><span style="color: #000000">demande du navigateur ;</span></li>
-<li><span style="color: #000000">élaboration d&#x27;une vue en réponse au client par le serveur web ;</span></li>
-<li><span style="color: #000000">affichage de cette nouvelle vue par le navigateur.</span></li>
+  <li><span style="color: #000000">demande du navigateur ;</span>
+  </li>
+  <li><span style="color: #000000">élaboration d&#x27;une vue en réponse au client par le serveur web ;</span>
+  </li>
+  <li><span style="color: #000000">affichage de cette nouvelle vue par le navigateur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il existe depuis quelques années un autre mode d&#x27;interaction entre le navigateur et le serveur web : <strong>AJAX</strong> (<strong>A</strong>synchronous <strong>J</strong>avascript <strong>A</strong>nd <strong>X</strong>ml). Il s&#x27;agit en fait d&#x27;interactions entre la vue affichée par le navigateur et le serveur web. Le navigateur continue à faire ce qu&#x27;il sait faire, afficher une vue HTML mais il est désormais manipulé par du Javascript embarqué dans la vue HTML affichée. Le schéma est le suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000465000001645DB641CB.png" style="display:inline-block; margin:4px;width:14.884cm;height:4.71cm;" class="odt-zoomable" data-zoom-src="images/1000000000000465000001645DB641CB.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], un événement se produit dans la page affichée dans le navigateur (clic sur un bouton, changement d&#x27;un texte, ...). Cet événement est intercepté par du Javascript (jS) embarqué dans la page ;</span></li>
-<li><span style="color: #000000">en [2], le code Javascript fait une requête HTTP comme l&#x27;aurait fait le navigateur. La requête est <strong>asynchrone</strong> : l&#x27;utilisateur peut continuer à interagir avec la page sans être bloqué par l&#x27;attente de la réponse à la requête HTTP. La requête suit le processus classique de traitement. Rien (ou peu) ne la distingue d&#x27;une requête classique ;</span></li>
-<li><span style="color: #000000">en [3], une réponse est envoyée au client jS. Plutôt qu&#x27;une vue HTML complète, c&#x27;est plutôt une vue HTML partielle, un flux XML ou jSON (<strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation) qui est envoyé ;</span></li>
-<li><span style="color: #000000">en [4], le Javascript récupère cette réponse et l&#x27;utilise pour mettre à jour une région de la page HTML affichée.</span></li>
+  <li><span style="color: #000000">en [1], un événement se produit dans la page affichée dans le navigateur (clic sur un bouton, changement d&#x27;un texte, ...). Cet événement est intercepté par du Javascript (jS) embarqué dans la page ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], le code Javascript fait une requête HTTP comme l&#x27;aurait fait le navigateur. La requête est <b>asynchrone</b> : l&#x27;utilisateur peut continuer à interagir avec la page sans être bloqué par l&#x27;attente de la réponse à la requête HTTP. La requête suit le processus classique de traitement. Rien (ou peu) ne la distingue d&#x27;une requête classique ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], une réponse est envoyée au client jS. Plutôt qu&#x27;une vue HTML complète, c&#x27;est plutôt une vue HTML partielle, un flux XML ou jSON (<b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation) qui est envoyé ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], le Javascript récupère cette réponse et l&#x27;utilise pour mettre à jour une région de la page HTML affichée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pour l&#x27;utilisateur, il y a changement de vue car ce qu&#x27;il voit a changé. Il n&#x27;y a cependant pas rechargement total d&#x27;une page mais simplement modification partielle de la page affichée. Cela contribue à donner de la fluidité et de l&#x27;interactivité à la page : parce qu&#x27;il n&#x27;y a pas de rechargement total de la page, on peut se permettre de gérer des événements qu&#x27;auparavant on ne gérait pas. Par exemple, proposer à l&#x27;utilisateur une liste d&#x27;options au fur et à mesure qu&#x27;il saisit des caractères dans une boîte de saisie. A chaque nouveau caractère tapé, une requête AJAX est faite vers le serveur qui renvoie alors d&#x27;autres propositions. Sans Ajax, ce genre d&#x27;aide à la saisie était auparavant impossible. On ne pouvait pas recharger une nouvelle page à chaque caractère tapé.</span></p>
 <p><a id="refheading95257463420399"></a></p>
 <h2 id="72-mise-a-jour-dune-page-avec-un-flux-html">7.2. Mise à jour d&#x27;une page avec un flux HTML</h2>
@@ -1405,11 +1417,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053C000002EE905C30AF.png" style="display:inline-block; margin:4px;width:17.727cm;height:9.922cm;" class="odt-zoomable" data-zoom-src="images/100000000000053C000002EE905C30AF.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], l&#x27;heure de chargement de la page ;</span></li>
-<li><span style="color: #000000">en [2], on fait les quatre opérations arithmétiques sur deux nombres réels A et B ;</span></li>
-<li><span style="color: #000000">en [3], la réponse du serveur vient s&#x27;inscrire dans une région de la page ;</span></li>
-<li><span style="color: #000000">en [4], l&#x27;heure du calcul. Celle-ci est différente de l&#x27;heure de chargement de la page [5]. Cette dernière est égale à [1] montrant que la région [6] n&#x27;a pas été rechargée. Par ailleurs l&#x27;URL [7] de la page n&#x27;a pas changé.</span></li>
+  <li><span style="color: #000000">en [1], l&#x27;heure de chargement de la page ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], on fait les quatre opérations arithmétiques sur deux nombres réels A et B ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], la réponse du serveur vient s&#x27;inscrire dans une région de la page ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], l&#x27;heure du calcul. Celle-ci est différente de l&#x27;heure de chargement de la page [5]. Cette dernière est égale à [1] montrant que la région [6] n&#x27;a pas été rechargée. Par ailleurs l&#x27;URL [7] de la page n&#x27;a pas changé.</span>
+  </li>
 </ul>
+
 <p><a id="refheading95259463420399"></a></p>
 <h3 id="722-laction-ajax-01">7.2.2. L&#x27;action [/ajax-01]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E3000000B2585F28F7.png" style="display:inline-block; margin:4px;width:4.2cm;height:3.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E3000000B2585F28F7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1438,11 +1455,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;action [/ajax-01] n&#x27;accepte qu&#x27;un seul paramètre [tempo]. C&#x27;est la durée en millisecondes pendant laquelle le serveur devra attendre avant d&#x27;envoyer les résultats des opérations arithmétiques ;</li>
-<li>ligne 4 : le paramètre [tempo] est facultatif ;</li>
-<li>lignes 5-12 : on vérifie que la valeur du paramètre [tempo] est acceptable ;</li>
-<li>lignes 13-15 : si c&#x27;est le cas, la valeur de la temporisation est mise en session. Cela veut dire qu&#x27;elle sera en vigueur tant qu&#x27;on ne la changera pas ;</li>
+  <li>ligne 2 : l&#x27;action [/ajax-01] n&#x27;accepte qu&#x27;un seul paramètre [tempo]. C&#x27;est la durée en millisecondes pendant laquelle le serveur devra attendre avant d&#x27;envoyer les résultats des opérations arithmétiques ;
+  </li>
+  <li>ligne 4 : le paramètre [tempo] est facultatif ;
+  </li>
+  <li>lignes 5-12 : on vérifie que la valeur du paramètre [tempo] est acceptable ;
+  </li>
+  <li>lignes 13-15 : si c&#x27;est le cas, la valeur de la temporisation est mise en session. Cela veut dire qu&#x27;elle sera en vigueur tant qu&#x27;on ne la changera pas ;
+  </li>
 </ul>
+
 <p>Le code de l&#x27;action [/ajax-01] se poursuit ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-01&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">GET</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1481,8 +1503,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 11 et 15 : deux réels [a,b] qui vont être postés par un formulaire ;</li>
+  <li>lignes 11 et 15 : deux réels [a,b] qui vont être postés par un formulaire ;
+  </li>
 </ul>
+
 <p>Revenons au code de l&#x27;action :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-01&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">GET</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1499,8 +1523,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-7 : on met une instance de type [Resultats] dans le modèle ;</li>
+  <li>lignes 6-7 : on met une instance de type [Resultats] dans le modèle ;
+  </li>
 </ul>
+
 <p>Le type [Resultats] mis dans le modèle est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E6000000949262202C.png" style="display:inline-block; margin:4px;width:4.26cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E6000000949262202C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1526,13 +1552,20 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-9 : le résultat des quatre opération arithmétiques sur les nombres [a,b] ;</li>
-<li>ligne 10 : l&#x27;heure du chargement initial de la page ;</li>
-<li>ligne 11 : l&#x27;heure d&#x27;exécution des quatre opérations arithmétiques ;</li>
-<li>ligne 12 : un éventuel message d&#x27;erreur ;</li>
-<li>ligne 13 : l&#x27;éventuelle vue qui doit être affichée ;</li>
-<li>ligne 14 : la culture de la vue, [fr-FR] ou [en-US] ;</li>
+  <li>lignes 6-9 : le résultat des quatre opération arithmétiques sur les nombres [a,b] ;
+  </li>
+  <li>ligne 10 : l&#x27;heure du chargement initial de la page ;
+  </li>
+  <li>ligne 11 : l&#x27;heure d&#x27;exécution des quatre opérations arithmétiques ;
+  </li>
+  <li>ligne 12 : un éventuel message d&#x27;erreur ;
+  </li>
+  <li>ligne 13 : l&#x27;éventuelle vue qui doit être affichée ;
+  </li>
+  <li>ligne 14 : la culture de la vue, [fr-FR] ou [en-US] ;
+  </li>
 </ul>
+
 <p>Le code de l&#x27;action [/ajax-01] se poursuit ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-01&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">GET</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1545,8 +1578,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la méthode [setLocale] sert à mettre dans le modèle de la vue la culture à utiliser, [fr-FR] ou [en-US]. Cette culture est à destination du Javascript embarqué dans la vue ;</li>
+  <li>ligne 5 : la méthode [setLocale] sert à mettre dans le modèle de la vue la culture à utiliser, [fr-FR] ou [en-US]. Cette culture est à destination du Javascript embarqué dans la vue ;
+  </li>
 </ul>
+
 <p>La méthode [setLocale] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setLocale(Locale </span><span style="color:#6a3e3e">locale</span><span style="color:#000000">, Model </span><span style="color:#6a3e3e">modèle</span><span style="color:#000000">, Resultats </span><span style="color:#6a3e3e">résultats</span><span style="color:#000000">) {</span></span>
@@ -1583,9 +1618,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on met l&#x27;heure du GET dans le modèle ;</li>
-<li>lignes 9 : on affiche la vue [vue-01.xml] :</li>
+  <li>ligne 7 : on met l&#x27;heure du GET dans le modèle ;
+  </li>
+  <li>lignes 9 : on affiche la vue [vue-01.xml] :
+  </li>
 </ul>
+
 <p><a id="refheading95261463420399"></a></p>
 <h3 id="723-la-vue-vue-01xml">7.2.3. La vue [vue-01.xml]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C1000000DF761A7D3A.png" style="display:inline-block; margin:4px;width:3.57cm;height:4.129cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C1000000DF761A7D3A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FF0000014DF464A3AB.png" style="display:inline-block; margin:4px;width:9.46cm;height:6.16cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FF0000014DF464A3AB.png" /></td></tr></table>
@@ -1637,16 +1675,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 7-12 : les bibliothèques jQuery de validation et d&#x27;internationalisation (cultures) ;</li>
-<li>ligne 15 : la bibliothèque [client-validation] construite au paragraphe <a href="validation-javascript-cote-client.html#refheading730632038707144">6.3</a> ;</li>
-<li>ligne 14 : la bibliothèque jSON utilisée par la bibliothèque [client-validation]. Elle est facultative si les logs de validation ont été désactivés ;</li>
-<li>ligne 13 : la bibliothèque [Unobtrusive Ajax] de Microsoft. Cette bibliothèque permet parfois de s&#x27;affranchir d&#x27;écrire du Javascript ;</li>
-<li>ligne 16 : un fichier jS pour nos propres besoins ;</li>
-<li>lignes 17-22 : pour gérer côté client les cultures [fr-FR] et [en-US]. Nous avons déjà rencontré ce code ;</li>
-<li>ligne 27 : un message paramétré. Nous les avons étudiés au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a> ;</li>
-<li>lignes 36-38 : le formulaire sur lequel nous allons revenir ;</li>
-<li>ligne 40 : la zone du document dans lequel le Javascript placera la réponse du serveur ;</li>
+  <li>lignes 7-12 : les bibliothèques jQuery de validation et d&#x27;internationalisation (cultures) ;
+  </li>
+  <li>ligne 15 : la bibliothèque [client-validation] construite au paragraphe <a href="validation-javascript-cote-client.html#refheading730632038707144">6.3</a> ;
+  </li>
+  <li>ligne 14 : la bibliothèque jSON utilisée par la bibliothèque [client-validation]. Elle est facultative si les logs de validation ont été désactivés ;
+  </li>
+  <li>ligne 13 : la bibliothèque [Unobtrusive Ajax] de Microsoft. Cette bibliothèque permet parfois de s&#x27;affranchir d&#x27;écrire du Javascript ;
+  </li>
+  <li>ligne 16 : un fichier jS pour nos propres besoins ;
+  </li>
+  <li>lignes 17-22 : pour gérer côté client les cultures [fr-FR] et [en-US]. Nous avons déjà rencontré ce code ;
+  </li>
+  <li>ligne 27 : un message paramétré. Nous les avons étudiés au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a> ;
+  </li>
+  <li>lignes 36-38 : le formulaire sur lequel nous allons revenir ;
+  </li>
+  <li>ligne 40 : la zone du document dans lequel le Javascript placera la réponse du serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading95263463420399"></a></p>
 <h3 id="724-le-formulaire">7.2.4. Le formulaire</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020200000150234F9EFD.png" style="display:inline-block; margin:4px;width:9.52cm;height:6.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000020200000150234F9EFD.png" /></td></tr></table>
@@ -1744,9 +1792,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 16 : au champ [a] sont associés les validateurs [required], [number] et [min] ;</li>
-<li>ligne 19 : idem pour le champ [b] ;</li>
+  <li>ligne 16 : au champ [a] sont associés les validateurs [required], [number] et [min] ;
+  </li>
+  <li>ligne 19 : idem pour le champ [b] ;
+  </li>
 </ul>
+
 <p>Les divers messages sont trouvés dans les fichiers [messages.properties] du projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E80000008D17EAB376.png" style="display:inline-block; margin:4px;width:4.3cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E80000008D17EAB376.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1828,34 +1879,48 @@
 
 <p>Lorsque les attributs [data-ajax-xxx] sont présents, le [submit] du formulaire va être exécuté par un appel Ajax de la bibliothèque [<em><span style="color: #2a00ff">unobtrusive-ajax</span></em>]. La signification des paramètres est la suivante :</p>
 <ul>
-<li>[<span style="color: #7f007f">data-ajax</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;true&quot;</span></em>] : c&#x27;est la présence de cet attribut qui fait que le [submit] du formulaire va être ajaxifié ;</li>
-<li>[<span style="color: #7f007f">data-ajax-method</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;post&quot;</span></em>] : la méthode du [submit]. L&#x27;URL du post sera celle de l&#x27;attibut [<span style="color: #7f007f">action</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;/ajax-02.html&quot;</span></em>] ;</li>
-<li>[<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;#loading&quot;</span></em>] : l&#x27;id d&#x27;une zone à afficher en attendant la réponse du serveur. La zone identifiée par [loading] dans la vue [vue-01.xml] est la suivante :</li>
+  <li>[<span style="color: #7f007f">data-ajax</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;true&quot;</span></i>] : c&#x27;est la présence de cet attribut qui fait que le [submit] du formulaire va être ajaxifié ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-method</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;post&quot;</span></i>] : la méthode du [submit]. L&#x27;URL du post sera celle de l&#x27;attibut [<span style="color: #7f007f">action</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;/ajax-02.html&quot;</span></i>] ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;#loading&quot;</span></i>] : l&#x27;id d&#x27;une zone à afficher en attendant la réponse du serveur. La zone identifiée par [loading] dans la vue [vue-01.xml] est la suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">img</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;loading&quot;</span> <span style="color:#7f007f">style</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;display: none&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/images/loading.gif&quot;</span> <span style="color:#008080">/&gt;</span></span>
 </code></pre></div>
 
 <p>C&#x27;est une image animée d&#x27;attente qui sera affichée tant que la réponse du serveur n&#x27;aura pas été reçue ;</p>
 <ul>
-<li>[<span style="color: #7f007f">data-ajax-loading-duration</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;0&quot;</span></em>] : le temps d&#x27;attente en millisecondes avant que la zone [<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;#loading&quot;</span></em>] soit affichée. Ici, elle sera affichée dès que l&#x27;attente commencera ;</li>
-<li>[<span style="color: #7f007f">data-ajax-begin</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;beforeSend&quot;</span></em>] : la fonction jS à exécuter avant de faire le [submit] ;</li>
-<li>[<span style="color: #7f007f">data-ajax-complete</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;afterComplete&quot;</span></em>] : la fonction jS à exécuter lorsque la réponse a été reçue ;</li>
-<li>[<span style="color: #7f007f">data-ajax-update</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;#resultats&quot;</span></em>] : l&#x27;identifiant de la zone où le résultat envoyé par le serveur sera placé. La vue [vue-01.xml] possède la zone suivante :</li>
+  <li>[<span style="color: #7f007f">data-ajax-loading-duration</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;0&quot;</span></i>] : le temps d&#x27;attente en millisecondes avant que la zone [<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;#loading&quot;</span></i>] soit affichée. Ici, elle sera affichée dès que l&#x27;attente commencera ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-begin</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;beforeSend&quot;</span></i>] : la fonction jS à exécuter avant de faire le [submit] ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-complete</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;afterComplete&quot;</span></i>] : la fonction jS à exécuter lorsque la réponse a été reçue ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-update</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;#resultats&quot;</span></i>] : l&#x27;identifiant de la zone où le résultat envoyé par le serveur sera placé. La vue [vue-01.xml] possède la zone suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;resultats&quot;</span> <span style="color:#008080">/&gt;</span></span>
 </code></pre></div>
 
 <ul>
-<li>[<span style="color: #7f007f">data-ajax-mode</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;replace&quot;</span></em>] : le mode d&#x27;insertion du résultat dans la zone précédente. Le mode [replace] fera que le résultat &#x27;écrasera&#x27; ce qu&#x27;il y avait avant dans la zone d&#x27;id [resultats] ;</li>
+  <li>[<span style="color: #7f007f">data-ajax-mode</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;replace&quot;</span></i>] : le mode d&#x27;insertion du résultat dans la zone précédente. Le mode [replace] fera que le résultat &#x27;écrasera&#x27; ce qu&#x27;il y avait avant dans la zone d&#x27;id [resultats] ;
+  </li>
 </ul>
+
 <p>Il faut noter que le [submit] Javascript n&#x27;aura lieu que si les validateurs ont déclaré valides les valeurs testées.</p>
 <p>La bibliothèque jS [<em><span style="color: #2a00ff">unobtrusive-ajax</span></em>] a deux objectifs :</p>
 <ul>
-<li>faire en sorte que le formulaire s&#x27;adapte correctement aux deux possibilités : activation ou non du Javascript sur le navigateur ;</li>
-<li>éviter d&#x27;écrire du Javascript. Nous verrons qu&#x27;ici, cela n&#x27;a pas pu être évité.</li>
+  <li>faire en sorte que le formulaire s&#x27;adapte correctement aux deux possibilités : activation ou non du Javascript sur le navigateur ;
+  </li>
+  <li>éviter d&#x27;écrire du Javascript. Nous verrons qu&#x27;ici, cela n&#x27;a pas pu être évité.
+  </li>
 </ul>
+
 <p><a id="refheading95265463420399"></a></p>
 <h3 id="725-laction-ajax-02">7.2.5. L&#x27;action [/ajax-02]</h3>
 <p>Nous avons vu que les valeurs postées étaient envoyées à l&#x27;action [/ajax-02]. Celle-ci est la suivante :</p>
@@ -1879,13 +1944,20 @@
 </code></pre></div>
 
 <ul>
-<li>nous allons simplifier dans un premier temps : nous supposons que le POST qui a lieu a bien été fait par le Javascript de la vue [vue-01.xml]. Nous reviendrons sur cette hypothèse un peu plus tard ;</li>
-<li>ligne 2 : les valeurs [a,b] postées sont mises dans le modèle [ActionModel01] ;</li>
-<li>lignes 4-7 : si l&#x27;utilisateur avait fixé une temporisation lors d&#x27;un précédent GET, celle-ci est récupérée dans la session et on fait la temporisation (ligne 6). Le but de celle-ci est de permettre à l&#x27;utilisateur de voir l&#x27;effet de l&#x27;attribut [<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;#loading&quot;</span></em>] dans le formulaire ;</li>
-<li>lignes 9-10 : on met un attribut [resultats] dans le modèle ;</li>
-<li>ligne 12 : on met la culture [fr-FR] ou [en-US] dans le modèle ;</li>
-<li>ligne 14 : on met l&#x27;heure du POST dans le modèle ;</li>
+  <li>nous allons simplifier dans un premier temps : nous supposons que le POST qui a lieu a bien été fait par le Javascript de la vue [vue-01.xml]. Nous reviendrons sur cette hypothèse un peu plus tard ;
+  </li>
+  <li>ligne 2 : les valeurs [a,b] postées sont mises dans le modèle [ActionModel01] ;
+  </li>
+  <li>lignes 4-7 : si l&#x27;utilisateur avait fixé une temporisation lors d&#x27;un précédent GET, celle-ci est récupérée dans la session et on fait la temporisation (ligne 6). Le but de celle-ci est de permettre à l&#x27;utilisateur de voir l&#x27;effet de l&#x27;attribut [<span style="color: #7f007f">data-ajax-loading</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;#loading&quot;</span></i>] dans le formulaire ;
+  </li>
+  <li>lignes 9-10 : on met un attribut [resultats] dans le modèle ;
+  </li>
+  <li>ligne 12 : on met la culture [fr-FR] ou [en-US] dans le modèle ;
+  </li>
+  <li>ligne 14 : on met l&#x27;heure du POST dans le modèle ;
+  </li>
 </ul>
+
 <p>Rappelons le type [Resultats] mis dans le modèle :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Resultats {</span></span>
@@ -1924,8 +1996,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-11 : pour l&#x27;exemple on montre comment renvoyer une page d&#x27;erreur au client jS. Une fois sur deux, on renvoie la vue [vue-03.xml] suivante :</li>
+  <li>lignes 6-11 : pour l&#x27;exemple on montre comment renvoyer une page d&#x27;erreur au client jS. Une fois sur deux, on renvoie la vue [vue-03.xml] suivante :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C000000299A5F4CB1D.png" style="display:inline-block; margin:4px;width:16.087cm;height:8.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C000000299A5F4CB1D.png" /></td></tr></table>
 
 <p>On notera ligne 9, que ce n&#x27;est pas un message qu&#x27;on met dans le modèle, mais une clé de message :</p>
@@ -1961,8 +2035,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12, on notera un message paramétré par une clé de message qui est elle-même calculée. Nous avons introduit cette notion au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a>, page <a href="les-vues-thymeleaf.html#refheading9401392526165">170</a>.</li>
+  <li>ligne 12, on notera un message paramétré par une clé de message qui est elle-même calculée. Nous avons introduit cette notion au paragraphe <a href="les-vues-thymeleaf.html#refheading9401392526165">5.18</a>, page <a href="les-vues-thymeleaf.html#refheading9401392526165">170</a>.
+  </li>
 </ul>
+
 <p>Le code de l&#x27;action [/ajax-02] se poursuit ainsi :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-02&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1986,9 +2062,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5-15 : les quatre opération arithmétiques sont faites sur les nombres [a,b] et encapsulées dans l&#x27;instance [Resultats] du modèle ;</li>
-<li>ligne 17 : on renvoie la vue [vue-02.xml] suivante :</li>
+  <li>lignes 5-15 : les quatre opération arithmétiques sont faites sur les nombres [a,b] et encapsulées dans l&#x27;instance [Resultats] du modèle ;
+  </li>
+  <li>ligne 17 : on renvoie la vue [vue-02.xml] suivante :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C10000031199755937.png" style="display:inline-block; margin:4px;width:16.101cm;height:10.386cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C10000031199755937.png" /></td></tr></table>
 
 <p>La vue [vue-02.xml] est la suivante :</p>
@@ -2028,14 +2107,20 @@
 <h3 id="726-le-post-des-valeurs-saisies">7.2.6. Le POST des valeurs saisies</h3>
 <p>On a une difficulté ici avec les valeurs postées. On travaille avec deux cultures [fr-FR] et [en-US] qui écrivent différemment les nombres réels. Nous nous étions attaqués à cette difficulté lorsqu&#x27;il avait fallu dans le pararaphe <a href="validation-javascript-cote-client.html#refheading730632038707144">6.3</a>, page <a href="validation-javascript-cote-client.html#refheading730632038707144">190</a>, poster des réels dans deux cultures différentes. Nous allons reprendre ici des outils utilisés alors. Mais on a une difficulté supplémentaire : on n&#x27;a pas accès à la méthode qui opère le POST des valeurs saisies. C&#x27;est la raison pour laquelle, nous avons ajouté les attributs suivants à la balise du formulaire :</p>
 <ul>
-<li>[<span style="color: #7f007f">data-ajax-begin</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;beforeSend&quot;</span></em>] : la fonction jS à exécuter avant de faire le [submit] ;</li>
-<li>[<span style="color: #7f007f">data-ajax-complete</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;afterComplete&quot;</span></em>] : la fonction jS à exécuter lorsque la réponse a été reçue ;</li>
+  <li>[<span style="color: #7f007f">data-ajax-begin</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;beforeSend&quot;</span></i>] : la fonction jS à exécuter avant de faire le [submit] ;
+  </li>
+  <li>[<span style="color: #7f007f">data-ajax-complete</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;afterComplete&quot;</span></i>] : la fonction jS à exécuter lorsque la réponse a été reçue ;
+  </li>
 </ul>
+
 <p>Nous n&#x27;avons pas accès à la fonction jS qui va poster les valeurs saisies, mais nous pouvons écrire deux fonctions jS :</p>
 <ul>
-<li>[beforeSend] : une fonction jS exécutée avant le POST ;</li>
-<li>[afterComplete] : une fonction jS exécutée à réception de la réponse au POST ;</li>
+  <li>[beforeSend] : une fonction jS exécutée avant le POST ;
+  </li>
+  <li>[afterComplete] : une fonction jS exécutée à réception de la réponse au POST ;
+  </li>
 </ul>
+
 <p>Ces deux fonctions sont placées dans un fichier [local1.js] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000FE043BEE43.png" style="display:inline-block; margin:4px;width:3.979cm;height:4.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000FE043BEE43.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2067,8 +2152,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 22 : la fonction [checkCulture] est présentée un peu plus loin ;</li>
+  <li>ligne 22 : la fonction [checkCulture] est présentée un peu plus loin ;
+  </li>
 </ul>
+
 <p>La fonction jS [beforeSend] sera la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> beforeSend(jqXHR, settings) {</span></span>
@@ -2100,10 +2187,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-6 : on vérifie si la culture de la vue est [fr-FR]. Dans ce cas, il faut changer les valeurs postées. En effet, si l&#x27;utilisateur a saisi [1,6], il faut poster la valeur [1.6] sinon la valeur [1,6] sera refusée côté serveur. Il suffit pour cela de changer la virgule des valeurs postées en point décimal (lignes 18-21) ;</li>
-<li>on ne peut s&#x27;en tenir là. En effet, lorsque la fonction [beforeSend] est appelée, la chaîne des valeurs postées [a=val1&amp;b=valB] a déjà été construite. Il nous faut donc la modifier. Cela se fait à l&#x27;aide du second paramètre [settings] de la fonction ;</li>
-<li>ligne 7 : [settings.data] (<em>settings</em> est un paramètre de la fonction) représente la chaîne postée. On recrée cette chaîne avec l&#x27;expression [formulaire.serialize()]. Cette expression parcourt le formulaire à la recherche des valeurs à poster et construit la chaîne du POST. Elle va alors prendre les nouvelles valeurs de [a,b] avec des points décimaux ;</li>
+  <li>lignes 4-6 : on vérifie si la culture de la vue est [fr-FR]. Dans ce cas, il faut changer les valeurs postées. En effet, si l&#x27;utilisateur a saisi [1,6], il faut poster la valeur [1.6] sinon la valeur [1,6] sera refusée côté serveur. Il suffit pour cela de changer la virgule des valeurs postées en point décimal (lignes 18-21) ;
+  </li>
+  <li>on ne peut s&#x27;en tenir là. En effet, lorsque la fonction [beforeSend] est appelée, la chaîne des valeurs postées [a=val1&amp;b=valB] a déjà été construite. Il nous faut donc la modifier. Cela se fait à l&#x27;aide du second paramètre [settings] de la fonction ;
+  </li>
+  <li>ligne 7 : [settings.data] (<i>settings</i> est un paramètre de la fonction) représente la chaîne postée. On recrée cette chaîne avec l&#x27;expression [formulaire.serialize()]. Cette expression parcourt le formulaire à la recherche des valeurs à poster et construit la chaîne du POST. Elle va alors prendre les nouvelles valeurs de [a,b] avec des points décimaux ;
+  </li>
 </ul>
+
 <p>Si on ne fait rien de plus, le serveur va envoyer sa réponse qui va être correctement affichée. Seulement maintenant les valeurs de [a,b] sont avec le point décimal alors qu&#x27;on est toujours dans la culture [fr-FR]. Si donc l&#x27;utilisateur ne s&#x27;en aperçoit pas et reclique sur [Calculer], les validateurs lui répondent que les valeurs [a,b] sont invalides. Ce qui est juste. C&#x27;est là qu&#x27;intervient la fonction [afterComplete] exécutée à la réception du résultat :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> beforeSend(jqXHR, settings) {</span></span>
@@ -2135,30 +2226,40 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-12 : si la culture de la vue est [fr-FR], on remet les nombres [a,b] au format français.</li>
+  <li>lignes 9-12 : si la culture de la vue est [fr-FR], on remet les nombres [a,b] au format français.
+  </li>
 </ul>
+
 <p><a id="refheading95269463420399"></a></p>
 <h3 id="727-tests">7.2.7. Tests</h3>
 <p>Voici quelques copies d&#x27;écran de tests :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005300000030ECC07A3BF.png" style="display:inline-block; margin:4px;width:17.568cm;height:10.345cm;" class="odt-zoomable" data-zoom-src="images/10000000000005300000030ECC07A3BF.png" /></td></tr></table>
 
 <ul>
-<li>en [1], la réponse du serveur ;</li>
+  <li>en [1], la réponse du serveur ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053F000002DEB22C13BE.png" style="display:inline-block; margin:4px;width:17.768cm;height:9.71cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F000002DEB22C13BE.png" /></td></tr></table>
 
 <ul>
-<li>en [2], la réponse du serveur avec un message d&#x27;erreur ;</li>
+  <li>en [2], la réponse du serveur avec un message d&#x27;erreur ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000531000001CA72167C45.png" style="display:inline-block; margin:4px;width:17.582cm;height:6.059cm;" class="odt-zoomable" data-zoom-src="images/1000000000000531000001CA72167C45.png" /></td></tr></table>
 
 <ul>
-<li>en [3], on fixe une temporisation de 5 secondes. Cela veut dire que le serveur attendra 5 secondes avant d&#x27;envoyer sa réponse. Dans la balise [form], nous avons utilisé l&#x27;attribut [<em><span style="color: #2a00ff">data-ajax-loading=&#x27;#loading&#x27;</span></em>]. Le paramètre [loading] est l&#x27;identifiant d&#x27;une zone qui est :<ul>
-<li>affichée pendant toute la durée de l&#x27;attente ;</li>
-<li>cachée après réception de la réponse du serveur ;</li>
+  <li>en [3], on fixe une temporisation de 5 secondes. Cela veut dire que le serveur attendra 5 secondes avant d&#x27;envoyer sa réponse. Dans la balise [form], nous avons utilisé l&#x27;attribut [<i><span style="color: #2a00ff">data-ajax-loading=&#x27;#loading&#x27;</span></i>]. Le paramètre [loading] est l&#x27;identifiant d&#x27;une zone qui est :
+    <ul>
+      <li>affichée pendant toute la durée de l&#x27;attente ;
+      </li>
+      <li>cachée après réception de la réponse du serveur ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Ici [loading] est l&#x27;identifiant d&#x27;une image animée qu&#x27;on voit en [4].</p>
 <p><a id="refheading95271463420399"></a></p>
 <h3 id="728-desactivation-du-javascript-avec-la-culture-en-us">7.2.8. Désactivation du Javascript avec la culture [en-US]</h3>
@@ -2180,16 +2281,21 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : l&#x27;action [/ajax-02] peut donc désormais être appelé via un POST Ajax ou via un POST classique. Il nous faut savoir différencier ces deux cas. On le fait avec les entêtes HTTP envoyés par le navigateur client ;</li>
+  <li>ligne 4 : l&#x27;action [/ajax-02] peut donc désormais être appelé via un POST Ajax ou via un POST classique. Il nous faut savoir différencier ces deux cas. On le fait avec les entêtes HTTP envoyés par le navigateur client ;
+  </li>
 </ul>
+
 <p>Lorsqu&#x27;on regarde les échanges réseau dans la console de développement de Chrome (Ctrl-Maj-I) alors que le Javascript est activé, on voit que le client envoie les entêtes suivants au moment du POST :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028D000002851E47B1C1.png" style="display:inline-block; margin:4px;width:8.64cm;height:8.534cm;" class="odt-zoomable" data-zoom-src="images/100000000000028D000002851E47B1C1.png" /></td></tr></table>
 
 <p>On voit ci-dessus que :</p>
 <ul>
-<li>un entête [<span style="color: #222222">X-Requested-With</span>] a été envoyé [1] ;</li>
-<li>un paramètre [<span style="color: #222222">X-Requested-With</span>] a été ajouté aux valeurs postées [2] ;</li>
+  <li>un entête [<span style="color: #222222">X-Requested-With</span>] a été envoyé [1] ;
+  </li>
+  <li>un paramètre [<span style="color: #222222">X-Requested-With</span>] a été ajouté aux valeurs postées [2] ;
+  </li>
 </ul>
+
 <p>Ceci n&#x27;est pas fait dans le cas d&#x27;un POST classique. On a donc deux possibilités pour récupérer l&#x27;information : la récupérer dans les entêtes HTTP ou dans les valeurs postées. La ligne 4 de l&#x27;action [/ajax-02] a choisi la première solution.</p>
 <p>Continuons avec le code de cette action :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2219,9 +2325,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : le paramètre [<span style="color: #646464">@Valid</span><span style="color: #000000"> ActionModel01 </span><span style="color: #6a3e3e">formulaire</span>] actionne les validateurs côté serveur ;</li>
-<li>lignes 20-22 : si l&#x27;appel n&#x27;est pas un appel Ajax et que la validation a échoué, alors on renvoie la vue [vue-01.xml] avec les messages d&#x27;erreur.</li>
+  <li>ligne 2 : le paramètre [<span style="color: #646464">@Valid</span><span style="color: #000000"> ActionModel01 </span><span style="color: #6a3e3e">formulaire</span>] actionne les validateurs côté serveur ;
+  </li>
+  <li>lignes 20-22 : si l&#x27;appel n&#x27;est pas un appel Ajax et que la validation a échoué, alors on renvoie la vue [vue-01.xml] avec les messages d&#x27;erreur.
+  </li>
 </ul>
+
 <p>Voici un exemple :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E40000016DB70798C3.png" style="display:inline-block; margin:4px;width:8.641cm;height:6.47cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E40000016DB70798C3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E70000017E6BA9B1E4.png" style="display:inline-block; margin:4px;width:8.631cm;height:6.81cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E70000017E6BA9B1E4.png" /></td></tr></table>
 
@@ -2252,11 +2361,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : on génère une erreur aléatoire ;</li>
-<li>ligne 16 : dans le cas d&#x27;un appel Ajax, on retourne la vue [vue-03.xml] qui sera placée dans la zone identifiée par [resultats] ;</li>
-<li>ligne 18 : dans le cas d&#x27;un appel non Ajax, on met la vue à afficher dans le modèle de type [Resultats] ;</li>
-<li>ligne 19 : on rend de nouveau la vue [vue-01.xml] ;</li>
+  <li>ligne 14 : on génère une erreur aléatoire ;
+  </li>
+  <li>ligne 16 : dans le cas d&#x27;un appel Ajax, on retourne la vue [vue-03.xml] qui sera placée dans la zone identifiée par [resultats] ;
+  </li>
+  <li>ligne 18 : dans le cas d&#x27;un appel non Ajax, on met la vue à afficher dans le modèle de type [Resultats] ;
+  </li>
+  <li>ligne 19 : on rend de nouveau la vue [vue-01.xml] ;
+  </li>
 </ul>
+
 <p>La vue [vue-01.xml] est modifiée de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;resultats&quot;</span> <span style="color:#008080">/&gt;</span></span>
@@ -2265,8 +2379,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la vue [vue-03.xml] va être insérée sous la zone [resultats] ;</li>
+  <li>ligne 3 : la vue [vue-03.xml] va être insérée sous la zone [resultats] ;
+  </li>
 </ul>
+
 <p>Voici un exemple :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C00000029E96B1220E.png" style="display:inline-block; margin:4px;width:9.313cm;height:8.864cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C00000029E96B1220E.png" /></td></tr></table>
 
@@ -2301,9 +2417,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 7-17 : les résultats des quatre opération arithmétiques sont mises dans le modèle ;</li>
-<li>lignes 22-23 : on rend la vue [vue-01.xml] (ligne 22) en lui insérant la vue [vue-02.xml] (ligne 22) ;</li>
+  <li>lignes 7-17 : les résultats des quatre opération arithmétiques sont mises dans le modèle ;
+  </li>
+  <li>lignes 22-23 : on rend la vue [vue-01.xml] (ligne 22) en lui insérant la vue [vue-02.xml] (ligne 22) ;
+  </li>
 </ul>
+
 <p>Cette insertion de fait de la façon suivante dans [vue-01.xml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;resultats&quot;</span> <span style="color:#008080">/&gt;</span></span>
@@ -2312,8 +2431,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la vue [vue-02.xml] va être insérée sous la zone [resultats] ;</li>
+  <li>ligne 2 : la vue [vue-02.xml] va être insérée sous la zone [resultats] ;
+  </li>
 </ul>
+
 <p>Voici un exemple d&#x27;exécution :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DF000002392217B42F.png" style="display:inline-block; margin:4px;width:8.871cm;height:10.539cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DF000002392217B42F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2324,10 +2445,14 @@
 
 <p>Les valeurs saisies au format français ont été déclarées invalides. En effet, le serveur attend des réels au format anglo-saxon. La solution est assez complexe. Nous allons créer un filtre qui va :</p>
 <ul>
-<li>intercepter la requête ;</li>
-<li>changer les virgules dans les valeurs postées [a] et [b] en point décimal ;</li>
-<li>puis passer la nouvelle requête à l&#x27;action qui doit la traiter ;</li>
+  <li>intercepter la requête ;
+  </li>
+  <li>changer les virgules dans les valeurs postées [a] et [b] en point décimal ;
+  </li>
+  <li>puis passer la nouvelle requête à l&#x27;action qui doit la traiter ;
+  </li>
 </ul>
+
 <p>Tout d&#x27;abord, nous introduisons un champ caché dans la vue [vue-01.xml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form ...</span><span style="color:#008080">&gt;</span></span>
@@ -2339,8 +2464,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la culture [fr-FR] ou [en-US] est mise dans le champ d&#x27;attribut [name=culture]. Comme la balise [input] est dans le formulaire, sa valeur va être postée avec les valeurs de [a] et [b]. On aura alors une chaîne postée de la forme :</li>
+  <li>ligne 5 : la culture [fr-FR] ou [en-US] est mise dans le champ d&#x27;attribut [name=culture]. Comme la balise [input] est dans le formulaire, sa valeur va être postée avec les valeurs de [a] et [b]. On aura alors une chaîne postée de la forme :
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>culture=fr-FR&amp;a=12,7&amp;b=20,78
 </code></pre></div>
 <p>Il est important de comprendre ce point.</p>
@@ -2362,8 +2489,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : le fait que le bean [<span style="color: #000000">cultureFilter</span>] rende un type [Filter] fait de lui un filtre. Le bean, lui, peut porter un nom quelconque ;</li>
+  <li>ligne 7 : le fait que le bean [<span style="color: #000000">cultureFilter</span>] rende un type [Filter] fait de lui un filtre. Le bean, lui, peut porter un nom quelconque ;
+  </li>
 </ul>
+
 <p>L&#x27;étape suivante est de créer le filtre lui-même :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EC000000990AB4359E.png" style="display:inline-block; margin:4px;width:4.369cm;height:2.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EC000000990AB4359E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2391,15 +2520,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : nous étendons la classe [<span style="color: #000000">OncePerRequestFilter</span>] qui est une classe Spring et ce que nous devons faire est de rédéfinir la méthode [<span style="color: #000000">doFilterInternal</span>] de cette classe ;</li>
-<li>ligne 15 : la méthode [<span style="color: #000000">doFilterInternal</span>] reçoit trois informations :<ul>
-<li>[<span style="color: #000000">HttpServletRequest </span><span style="color: #6a3e3e">request</span>] : la requête à filtrer. Celle-ci ne peut être modifiée,</li>
-<li>[<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">response</span>] : la réponse qui sera faite au serveur. Le filtre peut décider de la faire lui-même,</li>
-<li>[<span style="color: #000000">FilterChain </span><span style="color: #6a3e3e">filterChain</span>] : la chaîne des filtres. Une fois que la méthode [<span style="color: #000000">doFilterInternal</span>] a fini son travail, elle doit passer la requête au filtre suivant de la chaîne des filtres ;</li>
+  <li>ligne 12 : nous étendons la classe [<span style="color: #000000">OncePerRequestFilter</span>] qui est une classe Spring et ce que nous devons faire est de rédéfinir la méthode [<span style="color: #000000">doFilterInternal</span>] de cette classe ;
+  </li>
+  <li>ligne 15 : la méthode [<span style="color: #000000">doFilterInternal</span>] reçoit trois informations :
+    <ul>
+      <li>[<span style="color: #000000">HttpServletRequest </span><span style="color: #6a3e3e">request</span>] : la requête à filtrer. Celle-ci ne peut être modifiée,
+      </li>
+      <li>[<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">response</span>] : la réponse qui sera faite au serveur. Le filtre peut décider de la faire lui-même,
+      </li>
+      <li>[<span style="color: #000000">FilterChain </span><span style="color: #6a3e3e">filterChain</span>] : la chaîne des filtres. Une fois que la méthode [<span style="color: #000000">doFilterInternal</span>] a fini son travail, elle doit passer la requête au filtre suivant de la chaîne des filtres ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 18 : on crée une nouvelle requête à partir de celle qu&#x27;on a reçue [<b><span style="color: #7f0055">new</span></b><span style="color: #000000"> CultureRequestWrapper(</span><span style="color: #6a3e3e">request</span><span style="color: #000000">)</span>] et on la passe au filtre suivant. Parce qu&#x27;on ne peut modifier la requête initiale [<span style="color: #000000">HttpServletRequest </span><span style="color: #6a3e3e">request</span>], on en crée une nouvelle ;
+  </li>
 </ul>
-</li>
-<li>ligne 18 : on crée une nouvelle requête à partir de celle qu&#x27;on a reçue [<strong><span style="color: #7f0055">new</span></strong><span style="color: #000000"> CultureRequestWrapper(</span><span style="color: #6a3e3e">request</span><span style="color: #000000">)</span>] et on la passe au filtre suivant. Parce qu&#x27;on ne peut modifier la requête initiale [<span style="color: #000000">HttpServletRequest </span><span style="color: #6a3e3e">request</span>], on en crée une nouvelle ;</li>
-</ul>
+
 <p>La classe [<span style="color: #000000">CultureRequestWrapper</span>] est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EC00000099FA3D6DE8.png" style="display:inline-block; margin:4px;width:4.369cm;height:2.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EC00000099FA3D6DE8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2432,20 +2568,30 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe [<span style="color: #000000">CultureRequestWrapper</span>] étend la classe [<span style="color: #000000">HttpServletRequestWrapper</span>] et va redéfinir certaines de ces méthodes ;</li>
-<li>lignes 8-10 : le constructeur qui reçoit la requête à filtrer et la passe à la classe parent ;</li>
-<li>il faut comprendre ici que la requête filtrée va au final aboutir comme paramètre d&#x27;entrée d&#x27;une classe appelée une servlet. Avec Spring MVC, cette servlet est de type [DispatcherServlet]. Cette classe dispose de diverses méthodes pour récupérer les paramètres de la requête : [getParameter, getParameterMap, getParameterNames, getParameterValues, ...]. Il faut redéfinir la méthode utilisée par la servlet. Il faudrait lire pour cela le code de la classe [DispatcherServlet]. Je ne l&#x27;ai pas fait et j&#x27;ai redéfini diverses méthodes. C&#x27;est finalement la méthode [<span style="color: #000000">getParameterValues</span>] qui a été redéfinie ;</li>
-<li>ligne 13 : la méthode [<span style="color: #000000">getParameterValues</span>] reçoit en paramètre, le nom d&#x27;un des paramètres rendus par la méthode [getParameterNames] et doit rendre le tableau de ses valeurs. En effet, on sait qu&#x27;un paramètre peut être présent en plusieurs exemplaires dans une requête ;</li>
-<li>ligne 18 : on remplace la virgule par un point décimal ;</li>
+  <li>ligne 6 : la classe [<span style="color: #000000">CultureRequestWrapper</span>] étend la classe [<span style="color: #000000">HttpServletRequestWrapper</span>] et va redéfinir certaines de ces méthodes ;
+  </li>
+  <li>lignes 8-10 : le constructeur qui reçoit la requête à filtrer et la passe à la classe parent ;
+  </li>
+  <li>il faut comprendre ici que la requête filtrée va au final aboutir comme paramètre d&#x27;entrée d&#x27;une classe appelée une servlet. Avec Spring MVC, cette servlet est de type [DispatcherServlet]. Cette classe dispose de diverses méthodes pour récupérer les paramètres de la requête : [getParameter, getParameterMap, getParameterNames, getParameterValues, ...]. Il faut redéfinir la méthode utilisée par la servlet. Il faudrait lire pour cela le code de la classe [DispatcherServlet]. Je ne l&#x27;ai pas fait et j&#x27;ai redéfini diverses méthodes. C&#x27;est finalement la méthode [<span style="color: #000000">getParameterValues</span>] qui a été redéfinie ;
+  </li>
+  <li>ligne 13 : la méthode [<span style="color: #000000">getParameterValues</span>] reçoit en paramètre, le nom d&#x27;un des paramètres rendus par la méthode [getParameterNames] et doit rendre le tableau de ses valeurs. En effet, on sait qu&#x27;un paramètre peut être présent en plusieurs exemplaires dans une requête ;
+  </li>
+  <li>ligne 18 : on remplace la virgule par un point décimal ;
+  </li>
 </ul>
+
 <p>Voici un exemple d&#x27;exécution :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000002BA7D6BA946.png" style="display:inline-block; margin:4px;width:17.662cm;height:9.234cm;" class="odt-zoomable" data-zoom-src="images/1000000000000537000002BA7D6BA946.png" /></td></tr></table>
 
 <ul>
-<li>en [1], les valeurs [a,b] sont saisies au format français ;</li>
-<li>en [2], les résultats ;</li>
-<li>en [3], le serveur a renvoyé une page avec des nombres au format anglo-saxon.</li>
+  <li>en [1], les valeurs [a,b] sont saisies au format français ;
+  </li>
+  <li>en [2], les résultats ;
+  </li>
+  <li>en [3], le serveur a renvoyé une page avec des nombres au format anglo-saxon.
+  </li>
 </ul>
+
 <p>Ce dernier problème peut-être résolu avec Thymeleaf de la façon suivante dans la vue [vue-01.xml]</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2460,16 +2606,22 @@
 
 <p>Il y a plusieurs modification à faire lignes 3 et 6. Nous allons raisonner sur la ligne 3 :</p>
 <ul>
-<li>on avait écrit [th:field=&quot;*{a}&quot;]. Le paramètre [th:field] fixe les attributs [id, name, value] de la balise HTML [input] générée. Ici, on veut gérer l&#x27;attribut [value] nous-mêmes. On fixe donc aussi les attributs [id, name] nous-mêmes ;</li>
-<li>l&#x27;attribut [th:value] évalue une expression utilisant l&#x27;opérateur ternaire ?. On teste l&#x27;expression [<em><span style="color: #2a00ff">${resultats.culture}==&#x27;fr-FR&#x27; and ${actionModel01.b}!=null</span></em>]. Si elle est vraie on donne à l&#x27;attribut [value] la valeur de a [<em><span style="color: #2a00ff">actionModel01.a</span></em>] où le point décimal est remplacé par la virgule. Si elle est fausse, on donne à l&#x27;attribut [value] la valeur de a [<em><span style="color: #2a00ff">actionModel01.a</span></em>] sans modifications ;</li>
-<li>ligne 6 : on refait la même chose pour le champ [b] ;</li>
+  <li>on avait écrit [th:field=&quot;*{a}&quot;]. Le paramètre [th:field] fixe les attributs [id, name, value] de la balise HTML [input] générée. Ici, on veut gérer l&#x27;attribut [value] nous-mêmes. On fixe donc aussi les attributs [id, name] nous-mêmes ;
+  </li>
+  <li>l&#x27;attribut [th:value] évalue une expression utilisant l&#x27;opérateur ternaire ?. On teste l&#x27;expression [<i><span style="color: #2a00ff">${resultats.culture}==&#x27;fr-FR&#x27; and ${actionModel01.b}!=null</span></i>]. Si elle est vraie on donne à l&#x27;attribut [value] la valeur de a [<i><span style="color: #2a00ff">actionModel01.a</span></i>] où le point décimal est remplacé par la virgule. Si elle est fausse, on donne à l&#x27;attribut [value] la valeur de a [<i><span style="color: #2a00ff">actionModel01.a</span></i>] sans modifications ;
+  </li>
+  <li>ligne 6 : on refait la même chose pour le champ [b] ;
+  </li>
 </ul>
+
 <p>Voici un exemple d&#x27;exécution :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000532000002C32D5BCA44.png" style="display:inline-block; margin:4px;width:17.595cm;height:9.354cm;" class="odt-zoomable" data-zoom-src="images/1000000000000532000002C32D5BCA44.png" /></td></tr></table>
 
 <ul>
-<li>en [1], les nombres [a,b] ont gardé la notation française. Ce n&#x27;est pas le cas en [2] ;</li>
+  <li>en [1], les nombres [a,b] ont gardé la notation française. Ce n&#x27;est pas le cas en [2] ;
+  </li>
 </ul>
+
 <p>Ce nouveau problème se gère de la même façon que le précédent. On modifie la vue [vue-03.xml] de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">HTML&gt;</span></span>
@@ -2560,21 +2712,36 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 2-5 : rappelons que ces éléments ont été initialisés par la fonction [<span style="color: #000000">$(document).ready</span>] ;</li>
-<li>lignes 9-12 : on exécute les validateurs jS du formulaire. Si l&#x27;une des valeurs est invalide, l&#x27;expression [<span style="color: #000000">formulaire.validate().form()</span>] rend la valeur <em>false</em>. Dans ce cas, le [submit] du formulaire est annulé ;</li>
-<li>lignes 18-38 : on fait un appel Ajax à la main ;</li>
-<li>ligne 19 : l&#x27;URL cible de l&#x27;appel Ajax ;</li>
-<li>lignes 20-22 : un tableau d&#x27;entêtes HTTP à ajouter à ceux présents par défaut dans la requête HTTP. Ici, on ajoute l&#x27;entête HTTP qui va indiquer au serveur qu&#x27;on fait un appel Ajax ;</li>
-<li>ligne 23 : la méthode HTTP utilisée ;</li>
-<li>ligne 24 : les données postées. [formulaire.serialize] crée la chaîne à poster [culture=fr-FR&amp;a=12,7&amp;b=20,89] du formulaire d&#x27;<strong>id</strong> [formulaire]. On va retrouver ici le problème étudié précédemment : il faut que les valeurs [a,b] soient postées au format anglo-saxon. On sait que ce problème a été désormais réglé avec la création du filtre [cultureFilter] ;</li>
-<li>ligne 25 : le type de données attendu en retour. On sait que le serveur va renvoyer un flux HTML ;</li>
-<li>ligne 26 : la méthode à exécuter lorsque la requête démarre. Ici, on indique qu&#x27;il faut afficher le composant d&#x27;<strong>id</strong> [loading]. C&#x27;est l&#x27;image animée d&#x27;attente ;</li>
-<li>ligne 29 : la méthode à exécuter en cas de succès de la requête Ajax. Le paramètre [data] est la réponse complète du serveur. On sait que c&#x27;est un flux HTML ;</li>
-<li>ligne 30: on met à jour le composant d&#x27;<strong>id</strong> [résultats] avec le HTML du paramètre [data].</li>
-<li>ligne 33 : on cache le signal d&#x27;attente ;</li>
-<li>ligne 35 : fonction exécutée lorsque la réponse du serveur a été reçue, quelle que soit celle-ci, succès ou erreur ;</li>
-<li>lignes 35-37 : en cas d&#x27;erreur (le serveur a renvoyé une réponse HTTP avec un statut indiquant qu&#x27;il y a eu erreur côté serveur), on affiche la réponse HTML du serveur dans la zone [resultats] ;</li>
+  <li>lignes 2-5 : rappelons que ces éléments ont été initialisés par la fonction [<span style="color: #000000">$(document).ready</span>] ;
+  </li>
+  <li>lignes 9-12 : on exécute les validateurs jS du formulaire. Si l&#x27;une des valeurs est invalide, l&#x27;expression [<span style="color: #000000">formulaire.validate().form()</span>] rend la valeur <i>false</i>. Dans ce cas, le [submit] du formulaire est annulé ;
+  </li>
+  <li>lignes 18-38 : on fait un appel Ajax à la main ;
+  </li>
+  <li>ligne 19 : l&#x27;URL cible de l&#x27;appel Ajax ;
+  </li>
+  <li>lignes 20-22 : un tableau d&#x27;entêtes HTTP à ajouter à ceux présents par défaut dans la requête HTTP. Ici, on ajoute l&#x27;entête HTTP qui va indiquer au serveur qu&#x27;on fait un appel Ajax ;
+  </li>
+  <li>ligne 23 : la méthode HTTP utilisée ;
+  </li>
+  <li>ligne 24 : les données postées. [formulaire.serialize] crée la chaîne à poster [culture=fr-FR&amp;a=12,7&amp;b=20,89] du formulaire d&#x27;<b>id</b> [formulaire]. On va retrouver ici le problème étudié précédemment : il faut que les valeurs [a,b] soient postées au format anglo-saxon. On sait que ce problème a été désormais réglé avec la création du filtre [cultureFilter] ;
+  </li>
+  <li>ligne 25 : le type de données attendu en retour. On sait que le serveur va renvoyer un flux HTML ;
+  </li>
+  <li>ligne 26 : la méthode à exécuter lorsque la requête démarre. Ici, on indique qu&#x27;il faut afficher le composant d&#x27;<b>id</b> [loading]. C&#x27;est l&#x27;image animée d&#x27;attente ;
+  </li>
+  <li>ligne 29 : la méthode à exécuter en cas de succès de la requête Ajax. Le paramètre [data] est la réponse complète du serveur. On sait que c&#x27;est un flux HTML ;
+  </li>
+  <li>ligne 30: on met à jour le composant d&#x27;<b>id</b> [résultats] avec le HTML du paramètre [data].
+  </li>
+  <li>ligne 33 : on cache le signal d&#x27;attente ;
+  </li>
+  <li>ligne 35 : fonction exécutée lorsque la réponse du serveur a été reçue, quelle que soit celle-ci, succès ou erreur ;
+  </li>
+  <li>lignes 35-37 : en cas d&#x27;erreur (le serveur a renvoyé une réponse HTTP avec un statut indiquant qu&#x27;il y a eu erreur côté serveur), on affiche la réponse HTML du serveur dans la zone [resultats] ;
+  </li>
 </ul>
+
 <p>Voici un exemple d&#x27;exécution :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000203000001526EF59D22.png" style="display:inline-block; margin:4px;width:8.641cm;height:5.671cm;" class="odt-zoomable" data-zoom-src="images/1000000000000203000001526EF59D22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001F8000002247CBCB08E.png" style="display:inline-block; margin:4px;width:8.4cm;height:9.13cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F8000002247CBCB08E.png" /></td></tr></table>
 
@@ -2661,13 +2828,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : le Javascript de la vue est désormais dans le fichier [local4.js] ;</li>
-<li>ligne 16 : la balise [form] n&#x27;a plus les paramètres [data-ajax-attr] de la bibliothèque [Unobtrusive Ajax]. Nous n&#x27;allons pas l&#x27;utiliser ici. La balise [form] n&#x27;a pas non plus les attributs [method] et [action] qui indiquent comment et où poster les valeurs saisies dans le formulaire. Ceci parce que celui-ci va être posté par une fonction jS (ligne 20) ;</li>
-<li>lignes 26-57 : la zone d&#x27;id [resultats] qui auparavant était une zone vide contient désormais du code HTML pour afficher les résultats ;</li>
-<li>lignes 26-34 : l&#x27;entête des résultat où l&#x27;heure de calcul est affichée ;</li>
-<li>lignes 35-52 : les résultats des quatre opérations arithmétiques ;</li>
-<li>lignes 53-57 : un éventuel message d&#x27;erreur envoyé par le serveur ;</li>
+  <li>ligne 5 : le Javascript de la vue est désormais dans le fichier [local4.js] ;
+  </li>
+  <li>ligne 16 : la balise [form] n&#x27;a plus les paramètres [data-ajax-attr] de la bibliothèque [Unobtrusive Ajax]. Nous n&#x27;allons pas l&#x27;utiliser ici. La balise [form] n&#x27;a pas non plus les attributs [method] et [action] qui indiquent comment et où poster les valeurs saisies dans le formulaire. Ceci parce que celui-ci va être posté par une fonction jS (ligne 20) ;
+  </li>
+  <li>lignes 26-57 : la zone d&#x27;id [resultats] qui auparavant était une zone vide contient désormais du code HTML pour afficher les résultats ;
+  </li>
+  <li>lignes 26-34 : l&#x27;entête des résultat où l&#x27;heure de calcul est affichée ;
+  </li>
+  <li>lignes 35-52 : les résultats des quatre opérations arithmétiques ;
+  </li>
+  <li>lignes 53-57 : un éventuel message d&#x27;erreur envoyé par le serveur ;
+  </li>
 </ul>
+
 <p>Le code jS exécuté au chargement de la vue [vue-04.xm] est dans le fichier [local4.js]. C&#x27;est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// données globales</span>
@@ -2705,12 +2879,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 17-27 : on récupère les références jQuery de tous les éléments de la page ;</li>
-<li>ligne 29 : la zone des résultats est cachée ;</li>
-<li>ligne 30 : ainsi que la zone de l&#x27;erreur ;</li>
-<li>ligne 31 : ainsi que l&#x27;image animée d&#x27;attente ;</li>
-<li>lignes 2-12 : les références récupérées sont faites globales afin que les autres fonctions puissent en disposer ;</li>
+  <li>lignes 17-27 : on récupère les références jQuery de tous les éléments de la page ;
+  </li>
+  <li>ligne 29 : la zone des résultats est cachée ;
+  </li>
+  <li>ligne 30 : ainsi que la zone de l&#x27;erreur ;
+  </li>
+  <li>ligne 31 : ainsi que l&#x27;image animée d&#x27;attente ;
+  </li>
+  <li>lignes 2-12 : les références récupérées sont faites globales afin que les autres fonctions puissent en disposer ;
+  </li>
 </ul>
+
 <p><a id="refheading976071573317777"></a></p>
 <h3 id="733-la-fonction-js-postform">7.3.3. La fonction jS [postForm]</h3>
 <p>Le lien [Calculer] est le suivant :</p>
@@ -2769,17 +2949,28 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 3-6 : avant de poster les valeurs saisies, on les vérifie. Si elles sont incorrectes, on ne fait pas le POST du formulaire ;</li>
-<li>ligne 9 : les valeurs saisies sont envoyées à l&#x27;action [/ajax-05] que nous détaillons un peu plus loin ;</li>
-<li>lignes 10-12 : un entête HTTP pour dire au serveur qu&#x27;on attend une réponse au format jSON ;</li>
-<li>ligne 13 : les valeurs saisies vont être postées ;</li>
-<li>ligne 14 : sérialisation des valeurs saisies en une chaîne prête à être postée [a=1,6&amp;b=2,4&amp;culture=fr-FR] ;</li>
-<li>ligne 15 : le type de la réponse envoyée par le serveur. Ce sera du jSON ;</li>
-<li>ligne 16 : la fonction à exécuter avant le POST ;</li>
-<li>ligne 17 : la fonction à exécuter à réception de la réponse du serveur si celle-ci est un succès. Le &#x27;succès&#x27; d&#x27;une requête HTTP est mesuré à l&#x27;aune du statut de la réponse HTTP du serveur. Une réponse [<span style="color: #222222">HTTP/1.1 200 OK</span> ] est une réponse de succès. Une réponse [<span style="color: #222222">HTTP/1.1 500 Internal Server Error</span>] est une réponse d&#x27;échec. Ce qu&#x27;on appelle le statut d&#x27;une réponse HTTP est le code [200] ou [500]. Un certain nombre de ces codes sont reliés au &#x27;succès&#x27; alors que d&#x27;autres codes sont reliés à &#x27;l&#x27;échec&#x27; ;</li>
-<li>ligne 18 : la fonction à exécuter à réception de la réponse du serveur lorsque le statut HTTP de cette de cette réponse est un statut d&#x27;échec ;</li>
-<li>ligne 18 : la fonction à exécuter en dernier lieu, après les fonctions [onSuccess, onError] précédentes ;</li>
+  <li>lignes 3-6 : avant de poster les valeurs saisies, on les vérifie. Si elles sont incorrectes, on ne fait pas le POST du formulaire ;
+  </li>
+  <li>ligne 9 : les valeurs saisies sont envoyées à l&#x27;action [/ajax-05] que nous détaillons un peu plus loin ;
+  </li>
+  <li>lignes 10-12 : un entête HTTP pour dire au serveur qu&#x27;on attend une réponse au format jSON ;
+  </li>
+  <li>ligne 13 : les valeurs saisies vont être postées ;
+  </li>
+  <li>ligne 14 : sérialisation des valeurs saisies en une chaîne prête à être postée [a=1,6&amp;b=2,4&amp;culture=fr-FR] ;
+  </li>
+  <li>ligne 15 : le type de la réponse envoyée par le serveur. Ce sera du jSON ;
+  </li>
+  <li>ligne 16 : la fonction à exécuter avant le POST ;
+  </li>
+  <li>ligne 17 : la fonction à exécuter à réception de la réponse du serveur si celle-ci est un succès. Le &#x27;succès&#x27; d&#x27;une requête HTTP est mesuré à l&#x27;aune du statut de la réponse HTTP du serveur. Une réponse [<span style="color: #222222">HTTP/1.1 200 OK</span> ] est une réponse de succès. Une réponse [<span style="color: #222222">HTTP/1.1 500 Internal Server Error</span>] est une réponse d&#x27;échec. Ce qu&#x27;on appelle le statut d&#x27;une réponse HTTP est le code [200] ou [500]. Un certain nombre de ces codes sont reliés au &#x27;succès&#x27; alors que d&#x27;autres codes sont reliés à &#x27;l&#x27;échec&#x27; ;
+  </li>
+  <li>ligne 18 : la fonction à exécuter à réception de la réponse du serveur lorsque le statut HTTP de cette de cette réponse est un statut d&#x27;échec ;
+  </li>
+  <li>ligne 18 : la fonction à exécuter en dernier lieu, après les fonctions [onSuccess, onError] précédentes ;
+  </li>
 </ul>
+
 <p>La fonction [onBegin] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// avant l&#x27;appel Ajax</span>
@@ -2812,10 +3003,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;attribut [ResponseBody] indique que l&#x27;action [/ajax-05] rend elle-même la réponse au client. Parce qu&#x27;une bibliothèque jSON est dans les dépendances du projet, Spring Boot autoconfigure ce type d&#x27;actions pour qu&#x27;elles rendent du jSON. C&#x27;est donc la chaîne jSON d&#x27;un type [<span style="color: #000000">JsonResults</span>] (ligne 4) qui va être envoyée au client ;</li>
-<li>ligne 2 : les valeurs postées [a, b, culture] vont être encapsulées dans un type [<span style="color: #000000">ActionModel01</span>] dont on demande la validation [<span style="color: #646464">@Valid</span><span style="color: #000000"> ActionModel01</span>]. C&#x27;est pour la forme. On est parti sur l&#x27;hypothèse que le Javascrit était activé sur le navigateur client et donc lorsqu&#x27;elles arrivent, les valeurs postées ont déjà été vérifiées côté client. Néanmoins, on peut prévoir le cas d&#x27;un POST sauvage qui n&#x27;utiliserait pas notre client jS. Dans ce cas, la validation peut échouer ;</li>
-<li>lignes 5-7 : en cas d&#x27;erreur, on rend un flux jSON vide ;</li>
+  <li>ligne 2 : l&#x27;attribut [ResponseBody] indique que l&#x27;action [/ajax-05] rend elle-même la réponse au client. Parce qu&#x27;une bibliothèque jSON est dans les dépendances du projet, Spring Boot autoconfigure ce type d&#x27;actions pour qu&#x27;elles rendent du jSON. C&#x27;est donc la chaîne jSON d&#x27;un type [<span style="color: #000000">JsonResults</span>] (ligne 4) qui va être envoyée au client ;
+  </li>
+  <li>ligne 2 : les valeurs postées [a, b, culture] vont être encapsulées dans un type [<span style="color: #000000">ActionModel01</span>] dont on demande la validation [<span style="color: #646464">@Valid</span><span style="color: #000000"> ActionModel01</span>]. C&#x27;est pour la forme. On est parti sur l&#x27;hypothèse que le Javascrit était activé sur le navigateur client et donc lorsqu&#x27;elles arrivent, les valeurs postées ont déjà été vérifiées côté client. Néanmoins, on peut prévoir le cas d&#x27;un POST sauvage qui n&#x27;utiliserait pas notre client jS. Dans ce cas, la validation peut échouer ;
+  </li>
+  <li>lignes 5-7 : en cas d&#x27;erreur, on rend un flux jSON vide ;
+  </li>
 </ul>
+
 <p>Continuons l&#x27;étude de l&#x27;action [/ajax-05] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-05&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">)</span></span>
@@ -2838,19 +3033,29 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : on récupère le contexte [ctx] de l&#x27;application Spring. On en a besoin pour récupérer les messages des fichiers [messages.properties] à partir d&#x27;une clé de message et d&#x27;une locale. Cela se fait avec la syntaxe suivante :</li>
+  <li>ligne 8 : on récupère le contexte [ctx] de l&#x27;application Spring. On en a besoin pour récupérer les messages des fichiers [messages.properties] à partir d&#x27;une clé de message et d&#x27;une locale. Cela se fait avec la syntaxe suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#6a3e3e">ctx</span><span style="color:#000000">.getMessage(</span><span style="color:#2a00ff">clé_message</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">tableau_de_paramètres</span><span style="color:#000000">, </span><span style="color:#6a3e3e">locale)</span></span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>- [**clé\_message**] : la clé du message recherché ;
-- [**locale**] : la locale utilisée. Ainsi si cette locale est [en\_US], c&amp;#x27;est le fichier [messages\_en.properties] qui sera exploité ;
-- [**tableau\_de\_paramètres**] : le message obtenu peut être paramétré tel que dans [clé=message {0} {1}]. Il y a dans ce message deux paramètres [{0} {1}]. Il faudra fournir comme second paramètre de [&lt;span style=&quot;color: #6a3e3e&quot;&gt;ctx&lt;/span&gt;&lt;span style=&quot;color: #000000&quot;&gt;.getMessage&lt;/span&gt;] un tableau de deux valeurs ;
-</code></pre></div>
+<ol>
+    <ul>
+      <li>[<b>clé_message</b>] : la clé du message recherché ;
+      </li>
+      <li>[<b>locale</b>] : la locale utilisée. Ainsi si cette locale est [en_US], c&#x27;est le fichier [messages_en.properties] qui sera exploité ;
+      </li>
+      <li>[<b>tableau_de_paramètres</b>] : le message obtenu peut être paramétré tel que dans [clé=message {0} {1}]. Il y a dans ce message deux paramètres [{0} {1}]. Il faudra fournir comme second paramètre de [<span style="color: #6a3e3e">ctx</span><span style="color: #000000">.getMessage</span>] un tableau de deux valeurs ;
+      </li>
+    </ul>
+</ol>
 <ul>
-<li>lignes 10-13 : s&#x27;il y a une temporisation dans la session, on arrête le thread courant le temps de celle-ci ;</li>
+  <li>lignes 10-13 : s&#x27;il y a une temporisation dans la session, on arrête le thread courant le temps de celle-ci ;
+  </li>
 </ul>
+
 <p>L&#x27;action [/ajax-05] se poursuit de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on prépare le modèle de la prochaine vue</span></span>
@@ -2860,8 +3065,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : création du modèle de la chaîne jSON envoyée au client ;</li>
+  <li>ligne 2 : création du modèle de la chaîne jSON envoyée au client ;
+  </li>
 </ul>
+
 <p>Le modèle [JsonResults] est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DD00000092B8BB3C8A.png" style="display:inline-block; margin:4px;width:4.09cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DD00000092B8BB3C8A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2887,8 +3094,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-13 : chacun des champs de la classe [JsonResult] correspond à un champ de même [id] dans la vue [vue-04.xml] :</li>
+  <li>lignes 6-13 : chacun des champs de la classe [JsonResult] correspond à un champ de même [id] dans la vue [vue-04.xml] :
+  </li>
 </ul>
+
 <p>L&#x27;action [/ajax-05] se poursuit de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on prépare le modèle de la prochaine vue</span></span>
@@ -2908,11 +3117,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : création du modèle de la chaîne jSON envoyée au client ;</li>
-<li>lignes 4-6 : on crée les messages de l&#x27;entête des résultats ;</li>
-<li>lignes 8-14 : une fois sur deux en moyenne, on génère un message d&#x27;erreur. Dans ce cas, on ne va pas plus loin et on rend la chaîne jSON au client (ligne 13) ;</li>
-<li>ligne 11 : on a ici un exemple de message paramétré :</li>
+  <li>ligne 2 : création du modèle de la chaîne jSON envoyée au client ;
+  </li>
+  <li>lignes 4-6 : on crée les messages de l&#x27;entête des résultats ;
+  </li>
+  <li>lignes 8-14 : une fois sur deux en moyenne, on génère un message d&#x27;erreur. Dans ce cas, on ne va pas plus loin et on rend la chaîne jSON au client (ligne 13) ;
+  </li>
+  <li>ligne 11 : on a ici un exemple de message paramétré :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">erreur.aleatoire=</span><span style="color:#2a00ff">erreur</span><span style="color:#000000"> </span><span style="color:#2a00ff">aléatoire</span></span>
 <span class="odt-code-line"><span style="color:#000000">resultats.erreur=</span><span style="color:#2a00ff">Une</span><span style="color:#000000"> </span><span style="color:#2a00ff">erreur</span><span style="color:#000000"> </span><span style="color:#2a00ff">s&#x27;&#x27;est</span><span style="color:#000000"> </span><span style="color:#2a00ff">produite</span><span style="color:#000000"> </span><span style="color:#2a00ff">:</span><span style="color:#000000"> </span><span style="color:#2a00ff">[</span><span style="font-weight:bold;color:#7f0055">{0}</span><span style="color:#2a00ff">]</span></span>
@@ -2937,36 +3151,53 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 2-3 : on récupère les valeurs de [a] et [b] ;</li>
-<li>lignes 5-12 : on construit les quatre résultats ;</li>
-<li>ligne 14 : la chaîne jSON [JsonResults] est envoyée au client ;</li>
+  <li>lignes 2-3 : on récupère les valeurs de [a] et [b] ;
+  </li>
+  <li>lignes 5-12 : on construit les quatre résultats ;
+  </li>
+  <li>ligne 14 : la chaîne jSON [JsonResults] est envoyée au client ;
+  </li>
 </ul>
+
 <p>Voyons ce que ça donne avec le client [Advanced Rest Client] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D60000027076F793E1.png" style="display:inline-block; margin:4px;width:16.378cm;height:8.255cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D60000027076F793E1.png" /></td></tr></table>
 
 <ul>
-<li>en [1-2], on fait une requête POST à l&#x27;action [/ajax-05] ;</li>
-<li>en [3], on poste des valeurs incorrectes ;</li>
-<li>en [4], le serveur a renvoyé un flux vide ;</li>
+  <li>en [1-2], on fait une requête POST à l&#x27;action [/ajax-05] ;
+  </li>
+  <li>en [3], on poste des valeurs incorrectes ;
+  </li>
+  <li>en [4], le serveur a renvoyé un flux vide ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F8000001DEFBFB4398.png" style="display:inline-block; margin:4px;width:16.828cm;height:6.324cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F8000001DEFBFB4398.png" /></td></tr></table>
 
 <ul>
-<li>en [1], on poste des valeurs correctes ;</li>
-<li>en [2], l&#x27;objet jSON renvoyé par le serveur, avec ici un message d&#x27;erreur ;</li>
+  <li>en [1], on poste des valeurs correctes ;
+  </li>
+  <li>en [2], l&#x27;objet jSON renvoyé par le serveur, avec ici un message d&#x27;erreur ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000497000001DDA1393BD0.png" style="display:inline-block; margin:4px;width:15.545cm;height:6.311cm;" class="odt-zoomable" data-zoom-src="images/1000000000000497000001DDA1393BD0.png" /></td></tr></table>
 
 <ul>
-<li>en [1], on poste des valeurs correctes ;</li>
-<li>en [2], l&#x27;objet jSON renvoyé par le serveur, avec ici les quatre résultats ;</li>
+  <li>en [1], on poste des valeurs correctes ;
+  </li>
+  <li>en [2], l&#x27;objet jSON renvoyé par le serveur, avec ici les quatre résultats ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051B000001E04531D99C.png" style="display:inline-block; margin:4px;width:17.291cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/100000000000051B000001E04531D99C.png" /></td></tr></table>
 
 <ul>
-<li>en [1], on poste des valeurs correctes ;</li>
-<li>en [2], on s&#x27;est arranagé pour provoquer une exception côté serveur. On voit que le serveur envoie encore un objet jSON. Dans ce message, on voit que le statut HTTP de la réponse est [500], indiquant qu&#x27;il y a eu une erreur côté serveur ;</li>
+  <li>en [1], on poste des valeurs correctes ;
+  </li>
+  <li>en [2], on s&#x27;est arranagé pour provoquer une exception côté serveur. On voit que le serveur envoie encore un objet jSON. Dans ce message, on voit que le statut HTTP de la réponse est [500], indiquant qu&#x27;il y a eu une erreur côté serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading976111573317777"></a></p>
 <h3 id="735-la-fonction-js-postform-2">7.3.5. La fonction jS [postForm] - 2</h3>
 <p>Maintenant que nous connaissons l&#x27;objet jSON renvoyé par le serveur, on peut l&#x27;exploiter dans le javascript. La méthode [onSuccess] exécutée lorsque le serveur envoie une réponse avec le statut HTTP [200] est la suivante :</p>
@@ -2996,8 +3227,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : le paramètre [data] est l&#x27;objet jSON renvoyé par le serveur :</li>
+  <li>ligne 3 : le paramètre [data] est l&#x27;objet jSON renvoyé par le serveur :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000001175C809B31.png" style="display:inline-block; margin:4px;width:5.96cm;height:5.159cm;" class="odt-zoomable" data-zoom-src="images/1000000000000142000001175C809B31.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La méthode [onError] exécutée lorsque le statut de la réponse HTTP est [500] est la suivante :</p>
@@ -3013,14 +3246,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : l&#x27;objet JQuery [</span><strong><span style="color: #000000">jqXHR</span></strong><span style="color: #000000">] a parmi ses propriétés les suivantes :</span><ul>
-<li><span style="color: #000000"><strong>responseText</strong> : le texte de la réponse du serveur,</span></li>
-<li><span style="color: #000000"><strong>status</strong> : le code d&#x27;erreur retourné par le serveur,</span></li>
-<li><span style="color: #000000"><strong>statusText</strong> : le texte associé à ce code d&#x27;erreur ;</span></li>
+  <li><span style="color: #000000">ligne 3 : l&#x27;objet JQuery [</span><b><span style="color: #000000">jqXHR</span></b><span style="color: #000000">] a parmi ses propriétés les suivantes :</span>
+    <ul>
+      <li><span style="color: #000000"><b>responseText</b> : le texte de la réponse du serveur,</span>
+      </li>
+      <li><span style="color: #000000"><b>status</b> : le code d&#x27;erreur retourné par le serveur,</span>
+      </li>
+      <li><span style="color: #000000"><b>statusText</b> : le texte associé à ce code d&#x27;erreur ;</span>
+      </li>
+    </ul>
+  </li>
+  <li>ligne 6 : l&#x27;objet [jqXHR.responseText] est l&#x27;objet jSON suivant :
+  </li>
 </ul>
-</li>
-<li>ligne 6 : l&#x27;objet [jqXHR.responseText] est l&#x27;objet jSON suivant :</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025E000000E8C689BC23.png" style="display:inline-block; margin:4px;width:11.22cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/100000000000025E000000E8C689BC23.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading976131573317777"></a></p>
@@ -3038,21 +3277,30 @@
 <h3 id="741-introduction">7.4.1. Introduction</h3>
 <p><span style="color: #000000"><a id="refheading58194676630786"></a>La technologie Ajax permet de construire des applications à <strong>page unique</strong> :</span></p>
 <ul>
-<li><span style="color: #000000">la première page est issue d&#x27;une requête classique d&#x27;un navigateur ;</span></li>
-<li><span style="color: #000000">les pages suivantes sont obtenues avec des appels Ajax. Aussi, au final le navigateur ne change jamais d&#x27;URL et ne charge jamais de nouvelle page. On appelle ce type d&#x27;application, <strong>Application à Page Unique</strong> (APU) ou en anglais <strong>Single Page Application</strong> (SPA).</span></li>
+  <li><span style="color: #000000">la première page est issue d&#x27;une requête classique d&#x27;un navigateur ;</span>
+  </li>
+  <li><span style="color: #000000">les pages suivantes sont obtenues avec des appels Ajax. Aussi, au final le navigateur ne change jamais d&#x27;URL et ne charge jamais de nouvelle page. On appelle ce type d&#x27;application, <b>Application à Page Unique</b> (APU) ou en anglais <b>Single Page Application</b> (SPA).</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple basique d&#x27;une telle application. La nouvelle application aura deux vues :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000539000001441410EB4A.png" style="display:inline-block; margin:4px;width:17.688cm;height:4.286cm;" class="odt-zoomable" data-zoom-src="images/1000000000000539000001441410EB4A.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CE0000014550FCF780.png" style="display:inline-block; margin:4px;width:9.499cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CE0000014550FCF780.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], l&#x27;action [/ajax-06] nous permet d&#x27;avoir la première page, la <strong>page 1</strong> ;</span></li>
-<li><span style="color: #000000">en [2], un lien nous permet de passer à la <strong>page 2</strong> grâce à un appel Ajax ;</span></li>
-<li><span style="color: #000000">en [3], l&#x27;URL n&#x27;a pas changé. La page présentée est la <strong>page 2</strong> ;</span></li>
-<li><span style="color: #000000">en [4], un lien nous permet de revenir à la <strong>page 1</strong> grâce à un appel Ajax ;</span></li>
-<li><span style="color: #000000">en [5], l&#x27;URL n&#x27;a pas changé. La page présentée est la <strong>page 1</strong>.</span></li>
+  <li><span style="color: #000000">en [1], l&#x27;action [/ajax-06] nous permet d&#x27;avoir la première page, la <b>page 1</b> ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], un lien nous permet de passer à la <b>page 2</b> grâce à un appel Ajax ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], l&#x27;URL n&#x27;a pas changé. La page présentée est la <b>page 2</b> ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], un lien nous permet de revenir à la <b>page 1</b> grâce à un appel Ajax ;</span>
+  </li>
+  <li><span style="color: #000000">en [5], l&#x27;URL n&#x27;a pas changé. La page présentée est la <b>page 1</b>.</span>
+  </li>
 </ul>
+
 <p><a id="refheading976171573317777"></a></p>
 <h3 id="742-laction-ajax-06">7.4.2. L&#x27;action [/ajax-06]</h3>
 <p><span style="color: #000000">Le code de l&#x27;action [/ajax-06] est le suivant :</span></p>
@@ -3064,8 +3312,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 1-4 : l&#x27;action [/ajax-06] se contente de rendre la vue [vue-06.xml] ;</span></li>
+  <li><span style="color: #000000">lignes 1-4 : l&#x27;action [/ajax-06] se contente de rendre la vue [vue-06.xml] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading976191573317777"></a></p>
 <h3 id="743-la-vue-vue-06xml">7.4.3. La vue [vue-06.xml]</h3>
 <p><span style="color: #000000">La vue [vue-06.xml] est la suivante :</span></p>
@@ -3087,9 +3337,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : la vue utilise un script [local6.js] ;</span></li>
-<li><span style="color: #000000">ligne 12 : on inclut la vue [vue-07.xml] dans la zone d&#x27;id [content] de la vue [vue-06.xml] ;</span></li>
+  <li><span style="color: #000000">ligne 8 : la vue utilise un script [local6.js] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : on inclut la vue [vue-07.xml] dans la zone d&#x27;id [content] de la vue [vue-06.xml] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading976211573317777"></a></p>
 <h3 id="744-la-vue-vue-07xml">7.4.4. La vue [vue-07.xml]</h3>
 <p><span style="color: #000000">La vue [vue-07.xml] est la suivante :</span></p>
@@ -3141,15 +3394,24 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 28 : au chargement de la page, on mémorise la zone d&#x27;id [content] et on en fait une variable globale (ligne 2) ;</span></li>
-<li><span style="color: #000000">ligne 4 : la fonction [gotoPage] reçoit comme paramètre le n° de la page (1 ou 2) à afficher dans la vue actuelle ;</span></li>
-<li><span style="color: #000000">ligne 7 : l&#x27;URL cible du POST ;</span></li>
-<li><span style="color: #000000">ligne 8 : l&#x27;URL de la ligne 7 est demandée via un POST ;</span></li>
-<li><span style="color: #000000">ligne 9 : la chaîne postée. C&#x27;est un paramètre nommé [num] qui est posté. Sa valeur est le n° de page (ligne 4) à afficher dans la vue actuelle ;</span></li>
-<li><span style="color: #000000">ligne 10 : le serveur va renvoyer du HTML, celui de la page à afficher ;</span></li>
-<li><span style="color: #000000">lignes 13-15 : en cas de succès (statut HTTP égal à 200), le HTML envoyé par le serveur est mis dans la zone d&#x27;id [content] ;</span></li>
-<li><span style="color: #000000">lignes 18-20 : en cas d&#x27;échec (statut HTTP égal à 500), le HTML envoyé par le serveur est mis dans la zone d&#x27;id [content] ;</span></li>
+  <li><span style="color: #000000">ligne 28 : au chargement de la page, on mémorise la zone d&#x27;id [content] et on en fait une variable globale (ligne 2) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : la fonction [gotoPage] reçoit comme paramètre le n° de la page (1 ou 2) à afficher dans la vue actuelle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : l&#x27;URL cible du POST ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : l&#x27;URL de la ligne 7 est demandée via un POST ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : la chaîne postée. C&#x27;est un paramètre nommé [num] qui est posté. Sa valeur est le n° de page (ligne 4) à afficher dans la vue actuelle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : le serveur va renvoyer du HTML, celui de la page à afficher ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-15 : en cas de succès (statut HTTP égal à 200), le HTML envoyé par le serveur est mis dans la zone d&#x27;id [content] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 18-20 : en cas d&#x27;échec (statut HTTP égal à 500), le HTML envoyé par le serveur est mis dans la zone d&#x27;id [content] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading976251573317777"></a></p>
 <h3 id="746-laction-ajax-07">7.4.6. L&#x27;action [/ajax-07]</h3>
 <p><span style="color: #000000">Le code de l&#x27;action [/ajax-07] est le suivant :</span></p>
@@ -3169,11 +3431,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : on récupère le paramètre posté qui s&#x27;appelle [num]. On rappelle que le paramètre ligne 2 doit porter le nom du paramètre posté, ici [num]. [num] est un n° de page ou de vue ;</li>
-<li>lignes 5-6 : dans le cas où [num==1], on renvoie la vue [vue-07.xml] ;</li>
-<li>lignes 7-8 : dans le cas où [num==2], on renvoie la vue [vue-08.xml] ;</li>
-<li>lignes 9-10 : dans les autres cas, (impossible normalement), on renvoie la vue [vue-07.xml] ;</li>
+  <li>ligne 2 : on récupère le paramètre posté qui s&#x27;appelle [num]. On rappelle que le paramètre ligne 2 doit porter le nom du paramètre posté, ici [num]. [num] est un n° de page ou de vue ;
+  </li>
+  <li>lignes 5-6 : dans le cas où [num==1], on renvoie la vue [vue-07.xml] ;
+  </li>
+  <li>lignes 7-8 : dans le cas où [num==2], on renvoie la vue [vue-08.xml] ;
+  </li>
+  <li>lignes 9-10 : dans les autres cas, (impossible normalement), on renvoie la vue [vue-07.xml] ;
+  </li>
 </ul>
+
 <p><a id="refheading976271573317777"></a></p>
 <h3 id="747-la-vue-vue-08xml">7.4.7. La vue [vue-08.xml]</h3>
 <p><span style="color: #000000">La vue [vue-08.xml] forme la page n° 2 de l&#x27;application :</span></p>
@@ -3198,16 +3465,22 @@
 
 <p>La page [1] a quatre zones :</p>
 <ul>
-<li>[Zone 1, Zone 3] sont des zones qui apparaissent / disparaissent sur un clic sur le bouton [Rafraîchir]. On compte le nombre d&#x27;apparitions de chacune de ces deux zones [2]. La zone [Zone 1] utilise la langue française alors que la zone [Zone 3] utilise la langue anglaise ;</li>
-<li>la zone [Zone 2] est présente en permanence ;</li>
-<li>la zone [Saisies] est présente en permanence ;</li>
+  <li>[Zone 1, Zone 3] sont des zones qui apparaissent / disparaissent sur un clic sur le bouton [Rafraîchir]. On compte le nombre d&#x27;apparitions de chacune de ces deux zones [2]. La zone [Zone 1] utilise la langue française alors que la zone [Zone 3] utilise la langue anglaise ;
+  </li>
+  <li>la zone [Zone 2] est présente en permanence ;
+  </li>
+  <li>la zone [Saisies] est présente en permanence ;
+  </li>
 </ul>
+
 <p>Le lien [Valider] affiche la page suivante [3] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005400000037BED1C11E2.png" style="display:inline-block; margin:4px;width:17.78cm;height:11.788cm;" class="odt-zoomable" data-zoom-src="images/10000000000005400000037BED1C11E2.png" /></td></tr></table>
 
 <ul>
-<li>le lien [Retour à la page 1] ramène la page n° 1 dans l&#x27;état où elle était [4] ;</li>
+  <li>le lien [Retour à la page 1] ramène la page n° 1 dans l&#x27;état où elle était [4] ;
+  </li>
 </ul>
+
 <p>L&#x27;application est à page unique. La première page est demandée au serveur par le navigateur. Les suivantes sont obtenues auprès du serveur par des appels Ajax.</p>
 <p><a id="refheading1429601829949500"></a></p>
 <h3 id="752-laction-ajax-09">7.5.2. L&#x27;action [/ajax-09]</h3>
@@ -3250,11 +3523,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : le fichier JS utilisé dans l&#x27;application ;</li>
-<li>ligne 15 : le contenu de la page maître ;</li>
-<li>ligne 16 : une image animée d&#x27;attente :</li>
-<li>ligne 17 : zone pour afficher une éventuelle erreur ;</li>
+  <li>ligne 9 : le fichier JS utilisé dans l&#x27;application ;
+  </li>
+  <li>ligne 15 : le contenu de la page maître ;
+  </li>
+  <li>ligne 16 : une image animée d&#x27;attente :
+  </li>
+  <li>ligne 17 : zone pour afficher une éventuelle erreur ;
+  </li>
 </ul>
+
 <p>La vue [vue-09-page1.xml] est la page 1 de l&#x27;application :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">HTML&gt;</span></span>
@@ -3288,12 +3566,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-9 : la zone [Zone 1]. Son contenu est placé dans le composant [<span style="color: #7f007f">id</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;zone1-content&quot;</span></em>] ;</li>
-<li>lignes 11-14 : la zone [Zone 2] qui ne change pas ;</li>
-<li>lignes 16-19 : la zone [Zone 3]. Son contenu est placé dans le composant [<span style="color: #7f007f">id</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;zone3-content&quot;</span></em>] ;</li>
-<li>ligne 22 : la fonction JS qui poste le formulaire ;</li>
-<li>ligne 25 : inclusion de la zone de saisies ;</li>
+  <li>lignes 6-9 : la zone [Zone 1]. Son contenu est placé dans le composant [<span style="color: #7f007f">id</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;zone1-content&quot;</span></i>] ;
+  </li>
+  <li>lignes 11-14 : la zone [Zone 2] qui ne change pas ;
+  </li>
+  <li>lignes 16-19 : la zone [Zone 3]. Son contenu est placé dans le composant [<span style="color: #7f007f">id</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;zone3-content&quot;</span></i>] ;
+  </li>
+  <li>ligne 22 : la fonction JS qui poste le formulaire ;
+  </li>
+  <li>ligne 25 : inclusion de la zone de saisies ;
+  </li>
 </ul>
+
 <p>On notera que la page 1 n&#x27;a pas de balise [form]. Tout va être traité en javascript.</p>
 <p>La vue [vue-09-saisies.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3317,21 +3601,31 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5-8 : saisie d&#x27;une chaîne de caractères ;</li>
-<li>lignes 13-16 : saisie d&#x27;un nombre entier ;</li>
-<li>ligne 14 : la fonction JS qui poste les valeurs saisies ;</li>
+  <li>lignes 5-8 : saisie d&#x27;une chaîne de caractères ;
+  </li>
+  <li>lignes 13-16 : saisie d&#x27;un nombre entier ;
+  </li>
+  <li>ligne 14 : la fonction JS qui poste les valeurs saisies ;
+  </li>
 </ul>
+
 <p>De nouveau, on notera que la zone de saisies n&#x27;a pas de balise [form].</p>
 <p>Au total, la page n° 1 présente deux fonctionnalités :</p>
 <ul>
-<li>[Rafraîchir] : qui rafraîchit les zones 1 et 3. Cette action est traitée par le serveur qui renvoie aléatoirement  :<ul>
-<li>la zone 1 avec son compteur d&#x27;accès et rien pour la zone 3,</li>
-<li>la zone 3 avec son compteur d&#x27;accès et rien pour la zone 1,</li>
-<li>les deux zones avec leurs compteurs d&#x27;accès ;</li>
+  <li>[Rafraîchir] : qui rafraîchit les zones 1 et 3. Cette action est traitée par le serveur qui renvoie aléatoirement  :
+    <ul>
+      <li>la zone 1 avec son compteur d&#x27;accès et rien pour la zone 3,
+      </li>
+      <li>la zone 3 avec son compteur d&#x27;accès et rien pour la zone 1,
+      </li>
+      <li>les deux zones avec leurs compteurs d&#x27;accès ;
+      </li>
+    </ul>
+  </li>
+  <li>[Valider] : qui affiche la page 2 avec les valeurs saisies ou bien un message d&#x27;erreur si les données saisies sont invalides ;
+  </li>
 </ul>
-</li>
-<li>[Valider] : qui affiche la page 2 avec les valeurs saisies ou bien un message d&#x27;erreur si les données saisies sont invalides ;</li>
-</ul>
+
 <p>Nous allons nous intéresser d&#x27;abord au bouton [Rafraîchir].</p>
 <p><a id="refheading1429641829949500"></a></p>
 <h3 id="754-le-code-js-de-gestion-du-bouton-rafraichir">7.5.4. Le code JS de gestion du bouton [Rafraîchir]</h3>
@@ -3356,9 +3650,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-13 : lorsque la page maître est chargée, on mémorise les références sur les trois composants identifiés par [loading, erreur, content] ;</li>
-<li>lignes 2-4 : les références de ces trois composants sont mémorisées dans des variables globales. Elles restent fixes parce que les trois zones concernées sont toujours présentes dans la page affichée, ceci quelque soit le moment. Parce qu&#x27;elles restent fixes elles peuvent être calculées dans [<span style="color: #000000">$(document).ready</span>] et partagées avec les autres fonctions du fichier JS ;</li>
+  <li>lignes 9-13 : lorsque la page maître est chargée, on mémorise les références sur les trois composants identifiés par [loading, erreur, content] ;
+  </li>
+  <li>lignes 2-4 : les références de ces trois composants sont mémorisées dans des variables globales. Elles restent fixes parce que les trois zones concernées sont toujours présentes dans la page affichée, ceci quelque soit le moment. Parce qu&#x27;elles restent fixes elles peuvent être calculées dans [<span style="color: #000000">$(document).ready</span>] et partagées avec les autres fonctions du fichier JS ;
+  </li>
 </ul>
+
 <p>La fonction [postForm] gère le clic sur le bouton [Rafraîchir] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> postForm() {</span></span>
@@ -3380,16 +3677,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-15 : l&#x27;appel Ajax au serveur ;</li>
-<li>ligne 5 : c&#x27;est l&#x27;action [ajax-10] qui va traiter le POST ;</li>
-<li>lignes 6-8 : la réponse va être du jSON. Le client JS indique qu&#x27;il accepte les documents jSON ;</li>
-<li>ligne 9 : l&#x27;action [ajax-10] est appelée avec une opération POST ;</li>
-<li>igne 10 : on va recevoir du jSON ;</li>
-<li>ligne 11 : la fonction exécutée avant l&#x27;appel Ajax ;</li>
-<li>ligne 12 : la fonction exécutée à réception de la réponse du serveur, lorsque celle-ci est un succès [200 OK] ;</li>
-<li>ligne 13 : la fonction exécutée à réception de la réponse du serveur, lorsque celle-ci est un échec [500 Internal server error, ...] ;</li>
-<li>ligne 14 : la fonction exécutée après réception de la réponse ;</li>
+  <li>lignes 4-15 : l&#x27;appel Ajax au serveur ;
+  </li>
+  <li>ligne 5 : c&#x27;est l&#x27;action [ajax-10] qui va traiter le POST ;
+  </li>
+  <li>lignes 6-8 : la réponse va être du jSON. Le client JS indique qu&#x27;il accepte les documents jSON ;
+  </li>
+  <li>ligne 9 : l&#x27;action [ajax-10] est appelée avec une opération POST ;
+  </li>
+  <li>igne 10 : on va recevoir du jSON ;
+  </li>
+  <li>ligne 11 : la fonction exécutée avant l&#x27;appel Ajax ;
+  </li>
+  <li>ligne 12 : la fonction exécutée à réception de la réponse du serveur, lorsque celle-ci est un succès [200 OK] ;
+  </li>
+  <li>ligne 13 : la fonction exécutée à réception de la réponse du serveur, lorsque celle-ci est un échec [500 Internal server error, ...] ;
+  </li>
+  <li>ligne 14 : la fonction exécutée après réception de la réponse ;
+  </li>
 </ul>
+
 <p>La fonction [onBegin] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// avant l&#x27;appel Ajax</span>
@@ -3422,8 +3729,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : on injecte la session. Celle-ci a le type [SessionModel1] suivant :</li>
+  <li>ligne 3 : on injecte la session. Celle-ci a le type [SessionModel1] suivant :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EA000000FEFF9160CB.png" style="display:inline-block; margin:4px;width:4.33cm;height:4.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000000FEFF9160CB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3457,11 +3766,16 @@
 
 <p>La session [<span style="color: #000000">SessionModel1</span>] mémorise les éléments suivants :</p>
 <ul>
-<li>ligne 15 : le nombre de fois [cpt1] où la zone [Zone 1] est affichée ;</li>
-<li>ligne 16 : le nombre de fois [cpt3] où la zone [Zone 3] est affichée ;</li>
-<li>lignes 18-20 : les flux HTML des zones [Zone 1], [Zone 3] et [Saisies]. Ceci est nécessaire dans la séquence [Page 1] --&gt; [Page 2] --&gt; [Page 1]. Lorsqu&#x27;on passe de [Page 2] à [Page 1], il faut restaurer [Page 1] et donc ses trois zones ;</li>
-<li>lignes 21-22 : deux booléens qui indiquent si les zones [Zone 1] et [Zone 3] sont affichées (visibles) ;</li>
+  <li>ligne 15 : le nombre de fois [cpt1] où la zone [Zone 1] est affichée ;
+  </li>
+  <li>ligne 16 : le nombre de fois [cpt3] où la zone [Zone 3] est affichée ;
+  </li>
+  <li>lignes 18-20 : les flux HTML des zones [Zone 1], [Zone 3] et [Saisies]. Ceci est nécessaire dans la séquence [Page 1] --&gt; [Page 2] --&gt; [Page 1]. Lorsqu&#x27;on passe de [Page 2] à [Page 1], il faut restaurer [Page 1] et donc ses trois zones ;
+  </li>
+  <li>lignes 21-22 : deux booléens qui indiquent si les zones [Zone 1] et [Zone 3] sont affichées (visibles) ;
+  </li>
 </ul>
+
 <p>L&#x27;autre élément injecté dans le contrôleur [AjaxController] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// le moteur Thymeleaf / Spring</span></span>
@@ -3494,9 +3808,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 2-10 : nous connaissons le bean de type [<span style="color: #000000">SpringResourceTemplateResolver</span>] qui nous permet de définir certaines caractéristiques des vues ;</li>
-<li>lignes 13-17 : le bean de type [<span style="color: #000000">SpringTemplateEngine</span>] nous permet de définir le &quot; moteur &quot; de vues, la classe chargée de générer les réponses [Thymeleaf] aux clients. [Thymeleaf] a un &quot; moteur &quot; par défaut et un autre lorsqu&#x27;il est utilisé dans un environnement [Spring]. C&#x27;est ce dernier que nous utilisons ici ;</li>
+  <li>lignes 2-10 : nous connaissons le bean de type [<span style="color: #000000">SpringResourceTemplateResolver</span>] qui nous permet de définir certaines caractéristiques des vues ;
+  </li>
+  <li>lignes 13-17 : le bean de type [<span style="color: #000000">SpringTemplateEngine</span>] nous permet de définir le &quot; moteur &quot; de vues, la classe chargée de générer les réponses [Thymeleaf] aux clients. [Thymeleaf] a un &quot; moteur &quot; par défaut et un autre lorsqu&#x27;il est utilisé dans un environnement [Spring]. C&#x27;est ce dernier que nous utilisons ici ;
+  </li>
 </ul>
+
 <p>La signature de l&#x27;action [/ajax-10] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-10&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">)</span></span>
@@ -3507,10 +3824,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : l&#x27;action [/ajax-10] n&#x27;accepte qu&#x27;un POST ;</li>
-<li>ligne 2 : l&#x27;action [/ajax-10] rend elle-même la réponse au client. Celle-ci sera tranformée automatiquement en jSON ;</li>
-<li>ligne 3 : la réponse est de type [<span style="color: #000000">JsonResult10</span>] suivant :</li>
+  <li>ligne 1 : l&#x27;action [/ajax-10] n&#x27;accepte qu&#x27;un POST ;
+  </li>
+  <li>ligne 2 : l&#x27;action [/ajax-10] rend elle-même la réponse au client. Celle-ci sera tranformée automatiquement en jSON ;
+  </li>
+  <li>ligne 3 : la réponse est de type [<span style="color: #000000">JsonResult10</span>] suivant :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000010181AB882C.png" style="display:inline-block; margin:4px;width:4.41cm;height:4.761cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE0000010181AB882C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3536,14 +3857,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : le contenu HTML de la zone identifiée par [content] ;</li>
-<li>ligne 7 : le contenu HTML de la zone [Zone 1] ;</li>
-<li>ligne 8 : le contenu HTML de la zone [Zone 3] ;</li>
-<li>ligne 9 : le contenu HTML de la zone [Erreur] ;</li>
-<li>ligne 10 : le contenu HTML de la zone [Saisies] ;</li>
-<li>ligne 11 : booléen indiquant si la zone [Zone 1] doit être affichée ;</li>
-<li>ligne 12 : booléen indiquant si la zone [Zone 3] doit être affichée ;</li>
+  <li>ligne 6 : le contenu HTML de la zone identifiée par [content] ;
+  </li>
+  <li>ligne 7 : le contenu HTML de la zone [Zone 1] ;
+  </li>
+  <li>ligne 8 : le contenu HTML de la zone [Zone 3] ;
+  </li>
+  <li>ligne 9 : le contenu HTML de la zone [Erreur] ;
+  </li>
+  <li>ligne 10 : le contenu HTML de la zone [Saisies] ;
+  </li>
+  <li>ligne 11 : booléen indiquant si la zone [Zone 1] doit être affichée ;
+  </li>
+  <li>ligne 12 : booléen indiquant si la zone [Zone 3] doit être affichée ;
+  </li>
 </ul>
+
 <p>Le code de l&#x27;action [/ajax-10] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-10&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">)</span></span>
@@ -3580,14 +3909,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : nous récupérons le contexte [Thymeleaf]. Nous verrons ultérieurement à quoi il va nous servir ;</li>
-<li>ligne 7 : nous créons une réponse vide pour l&#x27;instant ;</li>
-<li>lignes 9-12 : nous mettons à [null] les deux zones contenues dans la session et nous indiquons qu&#x27;elles ne doivent pas être affichées. Ces deux zones vont être bientôt générées mais il est possible que seule l&#x27;une d&#x27;entre-elles le soit ;</li>
-<li>lignes 14-29 : les deux zones sont générées ;</li>
-<li>lignes 17-19 : seule la zone [Zone 1] est générée ;</li>
-<li>lignes 21-23 : seule la zone [Zone 3] est générée ;</li>
-<li>lignes 25-28 : les deux zones [Zone 1] et [Zone 3] sont générées ;</li>
+  <li>ligne 5 : nous récupérons le contexte [Thymeleaf]. Nous verrons ultérieurement à quoi il va nous servir ;
+  </li>
+  <li>ligne 7 : nous créons une réponse vide pour l&#x27;instant ;
+  </li>
+  <li>lignes 9-12 : nous mettons à [null] les deux zones contenues dans la session et nous indiquons qu&#x27;elles ne doivent pas être affichées. Ces deux zones vont être bientôt générées mais il est possible que seule l&#x27;une d&#x27;entre-elles le soit ;
+  </li>
+  <li>lignes 14-29 : les deux zones sont générées ;
+  </li>
+  <li>lignes 17-19 : seule la zone [Zone 1] est générée ;
+  </li>
+  <li>lignes 21-23 : seule la zone [Zone 3] est générée ;
+  </li>
+  <li>lignes 25-28 : les deux zones [Zone 1] et [Zone 3] sont générées ;
+  </li>
 </ul>
+
 <p>Le flux HTML de la zone [Zone 1] est généré par la méthode suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setZone1(WebContext </span><span style="color:#6a3e3e">thymeleafContext</span><span style="color:#000000">, JsonResult10 </span><span style="color:#6a3e3e">result</span><span style="color:#000000">) {</span></span>
@@ -3607,18 +3944,28 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : les paramètres sont :<ul>
-<li>le contexte [Thymeleaf] de type [<span style="color: #000000">WebContext</span>],</li>
-<li>la réponse au client en cours de construction de type [<span style="color: #000000">JsonResult10</span>] ;</li>
+  <li>ligne 1 : les paramètres sont :
+    <ul>
+      <li>le contexte [Thymeleaf] de type [<span style="color: #000000">WebContext</span>],
+      </li>
+      <li>la réponse au client en cours de construction de type [<span style="color: #000000">JsonResult10</span>] ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 3 : on incrémente le compteur [cpt1] de la session qui compte le nombre de fois où la zone [Zone 1] est affichée ;
+  </li>
+  <li>ligne 4 : le contexte [Thymeleaf] de type [<span style="color: #000000">WebContext</span>] se comporte un peu comme le modèle [Model] de Spring MVC. Pour ajouter un élément au modèle, on utilise [<span style="color: #000000">WebContext.setVariable</span>]. Ici, on met donc le compteur [cpt1] dans le modèle [Thymeleaf]. Cela va permettre d&#x27;évaluer l&#x27;expression Thymeleaf [${cpt1}]
+  </li>
+  <li>ligne 5 : le contexte [Thymeleaf] a une locale. Cela lui permet d&#x27;évaluer les expression du type [#{clé_msg}]. Ici, on associe le contexte Thymeleaf a une locale française ;
+  </li>
+  <li>ligne 6 : c&#x27;est l&#x27;instruction la plus intéressante. Le moteur Thymeleaf va traiter la vue [<span style="color: #2a00ff">vue-09-zone1.xml</span>] avec le modèle et la locale que l&#x27;on vient de calculer et au lieu d&#x27;envoyer le flux HTML résultant au client, il le rend en tant que chaîne de caractères ;
+  </li>
+  <li>lignes 7-9 : le flux HTML de la zone [Zone 1] qui vient d&#x27;être calculé est mémorisé dans la session et dans le résultat qui va être envoyé au client. Par ailleurs, on indique que la zone [Zone 1] doit être affichée ;
+  </li>
+  <li>lignes 11-13 : on mémorise dans la session, les informations concernant la zone [Zone 1] afin d&#x27;être capables de la régénérer ;
+  </li>
 </ul>
-</li>
-<li>ligne 3 : on incrémente le compteur [cpt1] de la session qui compte le nombre de fois où la zone [Zone 1] est affichée ;</li>
-<li>ligne 4 : le contexte [Thymeleaf] de type [<span style="color: #000000">WebContext</span>] se comporte un peu comme le modèle [Model] de Spring MVC. Pour ajouter un élément au modèle, on utilise [<span style="color: #000000">WebContext.setVariable</span>]. Ici, on met donc le compteur [cpt1] dans le modèle [Thymeleaf]. Cela va permettre d&#x27;évaluer l&#x27;expression Thymeleaf [${cpt1}]</li>
-<li>ligne 5 : le contexte [Thymeleaf] a une locale. Cela lui permet d&#x27;évaluer les expression du type [#{clé_msg}]. Ici, on associe le contexte Thymeleaf a une locale française ;</li>
-<li>ligne 6 : c&#x27;est l&#x27;instruction la plus intéressante. Le moteur Thymeleaf va traiter la vue [<span style="color: #2a00ff">vue-09-zone1.xml</span>] avec le modèle et la locale que l&#x27;on vient de calculer et au lieu d&#x27;envoyer le flux HTML résultant au client, il le rend en tant que chaîne de caractères ;</li>
-<li>lignes 7-9 : le flux HTML de la zone [Zone 1] qui vient d&#x27;être calculé est mémorisé dans la session et dans le résultat qui va être envoyé au client. Par ailleurs, on indique que la zone [Zone 1] doit être affichée ;</li>
-<li>lignes 11-13 : on mémorise dans la session, les informations concernant la zone [Zone 1] afin d&#x27;être capables de la régénérer ;</li>
-</ul>
+
 <p>La ligne 7 traite la vue [<span style="color: #2a00ff">vue-09-zone1.xml</span>] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">HTML&gt;</span></span>
@@ -3629,9 +3976,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : l&#x27;expression [<em><span style="color: #2a00ff">#{message.zone}</span></em>] va être évaluée grâce à la locale ;</li>
-<li>ligne 4 : l&#x27;expression [<em><span style="color: #2a00ff">${cpt1}</span></em>] va être évaluée grâce au modèle Thymeleaf ;</li>
+  <li>ligne 3 : l&#x27;expression [<i><span style="color: #2a00ff">#{message.zone}</span></i>] va être évaluée grâce à la locale ;
+  </li>
+  <li>ligne 4 : l&#x27;expression [<i><span style="color: #2a00ff">${cpt1}</span></i>] va être évaluée grâce au modèle Thymeleaf ;
+  </li>
 </ul>
+
 <p>Le message de clé [message.zone] est défini dans les fichiers de messages [messages_fr.properties] et [messages_en.properties] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F4000000A534CCD52B.png" style="display:inline-block; margin:4px;width:4.521cm;height:3.06cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000A534CCD52B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3664,8 +4014,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la locale de la zone [Zone 3] est la locale anglaise ;</li>
+  <li>ligne 6 : la locale de la zone [Zone 3] est la locale anglaise ;
+  </li>
 </ul>
+
 <p><a id="refheading1429681829949500"></a></p>
 <h3 id="756-traitement-de-la-reponse-de-laction-ajax-10">7.5.6. Traitement de la réponse de l&#x27;action [/ajax-10]</h3>
 <p>Revenons au code JS de [local9.js] qui va traiter la réponse du serveur :</p>
@@ -3727,16 +4079,24 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 6-8 : si [data.content!=null], alors on initialise la zone [id=content] avec. Cette zonne représente [Page 1] ou [Page 2] dans sa totalité. Dans la démonstration présente, on a [data.content==null] et donc la zone [id=content] ne sera pas modifiée et continuera à afficher [Page 1] ;</li>
-<li>lignes 10-17 : affichage [Zone 1] si [data.zone1Active==true]. Si de plus [data.zone1!=null] alors le contenu de [Zone 1] est modifié sinon il reste ce qu&#x27;il était ;</li>
-<li>lignes 19-26 : même chose pour [Zone 3] ;</li>
-<li>lignes 28-30 : si on a [data.saisies!=null] alors la zone [Saisies] est régénérée. Dans  la démonstration présente, on a [data.saisies==null] et donc la zone [Saisies] reste ce qu&#x27;elle était ;</li>
-<li>lignes 32-37 : raisonnement analogue pour la zone [Erreur] avec les nuances suivantes :<ul>
-<li>ligne 33 : [data.erreur] sera un message d&#x27;erreur au format texte ;</li>
-<li>ligne 36 : si [data.erreur==null] alors la zone [Erreur] est cachée. En effet, elle a pu être affichée lors de la précédente requête ;</li>
+  <li>lignes 6-8 : si [data.content!=null], alors on initialise la zone [id=content] avec. Cette zonne représente [Page 1] ou [Page 2] dans sa totalité. Dans la démonstration présente, on a [data.content==null] et donc la zone [id=content] ne sera pas modifiée et continuera à afficher [Page 1] ;
+  </li>
+  <li>lignes 10-17 : affichage [Zone 1] si [data.zone1Active==true]. Si de plus [data.zone1!=null] alors le contenu de [Zone 1] est modifié sinon il reste ce qu&#x27;il était ;
+  </li>
+  <li>lignes 19-26 : même chose pour [Zone 3] ;
+  </li>
+  <li>lignes 28-30 : si on a [data.saisies!=null] alors la zone [Saisies] est régénérée. Dans  la démonstration présente, on a [data.saisies==null] et donc la zone [Saisies] reste ce qu&#x27;elle était ;
+  </li>
+  <li>lignes 32-37 : raisonnement analogue pour la zone [Erreur] avec les nuances suivantes :
+    <ul>
+      <li>ligne 33 : [data.erreur] sera un message d&#x27;erreur au format texte ;
+      </li>
+      <li>ligne 36 : si [data.erreur==null] alors la zone [Erreur] est cachée. En effet, elle a pu être affichée lors de la précédente requête ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>En cas d&#x27;erreur côté serveur (HTTP status du genre 500 Internal server error), la fonction suivante est exécutée :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// à réception de la réponse du serveur</span>
@@ -3764,8 +4124,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on met une URL qui n&#x27;existe pas ;</li>
+  <li>ligne 7 : on met une URL qui n&#x27;existe pas ;
+  </li>
 </ul>
+
 <p>Voici les résultats lorsqu&#x27;on clique sur le bouton [Rafraîchir] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046000000414580B7A22.png" style="display:inline-block; margin:4px;width:14.817cm;height:13.811cm;" class="odt-zoomable" data-zoom-src="images/100000000000046000000414580B7A22.png" /></td></tr></table>
 
@@ -3816,13 +4178,20 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-7 : nous avons deux valeurs v1 et v2 à poster : celles des composants de saisie identifiés par [<span style="color: #2a00ff">#text1</span>] et [<span style="color: #2a00ff">#text2</span>]. Nous allons faire quelque chose de nouveau. Nous allons poster ces deux valeurs sous la forme d&#x27;une chaîne jSON {&quot;value1&quot;:v1,&quot;value2&quot;:v2} ;</li>
-<li>ligne 10 : les valeurs postées seront envoyées à l&#x27;action [ajax-11A] ;</li>
-<li>ligne 12 : parce qu&#x27;on sait qu&#x27;on va recevoir une réponse jSON, on indique qu&#x27;on peut en recevoir du jSON ;</li>
-<li>ligne 13 : on indique au serveur qu&#x27;on va lui envoyer la valeur postée sous la forme d&#x27;une chaîne jSON ;</li>
-<li>lignes 15-16 : on fait un POST de la valeur à poster ;</li>
-<li>ligne 17 : on va recevoir du jSON ;</li>
+  <li>lignes 4-7 : nous avons deux valeurs v1 et v2 à poster : celles des composants de saisie identifiés par [<span style="color: #2a00ff">#text1</span>] et [<span style="color: #2a00ff">#text2</span>]. Nous allons faire quelque chose de nouveau. Nous allons poster ces deux valeurs sous la forme d&#x27;une chaîne jSON {&quot;value1&quot;:v1,&quot;value2&quot;:v2} ;
+  </li>
+  <li>ligne 10 : les valeurs postées seront envoyées à l&#x27;action [ajax-11A] ;
+  </li>
+  <li>ligne 12 : parce qu&#x27;on sait qu&#x27;on va recevoir une réponse jSON, on indique qu&#x27;on peut en recevoir du jSON ;
+  </li>
+  <li>ligne 13 : on indique au serveur qu&#x27;on va lui envoyer la valeur postée sous la forme d&#x27;une chaîne jSON ;
+  </li>
+  <li>lignes 15-16 : on fait un POST de la valeur à poster ;
+  </li>
+  <li>ligne 17 : on va recevoir du jSON ;
+  </li>
 </ul>
+
 <p><a id="refheading1429721829949500"></a></p>
 <h3 id="758-laction-ajax-11a">7.5.8. L&#x27;action [ajax-11A]</h3>
 <p><span style="color: #000000">L&#x27;action [ajax-11A] qui traite la chaîne jSON postée est la suivante :</span></p>
@@ -3835,9 +4204,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : on indique avec [<span style="color: #2a00ff">&quot;application/json&quot;</span>] que l&#x27;action attend un document sous forme jSON. Ce document est la valeur postée par le client ;</span></li>
-<li><span style="color: #000000">ligne 3 : la valeur postée va être récupérée dans l&#x27;objet [PostAjax11A <span style="color: #6a3e3e">post</span>] suivant :</span></li>
+  <li><span style="color: #000000">ligne 1 : on indique avec [<span style="color: #2a00ff">&quot;application/json&quot;</span>] que l&#x27;action attend un document sous forme jSON. Ce document est la valeur postée par le client ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : la valeur postée va être récupérée dans l&#x27;objet [PostAjax11A <span style="color: #6a3e3e">post</span>] suivant :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010300000115370C8B7F.png" style="display:inline-block; margin:4px;width:4.8cm;height:5.129cm;" class="odt-zoomable" data-zoom-src="images/100000000000010300000115370C8B7F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3864,9 +4236,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la structure de l&#x27;objet [PostAjax11A] doit reprendre la structure de l&#x27;objet posté {&quot;value1&quot;:v1,&quot;value2&quot;:v2}. Il faut donc un champ [value1] (ligne 13) et [value2] (ligne 16) ;</span></li>
-<li><span style="color: #000000">on a mis des contraintes d&#x27;intégrité sur les deux champs ;</span></li>
+  <li><span style="color: #000000">la structure de l&#x27;objet [PostAjax11A] doit reprendre la structure de l&#x27;objet posté {&quot;value1&quot;:v1,&quot;value2&quot;:v2}. Il faut donc un champ [value1] (ligne 13) et [value2] (ligne 16) ;</span>
+  </li>
+  <li><span style="color: #000000">on a mis des contraintes d&#x27;intégrité sur les deux champs ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Revenons au code de l&#x27;action [ajax-11A] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#646464">@RequestMapping</span>(value = <span style="color:#2a00ff">&quot;/ajax-11A&quot;</span>, method = RequestMethod.<span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span>, consumes = <span style="color:#2a00ff">&quot;application/json&quot;</span>)</span>
@@ -3889,14 +4264,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : l&#x27;annotation [<span style="color: #646464">@RequestBody</span>] désigne le document envoyé par le client. Il s&#x27;agit de la valeur postée en jSON par celui-ci. Celle-ci va donc être utilisée pour construire l&#x27;objet [PostAjax11A] ;</span></li>
-<li><span style="color: #000000">ligne 3 : l&#x27;annotation [@Valid] force la validation de la valeur postée ;</span></li>
-<li><span style="color: #000000">ligne 9 : si la validation échoue :</span><ul>
-<li><span style="color: #000000">ligne 13 : on renvoie un message d&#x27;erreur,</span></li>
-<li><span style="color: #000000">lignes 11-12 : les zones 1 et 3 sont remises dans l&#x27;état où elles étaient (affichées ou non) ;</span></li>
+  <li><span style="color: #000000">ligne 3 : l&#x27;annotation [<span style="color: #646464">@RequestBody</span>] désigne le document envoyé par le client. Il s&#x27;agit de la valeur postée en jSON par celui-ci. Celle-ci va donc être utilisée pour construire l&#x27;objet [PostAjax11A] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : l&#x27;annotation [@Valid] force la validation de la valeur postée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : si la validation échoue :</span>
+    <ul>
+      <li><span style="color: #000000">ligne 13 : on renvoie un message d&#x27;erreur,</span>
+      </li>
+      <li><span style="color: #000000">lignes 11-12 : les zones 1 et 3 sont remises dans l&#x27;état où elles étaient (affichées ou non) ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><span style="color: #000000">Le calcul du message d&#x27;erreur est fait de la façon suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="font-weight:bold;color:#7f0055">private</span> String getErreursForModel(BindingResult <span style="color:#6a3e3e">result</span>) {</span>
@@ -3939,10 +4320,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 13-14 : les valeurs postées sont mises dans le contexte Thymeleaf ;</span></li>
-<li><span style="color: #000000">ligne 15 : avec ce contexte, on calcule la vue [vue-09-saisies] et on la met dans la session afin de pouvoir la régénérer ultérieurement ;</span></li>
-<li><span style="color: #000000">ligne 17 : la page 2 est mise dans le résultat qui va être envoyé au client ;</span></li>
+  <li><span style="color: #000000">lignes 13-14 : les valeurs postées sont mises dans le contexte Thymeleaf ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : avec ce contexte, on calcule la vue [vue-09-saisies] et on la met dans la session afin de pouvoir la régénérer ultérieurement ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : la page 2 est mise dans le résultat qui va être envoyé au client ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [vue-09-page2.xml] est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F00000014717372322.png" style="display:inline-block; margin:4px;width:4.45cm;height:6.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F00000014717372322.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3968,8 +4353,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 9 et 13, on affiche les valeurs [value1, value2] que l&#x27;action [/ajax-11A] a placées dans le contexte Thymeleaf ;</span></li>
+  <li><span style="color: #000000">lignes 9 et 13, on affiche les valeurs [value1, value2] que l&#x27;action [/ajax-11A] a placées dans le contexte Thymeleaf ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1429741829949500"></a></p>
 <h3 id="759-traitement-de-la-reponse-de-laction-ajax-11a">7.5.9. Traitement de la réponse de l&#x27;action [/ajax-11A]</h3>
 <p><span style="color: #000000">Côté client, la réponse de l&#x27;action [/ajax-10] est traitée par la fonction [onSuccess] :</span></p>
@@ -4016,15 +4403,21 @@
 <p><u><strong><span style="color: #000000">Avec erreur</span></strong></u></p>
 <p><span style="color: #000000">Dans ce cas, l&#x27;action [/ajax-11A] a envoyé une réponse jSON de la forme <strong><mark style="background-color: #fff5ce">{&quot;zone1&quot;:null, &quot;zone3&quot;:null,&quot;saisies&quot;:null,&quot;erreur&quot;:erreur,&quot;zone1Active&quot;:zone1Active,&quot;zone3Active&quot;:zone3Active,&quot;content&quot;:null}</mark></strong>. Si on suit le code ci-dessus, on voit que :</span></p>
 <ul>
-<li><span style="color: #000000">la zone [content] ne change pas. Elle contenait la page n° 1 ;</span></li>
-<li><span style="color: #000000">la zone [Erreur] est affichée ;</span></li>
-<li><span style="color: #000000">les zones [Zone 1], [Zone 3], [Saisies] sont laissées dans l&#x27;état où elles étaient ;</span></li>
+  <li><span style="color: #000000">la zone [content] ne change pas. Elle contenait la page n° 1 ;</span>
+  </li>
+  <li><span style="color: #000000">la zone [Erreur] est affichée ;</span>
+  </li>
+  <li><span style="color: #000000">les zones [Zone 1], [Zone 3], [Saisies] sont laissées dans l&#x27;état où elles étaient ;</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Sans erreur</span></strong></u></p>
 <p><span style="color: #000000">Dans ce cas, l&#x27;action [/ajax-11A] a envoyé une réponse jSON de la forme <strong><mark style="background-color: #fff5ce">{&quot;zone1&quot;:null, &quot;zone3&quot;:null,&quot;saisies&quot;:null,&quot;erreur&quot;:null,&quot;zone1Active&quot;:false,&quot;zone3Active&quot;:false,&quot;content&quot;:content}</mark></strong>. Si on suit le code ci-dessus, on voit que :</span></p>
 <ul>
-<li><span style="color: #000000">la zone [content] est affichée. Elle contient la page n° 2 ;</span></li>
+  <li><span style="color: #000000">la zone [content] est affichée. Elle contient la page n° 2 ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici trois exemples d&#x27;exécution :</span></p>
 <p><u><strong><span style="color: #000000">Un cas avec erreur de validation :</span></strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022A000002998E402424.png" style="display:inline-block; margin:4px;width:8.641cm;height:10.372cm;" class="odt-zoomable" data-zoom-src="images/100000000000022A000002998E402424.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000201000002E13C757DF0.png" style="display:inline-block; margin:4px;width:8.839cm;height:12.67cm;" class="odt-zoomable" data-zoom-src="images/1000000000000201000002E13C757DF0.png" /></td></tr></table>
@@ -4088,12 +4481,18 @@
 
 <p><span style="color: #000000">L&#x27;action doit régénérer la page n°1 avec ses trois zones [Zone1, Zone3, Erreur] :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 9 : la page n° 1 est mise dans le résultat ;</span></li>
-<li><span style="color: #000000">ligne 10 : la zone des saisies est mise dans le résultat ;</span></li>
-<li><span style="color: #000000">ligne 11 : la zone [Zone 1] est mise dans le résultat ;</span></li>
-<li><span style="color: #000000">ligne 12 : la zone [Zone 3] est mise dans le résultat ;</span></li>
-<li><span style="color: #000000">lignes 13-14 : on met l&#x27;état des zones [Zone 1] et [Zone 3] dans le résultat ;</span></li>
+  <li><span style="color: #000000">ligne 9 : la page n° 1 est mise dans le résultat ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : la zone des saisies est mise dans le résultat ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : la zone [Zone 1] est mise dans le résultat ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : la zone [Zone 3] est mise dans le résultat ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-14 : on met l&#x27;état des zones [Zone 1] et [Zone 3] dans le résultat ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1429801829949500"></a></p>
 <h3 id="7512-traitement-de-la-reponse-de-laction-ajax-11b">7.5.12. Traitement de la réponse de l&#x27;action [/ajax-11B]</h3>
 <p><span style="color: #000000">La réponse de l&#x27;action [/ajax-11B] est traitée par la fonction [onSuccess] :</span></p>
@@ -4138,10 +4537,14 @@
 
 <p><span style="color: #000000">L&#x27;action [/ajax-11B] a envoyé une réponse jSON de la forme {&quot;zone1&quot;:zone1, &quot;zone3&quot;:zone3,&quot;saisies&quot;:saisies,&quot;erreur&quot;:null,&quot;zone1Active&quot;:zone1Active,&quot;zone3Active&quot;:zone3Active,&quot;content&quot;:content}. Si on suit le code ci-dessus, on voit que :</span></p>
 <ul>
-<li><span style="color: #000000">la zone [content] est modifiée. Elle contenait la page n° 2. Elle va désormais contenir la page n° 1 ;</span></li>
-<li><span style="color: #000000">la zone [Erreur] est cachée ;</span></li>
-<li><span style="color: #000000">les zones [Zone 1], [Zone 3], [Saisies] sont affichées dans l&#x27;état où elles étaient ;</span></li>
+  <li><span style="color: #000000">la zone [content] est modifiée. Elle contenait la page n° 2. Elle va désormais contenir la page n° 1 ;</span>
+  </li>
+  <li><span style="color: #000000">la zone [Erreur] est cachée ;</span>
+  </li>
+  <li><span style="color: #000000">les zones [Zone 1], [Zone 3], [Saisies] sont affichées dans l&#x27;état où elles étaient ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1429821829949500"></a></p>
 <h2 id="76-gerer-la-session-cote-client">7.6. Gérer la session côté client</h2>
 <p><a id="refheading1429841829949500"></a></p>
@@ -4203,8 +4606,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">cette vue est identique à la vue [vue-09] à la différence près du script JS utilisé en ligne 9 ;</span></li>
+  <li><span style="color: #000000">cette vue est identique à la vue [vue-09] à la différence près du script JS utilisé en ligne 9 ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue affichée est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E8000002AFAF6B7043.png" style="display:inline-block; margin:4px;width:8.641cm;height:12.236cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E8000002AFAF6B7043.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -4239,11 +4644,16 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 17-21 : lorsque la page maître est chargée, on mémorise les références des trois composants identifiés par [loading, erreur, content] dans les variables globales des lignes 2-4 ;</li>
-<li>lignes 5-6 : pour mémoriser les deux pages ;</li>
-<li>lignes 7-8 : pour mémoriser les deux valeurs postées par le lien [Valider] ;</li>
-<li>ligne 9 : la session. Elle mémorise côté client les valeurs des compteurs [cpt1, cpt3] ;</li>
+  <li>lignes 17-21 : lorsque la page maître est chargée, on mémorise les références des trois composants identifiés par [loading, erreur, content] dans les variables globales des lignes 2-4 ;
+  </li>
+  <li>lignes 5-6 : pour mémoriser les deux pages ;
+  </li>
+  <li>lignes 7-8 : pour mémoriser les deux valeurs postées par le lien [Valider] ;
+  </li>
+  <li>ligne 9 : la session. Elle mémorise côté client les valeurs des compteurs [cpt1, cpt3] ;
+  </li>
 </ul>
+
 <p>La fonction [postForm] gère le clic sur le bouton [Rafraîchir] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> postForm() {</span></span>
@@ -4272,17 +4682,26 @@
 
 <p>Les diffrences avec la version précédente sont les suivantes :</p>
 <ul>
-<li>l&#x27;URL de la ligne 7 est différente ;</li>
-<li>ligne 4 : on poste une valeur alors qu&#x27;auparavant on n&#x27;en postait pas. Cette valeur est la chaîne jSON de la session. Le principe est le suivant :<ul>
-<li>le client envoie la session au serveur,</li>
-<li>celui-ci la modifie et lui renvoie,</li>
-<li>le client mémorise la nouvelle session ;</li>
+  <li>l&#x27;URL de la ligne 7 est différente ;
+  </li>
+  <li>ligne 4 : on poste une valeur alors qu&#x27;auparavant on n&#x27;en postait pas. Cette valeur est la chaîne jSON de la session. Le principe est le suivant :
+    <ul>
+      <li>le client envoie la session au serveur,
+      </li>
+      <li>celui-ci la modifie et lui renvoie,
+      </li>
+      <li>le client mémorise la nouvelle session ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 10 : on envoie un document au format jSON (valeur postée) ;
+  </li>
+  <li>ligne 13 : on a quelque chose à poster ;
+  </li>
+  <li>lignes 15-20 : les fonctions [beforeSend,  error, complete] sont celles de la version précédente. Seule la fonction [success] change (lignes 16-18) ;
+  </li>
 </ul>
-</li>
-<li>ligne 10 : on envoie un document au format jSON (valeur postée) ;</li>
-<li>ligne 13 : on a quelque chose à poster ;</li>
-<li>lignes 15-20 : les fonctions [beforeSend,  error, complete] sont celles de la version précédente. Seule la fonction [success] change (lignes 16-18) ;</li>
-</ul>
+
 <p><a id="refheading1429901829949500"></a></p>
 <h3 id="764-laction-ajax-13">7.6.4. L&#x27;action [/ajax-13]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010B000000FAAE95B8FE.png" style="display:inline-block; margin:4px;width:4.941cm;height:4.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000010B000000FAAE95B8FE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -4297,8 +4716,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : le paramètre [<span style="color: #646464">@RequestBody</span><span style="color: #000000"> SessionModel2 </span><span style="color: #6a3e3e">session2</span>] récupère la session postée par le client. Celle-ci a le type [SessionModel2] suivant :</li>
+  <li>ligne 3 : le paramètre [<span style="color: #646464">@RequestBody</span><span style="color: #000000"> SessionModel2 </span><span style="color: #6a3e3e">session2</span>] récupère la session postée par le client. Celle-ci a le type [SessionModel2] suivant :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F600000126B6195150.png" style="display:inline-block; margin:4px;width:4.33cm;height:5.211cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F600000126B6195150.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -4320,9 +4741,12 @@
 
 <p>La session [<span style="color: #000000">SessionModel2</span>] mémorise les éléments suivants :</p>
 <ul>
-<li>ligne 9 : le nombre de fois [cpt1] où la zone [Zone 1] est affichée ;</li>
-<li>ligne 10 : le nombre de fois [cpt3] où la zone [Zone 3] est affichée ;</li>
+  <li>ligne 9 : le nombre de fois [cpt1] où la zone [Zone 1] est affichée ;
+  </li>
+  <li>ligne 10 : le nombre de fois [cpt3] où la zone [Zone 3] est affichée ;
+  </li>
 </ul>
+
 <p>Poursuivons l&#x27;étude du code de l&#x27;action [/ajax-13] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-13&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, consumes = </span><span style="color:#2a00ff">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -4333,8 +4757,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3, le type [<span style="color: #000000">JsonResult13</span>] de la réponse est le suivant :</li>
+  <li>ligne 3, le type [<span style="color: #000000">JsonResult13</span>] de la réponse est le suivant :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000001237578160F.png" style="display:inline-block; margin:4px;width:4.56cm;height:5.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000001237578160F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -4359,13 +4785,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : la session. Le serveur la renvoie au client pour mémorisation ;</li>
-<li>ligne 6 : le contenu HTML de la page n° 2 ;</li>
-<li>ligne 7 : le contenu HTML de la zone [Zone 1] ;</li>
-<li>ligne 8 : le contenu HTML de la zone [Zone 3] ;</li>
-<li>ligne 9 : le message d&#x27;erreur éventuel ;</li>
-<li>lignes 10-11 : deux informations calculées par le serveur et affichées par la page n° 2 ;</li>
+  <li>ligne 14 : la session. Le serveur la renvoie au client pour mémorisation ;
+  </li>
+  <li>ligne 6 : le contenu HTML de la page n° 2 ;
+  </li>
+  <li>ligne 7 : le contenu HTML de la zone [Zone 1] ;
+  </li>
+  <li>ligne 8 : le contenu HTML de la zone [Zone 3] ;
+  </li>
+  <li>ligne 9 : le message d&#x27;erreur éventuel ;
+  </li>
+  <li>lignes 10-11 : deux informations calculées par le serveur et affichées par la page n° 2 ;
+  </li>
 </ul>
+
 <p>Poursuivons l&#x27;étude du code de l&#x27;action [/ajax-13] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-13&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, consumes = </span><span style="color:#2a00ff">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -4399,8 +4832,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : la session est mise dans le résultat de l&#x27;action ;</li>
+  <li>ligne 9 : la session est mise dans le résultat de l&#x27;action ;
+  </li>
 </ul>
+
 <p>La méthode [<span style="color: #000000">setZone1B</span>] qui active la zone [Zone 1] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setZone1B(WebContext </span><span style="color:#6a3e3e">thymeleafContext</span><span style="color:#000000">, JsonResult13 </span><span style="color:#6a3e3e">result</span><span style="color:#000000">) {</span></span>
@@ -4419,9 +4854,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : on récupère la session. Elle va être modifiée ligne 12 avec le nouveau compteur [cpt1]. On rappelle que cette session va être renvoyée au client ;</li>
-<li>ligne 10 : la nouvelle zone [Zone 1] ;</li>
+  <li>ligne 3 : on récupère la session. Elle va être modifiée ligne 12 avec le nouveau compteur [cpt1]. On rappelle que cette session va être renvoyée au client ;
+  </li>
+  <li>ligne 10 : la nouvelle zone [Zone 1] ;
+  </li>
 </ul>
+
 <p>La méthode [<span style="color: #000000">setZone3B</span>] qui active la zone [Zone 3] est analogue :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setZone3B(WebContext </span><span style="color:#6a3e3e">thymeleafContext</span><span style="color:#000000">, JsonResult13 </span><span style="color:#6a3e3e">result</span><span style="color:#000000">) {</span></span>
@@ -4473,9 +4911,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 12-17 : si le serveur a mis quelque chose dans le champ [zone1] de la réponse, alors il faut régénérer la zone [Zone 1] et l&#x27;afficher, sinon elle doit être cachée ;</li>
-<li>lignes 18-23 : même raisonnement pour la zone [Zone 3] ;</li>
+  <li>lignes 12-17 : si le serveur a mis quelque chose dans le champ [zone1] de la réponse, alors il faut régénérer la zone [Zone 1] et l&#x27;afficher, sinon elle doit être cachée ;
+  </li>
+  <li>lignes 18-23 : même raisonnement pour la zone [Zone 3] ;
+  </li>
 </ul>
+
 <p><a id="refheading1429941829949500"></a></p>
 <h3 id="766-affichage-de-la-page-page-2">7.6.6. Affichage de la page [Page 2]</h3>
 <p>Le code HTML du lien [Valider] est le suivant :</p>
@@ -4519,13 +4960,20 @@
 </code></pre></div>
 
 <ul>
-<li>on va faire un POST qui normalement va nous faire passer à la page n° 2 ;</li>
-<li>ligne 4 : on mémorise la page n° 1 afin de pouvoir y revenir ultérieurement ;</li>
-<li>lignes 6-7 : l&#x27;opération précédente ne mémorise pas les valeurs saisies, juste le code HTML de la page. Aussi mémorise-t-on maintenant les deux valeurs saisies dans le formulaire ;</li>
-<li>lignes 9-13 : les deux valeurs saisies sont mises dans une chaîne jSON. C&#x27;est elle qui sera postée ;</li>
-<li>ligne 12 : un paramètre pour indiquer au serveur si on a besoin de la page n° 2. Nous allons procéder ainsi. Nous allons demander la page n° 2 une première fois, puis la mémoriser dans la variable JS [page2]. Ensuite, nous ne la redemanderons plus. Nous utiliserons la page en cache. Ligne 2, [pageRequired] vaut [true] si la variable [page2] ne contient rien, [false] sinon ;</li>
-<li>on notera que la session n&#x27;est pas postée. En effet, celle-ci mémorise des compteurs que l&#x27;action [/ajax-14] de la ligne 20 ne modifie pas ;</li>
+  <li>on va faire un POST qui normalement va nous faire passer à la page n° 2 ;
+  </li>
+  <li>ligne 4 : on mémorise la page n° 1 afin de pouvoir y revenir ultérieurement ;
+  </li>
+  <li>lignes 6-7 : l&#x27;opération précédente ne mémorise pas les valeurs saisies, juste le code HTML de la page. Aussi mémorise-t-on maintenant les deux valeurs saisies dans le formulaire ;
+  </li>
+  <li>lignes 9-13 : les deux valeurs saisies sont mises dans une chaîne jSON. C&#x27;est elle qui sera postée ;
+  </li>
+  <li>ligne 12 : un paramètre pour indiquer au serveur si on a besoin de la page n° 2. Nous allons procéder ainsi. Nous allons demander la page n° 2 une première fois, puis la mémoriser dans la variable JS [page2]. Ensuite, nous ne la redemanderons plus. Nous utiliserons la page en cache. Ligne 2, [pageRequired] vaut [true] si la variable [page2] ne contient rien, [false] sinon ;
+  </li>
+  <li>on notera que la session n&#x27;est pas postée. En effet, celle-ci mémorise des compteurs que l&#x27;action [/ajax-14] de la ligne 20 ne modifie pas ;
+  </li>
 </ul>
+
 <p><a id="refheading1429961829949500"></a></p>
 <h3 id="767-laction-ajax-14">7.6.7. L&#x27;action [/ajax-14]</h3>
 <p>L&#x27;action [/ajax-14] est la suivante :</p>
@@ -4538,9 +4986,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la réponse est toujours de type [<span style="color: #000000">JsonResult13</span>] ;</li>
-<li>ligne 3 : la valeur postée est encapsulée dans le type [<span style="color: #000000">PostAjax14</span>] suivant :</li>
+  <li>ligne 3 : la réponse est toujours de type [<span style="color: #000000">JsonResult13</span>] ;
+  </li>
+  <li>ligne 3 : la valeur postée est encapsulée dans le type [<span style="color: #000000">PostAjax14</span>] suivant :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.models;</span></span>
 <span class="odt-code-line"></span>
@@ -4555,8 +5006,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la classe [<span style="color: #000000">PostAjax14</span>] étend la classe [<span style="color: #000000">PostAjax11A</span>] de la version précédente. Elle a donc une structure [value1, value2, pageRequired] ;</li>
+  <li>ligne 3 : la classe [<span style="color: #000000">PostAjax14</span>] étend la classe [<span style="color: #000000">PostAjax11A</span>] de la version précédente. Elle a donc une structure [value1, value2, pageRequired] ;
+  </li>
 </ul>
+
 <p>L&#x27;action [/ajax-14] se poursuit de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/ajax-14&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">)</span></span>
@@ -4584,10 +5037,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-13 : si les valeurs postées [value1, value2] sont invalides, on renvoie un message d&#x27;erreur ;</li>
-<li>lignes 15-16 : normalement, le serveur devrait faire un calcul avec les valeurs postées. Ici, il se contente de les renvoyer pour montrer qu&#x27;il les a bien reçues ;</li>
-<li>lignes 18-20 : la page n° 2 n&#x27;est renvoyée que si elle a été demandée par le client. Ligne 19, la vue [<span style="color: #2a00ff">vue-12-page2</span>] est nouvelle :</li>
+  <li>lignes 9-13 : si les valeurs postées [value1, value2] sont invalides, on renvoie un message d&#x27;erreur ;
+  </li>
+  <li>lignes 15-16 : normalement, le serveur devrait faire un calcul avec les valeurs postées. Ici, il se contente de les renvoyer pour montrer qu&#x27;il les a bien reçues ;
+  </li>
+  <li>lignes 18-20 : la page n° 2 n&#x27;est renvoyée que si elle a été demandée par le client. Ligne 19, la vue [<span style="color: #2a00ff">vue-12-page2</span>] est nouvelle :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E50000015BFF167AFC.png" style="display:inline-block; margin:4px;width:4.24cm;height:6.421cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E50000015BFF167AFC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4612,9 +5069,12 @@
 </code></pre></div>
 
 <ul>
-<li>le code XML ne contient plus de valeurs évaluées par Thymeleaf comme c&#x27;était le cas auparavant ;</li>
-<li>on a identifié les zones où placer les valeurs renvoyées [value1, value2] par le serveur. Ligne 9, [id=&#x27;value1&#x27;] désigne l&#x27;endroit où placer [value1]. Ligne 13, même chose pour [value2] ;</li>
+  <li>le code XML ne contient plus de valeurs évaluées par Thymeleaf comme c&#x27;était le cas auparavant ;
+  </li>
+  <li>on a identifié les zones où placer les valeurs renvoyées [value1, value2] par le serveur. Ligne 9, [id=&#x27;value1&#x27;] désigne l&#x27;endroit où placer [value1]. Ligne 13, même chose pour [value2] ;
+  </li>
 </ul>
+
 <p><a id="refheading1429981829949500"></a></p>
 <h3 id="768-traitement-de-la-reponse-de-laction-ajax-14">7.6.8. Traitement de la réponse de l&#x27;action [/ajax-14]</h3>
 <p>La réponse de l&#x27;action [/ajax-14] est traitée par la fonction [success] suivante :</p>
@@ -4655,14 +5115,22 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-13 : si le serveur a renvoyé une erreur, on l&#x27;affiche ;</li>
-<li>lignes 14-29 : le cas où il n&#x27;y a pas eu d&#x27;erreur. On doit alors afficher la page n° 2 ;</li>
-<li>ligne 17 : on regarde si la page n° 2 est déjà enregistrée dans la variable [page2] ;</li>
-<li>ligne 19 : dans ce cas, on utilise la variable [page2] pour afficher la page n° 2 ;</li>
-<li>ligne 24 : sinon, on utilise le champ [data.page2] fourni par le serveur ;</li>
-<li>ligne 22 : on prend soin de mémoriser la page n° 2 pour ne plus la redemander par la suite ;</li>
-<li>lignes 27-28 : dans la page n° 2, on affiche les deux informations [value1, value2] envoyées par le serveur ;</li>
+  <li>lignes 9-13 : si le serveur a renvoyé une erreur, on l&#x27;affiche ;
+  </li>
+  <li>lignes 14-29 : le cas où il n&#x27;y a pas eu d&#x27;erreur. On doit alors afficher la page n° 2 ;
+  </li>
+  <li>ligne 17 : on regarde si la page n° 2 est déjà enregistrée dans la variable [page2] ;
+  </li>
+  <li>ligne 19 : dans ce cas, on utilise la variable [page2] pour afficher la page n° 2 ;
+  </li>
+  <li>ligne 24 : sinon, on utilise le champ [data.page2] fourni par le serveur ;
+  </li>
+  <li>ligne 22 : on prend soin de mémoriser la page n° 2 pour ne plus la redemander par la suite ;
+  </li>
+  <li>lignes 27-28 : dans la page n° 2, on affiche les deux informations [value1, value2] envoyées par le serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading1430001829949500"></a></p>
 <h3 id="769-retour-a-la-page-n-1">7.6.9. Retour à la page n° 1</h3>
 <p><span style="color: #000000">Le lien [Retour vers la page 1] dans la page N° 2 est le suivant :</span></p>
@@ -4683,17 +5151,24 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">c&#x27;est une action JS sans interaction avec le serveur car la page n° 1 a été mémorisée localement dans la variable [page1] ;</span></li>
-<li><span style="color: #000000">ligne 4 : on régénère la page n° 1 ;</span></li>
-<li><span style="color: #000000">ligne 6-7 : seule la partie HTML de la page n° 1 avait été mémorisée. Pas les saisies. On doit donc régénérer celles-ci ;</span></li>
+  <li><span style="color: #000000">c&#x27;est une action JS sans interaction avec le serveur car la page n° 1 a été mémorisée localement dans la variable [page1] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : on régénère la page n° 1 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6-7 : seule la partie HTML de la page n° 1 avait été mémorisée. Pas les saisies. On doit donc régénérer celles-ci ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1430021829949500"></a></p>
 <h3 id="7610-conclusion">7.6.10. Conclusion</h3>
 <p><span style="color: #000000">En exploitant les possibilités du modèle APU, nous avons réussi à simplifier le serveur web qui est maintenant sans état (absence de session) et est moins sollicité :</span></p>
 <ul>
-<li><span style="color: #000000">nous avons supprimé l&#x27;interaction avec le serveur dans la fonction JS [retourPage1]) ;</span></li>
-<li><span style="color: #000000">le serveur ne génère la page n° 2 qu&#x27;une fois ;</span></li>
+  <li><span style="color: #000000">nous avons supprimé l&#x27;interaction avec le serveur dans la fonction JS [retourPage1]) ;</span>
+  </li>
+  <li><span style="color: #000000">le serveur ne génère la page n° 2 qu&#x27;une fois ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1430041829949500"></a></p>
 <h2 id="77-structuration-du-code-javascript-en-couches">7.7. Structuration du code Javascript en couches</h2>
 <p><a id="refheading1430061829949500"></a></p>
@@ -4737,12 +5212,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 9-10 : le code JS a été placé dans deux fichiers différents :</span><ul>
-<li><span style="color: #000000">[local-ui] implémente la couche [présentation],</span></li>
-<li><span style="color: #000000">[local-dao] implémente la couche [DAO] ;</span></li>
+  <li><span style="color: #000000">lignes 9-10 : le code JS a été placé dans deux fichiers différents :</span>
+    <ul>
+      <li><span style="color: #000000">[local-ui] implémente la couche [présentation],</span>
+      </li>
+      <li><span style="color: #000000">[local-dao] implémente la couche [DAO] ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BF000000FA0A1E9929.png" style="display:inline-block; margin:4px;width:3.54cm;height:4.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BF000000FA0A1E9929.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1430101829949500"></a></p>
@@ -4754,9 +5233,9 @@
 <p><span style="color: #000000">La couche [DAO] dans [local-dao.js] va présenter l&#x27;interface suivante à la couche [présentation] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> updatePage1(deferred, sendMeBack)</span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour mettre à jour la page 1 avec le bouton [Rafraîchir]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour mettre à jour la page 1 avec le bouton [Rafraîchir]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> getPage2(deferred, sendMeBack, value1, value2, pageRequired)</span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour afficher la page 2 avec le bouton [Valider]</p></td></tr></table>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour afficher la page 2 avec le bouton [Valider]</div></td></tr></table>
 
 <p><span style="color: #000000">Le Javascript n&#x27;a pas la notion d&#x27;interface. J&#x27;ai utilisé ce terme simplement pour indiquer que la couche [présentation] s&#x27;engageait à dialoguer avec la couche [DAO] uniquement via les deux fonctions précédentes.</span></p>
 <p><a id="refheading217361254045136"></a></p>
@@ -4792,12 +5271,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : la fonction [updatePage1] reçoit deux paramètres :</span><ol>
-<li><span style="color: #000000">un objet de type [jQuery.Deferred]. Ce type d&#x27;objet mémorise un état qui peut avoir trois valeurs [&#x27;pending&#x27;, &#x27;resolved&#x27;, &#x27;rejected&#x27;]. Lorsqu&#x27;il arrive dans la fonction [updatePage1], il est dans l&#x27;état [pending] ;</span></li>
-<li><span style="color: #000000">un objet JS à renvoyer dans la couche [présentation] ;</span></li>
-</ol>
-</li>
+  <li><span style="color: #000000">ligne 1 : la fonction [updatePage1] reçoit deux paramètres :</span>
+    <ol>
+      <li><span style="color: #000000">un objet de type [jQuery.Deferred]. Ce type d&#x27;objet mémorise un état qui peut avoir trois valeurs [&#x27;pending&#x27;, &#x27;resolved&#x27;, &#x27;rejected&#x27;]. Lorsqu&#x27;il arrive dans la fonction [updatePage1], il est dans l&#x27;état [pending] ;</span>
+      </li>
+      <li><span style="color: #000000">un objet JS à renvoyer dans la couche [présentation] ;</span>
+      </li>
+    </ol>
+  </li>
 </ul>
+
 <p>Toutes les requêtes HTTP sont effectuées par la fonction [executePost] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">// requête HTTP</span>
@@ -4837,29 +5320,46 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : la fonction [executePost] exécute un appel Ajax de type POST. Elle attend quatre paramètres :</span><ol>
-<li><span style="color: #000000">un objet de type [jQuery.Deferred] dans l&#x27;état [pending] ;</span></li>
-<li><span style="color: #000000">un objet JS à renvoyer dans la couche [présentation] ;</span></li>
-<li><span style="color: #000000">l&#x27;URL du POST ;</span></li>
-<li><span style="color: #000000">la valeur à poster en tant qu&#x27;objet JS ;</span></li>
-</ol>
-</li>
-<li><span style="color: #000000">lignes 5-8 : la fonction poste du jSON (ligne 7) et reçoit du jSON (ligne 6) ;</span></li>
-<li><span style="color: #000000">ligne 11 : la valeur à poster est transformée en jSON ;</span></li>
-<li><span style="color: #000000">lignes 13-24 : la fonction exécutée en cas de succès de l&#x27;appel Ajax ;</span></li>
-<li><span style="color: #000000">lignes 19-23 : si le serveur a renvoyé une session, on la mémorise ;</span></li>
-<li><span style="color: #000000">lignes 13-18 : passent l&#x27;objet [deferred] dans l&#x27;état [resolved] en passant de plus un résultat avec les champs suivants :</span><ul>
-<li><span style="color: #000000">[status] : à 1 pour un succès, à 2 pour un échec,</span></li>
-<li><span style="color: #000000">[data] : la réponse jSON du serveur,</span></li>
-<li><span style="color: #000000">[<span style="color: #2a00ff">sendMeBack</span>] : le 2ième paramètre de la fonction qui est un objet que l&#x27;appelant veut récupérer ;</span></li>
+  <li><span style="color: #000000">ligne 1 : la fonction [executePost] exécute un appel Ajax de type POST. Elle attend quatre paramètres :</span>
+    <ol>
+      <li><span style="color: #000000">un objet de type [jQuery.Deferred] dans l&#x27;état [pending] ;</span>
+      </li>
+      <li><span style="color: #000000">un objet JS à renvoyer dans la couche [présentation] ;</span>
+      </li>
+      <li><span style="color: #000000">l&#x27;URL du POST ;</span>
+      </li>
+      <li><span style="color: #000000">la valeur à poster en tant qu&#x27;objet JS ;</span>
+      </li>
+    </ol>
+  </li>
+  <li><span style="color: #000000">lignes 5-8 : la fonction poste du jSON (ligne 7) et reçoit du jSON (ligne 6) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : la valeur à poster est transformée en jSON ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-24 : la fonction exécutée en cas de succès de l&#x27;appel Ajax ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 19-23 : si le serveur a renvoyé une session, on la mémorise ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-18 : passent l&#x27;objet [deferred] dans l&#x27;état [resolved] en passant de plus un résultat avec les champs suivants :</span>
+    <ul>
+      <li><span style="color: #000000">[status] : à 1 pour un succès, à 2 pour un échec,</span>
+      </li>
+      <li><span style="color: #000000">[data] : la réponse jSON du serveur,</span>
+      </li>
+      <li><span style="color: #000000">[<span style="color: #2a00ff">sendMeBack</span>] : le 2ième paramètre de la fonction qui est un objet que l&#x27;appelant veut récupérer ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">lignes 17-31 : la fonction exécutée en cas d&#x27;échec de l&#x27;appel Ajax. On fait la même chose que précédemment avec deux différences :</span>
+    <ul>
+      <li><span style="color: #000000">[status] passe à 2 pour signaler une erreur ;</span>
+      </li>
+      <li><span style="color: #000000">[data] est là encore la réponse jSON du serveur mais obtenue d&#x27;une façon différente ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">lignes 17-31 : la fonction exécutée en cas d&#x27;échec de l&#x27;appel Ajax. On fait la même chose que précédemment avec deux différences :</span><ul>
-<li><span style="color: #000000">[status] passe à 2 pour signaler une erreur ;</span></li>
-<li><span style="color: #000000">[data] est là encore la réponse jSON du serveur mais obtenue d&#x27;une façon différente ;</span></li>
-</ul>
-</li>
-</ul>
+
 <p><a id="refheading217365254045136"></a></p>
 <h4 id="7752-la-fonction-getpage2">7.7.5.2. La fonction [getPage2]</h4>
 <p><span style="color: #000000">La fonction [getPage2] est la suivante :</span></p>
@@ -4876,16 +5376,24 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la fonction reçoit les paramètres suivants :</span><ol>
-<li><span style="color: #000000">[deferred] : un objet de type [jQuery.Deferred] dans l&#x27;état [pending],</span></li>
-<li><span style="color: #000000">[sendMeBack] : un objet JS à renvoyer dans la couche [présentation],</span></li>
-<li><span style="color: #000000">[value1] : la première saisie dans page 1,</span></li>
-<li><span style="color: #000000">[value2] : la seconde saisie dans page 2,</span></li>
-<li><span style="color: #000000">[pageRequired] : un booléen indiquant au serveur s&#x27;il doit ou non envoyer le flux HTML de la page n° 2 ;</span></li>
-</ol>
-</li>
-<li><span style="color: #000000">la fonction [executePost] est appelée pour exécuter la requête HTTP nécessaire ;</span></li>
+  <li><span style="color: #000000">la fonction reçoit les paramètres suivants :</span>
+    <ol>
+      <li><span style="color: #000000">[deferred] : un objet de type [jQuery.Deferred] dans l&#x27;état [pending],</span>
+      </li>
+      <li><span style="color: #000000">[sendMeBack] : un objet JS à renvoyer dans la couche [présentation],</span>
+      </li>
+      <li><span style="color: #000000">[value1] : la première saisie dans page 1,</span>
+      </li>
+      <li><span style="color: #000000">[value2] : la seconde saisie dans page 2,</span>
+      </li>
+      <li><span style="color: #000000">[pageRequired] : un booléen indiquant au serveur s&#x27;il doit ou non envoyer le flux HTML de la page n° 2 ;</span>
+      </li>
+    </ol>
+  </li>
+  <li><span style="color: #000000">la fonction [executePost] est appelée pour exécuter la requête HTTP nécessaire ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1430121829949500"></a></p>
 <h3 id="776-la-couche-presentation">7.7.6. La couche [présentation]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030800000110B4CC715D.png" style="display:inline-block; margin:4px;width:10.266cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/100000000000030800000110B4CC715D.png" /></td></tr></table>
@@ -4910,11 +5418,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : on crée un objet [jQuery.Deferred]. Par défaut, il est dans l&#x27;état [pending] ;</li>
-<li>ligne 5 : l&#x27;image d&#x27;attente est affichée</li>
-<li>lignes 6-9 : la fonction [updatePage1] est exécutée. On passe un objet [sendMeBack] fictif, juste pour montrer à quoi ça peut servir ;</li>
-<li>ligne 11 : le paramètre de la fonction [deferred.done] est elle-même une fonction. C&#x27;est la fonction à exécuter lorsque l&#x27;état de l&#x27;objet [deferred] passe dans l&#x27;état [resolved]. On vient de voir que la fonction DAO [executePost] passait l&#x27;état de cet objet à [resolved] à réception de la réponse du serveur. Cela signifie que lorsque la fonction [postFormDone] s&#x27;exécute, la réponse du serveur a été reçue ;</li>
+  <li>ligne 4 : on crée un objet [jQuery.Deferred]. Par défaut, il est dans l&#x27;état [pending] ;
+  </li>
+  <li>ligne 5 : l&#x27;image d&#x27;attente est affichée
+  </li>
+  <li>lignes 6-9 : la fonction [updatePage1] est exécutée. On passe un objet [sendMeBack] fictif, juste pour montrer à quoi ça peut servir ;
+  </li>
+  <li>ligne 11 : le paramètre de la fonction [deferred.done] est elle-même une fonction. C&#x27;est la fonction à exécuter lorsque l&#x27;état de l&#x27;objet [deferred] passe dans l&#x27;état [resolved]. On vient de voir que la fonction DAO [executePost] passait l&#x27;état de cet objet à [resolved] à réception de la réponse du serveur. Cela signifie que lorsque la fonction [postFormDone] s&#x27;exécute, la réponse du serveur a été reçue ;
+  </li>
 </ul>
+
 <p>La fonction [postFormDone] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> postFormDone(result) {</span></span>
@@ -4950,8 +5463,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : le paramètre [result] reçu est le paramètre passé à la méthode [deferred.resolve] dans la fonction [executePost], par exemple :</span></li>
+  <li><span style="color: #000000">ligne 1 : le paramètre [result] reçu est le paramètre passé à la méthode [deferred.resolve] dans la fonction [executePost], par exemple :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">            <span style="color:#3f7f5f">// on rend le résultat</span></span>
 <span class="odt-code-line">            deferred.resolve({</span>
@@ -4962,10 +5477,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : on récupère la réponse du serveur ;</span></li>
-<li><span style="color: #000000">lignes 10-24 : on a le code qui dans la version précédente était dans la fonction [onSuccess] de la fonction [postForm] ;</span></li>
-<li><span style="color: #000000">lignes 25-28 : on a le code qui dans la version précédente était dans la fonction [onError] de la fonction [postForm] ;</span></li>
+  <li><span style="color: #000000">ligne 5 : on récupère la réponse du serveur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-24 : on a le code qui dans la version précédente était dans la fonction [onSuccess] de la fonction [postForm] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 25-28 : on a le code qui dans la version précédente était dans la fonction [onError] de la fonction [postForm] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading217367254045136"></a></p>
 <h4 id="7762-le-role-du-parametre-sendmeback">7.7.6.2. Le rôle du paramètre [<span style="color: #000000">sendMeBack</span>]</h4>
 <p><span style="color: #000000"><a id="refheading14301818299495001"></a>A quoi sert le paramètre [sendMeBack] ? Regardons le code d&#x27;appel de la fonction [updatePage1] :</span></p>
@@ -5005,8 +5524,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7, la fonction [postFormDone] a retrouvé le paramètre [sendMeBack] initialement transmis à la fonction DAO [updatePage1] par la fonction [postForm] ;</span></li>
+  <li><span style="color: #000000">ligne 7, la fonction [postFormDone] a retrouvé le paramètre [sendMeBack] initialement transmis à la fonction DAO [updatePage1] par la fonction [postForm] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1430161829949500"></a></p>
 <h3 id="777-la-fonction-valider">7.7.7. La fonction [valider]</h3>
 <p><span style="color: #000000">La fonction [valider] est la suivante :</span></p>
@@ -5077,10 +5598,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : on récupère la réponse du serveur ;</span></li>
-<li><span style="color: #000000">lignes 10-32 : on a le code qui dans la version précédente était dans la fonction [onSuccess] de la fonction [valider] ;</span></li>
-<li><span style="color: #000000">lignes 34-38 : on a le code qui dans la version précédente était dans la fonction [onError] de la fonction [valider] ;</span></li>
+  <li><span style="color: #000000">ligne 5 : on récupère la réponse du serveur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-32 : on a le code qui dans la version précédente était dans la fonction [onSuccess] de la fonction [valider] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 34-38 : on a le code qui dans la version précédente était dans la fonction [onError] de la fonction [valider] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading217369254045136"></a></p>
 <h3 id="778-tests">7.7.8. Tests</h3>
 <p><span style="color: #000000">L&#x27;application continue à fonctionner comme auparavant et dans la console de Chrome, on peut voir les paramètres [sendMeBack] des fonctions [postForm] et [valider] :</span></p>
@@ -5095,15 +5620,22 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F2000002A1625A90CD.png" style="display:inline-block; margin:4px;width:16.748cm;height:8.904cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F2000002A1625A90CD.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">on a une architecture client [2] / serveur [1] où le client et le serveur communiquent en jSON ;</span></li>
-<li><span style="color: #000000">en [1], la couche web Spring MVC délivre des vues, des fragments de vue, des données dans du jSON ;</span></li>
-<li><span style="color: #000000">en [2] : le code Javascript embarqué dans la vue chargée au démarrage de l&#x27;application peut être structuré en couches :</span><ul>
-<li><span style="color: #000000">la couche [présentation] s&#x27;occupe des interactions avec l&#x27;utilisateur,</span></li>
-<li><span style="color: #000000">la couche [DAO] s&#x27;occupe de l&#x27;accès aux données via le serveur web [1] ,</span></li>
-<li><span style="color: #000000">la couche [métier] peut ne pas exister ou reprendre certaines des fonctionnalités non confidentielles de la couche [métier] du serveur afin de soulager celui-ci ;</span></li>
-</ul>
-</li>
-<li><span style="color: #000000">le client [2] peut mettre certaines vues en cache afin là encore de soulager le serveur. Il gère la session ;</span></li>
+  <li><span style="color: #000000">on a une architecture client [2] / serveur [1] où le client et le serveur communiquent en jSON ;</span>
+  </li>
+  <li><span style="color: #000000">en [1], la couche web Spring MVC délivre des vues, des fragments de vue, des données dans du jSON ;</span>
+  </li>
+  <li><span style="color: #000000">en [2] : le code Javascript embarqué dans la vue chargée au démarrage de l&#x27;application peut être structuré en couches :</span>
+    <ul>
+      <li><span style="color: #000000">la couche [présentation] s&#x27;occupe des interactions avec l&#x27;utilisateur,</span>
+      </li>
+      <li><span style="color: #000000">la couche [DAO] s&#x27;occupe de l&#x27;accès aux données via le serveur web [1] ,</span>
+      </li>
+      <li><span style="color: #000000">la couche [métier] peut ne pas exister ou reprendre certaines des fonctionnalités non confidentielles de la couche [métier] du serveur afin de soulager celui-ci ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">le client [2] peut mettre certaines vues en cache afin là encore de soulager le serveur. Il gère la session ;</span>
+  </li>
 </ul>
 
 

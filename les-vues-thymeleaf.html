@@ -872,9 +872,12 @@
 
 <p>Les deux chapitres précédents ont décrit divers aspects du bloc [1], les <strong>actions</strong>. Nous abordons maintenant :</p>
 <ul>
-<li>le bloc [2] des vues V ;</li>
-<li>le bloc [3] du modèle M affiché par ces vues ;</li>
+  <li>le bloc [2] des vues V ;
+  </li>
+  <li>le bloc [3] du modèle M affiché par ces vues ;
+  </li>
 </ul>
+
 <p>Depuis la création de Spring MVC, la technologie de génération des pages HTML envoyées aux navigateurs client était celle des pages JSP (Java Server Pages). Depuis quelques années, la technologie [Thymeleaf] [<a href="http://www.thymeleaf.org/">http://www.thymeleaf.org/</a>] peut être également utilisée. C&#x27;est elle que nous présentons maintenant.</p>
 <p><a id="refheading1401431644545772"></a></p>
 <h2 id="51-le-projet-sts">5.1. Le projet STS</h2>
@@ -884,19 +887,27 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E70000028F58DD2468.png" style="display:inline-block; margin:4px;width:16.603cm;height:8.666cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E70000028F58DD2468.png" /></td></tr></table>
 
 <ul>
-<li>en [3], indiquer que le projet a besoin des dépendances [Thymeleaf]. Cela amènera en plus des dépendances [Spring MVC] du projet précédent, celles du framework [Thymeleaf] [5] ;</li>
+  <li>en [3], indiquer que le projet a besoin des dépendances [Thymeleaf]. Cela amènera en plus des dépendances [Spring MVC] du projet précédent, celles du framework [Thymeleaf] [5] ;
+  </li>
 </ul>
+
 <p>Maintenant, faisons évoluer ce projet de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE000001109B82AE70.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.039cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE000001109B82AE70.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Nous nous inspirons du projet précédent :</p>
 <ul>
-<li>[istia.st.springmvc.controllers] contiendra les contrôleurs ;</li>
-<li>[istia.st.springmvc.models] contiendra les modèles des actions et des vues ;</li>
-<li>[istia.st.springmvc.main] est le package de la classe exécutable Spring Boot ;</li>
-<li>[templates] contiendra les vues Thymeleaf ;</li>
-<li>[i18n] contiendra les messages internationalisés affichés par les vues ;</li>
+  <li>[istia.st.springmvc.controllers] contiendra les contrôleurs ;
+  </li>
+  <li>[istia.st.springmvc.models] contiendra les modèles des actions et des vues ;
+  </li>
+  <li>[istia.st.springmvc.main] est le package de la classe exécutable Spring Boot ;
+  </li>
+  <li>[templates] contiendra les vues Thymeleaf ;
+  </li>
+  <li>[i18n] contiendra les messages internationalisés affichés par les vues ;
+  </li>
 </ul>
+
 <p>La classe [Application] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.springmvc.main;</span></span>
@@ -975,12 +986,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5, l&#x27;annotation [@Controller] a remplacé l&#x27;annotation [@RestController] car désormais, les actions ne vont pas générer la réponse au client. Elles vont :<ul>
-<li>construire un modèle M</li>
-<li>rendre un type [String] qui sera le nom de la vue [Thymeleaf] chargée d&#x27;afficher ce modèle. C&#x27;est la combinaison de cette vue V et de ce modèle M qui va générer le flux HTML envoyé au client ;</li>
+  <li>ligne 5, l&#x27;annotation [@Controller] a remplacé l&#x27;annotation [@RestController] car désormais, les actions ne vont pas générer la réponse au client. Elles vont :
+    <ul>
+      <li>construire un modèle M
+      </li>
+      <li>rendre un type [String] qui sera le nom de la vue [Thymeleaf] chargée d&#x27;afficher ce modèle. C&#x27;est la combinaison de cette vue V et de ce modèle M qui va générer le flux HTML envoyé au client ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Le fichier [messages.properties] est pour l&#x27;instant vide.</p>
 <p><a id="refheading1401451644545772"></a></p>
 <h2 id="52-v01-les-bases-de-thymeleaf">5.2. [/v01] : les bases de Thymeleaf</h2>
@@ -994,9 +1009,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : l&#x27;action rend un type [String]. Ce sera le nom de l&#x27;action ;</li>
-<li>ligne 4 : cette vue sera [v01]. Par défaut, elle doit se trouver dans le dossier [templates] et s&#x27;appeler [v01.html] ;</li>
+  <li>ligne 3 : l&#x27;action rend un type [String]. Ce sera le nom de l&#x27;action ;
+  </li>
+  <li>ligne 4 : cette vue sera [v01]. Par défaut, elle doit se trouver dans le dossier [templates] et s&#x27;appeler [v01.html] ;
+  </li>
 </ul>
+
 <p>La vue [v01.html] est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DC000000E53652D36D.png" style="display:inline-block; margin:4px;width:9.684cm;height:3.03cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DC000000E53652D36D.png" /></td></tr></table>
 
@@ -1015,9 +1033,12 @@
 
 <p>C&#x27;est un fichier HTML. La présence de Thymeleaf se voit :</p>
 <ul>
-<li>à l&#x27;espace de noms [th] de la ligne 2 ;</li>
-<li>aux attributs [th:text] des lignes 4 et 8 ;</li>
+  <li>à l&#x27;espace de noms [th] de la ligne 2 ;
+  </li>
+  <li>aux attributs [th:text] des lignes 4 et 8 ;
+  </li>
 </ul>
+
 <p>On a là un fichier HTML valide qui peut être visualisé. Nous le mettons dans le dossier [static] [2] sous le nom [vue-01.html] et nous le demandons directement avec un navigateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052C0000017C40A16052.png" style="display:inline-block; margin:4px;width:17.515cm;height:5.027cm;" class="odt-zoomable" data-zoom-src="images/100000000000052C0000017C40A16052.png" /></td></tr></table>
 
@@ -1029,9 +1050,12 @@
 
 <p>est traitée de la façon suivante par Thymeleaf :</p>
 <ul>
-<li><strong>th:text</strong> a la syntaxe <strong>th:text=&quot;expression&quot;</strong> où expression est une expression à évaluer. Lorsque cette expression est une chaîne de caractères comme ici, il faut entourer celle-ci par des apostrophes ;</li>
-<li>la valeur de [expression] remplace le texte de la balise HTML, ici le texte de la balise [title] ;</li>
+  <li><b>th:text</b> a la syntaxe <b>th:text=&quot;expression&quot;</b> où expression est une expression à évaluer. Lorsque cette expression est une chaîne de caractères comme ici, il faut entourer celle-ci par des apostrophes ;
+  </li>
+  <li>la valeur de [expression] remplace le texte de la balise HTML, ici le texte de la balise [title] ;
+  </li>
 </ul>
+
 <p>Après traitement, la balise ci-dessus est devenue :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span><span style="color:#000000">Les vues</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span>
@@ -1041,8 +1065,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000503000001A2F1BA7359.png" style="display:inline-block; margin:4px;width:16.974cm;height:5.53cm;" class="odt-zoomable" data-zoom-src="images/1000000000000503000001A2F1BA7359.png" /></td></tr></table>
 
 <ul>
-<li>en [2], on voit le travail de remplacement fait par Thymeleaf ;</li>
+  <li>en [2], on voit le travail de remplacement fait par Thymeleaf ;
+  </li>
 </ul>
+
 <p>Maintenant demandons l&#x27;URL [http://localhost:8080/v01.html] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B50000009BF5BE1B5C.png" style="display:inline-block; margin:4px;width:8.089cm;height:2.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B50000009BF5BE1B5C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1066,8 +1092,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CF000001305BFEFE4B.png" style="display:inline-block; margin:4px;width:16.286cm;height:4.022cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CF000001305BFEFE4B.png" /></td></tr></table>
 
 <ul>
-<li>dans les logs console en [1], on voit que l&#x27;action [/v02] a été appelée, et celle-ci a fait afficher la vue [vue-02.html] en [2] ;</li>
+  <li>dans les logs console en [1], on voit que l&#x27;action [/v02] a été appelée, et celle-ci a fait afficher la vue [vue-02.html] en [2] ;
+  </li>
 </ul>
+
 <p>Maintenant on sait que l&#x27;URL [http://localhost:8080/v02.html] peut désigner également un fichier [/v02.html] dans le dossier [static]. Que se passe-t-il si ce fichier existe ? Nous essayons. Nous créons dans le dossier [static] le fichier [v02.html] suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BC000000B4A933AD7C.png" style="display:inline-block; margin:4px;width:3.48cm;height:3.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BC000000B4A933AD7C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1089,10 +1117,14 @@
 
 <p>[1] et [2] montrent que c&#x27;est l&#x27;action [/v02] qui a été appelée. On retiendra donc que lorsque l&#x27;URL demandée est de la forme [<strong>/x.html</strong>], Spring / Thymeleaf :</p>
 <ul>
-<li>exécute l&#x27;action [/x] si elle existe ;</li>
-<li>sert la page [/static/x.html] si elle existe ;</li>
-<li>lance une exception 404 Not found sinon ;</li>
+  <li>exécute l&#x27;action [/x] si elle existe ;
+  </li>
+  <li>sert la page [/static/x.html] si elle existe ;
+  </li>
+  <li>lance une exception 404 Not found sinon ;
+  </li>
 </ul>
+
 <p>Pour éviter des confusions, à partir de maintenant, les actions et les vues n&#x27;auront pas les mêmes noms.</p>
 <p><a id="refheading1401471644545772"></a></p>
 <h2 id="53-v03-internationalisation-des-vues">5.3. [/v03] : internationalisation des vues</h2>
@@ -1150,11 +1182,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : le modèle de la vue est injecté dans les paramètres de l&#x27;action. Par défaut, ce modèle initial est vide. On verra qu&#x27;il est possible de le pré-remplir ;</li>
-<li>ligne 4 : un modèle de type [Model] est une sorte de dictionnaire d&#x27;éléments de type &lt;String, Object&gt;. Ligne 4, nous ajoutons une entrée dans ce dictionnaire avec la clé [personne] associée à une valeur de type [Personne] ;</li>
-<li>ligne 5 : on affiche sur la console le modèle pour voir à quoi il ressemble ;</li>
-<li>ligne 6 : on fait afficher la vue [vue-04.html] ;</li>
+  <li>ligne 4 : le modèle de la vue est injecté dans les paramètres de l&#x27;action. Par défaut, ce modèle initial est vide. On verra qu&#x27;il est possible de le pré-remplir ;
+  </li>
+  <li>ligne 4 : un modèle de type [Model] est une sorte de dictionnaire d&#x27;éléments de type &lt;String, Object&gt;. Ligne 4, nous ajoutons une entrée dans ce dictionnaire avec la clé [personne] associée à une valeur de type [Personne] ;
+  </li>
+  <li>ligne 5 : on affiche sur la console le modèle pour voir à quoi il ressemble ;
+  </li>
+  <li>ligne 6 : on fait afficher la vue [vue-04.html] ;
+  </li>
 </ul>
+
 <p>La classe [Personne] est celle utilisée dans le chapitre précédent :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E900000091E9C2A24E.png" style="display:inline-block; margin:4px;width:4.309cm;height:2.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E900000091E9C2A24E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1219,10 +1256,14 @@
 </code></pre></div>
 
 <ul>
-<li>la ligne 10, introduit un nouveau type d&#x27;expression Thymeleaf <strong>${var}</strong> où <strong>var</strong> est une <strong>clé</strong> du modèle M de la vue. On se rappelle que l&#x27;action [/v04] a mis dans le modèle une clé [personne] associée à un type Personne[id, nom, age] ;</li>
-<li>ligne 10 : affiche le nom de la personne présente dans le modèle ;</li>
-<li>ligne 14 : affiche son âge ;</li>
+  <li>la ligne 10, introduit un nouveau type d&#x27;expression Thymeleaf <b>${var}</b> où <b>var</b> est une <b>clé</b> du modèle M de la vue. On se rappelle que l&#x27;action [/v04] a mis dans le modèle une clé [personne] associée à un type Personne[id, nom, age] ;
+  </li>
+  <li>ligne 10 : affiche le nom de la personne présente dans le modèle ;
+  </li>
+  <li>ligne 14 : affiche son âge ;
+  </li>
 </ul>
+
 <p>Les fichiers de messages sont modifiés pour ajouter les clés [personne.nom] et [personne.age] des lignes 9 et 13. Le résultat est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000500000001284947332F.png" style="display:inline-block; margin:4px;width:16.933cm;height:3.916cm;" class="odt-zoomable" data-zoom-src="images/1000000000000500000001284947332F.png" /></td></tr></table>
 
@@ -1351,19 +1392,27 @@
 </code></pre></div>
 
 <ul>
-<li>les lignes 16-24 configurent un [TemplateResolver] pour Thymeleaf. C&#x27;est cet objet qui est chargé à partir d&#x27;un nom de vue délivré par une action, de trouver le fichier correspondant ;</li>
-<li>lignes 18 et 19 fixent le préfixe et le suffixe à ajouter au nom de la vue pour trouver le fichier. Ainsi si le nom de la vue est [vue04], le fichier cherché sera [classpath:/templates/vue04.xml]. [classpath:/templates] est une syntaxe Spring qui désigne un dossier [/templates] placé à la racine du Classpath du projet ;</li>
-<li>ligne 21 : pour que dans la réponse faite au client on ait l&#x27;entête HTTP :</li>
+  <li>les lignes 16-24 configurent un [TemplateResolver] pour Thymeleaf. C&#x27;est cet objet qui est chargé à partir d&#x27;un nom de vue délivré par une action, de trouver le fichier correspondant ;
+  </li>
+  <li>lignes 18 et 19 fixent le préfixe et le suffixe à ajouter au nom de la vue pour trouver le fichier. Ainsi si le nom de la vue est [vue04], le fichier cherché sera [classpath:/templates/vue04.xml]. [classpath:/templates] est une syntaxe Spring qui désigne un dossier [/templates] placé à la racine du Classpath du projet ;
+  </li>
+  <li>ligne 21 : pour que dans la réponse faite au client on ait l&#x27;entête HTTP :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">Content-Type:text/html;<span style="background-color:#ff950e">charset=UTF-8</span></span>
 </code></pre></div>
 
 <ul>
-<li>ligne 20 : indique que la vue respecte la norme HTML5 ;</li>
-<li>ligne 22 : indique que les vues Thymeleaf peuvent être mises en cache ;</li>
-<li>lignes 26-31 : fixe le moteur de résolution des vues du couple Spring / Thymeleaf avec le moteur de résolution précédent ;</li>
+  <li>ligne 20 : indique que la vue respecte la norme HTML5 ;
+  </li>
+  <li>ligne 22 : indique que les vues Thymeleaf peuvent être mises en cache ;
+  </li>
+  <li>lignes 26-31 : fixe le moteur de résolution des vues du couple Spring / Thymeleaf avec le moteur de résolution précédent ;
+  </li>
 </ul>
+
 <p>Lançons l&#x27;exécutable de ce nouveau projet et demandons l&#x27;URL [http://localhost:8080/v04.html?lang=en] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000000B1551B6CB4.png" style="display:inline-block; margin:4px;width:7.68cm;height:3.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000000B1551B6CB4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1406,10 +1455,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 8-17 : à l&#x27;intérieur de ces lignes un objet Thymeleaf est défini par l&#x27;attribut [<span style="color: #7f007f">th:object</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;${personne}&quot;</span></em>] (ligne 8). Cet objet est ici l&#x27;objet de clé [personne] qui est dans le modèle :</li>
-<li>ligne 11 : l&#x27;expression Thymeleaf [<em><span style="color: #2a00ff">*{nom}</span></em>] est équivalente à [${objet.nom}] où [objet] est l&#x27;objet Thymeleaf courant. Donc ici l&#x27;expression [<em><span style="color: #2a00ff">*{nom}</span></em>] est équivalente à [$<em><span style="color: #2a00ff">{personne.nom}</span></em>] ;</li>
-<li>ligne 15 : idem ;</li>
+  <li>lignes 8-17 : à l&#x27;intérieur de ces lignes un objet Thymeleaf est défini par l&#x27;attribut [<span style="color: #7f007f">th:object</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;${personne}&quot;</span></i>] (ligne 8). Cet objet est ici l&#x27;objet de clé [personne] qui est dans le modèle :
+  </li>
+  <li>ligne 11 : l&#x27;expression Thymeleaf [<i><span style="color: #2a00ff">*{nom}</span></i>] est équivalente à [${objet.nom}] où [objet] est l&#x27;objet Thymeleaf courant. Donc ici l&#x27;expression [<i><span style="color: #2a00ff">*{nom}</span></i>] est équivalente à [$<i><span style="color: #2a00ff">{personne.nom}</span></i>] ;
+  </li>
+  <li>ligne 15 : idem ;
+  </li>
 </ul>
+
 <p>Le résultat :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000149000000B21217216C.png" style="display:inline-block; margin:4px;width:6.091cm;height:3.3cm;" class="odt-zoomable" data-zoom-src="images/1000000000000149000000B21217216C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1451,9 +1504,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 17 : l&#x27;attribut [th:if] évalue une expression booléenne. Si cette expression est vraie, la balise est affichée sinon elle ne l&#x27;est pas. Donc ici si ${personne.age}&gt;=18, le texte [<em><span style="color: #2a00ff">#{personne.majeure}</span></em>] sera affiché, ç-à-d le message de clé [personne.majeure] dans les fichiers de messages ;</li>
-<li>ligne 18 : on ne peut pas écrire [<em><span style="color: #2a00ff">*{age} &lt; 18</span></em>] car le signe &lt; est un caractère réservé. Il faut donc utiliser son équivalent HTML [&amp;lt;] appelé également entité HTML [<a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references</a>];</li>
+  <li>ligne 17 : l&#x27;attribut [th:if] évalue une expression booléenne. Si cette expression est vraie, la balise est affichée sinon elle ne l&#x27;est pas. Donc ici si ${personne.age}&gt;=18, le texte [<i><span style="color: #2a00ff">#{personne.majeure}</span></i>] sera affiché, ç-à-d le message de clé [personne.majeure] dans les fichiers de messages ;
+  </li>
+  <li>ligne 18 : on ne peut pas écrire [<i><span style="color: #2a00ff">*{age} &lt; 18</span></i>] car le signe &lt; est un caractère réservé. Il faut donc utiliser son équivalent HTML [&amp;lt;] appelé également entité HTML [<a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references</a>];
+  </li>
 </ul>
+
 <p>Les fichiers de messages sont modifiés :</p>
 <p><u><strong>[messages_fr.properties]</strong></u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1490,8 +1546,10 @@
 </code></pre></div>
 
 <ul>
-<li>l&#x27;action crée une liste de trois personnes, la met dans le modèle associée à la clé [liste] et fait afficher la vue [vue-07] ;</li>
+  <li>l&#x27;action crée une liste de trois personnes, la met dans le modèle associée à la clé [liste] et fait afficher la vue [vue-07] ;
+  </li>
 </ul>
+
 <p>La vue [vue-07.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1510,9 +1568,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : l&#x27;attribut [th:each] répète la balise dans laquelle elle se trouve, ici une balise &lt;li&gt;. Elle a ici deux paramètres [element : collection] où [collection] est une collection d&#x27;objets, ici une liste de personnes. Thymeleaf va parcourir la collection et générer autant de balises &lt;li&gt; qu&#x27;il y a d&#x27;éléments dans la collection. Pour chaque balise &lt;li&gt; [element] va représenter l&#x27;élément de la collection attaché à la balise. Pour cet élément, l&#x27;attribut [th:text] va être évalué. Son expression est ici une concaténation de chaînes pour avoir le résultat [id, nom, age] ;</li>
-<li>ligne 8 : on ajoute la clé [<em><span style="color: #2a00ff">liste.personnes</span></em>] dans les fichiers de messages ;</li>
+  <li>ligne 10 : l&#x27;attribut [th:each] répète la balise dans laquelle elle se trouve, ici une balise &lt;li&gt;. Elle a ici deux paramètres [element : collection] où [collection] est une collection d&#x27;objets, ici une liste de personnes. Thymeleaf va parcourir la collection et générer autant de balises &lt;li&gt; qu&#x27;il y a d&#x27;éléments dans la collection. Pour chaque balise &lt;li&gt; [element] va représenter l&#x27;élément de la collection attaché à la balise. Pour cet élément, l&#x27;attribut [th:text] va être évalué. Son expression est ici une concaténation de chaînes pour avoir le résultat [id, nom, age] ;
+  </li>
+  <li>ligne 8 : on ajoute la clé [<i><span style="color: #2a00ff">liste.personnes</span></i>] dans les fichiers de messages ;
+  </li>
 </ul>
+
 <p>Voici le résultat :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000184000000D7124FCDA8.png" style="display:inline-block; margin:4px;width:7.181cm;height:3.979cm;" class="odt-zoomable" data-zoom-src="images/1000000000000184000000D7124FCDA8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000187000000D9DE8B565B.png" style="display:inline-block; margin:4px;width:7.241cm;height:4.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000187000000D9DE8B565B.png" /></td></tr></table>
 
@@ -1537,10 +1598,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11 : l&#x27;annotation [<span style="color: #646464">@ModelAttribute</span><span style="color: #000000">(</span><span style="color: #2a00ff">&quot;someone&quot;</span><span style="color: #000000">)</span>] va automatiquement ajouter l&#x27;objet [Personne p] dans le modèle, associé à la clé [someone] ;</li>
-<li>ligne 12 : pour vérifier le modèle ;</li>
-<li>ligne 13 : affiche la vue [vue-08.xml] ;</li>
+  <li>ligne 11 : l&#x27;annotation [<span style="color: #646464">@ModelAttribute</span><span style="color: #000000">(</span><span style="color: #2a00ff">&quot;someone&quot;</span><span style="color: #000000">)</span>] va automatiquement ajouter l&#x27;objet [Personne p] dans le modèle, associé à la clé [someone] ;
+  </li>
+  <li>ligne 12 : pour vérifier le modèle ;
+  </li>
+  <li>ligne 13 : affiche la vue [vue-08.xml] ;
+  </li>
 </ul>
+
 <p>La vue [vue-08.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1569,8 +1634,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : l&#x27;objet Thymeleaf est initialisé avec l&#x27;objet de clé [someone] ;</li>
+  <li>ligne 8 : l&#x27;objet Thymeleaf est initialisé avec l&#x27;objet de clé [someone] ;
+  </li>
 </ul>
+
 <p>Le résultat est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000233000000CBC3B6CCFB.png" style="display:inline-block; margin:4px;width:10.419cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000233000000CBC3B6CCFB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1587,8 +1654,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la présence du paramètre [Personne p] va automatiquement mettre la personne [p] dans le modèle. Comme il n&#x27;est pas précisé de clé, la clé utilisée est le nom de la classe avec son premier caractère en minuscule. Donc [Personne p] est équivalent à [<span style="color: #646464">@ModelAttribute</span><span style="color: #000000">(</span><span style="color: #2a00ff">&quot;personne&quot;</span><span style="color: #000000">) Personne p</span>] ;</li>
+  <li>ligne 1 : la présence du paramètre [Personne p] va automatiquement mettre la personne [p] dans le modèle. Comme il n&#x27;est pas précisé de clé, la clé utilisée est le nom de la classe avec son premier caractère en minuscule. Donc [Personne p] est équivalent à [<span style="color: #646464">@ModelAttribute</span><span style="color: #000000">(</span><span style="color: #2a00ff">&quot;personne&quot;</span><span style="color: #000000">) Personne p</span>] ;
+  </li>
 </ul>
+
 <p>La vue [vue.09.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1617,8 +1686,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : la clé de modèle utilisée est [personne] ;</li>
+  <li>ligne 8 : la clé de modèle utilisée est [personne] ;
+  </li>
 </ul>
+
 <p>Voici un résultat :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000234000000D4D27C2322.png" style="display:inline-block; margin:4px;width:10.419cm;height:3.93cm;" class="odt-zoomable" data-zoom-src="images/1000000000000234000000D4D27C2322.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1640,9 +1711,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 1-4 : définissent une méthode créant dans le modèle <strong>de chaque requête</strong> un élément de clé [<span style="color: #2a00ff">uneAutrePersonne</span>] associé à l&#x27;objet [<strong><span style="color: #7f0055">new</span></strong><span style="color: #000000"> Personne(24,</span><span style="color: #2a00ff">&quot;pauline&quot;</span><span style="color: #000000">,55)</span>] ;</li>
-<li>lignes 6-10 : l&#x27;action [/v10] ne fait rien si ce n&#x27;est de passer le modèle qu&#x27;elle reçoit à la vue [vue-10.xml]. A Noter que le paramètre [<span style="color: #000000">Model </span><span style="color: #6a3e3e">model</span>] n&#x27;a besoin d&#x27;être présent que pour l&#x27;instruction de la ligne 8. Sans elle, il est inutile ;</li>
+  <li>lignes 1-4 : définissent une méthode créant dans le modèle <b>de chaque requête</b> un élément de clé [<span style="color: #2a00ff">uneAutrePersonne</span>] associé à l&#x27;objet [<b><span style="color: #7f0055">new</span></b><span style="color: #000000"> Personne(24,</span><span style="color: #2a00ff">&quot;pauline&quot;</span><span style="color: #000000">,55)</span>] ;
+  </li>
+  <li>lignes 6-10 : l&#x27;action [/v10] ne fait rien si ce n&#x27;est de passer le modèle qu&#x27;elle reçoit à la vue [vue-10.xml]. A Noter que le paramètre [<span style="color: #000000">Model </span><span style="color: #6a3e3e">model</span>] n&#x27;a besoin d&#x27;être présent que pour l&#x27;instruction de la ligne 8. Sans elle, il est inutile ;
+  </li>
 </ul>
+
 <p>La vue [vue-10.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1700,8 +1774,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : on indique que la clé [jean] du modèle doit être placé dans la session ;</li>
+  <li>ligne 2 : on indique que la clé [jean] du modèle doit être placé dans la session ;
+  </li>
 </ul>
+
 <p>C&#x27;est pourquoi en ligne 7 de l&#x27;action, on a injecté la session. Ligne 8, on affiche la valeur de la session associée à la clé [jean].</p>
 <p>La vue [vue-11.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1747,16 +1823,22 @@
 
 <p>On affiche deux personnes :</p>
 <ul>
-<li>lignes 8-21 : la personne de clé [jean] dans le modèle ;</li>
-<li>lignes 23-36 : la personne de clé [jean] dans la session ;</li>
+  <li>lignes 8-21 : la personne de clé [jean] dans le modèle ;
+  </li>
+  <li>lignes 23-36 : la personne de clé [jean] dans la session ;
+  </li>
 </ul>
+
 <p>Les résultats sont les suivants :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000282000001F696E3B39E.png" style="display:inline-block; margin:4px;width:8.493cm;height:6.641cm;" class="odt-zoomable" data-zoom-src="images/1000000000000282000001F696E3B39E.png" /></td></tr></table>
 
 <ul>
-<li>en [1], la personne de clé [jean] dans le modèle ;</li>
-<li>en [2], la personne de clé [jean] dans la session ;</li>
+  <li>en [1], la personne de clé [jean] dans le modèle ;
+  </li>
+  <li>en [2], la personne de clé [jean] dans la session ;
+  </li>
 </ul>
+
 <p>Le log console est lui le suivant :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">Modèle={uneAutrePersonne=[id=24, nom=pauline,  age=55], jean=[id=33, nom=jean,  age=10]}, <span style="background-color:#ff950e">Session[jean]=null</span></span>
@@ -1789,8 +1871,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2, il y a désormais deux attributs de session ;</span></li>
+  <li><span style="color: #000000">ligne 2, il y a désormais deux attributs de session ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Revenons aux paramètres de l&#x27;action [/v12b] :</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String v12b(Model </span><span style="color:#6a3e3e">model</span><span style="color:#000000">, </span><span style="color:#646464">@ModelAttribute</span><span style="color:#000000">(</span><span style="color:#2a00ff">&quot;paul&quot;</span><span style="color:#000000">) Personne </span><span style="color:#6a3e3e">p</span><span style="color:#000000">) {</span></span>
@@ -1825,8 +1909,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : on référence la clé [paul] du modèle de la vue ;</span></li>
+  <li><span style="color: #000000">ligne 8 : on référence la clé [paul] du modèle de la vue ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Cela donne le résultat suivant (après avoir exécuté l&#x27;action [/v12a] qui met la clé [paul] dans la session) :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000169000000D5D6FD1000.png" style="display:inline-block; margin:4px;width:6.68cm;height:3.941cm;" class="odt-zoomable" data-zoom-src="images/1000000000000169000000D5D6FD1000.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1893,9 +1979,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016F000001090F60711C.png" style="display:inline-block; margin:4px;width:6.789cm;height:4.911cm;" class="odt-zoomable" data-zoom-src="images/100000000000016F000001090F60711C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li><span style="color: #000000">ligne 8 du formulaire, on trouve la balise &lt;form&gt; avec l&#x27;attribut [th:action]. Cet attribut va être évalué par Thymeleaf et sa valeur remplacer le valeur actuelle de l&#x27;attribut [action] qui n&#x27;est donc là que pour décorer. Ici la valeur de l&#x27;attribut [th:action] sera [/v14.html] ;</span></li>
-<li><span style="color: #000000">lignes 17, 23 et 29, la valeur de l&#x27;attribut [th:value] va remplacer celle de l&#x27;attribut [value]. Ici cette valeur sera la chaîne vide ;</span></li>
+  <li><span style="color: #000000">ligne 8 du formulaire, on trouve la balise &lt;form&gt; avec l&#x27;attribut [th:action]. Cet attribut va être évalué par Thymeleaf et sa valeur remplacer le valeur actuelle de l&#x27;attribut [action] qui n&#x27;est donc là que pour décorer. Ici la valeur de l&#x27;attribut [th:action] sera [/v14.html] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 17, 23 et 29, la valeur de l&#x27;attribut [th:value] va remplacer celle de l&#x27;attribut [value]. Ici cette valeur sera la chaîne vide ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Lorsqu&#x27;on demande l&#x27;URL [/v13.html], on obtient le résultat suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019D00000107C6068A09.png" style="display:inline-block; margin:4px;width:7.65cm;height:4.87cm;" class="odt-zoomable" data-zoom-src="images/100000000000019D00000107C6068A09.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1955,9 +2044,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : les valeurs postées sont encapsulées dans un objet [Personne p]. On sait que cet objet fait automatiquement partie du modèle M de la vue V qui sera affichée par l&#x27;action, associé à la clé [personne] ;</span></li>
-<li><span style="color: #000000">ligne 4, la vue affichée est la vue [vue-14.xml] ;</span></li>
+  <li><span style="color: #000000">ligne 3 : les valeurs postées sont encapsulées dans un objet [Personne p]. On sait que cet objet fait automatiquement partie du modèle M de la vue V qui sera affichée par l&#x27;action, associé à la clé [personne] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4, la vue affichée est la vue [vue-14.xml] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [vue-14.xml] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1987,9 +2079,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9 : on récupère dans le modèle l&#x27;objet associé à la clé [personne] ;</span></li>
-<li><span style="color: #000000">lignes 12, 16 et 20 : on affiche les caractéristiques de cet objet ;</span></li>
+  <li><span style="color: #000000">ligne 9 : on récupère dans le modèle l&#x27;objet associé à la clé [personne] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 12, 16 et 20 : on affiche les caractéristiques de cet objet ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Cela donne le résultat suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CC00000110226E17DB.png" style="display:inline-block; margin:4px;width:8.52cm;height:5.039cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CC00000110226E17DB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000192000000F9156900EE.png" style="display:inline-block; margin:4px;width:7.44cm;height:4.611cm;" class="odt-zoomable" data-zoom-src="images/1000000000000192000000F9156900EE.png" /></td></tr></table>
 
@@ -1999,9 +2094,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052500000160822701A1.png" style="display:inline-block; margin:4px;width:17.424cm;height:4.657cm;" class="odt-zoomable" data-zoom-src="images/100000000000052500000160822701A1.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], on rentre des valeurs erronées pour les champs [id] et [age] de type [int] ;</span></li>
-<li><span style="color: #000000">en [2], la réponse du serveur nous indique qu&#x27;il y a eu deux erreurs ;</span></li>
+  <li><span style="color: #000000">en [1], on rentre des valeurs erronées pour les champs [id] et [age] de type [int] ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], la réponse du serveur nous indique qu&#x27;il y a eu deux erreurs ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous allons utiliser le même formulaire mais en cas d&#x27;erreurs de validation, nous allons renvoyer une page signalant ces erreurs afin que l&#x27;utilisateur puisse les corriger.</span></p>
 <p><span style="color: #000000">L&#x27;action [/v15] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2105,13 +2203,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 10-47 : l&#x27;objet du modèle de la page attaché à la clé [securedPerson] est récupéré. A l&#x27;issue du GET, on a un objet avec sa valeur d&#x27;instanciation [id=0, nom=null, age=0] ;</span></li>
-<li><span style="color: #000000">ligne 17 : la valeur du champ [securedPerson.id] ;</span></li>
-<li><span style="color: #000000">ligne 20 : l&#x27;expression [<em>${#fields.hasErrors(&#x27;id&#x27;)}</em>] permet de savoir s&#x27;il y a eu des erreurs de validation sur le champ [securedPerson.id]. Si c&#x27;est le cas, l&#x27;attribut [<span style="color: #7f007f"><mark style="background-color: #ff950e">th:errors</mark></span><mark style="background-color: #ff950e">=</mark><em><span style="color: #2a00ff"><mark style="background-color: #ff950e">&quot;*{id}&quot;</mark></span></em>] affiche le message d&#x27;erreur associé ;</span></li>
-<li><span style="color: #000000">ce scénario se répète aux lignes 29 pour le champ [nom] et 38 pour le champ [age] ;</span></li>
-<li><span style="color: #000000">ligne 45 : l&#x27;expression [<em><span style="color: #2a00ff">${#fields.errors(&#x27;*&#x27;)}</span></em>] désigne l&#x27;ensemble des erreurs sur les champs de l&#x27;objet [securedPerson]. Ainsi, c&#x27;est l&#x27;ensemble de ces erreurs qui va être affiché par les lignes 44-46 ;</span></li>
-<li><span style="color: #000000">ligne 16 : on voit que les valeurs du formulaire vont être postées à l&#x27;action [/v16]. Celle-ci est la suivante :</span></li>
+  <li><span style="color: #000000">lignes 10-47 : l&#x27;objet du modèle de la page attaché à la clé [securedPerson] est récupéré. A l&#x27;issue du GET, on a un objet avec sa valeur d&#x27;instanciation [id=0, nom=null, age=0] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : la valeur du champ [securedPerson.id] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 20 : l&#x27;expression [<i>${#fields.hasErrors(&#x27;id&#x27;)}</i>] permet de savoir s&#x27;il y a eu des erreurs de validation sur le champ [securedPerson.id]. Si c&#x27;est le cas, l&#x27;attribut [<span style="color: #7f007f"><mark style="background-color: #ff950e">th:errors</mark></span><mark style="background-color: #ff950e">=</mark><i><span style="color: #2a00ff"><mark style="background-color: #ff950e">&quot;*{id}&quot;</mark></span></i>] affiche le message d&#x27;erreur associé ;</span>
+  </li>
+  <li><span style="color: #000000">ce scénario se répète aux lignes 29 pour le champ [nom] et 38 pour le champ [age] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 45 : l&#x27;expression [<i><span style="color: #2a00ff">${#fields.errors(&#x27;*&#x27;)}</span></i>] désigne l&#x27;ensemble des erreurs sur les champs de l&#x27;objet [securedPerson]. Ainsi, c&#x27;est l&#x27;ensemble de ces erreurs qui va être affiché par les lignes 44-46 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : on voit que les valeurs du formulaire vont être postées à l&#x27;action [/v16]. Celle-ci est la suivante :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">    <span style="color:#3f7f5f">// -------------------- validation d&#x27;un modèle------------------</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/v16&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">)</span></span>
@@ -2126,11 +2231,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3, l&#x27;annotation [<span style="color: #646464">@Valid</span> SecuredPerson <span style="color: #6a3e3e">p</span>] force la validation des valeurs postées ;</span></li>
-<li><span style="color: #000000">ligne 5 : teste si le modèle de l&#x27;action est erroné ou non ;</span></li>
-<li><span style="color: #000000">ligne 6 : s&#x27;il est erroné, on retourne le formulaire [vue-15.xml]. Comme celui-ci affiche les messages d&#x27;erreur, on va voir ceux-ci ;</span></li>
-<li><span style="color: #000000">ligne 8 : si le modèle de l&#x27;action est validé, alors on affiche la vue [vue-16.xml] suivante :</span></li>
+  <li><span style="color: #000000">ligne 3, l&#x27;annotation [<span style="color: #646464">@Valid</span> SecuredPerson <span style="color: #6a3e3e">p</span>] force la validation des valeurs postées ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : teste si le modèle de l&#x27;action est erroné ou non ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6 : s&#x27;il est erroné, on retourne le formulaire [vue-15.xml]. Comme celui-ci affiche les messages d&#x27;erreur, on va voir ceux-ci ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : si le modèle de l&#x27;action est validé, alors on affiche la vue [vue-16.xml] suivante :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span> <span style="color:#7f007f">xmlns:th</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.thymeleaf.org&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -2212,10 +2322,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 12 et 19 : les champs [id] et [age] sont passés en type [String] ;</li>
-<li>ligne 11 : on indique que le champ [id] doit être un nombre d&#x27;au plus quatre chiffres, sans décimales ;</li>
-<li>ligne 18 : idem pour le champ [age] qui doit être un nombre entier d&#x27;au plus deux chiffres ;</li>
+  <li>lignes 12 et 19 : les champs [id] et [age] sont passés en type [String] ;
+  </li>
+  <li>ligne 11 : on indique que le champ [id] doit être un nombre d&#x27;au plus quatre chiffres, sans décimales ;
+  </li>
+  <li>ligne 18 : idem pour le champ [age] qui doit être un nombre entier d&#x27;au plus deux chiffres ;
+  </li>
 </ul>
+
 <p>L&#x27;action [/v17] devient la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// ---------------------- affichage d&#x27;un formulaire</span></span>
@@ -2283,15 +2397,22 @@
 
 <p>Les changements ont lieu aux lignes suivantes :</p>
 <ul>
-<li>ligne 10 : on travaille désormais avec l&#x27;objet du modèle de clé [<em><span style="color: #2a00ff">stringSecuredPerson</span></em>] ;</li>
-<li>ligne 20 : on parcourt la liste des erreurs du champ [id]. Dans la syntaxe [<span style="color: #7f007f">th:each</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;err,status : ${#fields.errors(&#x27;id&#x27;)}&quot;</span></em>], c&#x27;est la variable [err] qui parcourt la liste. La variable [status] donne des informations sur chaque itération. C&#x27;est un objet [index, count, size, current] où :<ul>
-<li>index : est le n° de l&#x27;élément courant,</li>
-<li>current : la valeur de cet élément courant,</li>
-<li>count, size : la taille de la liste parcourue ;</li>
+  <li>ligne 10 : on travaille désormais avec l&#x27;objet du modèle de clé [<i><span style="color: #2a00ff">stringSecuredPerson</span></i>] ;
+  </li>
+  <li>ligne 20 : on parcourt la liste des erreurs du champ [id]. Dans la syntaxe [<span style="color: #7f007f">th:each</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;err,status : ${#fields.errors(&#x27;id&#x27;)}&quot;</span></i>], c&#x27;est la variable [err] qui parcourt la liste. La variable [status] donne des informations sur chaque itération. C&#x27;est un objet [index, count, size, current] où :
+    <ul>
+      <li>index : est le n° de l&#x27;élément courant,
+      </li>
+      <li>current : la valeur de cet élément courant,
+      </li>
+      <li>count, size : la taille de la liste parcourue ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 20 : on n&#x27;affiche que le 1er élément de la liste [<span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;${status.index}==0&quot;</span></i>] ;
+  </li>
 </ul>
-</li>
-<li>ligne 20 : on n&#x27;affiche que le 1er élément de la liste [<span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;${status.index}==0&quot;</span></em>] ;</li>
-</ul>
+
 <p>L&#x27;action [/v18] qui traite le POST de l&#x27;action [/v17] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// -------------------- validation d&#x27;un modèle------------------</span></span>
@@ -2472,9 +2593,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : l&#x27;action reçoit comme paramètre un objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>]. Si le GET ne reçoit pas de paramètres, cet objet sera initialisé avec les valeurs par défaut du Java ;</li>
-<li>ligne 4 : la vue [vue-19.xml] est affichée. Celle-ci est la suivante :</li>
+  <li>ligne 3 : l&#x27;action reçoit comme paramètre un objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>]. Si le GET ne reçoit pas de paramètres, cet objet sera initialisé avec les valeurs par défaut du Java ;
+  </li>
+  <li>ligne 4 : la vue [vue-19.xml] est affichée. Celle-ci est la suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">HTML&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span> <span style="color:#7f007f">xmlns:th</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.thymeleaf.org&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -2642,10 +2766,14 @@
 
 <p>La page présente un tableau à trois colonnes :</p>
 <ul>
-<li>colonne 1 : le validateur du champ de saisie ;</li>
-<li>colonne 2 : le champ de saisie ;</li>
-<li>colonne 3 : les messages d&#x27;erreur sur le champ de saisie ;</li>
+  <li>colonne 1 : le validateur du champ de saisie ;
+  </li>
+  <li>colonne 2 : le champ de saisie ;
+  </li>
+  <li>colonne 3 : les messages d&#x27;erreur sur le champ de saisie ;
+  </li>
 </ul>
+
 <p>Examinons par exemple le code de la vue [/v19.html] pour le validateur [@Pattern] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">                    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2661,10 +2789,14 @@
 
 <p>On retrouve du code que nous venons d&#x27;étudier avec les formulaires de type [Personne] :</p>
 <ul>
-<li>ligne 2 : la 1ère colonne : le nom du validateur testé ;</li>
-<li>ligne 4 : l&#x27;attribut Thymeleaf [<span style="color: #7f007f">th:field</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;*{hhmmss}</span></em>] va générer les attributs HTML [id=&quot;hhmmss&quot;] et [name=&quot;hhmmss&quot;]. L&#x27;attribut Thymeleaf [<em><span style="color: #7f007f">th:value</span></em><em><span style="color: #000000">=</span></em><em><span style="color: #2a00ff">&quot;*{hhmmss}&quot;</span></em>] va générer l&#x27;attribut HTML [value=&quot;valeur de [form19.hhmmss]]&quot; ;</li>
-<li>ligne 7 : si la valeur saisie pour le champ [form19.hhmmss] est erroné, alors la ligne 7 affiche les messages d&#x27;erreur associés à ce champ ;</li>
+  <li>ligne 2 : la 1ère colonne : le nom du validateur testé ;
+  </li>
+  <li>ligne 4 : l&#x27;attribut Thymeleaf [<span style="color: #7f007f">th:field</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;*{hhmmss}</span></i>] va générer les attributs HTML [id=&quot;hhmmss&quot;] et [name=&quot;hhmmss&quot;]. L&#x27;attribut Thymeleaf [<i><span style="color: #7f007f">th:value</span></i><i><span style="color: #000000">=</span></i><i><span style="color: #2a00ff">&quot;*{hhmmss}&quot;</span></i>] va générer l&#x27;attribut HTML [value=&quot;valeur de [form19.hhmmss]]&quot; ;
+  </li>
+  <li>ligne 7 : si la valeur saisie pour le champ [form19.hhmmss] est erroné, alors la ligne 7 affiche les messages d&#x27;erreur associés à ce champ ;
+  </li>
 </ul>
+
 <p>Les valeurs postées sont traitées par l&#x27;action [/v20] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// ----------------- validation du modèle du formulaire</span></span>
@@ -2681,11 +2813,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : les valeurs postées vont remplir les champs de l&#x27;objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] si elles sont valides ;</li>
-<li>ligne 4-6 : si les valeurs postées ne sont pas valides, alors on réaffiche le formulaire [vue-19] avec les messages d&#x27;erreur ;</li>
-<li>lignes 6-10 : si les valeurs postées sont valides, alors l&#x27;objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] construit avec ces valeurs est mis à la disposition de la requête suivante, ici celle de la redirection. Il est détruit ensuite ;</li>
-<li>ligne 9 : on redirige le client vers l&#x27;action [/v19.html]. Celle-ci va réafficher le formulaire [vue-19] qui contient du code tel que :</li>
+  <li>ligne 3 : les valeurs postées vont remplir les champs de l&#x27;objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] si elles sont valides ;
+  </li>
+  <li>ligne 4-6 : si les valeurs postées ne sont pas valides, alors on réaffiche le formulaire [vue-19] avec les messages d&#x27;erreur ;
+  </li>
+  <li>lignes 6-10 : si les valeurs postées sont valides, alors l&#x27;objet [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] construit avec ces valeurs est mis à la disposition de la requête suivante, ici celle de la redirection. Il est détruit ensuite ;
+  </li>
+  <li>ligne 9 : on redirige le client vers l&#x27;action [/v19.html]. Celle-ci va réafficher le formulaire [vue-19] qui contient du code tel que :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/someURL&quot;</span> <span style="color:#7f007f">th:action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;@{/v20.html}&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span> <span style="color:#7f007f">th:object</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;${form19}&quot;</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
@@ -2853,10 +2990,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046A00000170017A7E8D.png" style="display:inline-block; margin:4px;width:14.949cm;height:4.868cm;" class="odt-zoomable" data-zoom-src="images/100000000000046A00000170017A7E8D.png" /></td></tr></table>
 
 <ul>
-<li>en [1], le POST initial vers [/v20] ;</li>
-<li>en [2], la réponse de cette action est une redirection ;</li>
-<li>en [3], la seconde requête vers [/v19] cette fois ;</li>
+  <li>en [1], le POST initial vers [/v20] ;
+  </li>
+  <li>en [2], la réponse de cette action est une redirection ;
+  </li>
+  <li>en [3], la seconde requête vers [/v19] cette fois ;
+  </li>
 </ul>
+
 <p>L&#x27;action [/v19] est alors exécutée :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// ------------------ affichage d&#x27;un formulaire</span></span>
@@ -2867,18 +3008,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3, le paramètre [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] est initialisé avec l&#x27;attribut Flash de clé [form19] qui avait été créé par l&#x27;action précédente [/v19] et qui était un objet de type [Form19] avec pour valeurs, les valeurs postées à l&#x27;action [/v19] ;</li>
-<li>ligne 4 : la vue [vue-19.xml] va être affichée avec dans son modèle un objet <span style="color: #6a3e3e">[</span><span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire]</span> initialisé avec les valeurs postées. C&#x27;est pourquoi, l&#x27;utilisateur retrouve le formulaire tel qu&#x27;il l&#x27;a posté ;</li>
+  <li>ligne 3, le paramètre [<span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire</span>] est initialisé avec l&#x27;attribut Flash de clé [form19] qui avait été créé par l&#x27;action précédente [/v19] et qui était un objet de type [Form19] avec pour valeurs, les valeurs postées à l&#x27;action [/v19] ;
+  </li>
+  <li>ligne 4 : la vue [vue-19.xml] va être affichée avec dans son modèle un objet <span style="color: #6a3e3e">[</span><span style="color: #000000">Form19 </span><span style="color: #6a3e3e">formulaire]</span> initialisé avec les valeurs postées. C&#x27;est pourquoi, l&#x27;utilisateur retrouve le formulaire tel qu&#x27;il l&#x27;a posté ;
+  </li>
 </ul>
+
 <p>Pourquoi une redirection ? Pourquoi n&#x27;a-t-on pas posté simplement à l&#x27;action [/v19] ci-dessus ? On aurait eu le même le résultat. A quelques différences près :</p>
 <ul>
-<li>le navigateur aurait mis dans son champ d&#x27;adresse [http://localhost:8080/v20.html] au lieu de [http://localhost:8080/v19.html] comme il l&#x27;a fait ici, car il affiche la dernière URL appelée ;</li>
-<li>si l&#x27;utilisateur fait un rafraîchissement de la page (F5), on n&#x27;a pas du tout le même résultat :<ul>
-<li>dans le cas de la redirection, l&#x27;URL affichée est [http://localhost:8080/v19.html] obtenue avec un GET. Le navigateur rejouera cette dernière commande et il obtiendra alors un formulaire tout neuf (l&#x27;attribut Flash n&#x27;est utilisé qu&#x27;une fois),</li>
-<li>dans le cas de la non redirection, l&#x27;URL affichée est  [http://localhost:8080/v20.html] obtenue avec un POST. Le navigateur rejouera cette dernière commande et donc fera de nouveau un POST avec les mêmes valeurs postées que précédemment. Ici ça ne porte pas à conséquence mais c&#x27;est souvent indésirable et donc on préfèrera en général la redirection ;</li>
+  <li>le navigateur aurait mis dans son champ d&#x27;adresse [http://localhost:8080/v20.html] au lieu de [http://localhost:8080/v19.html] comme il l&#x27;a fait ici, car il affiche la dernière URL appelée ;
+  </li>
+  <li>si l&#x27;utilisateur fait un rafraîchissement de la page (F5), on n&#x27;a pas du tout le même résultat :
+    <ul>
+      <li>dans le cas de la redirection, l&#x27;URL affichée est [http://localhost:8080/v19.html] obtenue avec un GET. Le navigateur rejouera cette dernière commande et il obtiendra alors un formulaire tout neuf (l&#x27;attribut Flash n&#x27;est utilisé qu&#x27;une fois),
+      </li>
+      <li>dans le cas de la non redirection, l&#x27;URL affichée est  [http://localhost:8080/v20.html] obtenue avec un POST. Le navigateur rejouera cette dernière commande et donc fera de nouveau un POST avec les mêmes valeurs postées que précédemment. Ici ça ne porte pas à conséquence mais c&#x27;est souvent indésirable et donc on préfèrera en général la redirection ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading1401711644545772"></a></p>
 <h2 id="515-v21-v22-gerer-des-boutons-radio">5.15. [/v21-/v22] : gérer des boutons radio</h2>
 <p>Considérons le composant Spring [Listes] suivant :</p>
@@ -2903,9 +3052,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la classe [Listes] sera un composant Spring ;</li>
-<li>lignes 8-10 : des listes utilisées pour alimenter des boutons radio, des cases à cocher et des listes déroulantes ;</li>
+  <li>ligne 5 : la classe [Listes] sera un composant Spring ;
+  </li>
+  <li>lignes 8-10 : des listes utilisées pour alimenter des boutons radio, des cases à cocher et des listes déroulantes ;
+  </li>
 </ul>
+
 <p>Dans la classe de configuration [Config], il est écrit :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">@Configuration</span>
@@ -2915,8 +3067,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : le package [models] où se trouve le composant [Listes] sera bien exploré par Spring ;</li>
+  <li>ligne 2 : le package [models] où se trouve le composant [Listes] sera bien exploré par Spring ;
+  </li>
 </ul>
+
 <p>Nous créons les nouvelles actions suivantes :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// ------------------ formulaire avec boutons radio</span></span>
@@ -2937,12 +3091,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 2-3 : le composant [Listes] est injecté dans le contrôleur ;</li>
-<li>ligne 6 : nous gérons un formulaire de type [Form21] que nous allons décrire. A noter qu&#x27;on a précisé sa clé [form] dans le modèle de la vue. On rappelle que par défaut, cela aurait été [form21] ;</li>
-<li>ligne 7 : on injecte le composant [Listes] dans le modèle. La vue va en avoir besoin ;</li>
-<li>ligne 8 : on affiche la vue [vue-21.xml]. Cette vue va afficher le formulaire [Form21] et les valeurs postées le seront à l&#x27;action [/v22] des lignes 12-15 ;</li>
-<li>lignes 12-15 : l&#x27;action [/v22] se contente d&#x27;une redirection vers l&#x27;action [/v21] en mettant les valeurs postées qu&#x27;elle a reçues dans un attribut Flash de clé [form]. Il est important que cette clé soit la même que celle utilisée ligne 6 ;</li>
+  <li>lignes 2-3 : le composant [Listes] est injecté dans le contrôleur ;
+  </li>
+  <li>ligne 6 : nous gérons un formulaire de type [Form21] que nous allons décrire. A noter qu&#x27;on a précisé sa clé [form] dans le modèle de la vue. On rappelle que par défaut, cela aurait été [form21] ;
+  </li>
+  <li>ligne 7 : on injecte le composant [Listes] dans le modèle. La vue va en avoir besoin ;
+  </li>
+  <li>ligne 8 : on affiche la vue [vue-21.xml]. Cette vue va afficher le formulaire [Form21] et les valeurs postées le seront à l&#x27;action [/v22] des lignes 12-15 ;
+  </li>
+  <li>lignes 12-15 : l&#x27;action [/v22] se contente d&#x27;une redirection vers l&#x27;action [/v21] en mettant les valeurs postées qu&#x27;elle a reçues dans un attribut Flash de clé [form]. Il est important que cette clé soit la même que celle utilisée ligne 6 ;
+  </li>
 </ul>
+
 <p>Le modèle [Form21] est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000C4AA224FB4.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.63cm;" class="odt-zoomable" data-zoom-src="images/1000000000000106000000C4AA224FB4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3024,9 +3184,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 36-40 : on notera l&#x27;exploitation du composant [Listes] mis dans le modèle, pour générer les libellés des cases à cocher ;</li>
-<li>la colonne 3 permet de connaître la valeur postée pour un POST, ou la valeur initiale du formulaire lors du GET initial ;</li>
+  <li>lignes 36-40 : on notera l&#x27;exploitation du composant [Listes] mis dans le modèle, pour générer les libellés des cases à cocher ;
+  </li>
+  <li>la colonne 3 permet de connaître la valeur postée pour un POST, ou la valeur initiale du formulaire lors du GET initial ;
+  </li>
 </ul>
+
 <p>Ce code affiche la page suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021F00000117310A9454.png" style="display:inline-block; margin:4px;width:10.051cm;height:5.159cm;" class="odt-zoomable" data-zoom-src="images/100000000000021F00000117310A9454.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3125,8 +3288,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : nous continuons à utiliser le modèle [Form21] ;</li>
+  <li>ligne 3 : nous continuons à utiliser le modèle [Form21] ;
+  </li>
 </ul>
+
 <p>La vue [vue-23.xml] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">HTML&gt;</span></span>
@@ -3185,8 +3350,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 37-41 : on notera l&#x27;utilisation du composant [Listes] pour générer les libellés des cases à cocher ;</li>
+  <li>lignes 37-41 : on notera l&#x27;utilisation du composant [Listes] pour générer les libellés des cases à cocher ;
+  </li>
 </ul>
+
 <p>Ce code affiche la page suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021400000117D349C520.png" style="display:inline-block; margin:4px;width:9.85cm;height:5.159cm;" class="odt-zoomable" data-zoom-src="images/100000000000021400000117D349C520.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3309,10 +3476,14 @@
 
 <p><span style="color: #000000">Il faut se rappeler ici que la bibliothèque jackson / jSON est dans les dépendances du projet.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 2 : on crée un type [ObjectMapper] qui permet de sérialiser / désérialiser des objets en jSON,</span></li>
-<li><span style="color: #000000">ligne 7 : on sérialise en jSON le tableau des couleurs. Le résultat est placé dans le champ [strCouleurs] ;</span></li>
-<li><span style="color: #000000">ligne 8 : on sérialise en jSON le tableau des bijoux. Le résultat est placé dans le champ [strBijoux] ;</span></li>
+  <li><span style="color: #000000">ligne 2 : on crée un type [ObjectMapper] qui permet de sérialiser / désérialiser des objets en jSON,</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : on sérialise en jSON le tableau des couleurs. Le résultat est placé dans le champ [strCouleurs] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : on sérialise en jSON le tableau des bijoux. Le résultat est placé dans le champ [strBijoux] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021700000122DC270E24.png" style="display:inline-block; margin:4px;width:8.49cm;height:4.6cm;" class="odt-zoomable" data-zoom-src="images/100000000000021700000122DC270E24.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023B000001174722E333.png" style="display:inline-block; margin:4px;width:9.059cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000023B000001174722E333.png" /></td></tr></table>
 
@@ -3388,8 +3559,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 38-42 : génération d&#x27;une liste à choix multiple où les libellés sont pris dans le composant [Listes] que nous avons déjà utilisé ;</span></li>
+  <li><span style="color: #000000">lignes 38-42 : génération d&#x27;une liste à choix multiple où les libellés sont pris dans le composant [Listes] que nous avons déjà utilisé ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La page affichée est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018100000134A571091D.png" style="display:inline-block; margin:4px;width:7.13cm;height:5.701cm;" class="odt-zoomable" data-zoom-src="images/100000000000018100000134A571091D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3455,17 +3628,22 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 44 : on peut remarquer que Thymeleaf a créé un champ caché. Je n&#x27;ai pas compris son rôle :</span></li>
-<li><span style="color: #000000">les valeurs postées (attributs </span><em><span style="color: #000000">value</span></em><span style="color: #000000"> des balises </span><em><span style="color: #000000">option</span></em><span style="color: #000000">) le seront dans les champs suivants (attributs </span><em><span style="color: #000000">name</span></em><span style="color: #000000">) de [Form21] :</span></li>
+  <li><span style="color: #000000">ligne 44 : on peut remarquer que Thymeleaf a créé un champ caché. Je n&#x27;ai pas compris son rôle :</span>
+  </li>
+  <li><span style="color: #000000">les valeurs postées (attributs </span><i><span style="color: #000000">value</span></i><span style="color: #000000"> des balises </span><i><span style="color: #000000">option</span></i><span style="color: #000000">) le seront dans les champs suivants (attributs </span><i><span style="color: #000000">name</span></i><span style="color: #000000">) de [Form21] :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#0000c0">couleur2</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000">[] </span><span style="color:#0000c0">bijoux2</span><span style="color:#000000">;</span></span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 38 : la liste [bijoux2] est à choix multiple. Donc plusieurs valeurs peuvent être postées associées au nom [bijoux2]. Pour les récupérer, le champ [bijoux2] doit être un tableau. On remarquera que c&#x27;est un tableau d&#x27;entiers. C&#x27;est possible puisque les valeurs postées peuvent être converties dans ce type ;</span></li>
+  <li><span style="color: #000000">ligne 38 : la liste [bijoux2] est à choix multiple. Donc plusieurs valeurs peuvent être postées associées au nom [bijoux2]. Pour les récupérer, le champ [bijoux2] doit être un tableau. On remarquera que c&#x27;est un tableau d&#x27;entiers. C&#x27;est possible puisque les valeurs postées peuvent être converties dans ce type ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les valeurs sont postées à l&#x27;action [/v26] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/v26&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -3512,11 +3690,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : un message sans paramètres ;</span></li>
-<li><span style="color: #000000">ligne 9 : un message avec un paramètre [$param1] pris dans le modèle ;</span></li>
-<li><span style="color: #000000">ligne 10 : un message avec deux paramètres [$param2, $param3] pris dans le modèle ;</span></li>
-<li><span style="color: #000000">ligne 11 : un message avec un paramètre. Ce paramètre est lui-même une clé de message (présence de #). La clé est fournie par [$param4] ;</span></li>
+  <li><span style="color: #000000">ligne 8 : un message sans paramètres ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : un message avec un paramètre [$param1] pris dans le modèle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : un message avec deux paramètres [$param2, $param3] pris dans le modèle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : un message avec un paramètre. Ce paramètre est lui-même une clé de message (présence de #). La clé est fournie par [$param4] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le fichier des messages français est le suivant :</span></p>
 <p><u><strong><span style="color: #000000">[messages_fr.properties]</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3688,12 +3871,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la page maître doit définir l&#x27;espace de noms [<span style="color: #7f007f">xmlns:layout</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;http://www.ultraq.net.nz/thymeleaf/layout&quot;</span></em>] dont un élément est utilisé ligne 19 ;</li>
-<li>lignes 10-12 : génèrent la zone [1] ci-dessous. La balise Thymeleaf [th:include] permet d&#x27;inclure dans la vue courante un fragment défini dans un autre fichier. Cela permet de factoriser les fragments utilisés dans plusieurs vues ;</li>
-<li>lignes 15-17 : génèrent la zone [2] ci-dessous ;</li>
-<li>lignes 19-20 : génèrent la zone [3] ci-dessous. L&#x27;attribut [layout:fragment] est un attribut de l&#x27;espace de noms [<span style="color: #7f007f">xmlns:layout</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;http://www.ultraq.net.nz/thymeleaf/layout&quot;</span></em>]. Il indique une zone qui à l&#x27;exécution peut être remplacée par une autre ;</li>
-<li>lignes 24-28 : génèrent la zone [4] ci-dessous ;</li>
+  <li>ligne 2 : la page maître doit définir l&#x27;espace de noms [<span style="color: #7f007f">xmlns:layout</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;http://www.ultraq.net.nz/thymeleaf/layout&quot;</span></i>] dont un élément est utilisé ligne 19 ;
+  </li>
+  <li>lignes 10-12 : génèrent la zone [1] ci-dessous. La balise Thymeleaf [th:include] permet d&#x27;inclure dans la vue courante un fragment défini dans un autre fichier. Cela permet de factoriser les fragments utilisés dans plusieurs vues ;
+  </li>
+  <li>lignes 15-17 : génèrent la zone [2] ci-dessous ;
+  </li>
+  <li>lignes 19-20 : génèrent la zone [3] ci-dessous. L&#x27;attribut [layout:fragment] est un attribut de l&#x27;espace de noms [<span style="color: #7f007f">xmlns:layout</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;http://www.ultraq.net.nz/thymeleaf/layout&quot;</span></i>]. Il indique une zone qui à l&#x27;exécution peut être remplacée par une autre ;
+  </li>
+  <li>lignes 24-28 : génèrent la zone [4] ci-dessous ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026D000002966198EF01.png" style="display:inline-block; margin:4px;width:8.216cm;height:8.758cm;" class="odt-zoomable" data-zoom-src="images/100000000000026D000002966198EF01.png" /></td></tr></table>
 
 <p><a id="refheading95249463420399"></a></p>
@@ -3737,10 +3926,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;attribut [<em><span style="color: #2a00ff">l</span></em><span style="color: #7f007f">ayout:decorator</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;layout&quot;</span></em>] indique que la page courante [page1.xml] est &#x27;décorée&#x27;, ç-à-d. qu&#x27;elle appartient à une page maître. Celle-ci est la valeur de l&#x27;attribut, ici la vue [layout.xml] ;</li>
-<li>ligne 3 : on indique dans quel fragment de la page maître va venir s&#x27;insérer [page1.xml]. L&#x27;attribut [<span style="color: #7f007f">layout:fragment</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;contenu&quot;</span></em>] indique que [page1.xml] va s&#x27;insérer dans le fragment appelé [contenu], ç-à-d. la zone [3] de la page maître ;</li>
-<li>lignes 5-7 : le contenu du fragment est un formulaire qui offre un bouton de POST vers l&#x27;action [/page2.html] ;</li>
+  <li>ligne 2 : l&#x27;attribut [<i><span style="color: #2a00ff">l</span></i><span style="color: #7f007f">ayout:decorator</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;layout&quot;</span></i>] indique que la page courante [page1.xml] est &#x27;décorée&#x27;, ç-à-d. qu&#x27;elle appartient à une page maître. Celle-ci est la valeur de l&#x27;attribut, ici la vue [layout.xml] ;
+  </li>
+  <li>ligne 3 : on indique dans quel fragment de la page maître va venir s&#x27;insérer [page1.xml]. L&#x27;attribut [<span style="color: #7f007f">layout:fragment</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;contenu&quot;</span></i>] indique que [page1.xml] va s&#x27;insérer dans le fragment appelé [contenu], ç-à-d. la zone [3] de la page maître ;
+  </li>
+  <li>lignes 5-7 : le contenu du fragment est un formulaire qui offre un bouton de POST vers l&#x27;action [/page2.html] ;
+  </li>
 </ul>
+
 <p>Le fragment [<u><strong>page2.xml</strong></u>] est analogue :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -3782,8 +3975,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 10-12 : l&#x27;action [/page1] se contente de faire afficher la vue [page1.xml] ;</li>
-<li>lignes 15-17 : idem pour l&#x27;action [/page2] qui fait afficher la vue [page2.xml] ;</li>
+  <li>lignes 10-12 : l&#x27;action [/page1] se contente de faire afficher la vue [page1.xml] ;
+  </li>
+  <li>lignes 15-17 : idem pour l&#x27;action [/page2] qui fait afficher la vue [page2.xml] ;
+  </li>
 </ul>
 
 

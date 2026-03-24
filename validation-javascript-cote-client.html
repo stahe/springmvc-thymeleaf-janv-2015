@@ -945,9 +945,12 @@
 <p><span style="color: #000000">BD</span></p>
 <p><span style="color: #000000">Pour l&#x27;instant, les pages envoyées au client ne contenaient pas de Javascript. Nous abordons maintenant cette technologie qui va nous permettre dans un premier temps de faire des validations côté client. Le principe est le suivant :</span></p>
 <ul>
-<li><span style="color: #000000">c&#x27;est le Javascript qui poste les valeurs au serveur web ;</span></li>
-<li><span style="color: #000000">et donc avant ce POST, il peut vérifier la validité des données et empêcher le POST si celles-ci sont invalides ;</span></li>
+  <li><span style="color: #000000">c&#x27;est le Javascript qui poste les valeurs au serveur web ;</span>
+  </li>
+  <li><span style="color: #000000">et donc avant ce POST, il peut vérifier la validité des données et empêcher le POST si celles-ci sont invalides ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous allons utiliser le formulaire que nous avons validé côté serveur. Nous allons maintenant offrir la possibilité de le valider à la fois côté client et côté serveur.</span></p>
 <p><span style="color: #000000"><strong>Note</strong> : le sujet est complexe. Le lecteur non intéressé par ce thème peut passer directement au paragraphe <a href="ajaxification-dune-application-spring-mvc.html#refheading95253463420399">7</a>.</span></p>
 <p><a id="refheading1401791644545772"></a></p>
@@ -956,26 +959,37 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EE000002DB3C577C51.png" style="display:inline-block; margin:4px;width:13.891cm;height:13.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000002EE000002DB3C577C51.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les validations ont été mises en place des deux côtés : client et serveur. Comme le POST n&#x27;a lieu que si les valeurs ont été considérées comme valides côté client, les validations côté serveur réussissent tout le temps. On a donc offert un lien pour désactiver les validations côté client. Lorsqu&#x27;on est dans ce mode, on retrouve le mode de fonctionnement que nous avons déjà étudié. Voici un exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b><b>2</b><b>3</b></p><img src="images/10000000000003D900000348EDE18116.png" style="display:inline-block; margin:4px;width:16.94cm;height:14.439cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D900000348EDE18116.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b><b>2</b><b>3</b></div><img src="images/10000000000003D900000348EDE18116.png" style="display:inline-block; margin:4px;width:16.94cm;height:14.439cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D900000348EDE18116.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], les valeurs saisies ;</span></li>
-<li><span style="color: #000000">en [2], les messages d&#x27;erreur liées aux saisies ;</span></li>
-<li><span style="color: #000000">en [3], un récapitulatif des erreurs avec pour chacune d&#x27;elles :</span><ul>
-<li><span style="color: #000000">le nom du champ validé,</span></li>
-<li><span style="color: #000000">le code d&#x27;erreur,</span></li>
-<li><span style="color: #000000">le message par défaut de ce code d&#x27;erreur ;</span></li>
+  <li><span style="color: #000000">en [1], les valeurs saisies ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], les messages d&#x27;erreur liées aux saisies ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], un récapitulatif des erreurs avec pour chacune d&#x27;elles :</span>
+    <ul>
+      <li><span style="color: #000000">le nom du champ validé,</span>
+      </li>
+      <li><span style="color: #000000">le code d&#x27;erreur,</span>
+      </li>
+      <li><span style="color: #000000">le message par défaut de ce code d&#x27;erreur ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><span style="color: #000000">Maintenant, autorisons la validation côté client :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057C000003F25D692131.png" style="display:inline-block; margin:4px;width:17.999cm;height:12.947cm;" class="odt-zoomable" data-zoom-src="images/100000000000057C000003F25D692131.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], les valeurs saisies. On peut remarquer que les saisies erronées ont un style particulier ;</span></li>
-<li><span style="color: #000000">en [2], les messages d&#x27;erreur associés aux saisies erronées. Ils sont identiques à ceux générés par le serveur ;</span></li>
-<li><span style="color: #000000">en [3-4], il n&#x27;y a plus rien car tant qu&#x27;il y a des saisies erronées, le POST vers le serveur n&#x27;a pas lieu ;</span></li>
+  <li><span style="color: #000000">en [1], les valeurs saisies. On peut remarquer que les saisies erronées ont un style particulier ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], les messages d&#x27;erreur associés aux saisies erronées. Ils sont identiques à ceux générés par le serveur ;</span>
+  </li>
+  <li><span style="color: #000000">en [3-4], il n&#x27;y a plus rien car tant qu&#x27;il y a des saisies erronées, le POST vers le serveur n&#x27;a pas lieu ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1401811644545772"></a></p>
 <h2 id="62-validation-cote-serveur">6.2. <span style="color: #000000">Validation côté serveur</span></h2>
 <p><a id="refheading1401831644545772"></a></p>
@@ -1085,9 +1099,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 13, Spring Boot est lancé avec le fichier de configuration [Config] ;</span></li>
-<li><span style="color: #000000">lignes 15-20 : pour l&#x27;exemple, nous montrons comment afficher la liste des objets gérée par Spring. Cela peut être utile si parfois on a l&#x27;impression que Spring ne gère pas l&#x27;un de nos composants. C&#x27;est un moyen de le vérifier. C&#x27;est aussi un moyen de vérifier l&#x27;autoconfiguration faite par Spring Boot. Sur la console, on obtient une liste analogue à la suivante :</span></li>
+  <li><span style="color: #000000">ligne 13, Spring Boot est lancé avec le fichier de configuration [Config] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15-20 : pour l&#x27;exemple, nous montrons comment afficher la liste des objets gérée par Spring. Cela peut être utile si parfois on a l&#x27;impression que Spring ne gère pas l&#x27;un de nos composants. C&#x27;est un moyen de le vérifier. C&#x27;est aussi un moyen de vérifier l&#x27;autoconfiguration faite par Spring Boot. Sur la console, on obtient une liste analogue à la suivante :</span>
+  </li>
 </ul>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1398,12 +1415,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9, l&#x27;action [/js01] ;</span></li>
-<li><span style="color: #000000">ligne 10 : un objet de type [Form01] est instancié et mis automatiquement dans le modèle, associé à la clé [form01] ;</span></li>
-<li><span style="color: #000000">ligne 10 : la locale et le modèle sont injectés dans les paramètres ;</span></li>
-<li><span style="color: #000000">ligne 11 : avec ces informations, on prépare le modèle ;</span></li>
-<li><span style="color: #000000">ligne 12 : on affiche la vue [vue-01.xml] ;</span></li>
+  <li><span style="color: #000000">ligne 9, l&#x27;action [/js01] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : un objet de type [Form01] est instancié et mis automatiquement dans le modèle, associé à la clé [form01] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : la locale et le modèle sont injectés dans les paramètres ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : avec ces informations, on prépare le modèle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : on affiche la vue [vue-01.xml] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La méthode [setModel] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// préparation du modèle de la vue vue-01</span></span>
@@ -1428,15 +1451,22 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">le but de la méthode [setModel] est de mettre dans le modèle :</span><ul>
-<li><span style="color: #000000">des informations sur la locale,</span></li>
-<li><span style="color: #000000">le message passé en dernier paramètre ;</span></li>
+  <li><span style="color: #000000">le but de la méthode [setModel] est de mettre dans le modèle :</span>
+    <ul>
+      <li><span style="color: #000000">des informations sur la locale,</span>
+      </li>
+      <li><span style="color: #000000">le message passé en dernier paramètre ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 14 : on met dans le modèle des informations sur la locale (langue, pays) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 16-18 : on met dans la locale l&#x27;éventuel message passé en paramètre ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 8, 12 : les informations sur la locale sont également stockées dans le formulaire [Form01]. Le Javascript va utiliser cette information ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 14 : on met dans le modèle des informations sur la locale (langue, pays) ;</span></li>
-<li><span style="color: #000000">lignes 16-18 : on met dans la locale l&#x27;éventuel message passé en paramètre ;</span></li>
-<li><span style="color: #000000">lignes 8, 12 : les informations sur la locale sont également stockées dans le formulaire [Form01]. Le Javascript va utiliser cette information ;</span></li>
-</ul>
+
 <p><span style="color: #000000">Les valeurs saisies dans le formulaire [vue-01.xml] vont être postées à l&#x27;action [/js02] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/js02&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1448,9 +1478,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : l&#x27;annotation [</span><span style="color: #646464">@Valid</span><span style="color: #000000"> Form01 </span><span style="color: #6a3e3e">formulaire</span><span style="color: #000000">] fait que les valeurs postées vont être soumises aux validateurs de la classe [Form01]. Nous savons qu&#x27;il existe une validation spécifique [double1+double2] dans l&#x27;intervalle [10,13]. Lorsqu&#x27;on arrive à la ligne 3, cette validation n&#x27;a pas été faite ;</span></li>
-<li><span style="color: #000000">ligne 3 : on crée l&#x27;objet [Form01Validator] suivant :</span></li>
+  <li><span style="color: #000000">ligne 2 : l&#x27;annotation [</span><span style="color: #646464">@Valid</span><span style="color: #000000"> Form01 </span><span style="color: #6a3e3e">formulaire</span><span style="color: #000000">] fait que les valeurs postées vont être soumises aux validateurs de la classe [Form01]. Nous savons qu&#x27;il existe une validation spécifique [double1+double2] dans l&#x27;intervalle [10,13]. Lorsqu&#x27;on arrive à la ligne 3, cette validation n&#x27;a pas été faite ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : on crée l&#x27;objet [Form01Validator] suivant :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F0000000A20D37E633.png" style="display:inline-block; margin:4px;width:4.45cm;height:3cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000A20D37E633.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1504,17 +1537,26 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : pour implémenter une validation spécifique, nous créons une classe implémentant l&#x27;interface Spring [Validator]. Cette interface a deux méthodes : [supports] ligne 21 et [validate] ligne 26 ;</span></li>
-<li><span style="color: #000000">lignes 21-23 : la méthode [supports] reçoit un objet de type [Class]. Elle doit rendre </span><em><span style="color: #000000">true</span></em><span style="color: #000000"> pour dire qu&#x27;elle supporte cette classe, </span><em><span style="color: #000000">false</span></em><span style="color: #000000"> sinon ;</span></li>
-<li><span style="color: #000000">ligne 22 : nous disons que la classe [Form01Validator] ne valide que des objets de type [Form01] ;</span></li>
-<li><span style="color: #000000">lignes 15-18 : rappelons que nous voulons implémenter la contrainte [double1+double2] dans l&#x27;intervalle [10,13]. plutôt que de s&#x27;en tenir à cet intervalle, nous allons vérifier la contrainte [double1+double2] dans l&#x27;intervalle [min, max]. C&#x27;est pourquoi nous avons un constructeur avec ces deux paramètres ;</span></li>
-<li><span style="color: #000000">ligne 26 : la méthode [validate] est appelée avec une instance de l&#x27;objet validé, donc ici une instance de [Form01] et avec la collection des erreurs actuellement connues [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">]. Si la validation faite par la méthode [validate] échoue, elle doit créer un nouvel élément dans la collection [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">] ;</span></li>
-<li><span style="color: #000000">ligne 43 : la validation a échoué. On ajoute un élément à la collection [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">] avec la méthode [Errors.rejectValue] dont les paramètres sont les suivants :</span><ul>
-<li><span style="color: #000000">paramètre 1 : habituellement le nom du champ erroné. Ici on a testé les champs [double1, double2]. On peut mettre l&#x27;un des deux,</span></li>
-<li><span style="color: #000000">le message d&#x27;erreur associé ou plus exactement </span><strong><span style="color: #000000">sa clé</span></strong><span style="color: #000000"> dans les fichiers de messages externalisés :</span></li>
+  <li><span style="color: #000000">ligne 8 : pour implémenter une validation spécifique, nous créons une classe implémentant l&#x27;interface Spring [Validator]. Cette interface a deux méthodes : [supports] ligne 21 et [validate] ligne 26 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 21-23 : la méthode [supports] reçoit un objet de type [Class]. Elle doit rendre </span><i><span style="color: #000000">true</span></i><span style="color: #000000"> pour dire qu&#x27;elle supporte cette classe, </span><i><span style="color: #000000">false</span></i><span style="color: #000000"> sinon ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 22 : nous disons que la classe [Form01Validator] ne valide que des objets de type [Form01] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15-18 : rappelons que nous voulons implémenter la contrainte [double1+double2] dans l&#x27;intervalle [10,13]. plutôt que de s&#x27;en tenir à cet intervalle, nous allons vérifier la contrainte [double1+double2] dans l&#x27;intervalle [min, max]. C&#x27;est pourquoi nous avons un constructeur avec ces deux paramètres ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 26 : la méthode [validate] est appelée avec une instance de l&#x27;objet validé, donc ici une instance de [Form01] et avec la collection des erreurs actuellement connues [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">]. Si la validation faite par la méthode [validate] échoue, elle doit créer un nouvel élément dans la collection [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 43 : la validation a échoué. On ajoute un élément à la collection [Errors </span><span style="color: #6a3e3e">errors</span><span style="color: #000000">] avec la méthode [Errors.rejectValue] dont les paramètres sont les suivants :</span>
+    <ul>
+      <li><span style="color: #000000">paramètre 1 : habituellement le nom du champ erroné. Ici on a testé les champs [double1, double2]. On peut mettre l&#x27;un des deux,</span>
+      </li>
+      <li><span style="color: #000000">le message d&#x27;erreur associé ou plus exactement </span><b><span style="color: #000000">sa clé</span></b><span style="color: #000000"> dans les fichiers de messages externalisés :</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><u><strong><span style="color: #000000">[messages_fr.properties]</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">form01.double2=</span><span style="color:#2a00ff">[double2+double1]</span><span style="color:#000000"> </span><span style="color:#2a00ff">doit</span><span style="color:#000000"> </span><span style="color:#2a00ff">être</span><span style="color:#000000"> </span><span style="color:#2a00ff">dans</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;intervalle</span><span style="color:#000000"> </span><span style="color:#2a00ff">[</span><span style="font-weight:bold;color:#7f0055">{0}</span><span style="color:#2a00ff">,</span><span style="font-weight:bold;color:#7f0055">{1}</span><span style="color:#2a00ff">]</span></span>
@@ -1526,8 +1568,13 @@
 </code></pre></div>
 
 <p><span style="color: #000000">On a là des messages paramétrés par {0} et {1}. Il faut donc fournir deux valeurs à ce message. C&#x27;est ce que fait le troisième paramètre de la méthode [Errors.rejectValue].</span></p>
-<div class="highlight"><pre><span></span><code>- &lt;span style=&quot;color: #000000&quot;&gt;le quatrième paramètre est un message par défaut pour l&amp;#x27;erreur ;&lt;/span&gt;
-</code></pre></div>
+<ol>
+    <ul>
+      <li><span style="color: #000000">le quatrième paramètre est un message par défaut pour l&#x27;erreur ;</span>
+      </li>
+    </ul>
+</ol>
+
 <p><span style="color: #000000">Revenons à l&#x27;action [/js02] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/js02&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">POST</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
@@ -1549,21 +1596,32 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 4 : le validateur [Form01Validator] est exécuté avec les paramètres :</span><ul>
-<li><span style="color: #000000">paramètre 1 : l&#x27;objet en cours de validation,</span></li>
-<li><span style="color: #000000">paramètre 2 : la liste des erreurs de cet objet. Celle-ci est l&#x27;objet [BindingResult </span><span style="color: #6a3e3e">result</span><span style="color: #000000">] passé en paramètres de l&#x27;action. Si la validation échoue, cet objet aura une erreur de plus ;</span></li>
+  <li><span style="color: #000000">ligne 4 : le validateur [Form01Validator] est exécuté avec les paramètres :</span>
+    <ul>
+      <li><span style="color: #000000">paramètre 1 : l&#x27;objet en cours de validation,</span>
+      </li>
+      <li><span style="color: #000000">paramètre 2 : la liste des erreurs de cet objet. Celle-ci est l&#x27;objet [BindingResult </span><span style="color: #6a3e3e">result</span><span style="color: #000000">] passé en paramètres de l&#x27;action. Si la validation échoue, cet objet aura une erreur de plus ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on teste s&#x27;il y a des erreurs de validation ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 7-10 : on parcourt la liste des erreurs pour mémoriser pour chacune d&#x27;elles :</span>
+    <ul>
+      <li><span style="color: #000000">le nom de l&#x27;objet validé,</span>
+      </li>
+      <li><span style="color: #000000">son code d&#x27;erreur,</span>
+      </li>
+      <li><span style="color: #000000">son message d&#x27;erreur par défaut ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 10 : avec ces informations, on construit le modèle de la vue [vue-01.xml]. Cette fois-ci, il y a un message, la version concaténée et abrégée des différents messages d&#x27;erreur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 12-15 : si toutes les valeurs postées sont valides, on redirige le client vers l&#x27;action [/js01] en mettant les valeurs postées en attribut Flash ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 5 : on teste s&#x27;il y a des erreurs de validation ;</span></li>
-<li><span style="color: #000000">lignes 7-10 : on parcourt la liste des erreurs pour mémoriser pour chacune d&#x27;elles :</span><ul>
-<li><span style="color: #000000">le nom de l&#x27;objet validé,</span></li>
-<li><span style="color: #000000">son code d&#x27;erreur,</span></li>
-<li><span style="color: #000000">son message d&#x27;erreur par défaut ;</span></li>
-</ul>
-</li>
-<li><span style="color: #000000">ligne 10 : avec ces informations, on construit le modèle de la vue [vue-01.xml]. Cette fois-ci, il y a un message, la version concaténée et abrégée des différents messages d&#x27;erreur ;</span></li>
-<li><span style="color: #000000">lignes 12-15 : si toutes les valeurs postées sont valides, on redirige le client vers l&#x27;action [/js01] en mettant les valeurs postées en attribut Flash ;</span></li>
-</ul>
+
 <p><a id="refheading1401891644545772"></a></p>
 <h3 id="624-la-vue">6.2.4. <span style="color: #000000">La vue</span></h3>
 <p><span style="color: #000000">La vue [vue-01.xml] est complexe. Nous n&#x27;allons en présenter qu&#x27;une petite partie :</span></p>
@@ -1657,10 +1715,14 @@
 
 <p>Revenons au code de la page :</p>
 <ul>
-<li><span style="color: #000000">ligne 8 : un grand nombre d&#x27;imports de bibliothèques Javascript que nous pouvons ignorer ici ;</span></li>
-<li><span style="color: #000000">ligne 14 : affiche la locale mise dans le modèle par le serveur ;</span></li>
-<li><span style="color: #000000">ligne 59 : affiche le message mis dans le modèle par le serveur ;</span></li>
+  <li><span style="color: #000000">ligne 8 : un grand nombre d&#x27;imports de bibliothèques Javascript que nous pouvons ignorer ici ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : affiche la locale mise dans le modèle par le serveur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 59 : affiche le message mis dans le modèle par le serveur ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le code des lignes 33-44 est nouveau. Etudions-le :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">&lt;!-- required --&gt;</span>
@@ -1794,9 +1856,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : importation de jQuery ;</span></li>
-<li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<strong>id</strong> [element1]. Nous allons jouer avec cet élément.</span></li>
+  <li><span style="color: #000000">ligne 6 : importation de jQuery ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<b>id</b> [element1]. Nous allons jouer avec cet élément.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il nous faut télécharger le fichier [<em><span style="color: #2a00ff">jquery-1.11.1.min.js</span></em>]. On le trouvera la dernière version de jQuery à l&#x27;URL [<a href="http://jquery.com/download/">http://jquery.com/download/</a>] :</span></p>
 <p><img src="images/10000000000001F90000010A4C7D4D57.png" style="width:9.35cm;height:4.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F90000010A4C7D4D57.png" /></p>
 <p><span style="color: #000000">On placera le fichier téléchargé dans le dossier [static / js] :</span></p>
@@ -1806,25 +1871,31 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051F0000011876DA3602.png" style="display:inline-block; margin:4px;width:17.344cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000051F0000011876DA3602.png" /></td></tr></table>
 
 <p><span style="color: #000000">Avec Google Chrome, faire [Ctrl-Maj-I] pour faire apparaître les outils de développement [3]. L&#x27;onglet [Console] [4] permet d&#x27;exécuter du code Javascript. Nous donnons dans ce qui suit des commandes Javascript à taper et nous en donnons une explication.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>JS</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>résultat</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>JS</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>résultat</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1], donc normalement une collection de 0 ou 1 élément parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1], donc normalement une collection de 0 ou 1 élément parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$(&quot;#element1&quot;).text(&quot;blabla&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments de la collection. Ceci a pour effet de changer le contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affecte le texte [blabla] à tous les éléments de la collection. Ceci a pour effet de changer le contenu affiché par la page</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$(&quot;#element1&quot;).hide()
 </code></pre></div>
-</div><p style="margin:0;">cache les éléments de la collection. Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">cache les éléments de la collection. Le texte [blabla] n&#x27;est plus affiché.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous permet de voir que l&#x27;élément d&#x27;id [element1] a l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affiche de nouveau la collection. Cela nous permet de voir que l&#x27;élément d&#x27;id [element1] a l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait que l&#x27;élément est caché.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$(&quot;#element1&quot;).show()
 </code></pre></div>
-</div><p style="margin:0;">: affiche les éléments de la collection. Le texte [blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affiche les éléments de la collection. Le texte [blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet affichage.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$(&quot;#element1&quot;).attr(&#39;style&#39;,&#39;color: red&#39;)
 </code></pre></div>
-</div><p style="margin:0;">: fixe un attribut à tous les éléments de la collection. L&#x27;attribut est ici [style] et sa valeur [color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: fixe un attribut à tous les éléments de la collection. L&#x27;attribut est ici [style] et sa valeur [color: red]. Le texte [blabla] passe en rouge.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Tableau
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE0000011645A3961D.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1861,38 +1932,54 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000001B257DDF354.png" style="display:inline-block; margin:4px;width:15.901cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B2000001B257DDF354.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [5], le projet console ;</span></li>
-<li><span style="color: #000000">en [6-7] : on va ajouter des packages [NuGet] au projet. [NuGet] est une fonction de Visual Studio permettant de télécharger des bibliothèques sous formes de DLL mais également des bibliothèques jS. </span></li>
+  <li><span style="color: #000000">en [5], le projet console ;</span>
+  </li>
+  <li><span style="color: #000000">en [6-7] : on va ajouter des packages [NuGet] au projet. [NuGet] est une fonction de Visual Studio permettant de télécharger des bibliothèques sous formes de DLL mais également des bibliothèques jS. </span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047F0000021E7EE2D241.png" style="display:inline-block; margin:4px;width:15.228cm;height:7.17cm;" class="odt-zoomable" data-zoom-src="images/100000000000047F0000021E7EE2D241.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [9-10], faites une recherche avec le mot clé [jQuery] ;</span></li>
-<li><span style="color: #000000">en [11-13], téléchargez dans l&#x27;ordre indiqué les bibliothèques jS nécessaires à la validation côté client ;</span></li>
-<li><span style="color: #000000">en [14], téléchargez également la bibliothèque [Microsoft jQuery Unobtrusive Ajax] que nous allons utiliser prochainement ;</span></li>
+  <li><span style="color: #000000">en [9-10], faites une recherche avec le mot clé [jQuery] ;</span>
+  </li>
+  <li><span style="color: #000000">en [11-13], téléchargez dans l&#x27;ordre indiqué les bibliothèques jS nécessaires à la validation côté client ;</span>
+  </li>
+  <li><span style="color: #000000">en [14], téléchargez également la bibliothèque [Microsoft jQuery Unobtrusive Ajax] que nous allons utiliser prochainement ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000186DE36BE4C.png" style="display:inline-block; margin:4px;width:15.492cm;height:5.159cm;" class="odt-zoomable" data-zoom-src="images/100000000000049300000186DE36BE4C.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [15-16], faites une recherche de packages avec le mot clé [globalize] ;</span></li>
-<li><span style="color: #000000">en [17], téléchargez la bibliothèque [jQuery.Validation.Globalize] ;</span></li>
+  <li><span style="color: #000000">en [15-16], faites une recherche de packages avec le mot clé [globalize] ;</span>
+  </li>
+  <li><span style="color: #000000">en [17], téléchargez la bibliothèque [jQuery.Validation.Globalize] ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042E00000210ED76AE71.png" style="display:inline-block; margin:4px;width:14.155cm;height:6.985cm;" class="odt-zoomable" data-zoom-src="images/100000000000042E00000210ED76AE71.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ces divers téléchargements ont installé un certain nombre de bibliothèques jS dans le dossier [Scripts] du projet [18]. Ils ne sont pas tous utiles. Chaque fichier vient en deux exemplaires :</span></p>
 <ul>
-<li><span style="color: #000000">[js] : la version lisible de la bibliothèque ;</span></li>
-<li><span style="color: #000000">[min.js] : la version illisible dite minifiée &#x27;minified&#x27; de la bibliothèque. Elle n&#x27;est pas vraiment illisible. C&#x27;est du texte. Mais elle n&#x27;est pas compréhensible. C&#x27;est la version à utiliser en production car ce fichier est plus petit que la version correspondante [js] et donc améliore la rapidité des échanges client / serveur ;</span></li>
+  <li><span style="color: #000000">[js] : la version lisible de la bibliothèque ;</span>
+  </li>
+  <li><span style="color: #000000">[min.js] : la version illisible dite minifiée &#x27;minified&#x27; de la bibliothèque. Elle n&#x27;est pas vraiment illisible. C&#x27;est du texte. Mais elle n&#x27;est pas compréhensible. C&#x27;est la version à utiliser en production car ce fichier est plus petit que la version correspondante [js] et donc améliore la rapidité des échanges client / serveur ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les version [min.map] ne sont pas indispensables. Dans le dossier [cultures], on peut ne conserver que les cultures gérées par l&#x27;application.</span></p>
 <p><span style="color: #000000">Avec l&#x27;explorateur Windows, on copie ces fichiers dans le dossier [static / js / jquery] du projet [springmvc-validation-client] et on ne garde que les fichiers utiles [20] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EE00000318D75CC837.png" style="display:inline-block; margin:4px;width:6.535cm;height:10.478cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EE00000318D75CC837.png" /></td></tr></table>
 
 <p><span style="color: #000000">En [21], on ne garde que deux cultures :</span></p>
 <ul>
-<li><span style="color: #000000">[fr-FR] : le français de France ;</span></li>
-<li><span style="color: #000000">[en-US] : l&#x27;anglais des USA ;</span></li>
+  <li><span style="color: #000000">[fr-FR] : le français de France ;</span>
+  </li>
+  <li><span style="color: #000000">[en-US] : l&#x27;anglais des USA ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading730672038707144"></a></p>
 <h3 id="633-import-des-bibliotheques-js-de-validation">6.3.3. Import des bibliothèques jS de validation</h3>
 <p><span style="color: #000000">Pour être exploitées, ces bibliothèques doivent être importées par la vue [vue-01.xml] :</span></p>
@@ -1919,9 +2006,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 11 : l&#x27;import d&#x27;un fichier jS dont nous n&#x27;avons pas encore parlé ;</span></li>
-<li><span style="color: #000000">lignes 13-18 : un script jS interprété par Thymelaf. Il gère la locale côté client ;</span></li>
+  <li><span style="color: #000000">ligne 11 : l&#x27;import d&#x27;un fichier jS dont nous n&#x27;avons pas encore parlé ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-18 : un script jS interprété par Thymelaf. Il gère la locale côté client ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading730692038707144"></a></p>
 <h3 id="634-gestion-de-la-locale-cote-client">6.3.4. Gestion de la locale côté client</h3>
 <p><span style="color: #000000">La localisation côté client est faite par le script jS suivant :</span></p>
@@ -1935,8 +2025,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 3-4 : du code jS dans lequel on trouve l&#x27;expression Thymeleaf [[${locale}]]. Notez la syntaxe particulière de cette expression. Ceci parce qu&#x27;elle est dans du javascript. L&#x27;expression [[${locale}]] va être remplacée par la valeur de la clé [locale] du modèle de la vue ;</span></li>
+  <li><span style="color: #000000">lignes 3-4 : du code jS dans lequel on trouve l&#x27;expression Thymeleaf [[${locale}]]. Notez la syntaxe particulière de cette expression. Ceci parce qu&#x27;elle est dans du javascript. L&#x27;expression [[${locale}]] va être remplacée par la valeur de la clé [locale] du modèle de la vue ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le résultat dans le flux HTML généré de ces lignes est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span>
@@ -1980,8 +2072,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 20 : la locale [fr-FR] ou [en-US] est mise dans le modèle de la vue [vue-01.xml] (ligne 4). On notera une source de complications. Alors qu&#x27;une locale française est notée [fr-FR] côté client, elle est notée [fr_FR] côté serveur. C&#x27;est la raison pour laquelle, lignes 14 et 18, elle est stockée sous cette forme dans l&#x27;objet [Form01 <span style="color: #6a3e3e">formulaire</span>] qui réceptionne les valeurs postées ;</span></li>
+  <li><span style="color: #000000">ligne 20 : la locale [fr-FR] ou [en-US] est mise dans le modèle de la vue [vue-01.xml] (ligne 4). On notera une source de complications. Alors qu&#x27;une locale française est notée [fr-FR] côté client, elle est notée [fr_FR] côté serveur. C&#x27;est la raison pour laquelle, lignes 14 et 18, elle est stockée sous cette forme dans l&#x27;objet [Form01 <span style="color: #6a3e3e">formulaire</span>] qui réceptionne les valeurs postées ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On notera le point important suivant. Le script </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span>
@@ -2187,19 +2281,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5-8 : la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] est une fonction qui est exécutée lorsque le navigateur a chargé la totalité du document envoyé par le serveur. Son paramètre est une fonction. On utilise la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] pour initialiser l&#x27;environnement jS du document chargé ;</li>
-<li>ligne 7 : l&#x27;expression [<span style="color: #000000">$(</span><span style="color: #2a00ff">&quot;#lang&quot;</span><span style="color: #000000">)</span>] est une expression jQuery. Sa valeur est une référence sur le noeud du DOM d&#x27;attribut [id=&#x27;lang&#x27;] ;</li>
-<li>ligne 2 : les variables déclarées en-dehors d&#x27;une fonction sont globales aux fonctions. Ici, cela signifie que la variable [lang] initialisée dans [<span style="color: #000000">$(document).ready()</span>] est également connue dans la fonction [<span style="color: #000000">setLocale</span>] de la ligne 11 ;</li>
-<li>ligne 13 : modifie l&#x27;attribut [value] du noeud identifié par [lang]. Si <em>lang</em> vaut [xx_XX] alors la balise HTML du noeud devient :</li>
+  <li>lignes 5-8 : la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] est une fonction qui est exécutée lorsque le navigateur a chargé la totalité du document envoyé par le serveur. Son paramètre est une fonction. On utilise la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] pour initialiser l&#x27;environnement jS du document chargé ;
+  </li>
+  <li>ligne 7 : l&#x27;expression [<span style="color: #000000">$(</span><span style="color: #2a00ff">&quot;#lang&quot;</span><span style="color: #000000">)</span>] est une expression jQuery. Sa valeur est une référence sur le noeud du DOM d&#x27;attribut [id=&#x27;lang&#x27;] ;
+  </li>
+  <li>ligne 2 : les variables déclarées en-dehors d&#x27;une fonction sont globales aux fonctions. Ici, cela signifie que la variable [lang] initialisée dans [<span style="color: #000000">$(document).ready()</span>] est également connue dans la fonction [<span style="color: #000000">setLocale</span>] de la ligne 11 ;
+  </li>
+  <li>ligne 13 : modifie l&#x27;attribut [value] du noeud identifié par [lang]. Si <i>lang</i> vaut [xx_XX] alors la balise HTML du noeud devient :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;xx_XX&quot;</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lang&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lang&quot;</span> <span style="color:#008080">/&gt;</span></span>
 </code></pre></div>
 
 <p>Le javascript permet de modifier la valeur des éléments du DOM (Document Object Model).</p>
 <ul>
-<li>ligne 16 : [document] désigne le DOM. [document.form] désigne le 1er formulaire trouvé dans ce document. Un Document HTML peut avoir plusieurs balises &lt;form&gt; et donc plusieurs formulaires. Ici nous n&#x27;en avons qu&#x27;un. [document.form.submit] poste ce formulaire comme si l&#x27;utilisateur avait cliqué sur un bouton ayant l&#x27;attribut [type=&#x27;submit&#x27;]. A quelle action les valeurs du formulaire sont-elles postées ? Pour le savoir, il faut regarder la balise [form] du formulaire dans [vue-01.xml] :</li>
+  <li>ligne 16 : [document] désigne le DOM. [document.form] désigne le 1er formulaire trouvé dans ce document. Un Document HTML peut avoir plusieurs balises &lt;form&gt; et donc plusieurs formulaires. Ici nous n&#x27;en avons qu&#x27;un. [document.form.submit] poste ce formulaire comme si l&#x27;utilisateur avait cliqué sur un bouton ayant l&#x27;attribut [type=&#x27;submit&#x27;]. A quelle action les valeurs du formulaire sont-elles postées ? Pour le savoir, il faut regarder la balise [form] du formulaire dans [vue-01.xml] :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- formulaire --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/someURL&quot;</span> <span style="color:#7f007f">th:action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;@{/js02.html}&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span> <span style="color:#7f007f">th:object</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;${form01}&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -2244,10 +2345,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;action [/js02] va recevoir la nouvelle locale [xx_XX] encapsulée dans le paramètre [<span style="color: #000000">Locale </span><span style="color: #6a3e3e">locale</span>] :</li>
-<li>lignes 5-12 : si certaines des valeurs postées sont invalides, la vue [vue-01.xml] va être affichée avec des messages d&#x27;erreur utilisant la nouvelle locale [xx_XX]. Par ailleurs, la ligne 11 fait que la variable [locale=xx-XX] est mise dans le modèle. Côté client, cette valeur va être utilisée pour mettre à jour la locale côté client. Nous en avons décrit le processus ;</li>
-<li>lignes 14-15 : si les valeurs postées sont toutes valides, alors il y a une redirection vers l&#x27;action [/js01] suivante :</li>
+  <li>ligne 2 : l&#x27;action [/js02] va recevoir la nouvelle locale [xx_XX] encapsulée dans le paramètre [<span style="color: #000000">Locale </span><span style="color: #6a3e3e">locale</span>] :
+  </li>
+  <li>lignes 5-12 : si certaines des valeurs postées sont invalides, la vue [vue-01.xml] va être affichée avec des messages d&#x27;erreur utilisant la nouvelle locale [xx_XX]. Par ailleurs, la ligne 11 fait que la variable [locale=xx-XX] est mise dans le modèle. Côté client, cette valeur va être utilisée pour mettre à jour la locale côté client. Nous en avons décrit le processus ;
+  </li>
+  <li>lignes 14-15 : si les valeurs postées sont toutes valides, alors il y a une redirection vers l&#x27;action [/js01] suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@RequestMapping</span><span style="color:#000000">(value = </span><span style="color:#2a00ff">&quot;/js01&quot;</span><span style="color:#000000">, method = RequestMethod.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">GET</span><span style="color:#000000">, produces = </span><span style="color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String js01(Form01 </span><span style="color:#6a3e3e">formulaire</span><span style="color:#000000">, Locale </span><span style="color:#6a3e3e">locale</span><span style="color:#000000">, Model </span><span style="color:#6a3e3e">model</span><span style="color:#000000">) {</span></span>
@@ -2257,9 +2362,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2, la nouvelle locale [xx_XX] est injectée ;</li>
-<li>ligne 3 : la méthode [setModel] va alors mettre la culture du client à [xx-XX] ;</li>
+  <li>ligne 2, la nouvelle locale [xx_XX] est injectée ;
+  </li>
+  <li>ligne 3 : la méthode [setModel] va alors mettre la culture du client à [xx-XX] ;
+  </li>
 </ul>
+
 <p>Maintenant regardons l&#x27;influence de la locale dans la vue [vue-01.xml]. Pour l&#x27;instant nous n&#x27;avons pas présenté celle-ci dans sa totalité car elle compte plus de 300 lignes. Néanmoins l&#x27;essentiel des lignes consiste en la répétition d&#x27;une séquence analogue à la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">&lt;!-- required --&gt;</span>
@@ -2293,10 +2401,14 @@
 <p>Les attributs [data-x] sont exploités par la bibliothèque jS de validation.</p>
 <p>Au final, on retiendra que les deux liens de changement de locale :</p>
 <ul>
-<li>provoquent un POST des valeurs saisies ;</li>
-<li>changent la locale à la fois côté serveur et côté client ;</li>
-<li>génèrent une page HTML qui emportent avec elle les messages d&#x27;erreur destinés à la bibliothèque jS de validation et que ces messages sont dans la langue de la locale choisie ;</li>
+  <li>provoquent un POST des valeurs saisies ;
+  </li>
+  <li>changent la locale à la fois côté serveur et côté client ;
+  </li>
+  <li>génèrent une page HTML qui emportent avec elle les messages d&#x27;erreur destinés à la bibliothèque jS de validation et que ces messages sont dans la langue de la locale choisie ;
+  </li>
 </ul>
+
 <p><a id="refheading730752038707144"></a></p>
 <h3 id="637-le-post-des-valeurs-saisies">6.3.7. Le POST des valeurs saisies</h3>
 <p><a id="refheading1401951644545772"></a>Etudions le bouton [Valider] qui poste les valeurs saisies de la vue [vue-01.xml]. Son code HTML est le suivant :</p>
@@ -2345,9 +2457,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 8-16 : la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] est une fonction qui est exécutée lorsque le navigateur a chargé la totalité du document envoyé par le serveur. Son paramètre est une fonction. On utilise la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] pour initialiser l&#x27;environnement jS du document chargé ;</li>
-<li>ligne 10-14 : pour comprendre ces lignes, il faut à la fois regarder le code Thymeleaf et le code HTML généré ;</li>
+  <li>lignes 8-16 : la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] est une fonction qui est exécutée lorsque le navigateur a chargé la totalité du document envoyé par le serveur. Son paramètre est une fonction. On utilise la fonction jS [<span style="color: #000000">$(document).ready(f)</span>] pour initialiser l&#x27;environnement jS du document chargé ;
+  </li>
+  <li>ligne 10-14 : pour comprendre ces lignes, il faut à la fois regarder le code Thymeleaf et le code HTML généré ;
+  </li>
 </ul>
+
 <p>Le code Thymeleaf concerné est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/someURL&quot;</span> <span style="color:#7f007f">th:action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;@{/js02.html}&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span> <span style="color:#7f007f">th:object</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;${form01}&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span> <span style="background-color:#ff950e;color:#7f007f">id</span><span style="background-color:#ff950e;color:#000000">=</span><span style="font-style:italic;background-color:#ff950e;color:#2a00ff">&quot;form&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -2401,10 +2516,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : l&#x27;expression [<span style="color: #000000">$(</span><span style="color: #2a00ff">&quot;#form&quot;</span><span style="color: #000000">)</span>] est une expression jQuery. Sa valeur est une référence sur le noeud du DOM d&#x27;attribut [id=&#x27;form &#x27;] ;</li>
-<li>lignes 10-14 : on récupère les références sur cinq noeuds du DOM ;</li>
-<li>lignes 2-6 : les variables déclarées en-dehors d&#x27;une fonction sont globales aux fonctions. Ici, cela signifie que les variables [formulaire, <span style="color: #000000">clientValidation , </span>double1, double2, double3] initialisées dans [<span style="color: #000000">$(document).ready()</span>] seront connues également dans la fonction [postForm01] de la ligne 19 ;</li>
+  <li>ligne 10 : l&#x27;expression [<span style="color: #000000">$(</span><span style="color: #2a00ff">&quot;#form&quot;</span><span style="color: #000000">)</span>] est une expression jQuery. Sa valeur est une référence sur le noeud du DOM d&#x27;attribut [id=&#x27;form &#x27;] ;
+  </li>
+  <li>lignes 10-14 : on récupère les références sur cinq noeuds du DOM ;
+  </li>
+  <li>lignes 2-6 : les variables déclarées en-dehors d&#x27;une fonction sont globales aux fonctions. Ici, cela signifie que les variables [formulaire, <span style="color: #000000">clientValidation , </span>double1, double2, double3] initialisées dans [<span style="color: #000000">$(document).ready()</span>] seront connues également dans la fonction [postForm01] de la ligne 19 ;
+  </li>
 </ul>
+
 <p>Maintenant, étudions la fonction [postForm01] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// post formulaire</span>
@@ -2434,24 +2553,38 @@
 
 <p>Rappelons que cette fonction jS est exécutée avant le [submit] du formulaire. Si elle rend le booléen [false] (ligne 11) alors le submit n&#x27;aura pas lieu. Si elle rend autre chose (ligne 22), alors il aura lieu.</p>
 <ul>
-<li>le code important est lignes 4-12 ;</li>
-<li>ligne 4 : on récupère la valeur du champ caché [clientValidation]. Cette valeur est &#x27;true&#x27; si la validation client doit être activée, &#x27;false&#x27; sinon ;</li>
-<li>ligne 6 : en cas de validation côté client, on efface les messages d&#x27;erreur du serveur qui peuvent être présents parce que l&#x27;utilisateur vient de changer de locale ;</li>
-<li>ligne 9 : rappelons que la variable [formulaire] représente le noeud de la balise HTML &lt;form&gt;, donc le formulaire. Celui-ci présente des validateurs jS que nous n&#x27;avons pas encore présentés et qui vont faire l&#x27;objet des paragraphes suivants. L&#x27;expression [<span style="color: #000000">formulaire.validate().form()</span>] force l&#x27;exécution de tous les validateurs jS présents dans le formulaire. Sa valeur est [true] si les valeurs testées sont toutes valides, [false] sinon ;</li>
-<li>ligne 11 : on rend la valeur [false] si au moins l&#x27;une des valeurs testées est invalide. Cela empêchera le [submit] du formulaire au serveur ;</li>
-<li>lignes 15-20 : les identifiants [double1, double2, double3] représentent les trois nombres réels du formulaire. Selon la culture, la valeur saisie est différente. Avec la culture [fr-FR], on écrit [10,37] alors qu&#x27;avec la culture [en-US] on écrit [10.37]. Ca c&#x27;est pour la saisie. Avec la culture [fr-FR], la valeur postée pour [double1] ressemblera à [double1=10,37]. Arrivée côté serveur, la valeur [10,37] sera refusée car celui-ci attend [10.37], le format par défaut des nombres réels en Java. Aussi, les lignes 15-20, remplacent dans la valeur saisie pour ces nombres, la virgule par le point ;</li>
-<li>ligne 15 : l&#x27;expression [double1.val()] rend la chaîne de caractères saisie pour le noeud [double1]. L&#x27;expression [<span style="color: #000000">double1.val().replace(</span><span style="color: #2a00ff">&quot;,&quot;</span><span style="color: #000000">, </span><span style="color: #2a00ff">&quot;.&quot;</span><span style="color: #000000">)] remplace dans cette chaîne, les virgules par des points. Le résultat est une chaîne [value1] ;</span></li>
-<li><span style="color: #000000">ligne 16 : l&#x27;instruction [double1.val(value1)] affecte cette valeur [value1] au noeud [double1].</span></li>
+  <li>le code important est lignes 4-12 ;
+  </li>
+  <li>ligne 4 : on récupère la valeur du champ caché [clientValidation]. Cette valeur est &#x27;true&#x27; si la validation client doit être activée, &#x27;false&#x27; sinon ;
+  </li>
+  <li>ligne 6 : en cas de validation côté client, on efface les messages d&#x27;erreur du serveur qui peuvent être présents parce que l&#x27;utilisateur vient de changer de locale ;
+  </li>
+  <li>ligne 9 : rappelons que la variable [formulaire] représente le noeud de la balise HTML &lt;form&gt;, donc le formulaire. Celui-ci présente des validateurs jS que nous n&#x27;avons pas encore présentés et qui vont faire l&#x27;objet des paragraphes suivants. L&#x27;expression [<span style="color: #000000">formulaire.validate().form()</span>] force l&#x27;exécution de tous les validateurs jS présents dans le formulaire. Sa valeur est [true] si les valeurs testées sont toutes valides, [false] sinon ;
+  </li>
+  <li>ligne 11 : on rend la valeur [false] si au moins l&#x27;une des valeurs testées est invalide. Cela empêchera le [submit] du formulaire au serveur ;
+  </li>
+  <li>lignes 15-20 : les identifiants [double1, double2, double3] représentent les trois nombres réels du formulaire. Selon la culture, la valeur saisie est différente. Avec la culture [fr-FR], on écrit [10,37] alors qu&#x27;avec la culture [en-US] on écrit [10.37]. Ca c&#x27;est pour la saisie. Avec la culture [fr-FR], la valeur postée pour [double1] ressemblera à [double1=10,37]. Arrivée côté serveur, la valeur [10,37] sera refusée car celui-ci attend [10.37], le format par défaut des nombres réels en Java. Aussi, les lignes 15-20, remplacent dans la valeur saisie pour ces nombres, la virgule par le point ;
+  </li>
+  <li>ligne 15 : l&#x27;expression [double1.val()] rend la chaîne de caractères saisie pour le noeud [double1]. L&#x27;expression [<span style="color: #000000">double1.val().replace(</span><span style="color: #2a00ff">&quot;,&quot;</span><span style="color: #000000">, </span><span style="color: #2a00ff">&quot;.&quot;</span><span style="color: #000000">)] remplace dans cette chaîne, les virgules par des points. Le résultat est une chaîne [value1] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : l&#x27;instruction [double1.val(value1)] affecte cette valeur [value1] au noeud [double1].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Techniquement si l&#x27;utilisateur a saisi [10,37] pour le réel [double1], après les instruction précédentes le noeud [double1] a la valeur [10.37] et la valeur qui sera postée sera [param1=val1&amp;</span><strong><span style="color: #000000">double1=10.37</span></strong><span style="color: #000000">&amp;param2=val2], valeur qui sera acceptée par le serveur ;</span></p>
 <ul>
-<li><span style="color: #000000">ligne 22 : on rend la valeur [true] pour que le [submit] du formulaire s&#x27;exécute ;</span></li>
+  <li><span style="color: #000000">ligne 22 : on rend la valeur [true] pour que le [submit] du formulaire s&#x27;exécute ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On retiendra que la fonction jS [postForm01] :</span></p>
 <ul>
-<li><span style="color: #000000">exécute tous les validateurs jS du formulaire si la validation côté client est activée et empêche le [submit] du formulaire au serveur si l&#x27;une des valeurs saisies a été déclarée invalide ;</span></li>
-<li><span style="color: #000000">laisse faire le [submit] soit parce que la validation côté client n&#x27;est pas activée, soit parce qu&#x27;elle est activée et que toutes les valeurs saisies sont valides ;</span></li>
+  <li><span style="color: #000000">exécute tous les validateurs jS du formulaire si la validation côté client est activée et empêche le [submit] du formulaire au serveur si l&#x27;une des valeurs saisies a été déclarée invalide ;</span>
+  </li>
+  <li><span style="color: #000000">laisse faire le [submit] soit parce que la validation côté client n&#x27;est pas activée, soit parce qu&#x27;elle est activée et que toutes les valeurs saisies sont valides ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Reste l&#x27;instruction de la ligne [3] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// on efface les erreurs du serveur</span></span>
@@ -2487,10 +2620,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : l&#x27;expression [$(</span><span style="color: #2a00ff">&quot;.error&quot;</span><span style="color: #000000">)] ramène la collection des noeuds du DOM ayant la classe [error] ;</span></li>
-<li><span style="color: #000000">ligne 3 : l&#x27;expression [$(</span><span style="color: #2a00ff">&quot;.error&quot;</span><span style="color: #000000">).each(</span><strong><span style="color: #7f0055">function</span></strong><span style="color: #000000">(index){f}] exécute la fonction [f] pour chacun des noeuds de la collection. Elle reçoit un paramètre [index] qui n&#x27;est pas utilisé ici, qui est le n° du noeud dans la collection ;</span></li>
-<li><span style="color: #000000">ligne 4 : l&#x27;expression [$(</span><strong><span style="color: #7f0055">this</span></strong><span style="color: #000000">)] désigne le noeud courant dans l&#x27;itération. Celui-ci est une balise HTML &lt;span&gt;. L&#x27;expression [$(</span><strong><span style="color: #7f0055">this</span></strong><span style="color: #000000">).text(</span><span style="color: #2a00ff">&quot;&quot;</span><span style="color: #000000">)] attribue la chaîne vide au texte affiché par la balise &lt;span&gt; ;</span></li>
+  <li><span style="color: #000000">ligne 3 : l&#x27;expression [$(</span><span style="color: #2a00ff">&quot;.error&quot;</span><span style="color: #000000">)] ramène la collection des noeuds du DOM ayant la classe [error] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : l&#x27;expression [$(</span><span style="color: #2a00ff">&quot;.error&quot;</span><span style="color: #000000">).each(</span><b><span style="color: #7f0055">function</span></b><span style="color: #000000">(index){f}] exécute la fonction [f] pour chacun des noeuds de la collection. Elle reçoit un paramètre [index] qui n&#x27;est pas utilisé ici, qui est le n° du noeud dans la collection ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : l&#x27;expression [$(</span><b><span style="color: #7f0055">this</span></b><span style="color: #000000">)] désigne le noeud courant dans l&#x27;itération. Celui-ci est une balise HTML &lt;span&gt;. L&#x27;expression [$(</span><b><span style="color: #7f0055">this</span></b><span style="color: #000000">).text(</span><span style="color: #2a00ff">&quot;&quot;</span><span style="color: #000000">)] attribue la chaîne vide au texte affiché par la balise &lt;span&gt; ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous allons examiner maintenant différents validateurs jS.</span></p>
 <p><a id="refheading730772038707144"></a></p>
 <h3 id="638-validateur-required">6.3.8. <span style="color: #000000">Validateur [required]</span></h3>
@@ -2533,11 +2670,16 @@
 </code></pre></div>
 
 <ul>
-<li>l&#x27;attribut [data-val=&#x27;true&#x27;] est utilisée par les bibliothèques jQuery de validation. Sa présence indique que la valeur du noeud fait l&#x27;objet d&#x27;une validation ;</li>
-<li>l&#x27;attribut [data-val-X=&#x27;msg&#x27;] donne deux informations. [X] est le nom du validateur, [msg] est le message d&#x27;erreur associé à une valeur invalide du noeud sur lequel s&#x27;exerce le validateur. Ce n&#x27;est qu&#x27;une information. Cela ne provoque pas l&#x27;affichage du message d&#x27;erreur ;</li>
-<li>[required] est un validateur reconnu par <span style="color: #000000">la bibliothèque de validation [jquery.validate.unobstrusive] de Microsoft</span>. Il n&#x27;y a pas besoin de le définir. Ce ne sera pas toujours le cas dans la suite ;</li>
-<li>les balises [data-x] sont ignorées par HTML5. Elles ne sont utiles que s&#x27;il y a du javascript pour les exploiter ;</li>
+  <li>l&#x27;attribut [data-val=&#x27;true&#x27;] est utilisée par les bibliothèques jQuery de validation. Sa présence indique que la valeur du noeud fait l&#x27;objet d&#x27;une validation ;
+  </li>
+  <li>l&#x27;attribut [data-val-X=&#x27;msg&#x27;] donne deux informations. [X] est le nom du validateur, [msg] est le message d&#x27;erreur associé à une valeur invalide du noeud sur lequel s&#x27;exerce le validateur. Ce n&#x27;est qu&#x27;une information. Cela ne provoque pas l&#x27;affichage du message d&#x27;erreur ;
+  </li>
+  <li>[required] est un validateur reconnu par <span style="color: #000000">la bibliothèque de validation [jquery.validate.unobstrusive] de Microsoft</span>. Il n&#x27;y a pas besoin de le définir. Ce ne sera pas toujours le cas dans la suite ;
+  </li>
+  <li>les balises [data-x] sont ignorées par HTML5. Elles ne sont utiles que s&#x27;il y a du javascript pour les exploiter ;
+  </li>
 </ul>
+
 <p>Examinons la ligne 8 maintenant :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">span</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;field-validation-valid&quot;</span> <span style="color:#7f007f">data-valmsg-for</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;strNotEmpty&quot;</span> <span style="color:#7f007f">data-valmsg-replace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">span</span><span style="color:#008080">&gt;</span></span>
@@ -2563,11 +2705,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : la classe du noeud [<em><span style="color: #2a00ff">strNotEmpty</span></em>] a changé. Elle est devenue [<em><span style="color: #2a00ff">input-validation-error</span></em>] qui fait que le champ erroné est coloré en rouge ;</li>
-<li>ligne 7 : la classe du [span] a changé. Elle est devenue [<em><span style="color: #2a00ff">field-validation-error</span></em>] qui va faire afficher le texte du [span] en rouge ;</li>
-<li>ligne 8 : le [span] qui était auparavant vide a maintenant un texte [<span style="color: #000000">Le champ est obligatoire</span>]. Ce texte provient de la balise [<span style="color: #7f007f">data-val-required</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;Le champ est obligatoire&quot;</span></em>] de la ligne 4 ;</li>
-<li>ligne 7 : pour afficher le message d&#x27;erreur du noeud [strNotEmpty] de la ligne 4, il faut utiliser ligne 7 les attributs [<span style="color: #7f007f">data-valmsg-for</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;strNotEmpty&quot;</span></em>] et [<span style="color: #7f007f">data-valmsg-replace</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;true&quot;</span></em>] ;</li>
+  <li>ligne 4 : la classe du noeud [<i><span style="color: #2a00ff">strNotEmpty</span></i>] a changé. Elle est devenue [<i><span style="color: #2a00ff">input-validation-error</span></i>] qui fait que le champ erroné est coloré en rouge ;
+  </li>
+  <li>ligne 7 : la classe du [span] a changé. Elle est devenue [<i><span style="color: #2a00ff">field-validation-error</span></i>] qui va faire afficher le texte du [span] en rouge ;
+  </li>
+  <li>ligne 8 : le [span] qui était auparavant vide a maintenant un texte [<span style="color: #000000">Le champ est obligatoire</span>]. Ce texte provient de la balise [<span style="color: #7f007f">data-val-required</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;Le champ est obligatoire&quot;</span></i>] de la ligne 4 ;
+  </li>
+  <li>ligne 7 : pour afficher le message d&#x27;erreur du noeud [strNotEmpty] de la ligne 4, il faut utiliser ligne 7 les attributs [<span style="color: #7f007f">data-valmsg-for</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;strNotEmpty&quot;</span></i>] et [<span style="color: #7f007f">data-valmsg-replace</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;true&quot;</span></i>] ;
+  </li>
 </ul>
+
 <p><a id="refheading730792038707144"></a></p>
 <h3 id="639-validateur-assertfalse">6.3.9. <span style="color: #000000">Validateur [assertfalse]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DD0000006AA372DFCF.png" style="display:inline-block; margin:4px;width:13.085cm;height:1.402cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DD0000006AA372DFCF.png" /></td></tr></table>
@@ -2603,9 +2750,12 @@
 
 <p><span style="color: #000000">On veut reproduire cette contrainte côté client avec du Javascript. Les lignes 12-17 sont désormais classiques :</span></p>
 <ul>
-<li><span style="color: #000000">lignes 12-14 : affichent en cas d&#x27;erreur sur le champ [assertFalse], le message transporté par l&#x27;attribut [data-val-assertfalse] de la ligne 6 ou celui transporté par l&#x27;attribut [data-val-required] de la même ligne. On rappelle que ces messages sont localisés, ç-à-d dans la langue choisie précédemment par l&#x27;utilisateur ou en français s&#x27;il n&#x27;a pas fait de choix ;</span></li>
-<li><span style="color: #000000">lignes 5-10 : affichent les boutons radio avec des validateurs js qui sont déclenchés dès que l&#x27;utilisateur clique l&#x27;un d&#x27;eux.</span></li>
+  <li><span style="color: #000000">lignes 12-14 : affichent en cas d&#x27;erreur sur le champ [assertFalse], le message transporté par l&#x27;attribut [data-val-assertfalse] de la ligne 6 ou celui transporté par l&#x27;attribut [data-val-required] de la même ligne. On rappelle que ces messages sont localisés, ç-à-d dans la langue choisie précédemment par l&#x27;utilisateur ou en français s&#x27;il n&#x27;a pas fait de choix ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 5-10 : affichent les boutons radio avec des validateurs js qui sont déclenchés dès que l&#x27;utilisateur clique l&#x27;un d&#x27;eux.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les deux boutons sont construits de la même façon. On va examiner le premier :</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot;</span> <span style="color:#7f007f">th:field</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;*{assertFalse}&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span> <span style="color:#7f007f">data-val</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot; </span><span style="color:#7f007f">th:attr</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;data-val-required=#{NotNull},data-val-assertfalse=#{AssertFalse}&quot;</span><span style="color:#000000"> </span><span style="color:#008080">/&gt;</span></span>
@@ -2647,21 +2797,32 @@
 
 <p>Très honnêtement, je ne suis pas un spécialiste de javascript, un langage qui garde encore pour moi toute son obscurité. Ses bases sont simples mais les bibliothèques posées sur ces bases sont souvent très complexes. Pour écrire les lignes de code ci-dessus, je me suis inspiré de codes trouvés sur Internet. C&#x27;est le lien [<a href="http://jsfiddle.net/LDDrk/">http://jsfiddle.net/LDDrk/</a>] qui m&#x27;a donné la voie à suivre. S&#x27;il existe encore, le lecteur est invité à le parcourir car il est complet avec un exemple fonctionnel à la clé. Il montre comment créer un nouveau validateur et il m&#x27;a permis de créer tous ceux de ce chapitre. Revenons au code :</p>
 <ul>
-<li>lignes 2-4 : définissent le nouveau validateur. La fonction [<span style="color: #000000">$.validator.addMethod</span>] attend comme 1er paramètre, le nom du validateur, comme second paramètre une fonction définissant celui-ci ;</li>
-<li>ligne 2 : la fonction a trois paramètres :<ul>
-<li>[value] : la valeur à valider. La fonction doit rendre [true] si la valeur est valide, [false] sinon,</li>
-<li>[element] : élément HTML à laquelle appartient la valeur à valider,</li>
-<li>[param] : un objet contenant les valeurs associées aux paramètres d&#x27;un validateur. Nous n&#x27;avons pas encore introduit cette notion. Ici le validateur [assertFalse] n&#x27;a pas de paramètres. On peut dire si la valeur [value] est valide sans l&#x27;aide d&#x27;informations supplémentaires. Ce ne serait pas pareil s&#x27;il fallait vérifier que la valeur [value] était un nombre réel dans l&#x27;intervalle [min, max]. Alors là, il nous faudrait connaître [min] et [max]. On appelle ces deux valeurs les paramètres du validateur ; </li>
+  <li>lignes 2-4 : définissent le nouveau validateur. La fonction [<span style="color: #000000">$.validator.addMethod</span>] attend comme 1er paramètre, le nom du validateur, comme second paramètre une fonction définissant celui-ci ;
+  </li>
+  <li>ligne 2 : la fonction a trois paramètres :
+    <ul>
+      <li>[value] : la valeur à valider. La fonction doit rendre [true] si la valeur est valide, [false] sinon,
+      </li>
+      <li>[element] : élément HTML à laquelle appartient la valeur à valider,
+      </li>
+      <li>[param] : un objet contenant les valeurs associées aux paramètres d&#x27;un validateur. Nous n&#x27;avons pas encore introduit cette notion. Ici le validateur [assertFalse] n&#x27;a pas de paramètres. On peut dire si la valeur [value] est valide sans l&#x27;aide d&#x27;informations supplémentaires. Ce ne serait pas pareil s&#x27;il fallait vérifier que la valeur [value] était un nombre réel dans l&#x27;intervalle [min, max]. Alors là, il nous faudrait connaître [min] et [max]. On appelle ces deux valeurs les paramètres du validateur ; 
+      </li>
+    </ul>
+  </li>
+  <li>lignes 6-9 : une fonction nécessaire à la bibliothèque MS de validation. La fonction [<span style="color: #000000">$.validator.unobtrusive.adapters.add</span>] attend comme 1er paramètre, le nom du validateur, comme second paramètre le tableau de paramètres du validateur, comme troisième paramètre une fonction ;
+  </li>
+  <li>le validateur [assertFalse] n&#x27;a pas de paramètres. C&#x27;est pourquoi le second paramètre est un tableau vide ;
+  </li>
+  <li>la fonction n&#x27;a qu&#x27;un paramètre, un objet [options] qui contient des informations sur l&#x27;élément à valider et pour lequel il faut définir deux nouvelles propriétés [rules] et [messages] ;
+    <ul>
+      <li>ligne 7 : on définit les règles [rules] pour le validateur [assertFalse]. Ces règles sont les paramètres du validateur [assertFalse], les mêmes que celles du paramètre [param] de la ligne 2. Ces paramètres sont trouvés dans [options.params] ;
+      </li>
+      <li>ligne 8 : définissent le message d&#x27;erreur du validateur [assertFalse]. Celui-ci est trouvé dans [options.message]. On a la difficulté suivante avec les messages d&#x27;erreur. Dans les fichiers de messages, on va trouver le message suivant :
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>lignes 6-9 : une fonction nécessaire à la bibliothèque MS de validation. La fonction [<span style="color: #000000">$.validator.unobtrusive.adapters.add</span>] attend comme 1er paramètre, le nom du validateur, comme second paramètre le tableau de paramètres du validateur, comme troisième paramètre une fonction ;</li>
-<li>le validateur [assertFalse] n&#x27;a pas de paramètres. C&#x27;est pourquoi le second paramètre est un tableau vide ;</li>
-<li>la fonction n&#x27;a qu&#x27;un paramètre, un objet [options] qui contient des informations sur l&#x27;élément à valider et pour lequel il faut définir deux nouvelles propriétés [rules] et [messages] ;<ul>
-<li>ligne 7 : on définit les règles [rules] pour le validateur [assertFalse]. Ces règles sont les paramètres du validateur [assertFalse], les mêmes que celles du paramètre [param] de la ligne 2. Ces paramètres sont trouvés dans [options.params] ;</li>
-<li>ligne 8 : définissent le message d&#x27;erreur du validateur [assertFalse]. Celui-ci est trouvé dans [options.message]. On a la difficulté suivante avec les messages d&#x27;erreur. Dans les fichiers de messages, on va trouver le message suivant :</li>
-</ul>
-</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">Range.form01.int1014=</span><span style="color:#2a00ff">La</span><span style="color:#000000"> </span><span style="color:#2a00ff">valeur</span><span style="color:#000000"> </span><span style="color:#2a00ff">doit</span><span style="color:#000000"> </span><span style="color:#2a00ff">être</span><span style="color:#000000"> </span><span style="color:#2a00ff">dans</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;intervalle</span><span style="color:#000000"> </span><span style="color:#2a00ff">[10,14]</span></span>
 </code></pre></div>
@@ -2717,10 +2878,14 @@
 
 <p>La fonction jS [<span style="color: #000000">$.validator.unobtrusive.adapters.add</span>] a été exécutée. On apprend les choses suivantes :</p>
 <ul>
-<li>[options.params] est un objet vide car le validateur [assertFalse] n&#x27;a pas de paramètres ;</li>
-<li>[options.message] est le message d&#x27;erreur qu&#x27;on a construit pour le validateur [assertFalse] dans l&#x27;attribut [data-val-assertFalse] ;</li>
-<li>[options.messages] est un objet qui contient les autres messages d&#x27;erreur de l&#x27;élément validé. Ici on retrouve le message d&#x27;erreur que nous avons mis dans l&#x27;attribut [data-val-required] ;</li>
+  <li>[options.params] est un objet vide car le validateur [assertFalse] n&#x27;a pas de paramètres ;
+  </li>
+  <li>[options.message] est le message d&#x27;erreur qu&#x27;on a construit pour le validateur [assertFalse] dans l&#x27;attribut [data-val-assertFalse] ;
+  </li>
+  <li>[options.messages] est un objet qui contient les autres messages d&#x27;erreur de l&#x27;élément validé. Ici on retrouve le message d&#x27;erreur que nous avons mis dans l&#x27;attribut [data-val-required] ;
+  </li>
 </ul>
+
 <p>Maintenant donnons une valeur erronée au champ [assertFalse] et validons :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002EA0000001C57D98A06.png" style="display:inline-block; margin:4px;width:13.809cm;height:0.52cm;" class="odt-zoomable" data-zoom-src="images/10000000000002EA0000001C57D98A06.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2729,20 +2894,29 @@
 
 <p>On y voit les choses suivantes :</p>
 <ul>
-<li>la valeur testée est la valeur [true] (ligne 118) ;</li>
-<li>l&#x27;élément HTML testé est le bouton radio d&#x27;id [assertFalse1] (ligne 122) ;</li>
-<li>le validateur [assertFalse] n&#x27;a pas de paramètre (ligne 123) ;</li>
+  <li>la valeur testée est la valeur [true] (ligne 118) ;
+  </li>
+  <li>l&#x27;élément HTML testé est le bouton radio d&#x27;id [assertFalse1] (ligne 122) ;
+  </li>
+  <li>le validateur [assertFalse] n&#x27;a pas de paramètre (ligne 123) ;
+  </li>
 </ul>
+
 <p>Voilà. Que retenir de tout cela ?</p>
 <p>Pour un validateur X jS, nous devons définir :</p>
 <ul>
-<li>dans la balise HTML à valider, l&#x27;attribut [data-val-X=&#x27;msg&#x27;] qui définit à la fois le validateur X et son message d&#x27;erreur ;</li>
-<li>deux fonctions jS à mettre dans le fichier [client-validation.js] :<ul>
-<li>[<span style="color: #000000">$.validator.addMethod(</span><span style="color: #2a00ff">&quot;X&quot;</span><span style="color: #000000">, </span><strong><span style="color: #7f0055">function</span></strong><span style="color: #000000">(value, element, param)</span>],</li>
-<li>[<span style="color: #000000">$.validator.unobtrusive.adapters.add(</span><span style="color: #2a00ff">&quot;X&quot;</span><span style="color: #000000">, [param1, param2], </span><strong><span style="color: #7f0055">function</span></strong><span style="color: #000000">(options)</span>] ;</li>
+  <li>dans la balise HTML à valider, l&#x27;attribut [data-val-X=&#x27;msg&#x27;] qui définit à la fois le validateur X et son message d&#x27;erreur ;
+  </li>
+  <li>deux fonctions jS à mettre dans le fichier [client-validation.js] :
+    <ul>
+      <li>[<span style="color: #000000">$.validator.addMethod(</span><span style="color: #2a00ff">&quot;X&quot;</span><span style="color: #000000">, </span><b><span style="color: #7f0055">function</span></b><span style="color: #000000">(value, element, param)</span>],
+      </li>
+      <li>[<span style="color: #000000">$.validator.unobtrusive.adapters.add(</span><span style="color: #2a00ff">&quot;X&quot;</span><span style="color: #000000">, [param1, param2], </span><b><span style="color: #7f0055">function</span></b><span style="color: #000000">(options)</span>] ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Par la suite, nous allons nous appuyer sur ce qui a été fait pour ce premier validateur et simplement présenter ce qui est nouveau.</p>
 <p><a id="refheading730812038707144"></a></p>
 <h3 id="6310-validateur-asserttrue">6.3.10. Validateur [asserttrue]</h3>
@@ -2921,8 +3095,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5, apparaît un nouveau validateur [<em><span style="color: #2a00ff">data-val-future</span></em>] ;</span></li>
+  <li><span style="color: #000000">ligne 5, apparaît un nouveau validateur [<i><span style="color: #2a00ff">data-val-future</span></i>] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Ce validateur est bien sûr très analogue au validateur [past]. Les deux fonctions à ajouter dans [client-validation.js] sont les suivantes :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// -------------- future</span>
@@ -2984,12 +3160,18 @@
 
 <p><span style="color: #000000">Rappelons la signification des différents attributs [data-X] :</span></p>
 <ul>
-<li><span style="color: #000000">[<span style="color: #7f007f">data-val</span>=<em><span style="color: #2a00ff">&quot;true&quot;</span></em>] indique que des validateurs sont associés à l&#x27;élément HTML ;</span></li>
-<li><span style="color: #000000">[<span style="color: #7f007f">data-val-required</span>] introduit le validateur [required] avec son message ;</span></li>
-<li><span style="color: #000000">[<span style="color: #7f007f">data-val-int</span>] introduit le validateur [int] avec son message ;</span></li>
-<li><span style="color: #000000">[<span style="color: #7f007f">data-val-max</span>] introduit le validateur [max] avec son message ;</span></li>
-<li><span style="color: #000000">[<span style="color: #7f007f">data-val-max-value</span>=<em><span style="color: #2a00ff">&quot;100&quot;</span></em>] introduit un paramètre nommé [value] pour le validateur [max]. [100] est la valeur de ce paramètre. C&#x27;est la première fois que nous rencontrons la notion de paramètres d&#x27;un validateur.</span></li>
+  <li><span style="color: #000000">[<span style="color: #7f007f">data-val</span>=<i><span style="color: #2a00ff">&quot;true&quot;</span></i>] indique que des validateurs sont associés à l&#x27;élément HTML ;</span>
+  </li>
+  <li><span style="color: #000000">[<span style="color: #7f007f">data-val-required</span>] introduit le validateur [required] avec son message ;</span>
+  </li>
+  <li><span style="color: #000000">[<span style="color: #7f007f">data-val-int</span>] introduit le validateur [int] avec son message ;</span>
+  </li>
+  <li><span style="color: #000000">[<span style="color: #7f007f">data-val-max</span>] introduit le validateur [max] avec son message ;</span>
+  </li>
+  <li><span style="color: #000000">[<span style="color: #7f007f">data-val-max-value</span>=<i><span style="color: #2a00ff">&quot;100&quot;</span></i>] introduit un paramètre nommé [value] pour le validateur [max]. [100] est la valeur de ce paramètre. C&#x27;est la première fois que nous rencontrons la notion de paramètres d&#x27;un validateur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le fichier [client-validation.js] est enrichi du validateur [int] suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">logs.int = <span style="font-weight:bold;color:#7f0055">true</span>;</span>
@@ -3015,8 +3197,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : on utilise une expression régulière pour vérifier que la chaîne [value] représente bien un entier. Celui-ci peut être signé ;</span></li>
+  <li><span style="color: #000000">ligne 5 : on utilise une expression régulière pour vérifier que la chaîne [value] représente bien un entier. Celui-ci peut être signé ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici quelques exemples de logs :</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
@@ -3068,22 +3252,32 @@
 
 <p><span style="color: #000000">Nous allons traiter tout de suite le cas du paramètre [value] du validateur [max] introduit par l&#x27;attribut [</span><span style="color: #7f007f">data-val-max-value</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;100&quot;</span></em><span style="color: #000000">]. </span></p>
 <ul>
-<li><span style="color: #000000">ligne 35, le paramètre [value] est intégré dans le second paramètre de la fonction [$.validator.unobtrusive.adapters.add] ;</span></li>
-<li><span style="color: #000000">ligne 3, l&#x27;objet [param] ne va plus être vide, mais contenir {&quot;value&quot;:100} ;</span></li>
+  <li><span style="color: #000000">ligne 35, le paramètre [value] est intégré dans le second paramètre de la fonction [$.validator.unobtrusive.adapters.add] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3, l&#x27;objet [param] ne va plus être vide, mais contenir {&quot;value&quot;:100} ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pour comprendre le code des lignes 3-33, il faut savoir que lorsqu&#x27;il y a plusieurs validateurs sur un même élément HTML :</span></p>
 <ul>
-<li><span style="color: #000000">on ne connaît pas l&#x27;ordre d&#x27;exécution des validateurs ;</span></li>
-<li><span style="color: #000000">l&#x27;exécution des validateurs s&#x27;arrête dès qu&#x27;un validateur déclare l&#x27;élément invalide. C&#x27;est alors le message d&#x27;erreur de ce dernier qui est associé à l&#x27;élément invalide ;</span></li>
+  <li><span style="color: #000000">on ne connaît pas l&#x27;ordre d&#x27;exécution des validateurs ;</span>
+  </li>
+  <li><span style="color: #000000">l&#x27;exécution des validateurs s&#x27;arrête dès qu&#x27;un validateur déclare l&#x27;élément invalide. C&#x27;est alors le message d&#x27;erreur de ce dernier qui est associé à l&#x27;élément invalide ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Etudions le code :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 12 : on vérifie qu&#x27;on a un nombre. Si le validateur [int] a été exécuté avant le validateur [max], c&#x27;est forcément vrai puisque une valeur invalide arrête l&#x27;exécution des validateurs ;</span></li>
-<li><span style="color: #000000">lignes 13-22 : si on n&#x27;a pas un nombre, cela veut dire que le validateur [int] n&#x27;a pas encore été exécuté. On indique alors que la valeur testée est valide pour laisser le validateur [int] faire son travail et déclarer l&#x27;élément invalide avec son propre message d&#x27;erreur ;</span></li>
-<li><span style="color: #000000">lignes 23-24 : calcule la validité de [value] ;</span></li>
+  <li><span style="color: #000000">ligne 12 : on vérifie qu&#x27;on a un nombre. Si le validateur [int] a été exécuté avant le validateur [max], c&#x27;est forcément vrai puisque une valeur invalide arrête l&#x27;exécution des validateurs ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-22 : si on n&#x27;a pas un nombre, cela veut dire que le validateur [int] n&#x27;a pas encore été exécuté. On indique alors que la valeur testée est valide pour laisser le validateur [int] faire son travail et déclarer l&#x27;élément invalide avec son propre message d&#x27;erreur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 23-24 : calcule la validité de [value] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici quelques logs :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3176,7 +3370,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Voici quelques logs d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3347,7 +3541,7 @@
 
 <p><span style="color: #000000">Il est très semblable aux validateurs [min] et [max] déjà étudiés.</span></p>
 <p><span style="color: #000000">Voici quelques exemples de logs :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3426,7 +3620,7 @@
 </code></pre></div>
 
 <p>Voici quelques exemples de logs :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -3465,7 +3659,7 @@
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>3.3
 </code></pre></div>
 <p>Passons en anglais et faisons les saisies [+2,5] et [+2.5]. Les logs sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -3526,15 +3720,21 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : l&#x27;expression régulière d&#x27;un nombre réel pour la culture [fr-FR] ;</li>
-<li>ligne 6 : l&#x27;expression régulière d&#x27;un nombre réel pour la culture [en-US] ;</li>
-<li>ligne 7 : le nom de la culture du moment. Dans notre exemple, ce sera l&#x27;une de deux cultures ci-dessus ;</li>
-<li>lignes 9-16 : le test de validité de la valeur saisie ;</li>
-<li>ligne 15 : on a prévu le cas où la culture ne serait ni [fr-FR], ni [en-US] ;</li>
+  <li>ligne 5 : l&#x27;expression régulière d&#x27;un nombre réel pour la culture [fr-FR] ;
+  </li>
+  <li>ligne 6 : l&#x27;expression régulière d&#x27;un nombre réel pour la culture [en-US] ;
+  </li>
+  <li>ligne 7 : le nom de la culture du moment. Dans notre exemple, ce sera l&#x27;une de deux cultures ci-dessus ;
+  </li>
+  <li>lignes 9-16 : le test de validité de la valeur saisie ;
+  </li>
+  <li>ligne 15 : on a prévu le cas où la culture ne serait ni [fr-FR], ni [en-US] ;
+  </li>
 </ul>
+
 <p>Les logs donnent maintenant la chose suivante :</p>
 <p><u><strong>Culture [fr-FR]</strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3561,7 +3761,7 @@
 </code></pre></div></td></tr></table>
 
 <p><u><strong>Culture [en-US]</strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeur saisie</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeur saisie</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>x
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3616,10 +3816,14 @@
 
 <p>Cette ligne introduit le nouveau validateur [custom3] déclaré par l&#x27;attribut [<span style="color: #7f007f">data-val-custom3</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;[double3+double1] must be in [10,13]&quot;</span></em>]. Ce validateur a les paramètres suivants :</p>
 <ul>
-<li>[field] déclaré par l&#x27;attribut [<span style="color: #7f007f">data-val-custom3-field</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;double1&quot;</span></em>]. Ce paramètre désigne le champ dont la valeur participe au calcul de validité de [double3] ;</li>
-<li>[min] déclaré par l&#x27;attribut [<em><span style="color: #7f007f">data-val-custom3-min</span></em><em><span style="color: #000000">=</span></em><em><span style="color: #2a00ff">&quot;10.0&quot;</span></em>]. Ce paramètre est le min de l&#x27;intervalle [min, max] dans laquelle doit se trouver [double1+double3] ;</li>
-<li>[max] déclaré par l&#x27;attribut [<em><span style="color: #7f007f">data-val-custom3-max</span></em><em><span style="color: #000000">=</span></em><em><span style="color: #2a00ff">&quot;13.0&quot;</span></em>]. Ce paramètre est le max de l&#x27;intervalle [min, max] dans laquelle doit se trouver [double1+double3] ;</li>
+  <li>[field] déclaré par l&#x27;attribut [<span style="color: #7f007f">data-val-custom3-field</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;double1&quot;</span></i>]. Ce paramètre désigne le champ dont la valeur participe au calcul de validité de [double3] ;
+  </li>
+  <li>[min] déclaré par l&#x27;attribut [<i><span style="color: #7f007f">data-val-custom3-min</span></i><i><span style="color: #000000">=</span></i><i><span style="color: #2a00ff">&quot;10.0&quot;</span></i>]. Ce paramètre est le min de l&#x27;intervalle [min, max] dans laquelle doit se trouver [double1+double3] ;
+  </li>
+  <li>[max] déclaré par l&#x27;attribut [<i><span style="color: #7f007f">data-val-custom3-max</span></i><i><span style="color: #000000">=</span></i><i><span style="color: #2a00ff">&quot;13.0&quot;</span></i>]. Ce paramètre est le max de l&#x27;intervalle [min, max] dans laquelle doit se trouver [double1+double3] ;
+  </li>
 </ul>
+
 <p>Ce validateur est géré de la façon suivante dans [client-validation.js] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// -------------- custom3 utilisé conjointement avec [number]</span>
@@ -3679,7 +3883,7 @@
 </code></pre></div>
 
 <p>Voici quelques exemples de logs :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Valeurs saisies</b></p><p style="margin:0;"><b>[double1,double3]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>logs</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Valeurs saisies</b></div><div style="margin:0 0 0.5em 0"><b>[double1,double3]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>logs</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>[x,1]
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3782,10 +3986,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : une référence sur le lien d&#x27;activation de la validation côté client ;</li>
-<li>ligne 6 : une référence sur le lien de désactivation de la validation côté client ;</li>
-<li>ligne 7 : une référence sur un champ caché du formulaire qui mémorise le dernier état de l&#x27;activation sous la forme d&#x27;un booléen [true : validation client activée, false :  validation client désactivée]. Ce champ se trouve dans la vue [vue-01.xml] sous la forme suivante :</li>
+  <li>ligne 5 : une référence sur le lien d&#x27;activation de la validation côté client ;
+  </li>
+  <li>ligne 6 : une référence sur le lien de désactivation de la validation côté client ;
+  </li>
+  <li>ligne 7 : une référence sur un champ caché du formulaire qui mémorise le dernier état de l&#x27;activation sous la forme d&#x27;un booléen [true : validation client activée, false :  validation client désactivée]. Ce champ se trouve dans la vue [vue-01.xml] sous la forme suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot;</span> <span style="color:#7f007f">th:field</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;*{clientValidation}&quot;</span> <span style="color:#7f007f">th:value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;*{clientValidation}&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span> <span style="color:#008080">/&gt;</span></span>
 </code></pre></div>
@@ -3797,9 +4005,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11 : on récupère la valeur du champ caché ;</li>
-<li>ligne 12 : on appelle la fonction [<span style="color: #000000">setClientValidation2</span>] suivante :</li>
+  <li>ligne 11 : on récupère la valeur du champ caché ;
+  </li>
+  <li>ligne 12 : on appelle la fonction [<span style="color: #000000">setClientValidation2</span>] suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> setClientValidation2(activate) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// liens</span></span>
@@ -3820,12 +4031,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : le paramètre [activate] vaut [true] s&#x27;il faut activer la validation côté client, false sinon ;</li>
-<li>lignes 5-6 : le lien de désactivation est montré, le lien d&#x27;activation caché ;</li>
-<li>ligne 8 : pour que la validation côté client soit fonctionnelle, il faut parser (analyser) le document à la recherche de validateurs [data-val-X]. Le paramètre de la fonction [$.validator.unobtrusive.parse] est l&#x27;identifiant jS du formulaire à parser ;</li>
-<li>lignes 11-12 :  le lien de d&#x27;activation est montré, le lien de désactivation caché ;</li>
-<li>lignes 14 : les validateurs du formulaire sont désactivés. A partir de maintenant, c&#x27;est comme s&#x27;il n&#x27;y avait pas de validateurs jS dans le formulaire ;</li>
+  <li>ligne 1 : le paramètre [activate] vaut [true] s&#x27;il faut activer la validation côté client, false sinon ;
+  </li>
+  <li>lignes 5-6 : le lien de désactivation est montré, le lien d&#x27;activation caché ;
+  </li>
+  <li>ligne 8 : pour que la validation côté client soit fonctionnelle, il faut parser (analyser) le document à la recherche de validateurs [data-val-X]. Le paramètre de la fonction [$.validator.unobtrusive.parse] est l&#x27;identifiant jS du formulaire à parser ;
+  </li>
+  <li>lignes 11-12 :  le lien de d&#x27;activation est montré, le lien de désactivation caché ;
+  </li>
+  <li>lignes 14 : les validateurs du formulaire sont désactivés. A partir de maintenant, c&#x27;est comme s&#x27;il n&#x27;y avait pas de validateurs jS dans le formulaire ;
+  </li>
 </ul>
+
 <p>A quoi sert cette fonction [<span style="color: #000000">setClientValidation2</span>] ? Elle sert à gérer les POST. Comme le champ [clientValidation] est un champ caché, il est posté et revient avec le formulaire renvoyé par le serveur. On se sert alors de sa valeur pour remettre la validation côté client comme elle était avant le POST. En effet, il n&#x27;y a pas de mémoire jS entre les requêtes. Il faut donc que le serveur transmette dans la nouvelle vue les informations qui permettent d&#x27;initialiser le jS de celle-ci. Cela se fait habituellement dans la fonction [<span style="color: #000000">$(document).ready</span>].</p>
 <p>Revenons à la fonction [<span style="color: #000000">setClientValidation</span>] qui gère le clic sur les liens d&#x27;activation / désactivation de la validation côté client :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
@@ -3851,12 +4068,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : on utilise la fonction [setClientValidation2] que nous venons de voir ;</li>
-<li>ligne 6 : on mémorise le choix de l&#x27;utilisateur dans le champ caché pour le récupérer au retour du prochain POST ;</li>
-<li>ligne 11 : si la validation client est active, on efface les messages d&#x27;erreur de la colonne [serveur] de la vue. Nous avons décrit la fonction [clearServerErrors] au paragraphe <a href="#clearservererrors">6.3.7</a> ;</li>
-<li>ligne 13 : les validateurs jS sont exécutés pour faire apparaître d&#x27;éventuels messages d&#x27;erreur dans la colonne [client] de la vue ;</li>
-<li>ligne 17 : si la validation client est désactivée alors on efface les messages d&#x27;erreur de la colonne [client] de la vue. Examinons dans la console de développement de Chrome le code HTML d&#x27;un élément erroné :</li>
+  <li>ligne 4 : on utilise la fonction [setClientValidation2] que nous venons de voir ;
+  </li>
+  <li>ligne 6 : on mémorise le choix de l&#x27;utilisateur dans le champ caché pour le récupérer au retour du prochain POST ;
+  </li>
+  <li>ligne 11 : si la validation client est active, on efface les messages d&#x27;erreur de la colonne [serveur] de la vue. Nous avons décrit la fonction [clearServerErrors] au paragraphe <a href="#clearservererrors">6.3.7</a> ;
+  </li>
+  <li>ligne 13 : les validateurs jS sont exécutés pour faire apparaître d&#x27;éventuels messages d&#x27;erreur dans la colonne [client] de la vue ;
+  </li>
+  <li>ligne 17 : si la validation client est désactivée alors on efface les messages d&#x27;erreur de la colonne [client] de la vue. Examinons dans la console de développement de Chrome le code HTML d&#x27;un élément erroné :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;col2&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text&quot;</span> <span style="color:#7f007f">data-val</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span> <span style="color:#7f007f">data-val-int</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Format invalide&quot;</span> <span style="color:#7f007f">data-val-max-value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;100&quot;</span> <span style="color:#7f007f">data-val-required</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Le champ est obligatoire&quot; </span><span style="color:#7f007f">data-val-max</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;La valeur doit être inférieure ou égale à 100&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;&quot;</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;intMax100&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;intMax100&quot;</span> <span style="color:#7f007f">aria-required</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span>        <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input-validation-error&quot;</span> <span style="color:#7f007f">aria-describedby</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;intMax100-error&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -3869,9 +4092,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2, on voit que dans la colonne 2 du tableau, l&#x27;élément erroné a le style [<span style="color: #7f007f">class</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;input-validation-error&quot;</span></em>] ;</li>
-<li>ligne 5, on voit que dans la colonne 3 du tableau, le message d&#x27;erreur a le style [<span style="color: #7f007f">class</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;field-validation-error&quot;</span></em>] ;</li>
+  <li>ligne 2, on voit que dans la colonne 2 du tableau, l&#x27;élément erroné a le style [<span style="color: #7f007f">class</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;input-validation-error&quot;</span></i>] ;
+  </li>
+  <li>ligne 5, on voit que dans la colonne 3 du tableau, le message d&#x27;erreur a le style [<span style="color: #7f007f">class</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;field-validation-error&quot;</span></i>] ;
+  </li>
 </ul>
+
 <p>C&#x27;est vrai pour tous les éléments erronés. On utilise ces deux information dans la fonction [clearClientErrors] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// clear client errors</span>
@@ -3888,8 +4114,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-6 : on recherche tous les éléments du DOM ayant la classe [<span style="color: #2a00ff">field-validation-error</span>] et on efface le texte qu&#x27;ils affichent. C&#x27;est ainsi que les messages d&#x27;erreur sont effacés ;</li>
-<li>lignes 8-10 : on recherche tous les éléments du DOM ayant la classe [<span style="color: #2a00ff">input-validation-error</span>] et on leur enlève cette classe. Ainsi l&#x27;élément erroné qui avait été coloré en rouge retrouve son style primitif ;</li>
+  <li>lignes 4-6 : on recherche tous les éléments du DOM ayant la classe [<span style="color: #2a00ff">field-validation-error</span>] et on efface le texte qu&#x27;ils affichent. C&#x27;est ainsi que les messages d&#x27;erreur sont effacés ;
+  </li>
+  <li>lignes 8-10 : on recherche tous les éléments du DOM ayant la classe [<span style="color: #2a00ff">input-validation-error</span>] et on leur enlève cette classe. Ainsi l&#x27;élément erroné qui avait été coloré en rouge retrouve son style primitif ;
+  </li>
 </ul>
 
 
