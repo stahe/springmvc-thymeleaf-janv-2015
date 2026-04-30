@@ -756,15 +756,15 @@
 <p><a id="refheading256713779844303"></a></p>
 <h2 id="91-installation-dun-jdk">9.1. Installation d&#x27;un JDK</h2>
 <p><a id="refheading472751712028290"></a>On trouvera à l&#x27;URL [<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>] (octobre 2014), le JDK le plus récent. On nommera par la suite &lt;jdk-install&gt; le dossier d&#x27;installation du JDK.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000229000001BDF10714D0.png" style="display:inline-block; margin:4px;width:10.239cm;height:8.241cm;" class="odt-zoomable" data-zoom-src="images/1000000000000229000001BDF10714D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000229000001BDF10714D0.png" width="387" height="311" style="display:inline-block; margin:4px;width:10.239cm;height:8.241cm;" class="odt-zoomable" data-zoom-src="images/1000000000000229000001BDF10714D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading256715779844303"></a></p>
 <h2 id="92-installation-de-maven">9.2. Installation de Maven</h2>
 <p><a id="refheading463261712028290"></a>Maven est un outil de gestion des dépendances d&#x27;un projet Java et plus encore. Il est disponible à l&#x27;URL [<a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000269000000BB1072BA49.png" style="display:inline-block; margin:4px;width:11.419cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000269000000BB1072BA49.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000269000000BB1072BA49.png" width="432" height="131" style="display:inline-block; margin:4px;width:11.419cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000269000000BB1072BA49.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Téléchargez et dézippez l&#x27;archive. Nous appellerons &lt;maven-install&gt; le dossier d&#x27;installation de Maven.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C00000112B26E74FC.png" style="display:inline-block; margin:4px;width:5.239cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C00000112B26E74FC.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C00000112B26E74FC.png" width="198" height="137" style="display:inline-block; margin:4px;width:5.239cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C00000112B26E74FC.png" /></td></tr></table>
 
 <ul>
   <li>en [1], le fichier [conf / settings.xml] configure Maven ;
@@ -773,39 +773,39 @@
 
 <p>On y trouve les lignes suivantes :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- localRepository</span></span>
-<span class="odt-code-line">   | The path to the local repository maven will use to store artifacts.</span>
-<span class="odt-code-line">   |</span>
-<span class="odt-code-line">   | Default: ${user.home}/.m2/repository</span>
-<span class="odt-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
-<span class="odt-code-line">--&gt;</span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- localRepository</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | The path to the local repository maven will use to store artifacts.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   |</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | Default: ${user.home}/.m2/repository</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
 </code></pre></div>
 
 <p>La valeur par défaut de la ligne 4, si comme moi votre {user.home} a un espace dans son chemin (par exemple [C:\Users\Serge Tahé]), peut poser problème à certains logiciels dont IntellijIDEA. On écrira alors quelque chose comme :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- localRepository</span></span>
-<span class="odt-code-line">   | The path to the local repository maven will use to store artifacts.</span>
-<span class="odt-code-line">   |</span>
-<span class="odt-code-line">   | Default: ${user.home}/.m2/repository</span>
-<span class="odt-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
-<span class="odt-code-line">  --&gt;</span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span><span style="background-color:#ff950e;color:#000000">D:\Programs\devjava\maven\.m2\repository</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- localRepository</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | The path to the local repository maven will use to store artifacts.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   |</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | Default: ${user.home}/.m2/repository</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span><span style="background-color:#ff950e;color:#000000">D:\Programs\devjava\maven\.m2\repository</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <p>et on évitera, ligne 7, un chemin qui contient des espaces.</p>
 <p><a id="refheading179816779844303"></a></p>
 <h2 id="93-installation-de-sts-spring-tool-suite">9.3. Installation de STS (Spring Tool Suite)</h2>
 <p><a id="refheading1633372067866943"></a>Nous allons installer <strong>SpringSource Tool Suite</strong> [<a href="http://www.springsource.com/developer/sts">http://www.springsource.com/developer/sts</a>], un Eclipse pré-équipé avec de nombreux plugins liés au framework Spring et également avec une configuration Maven pré-installée.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048C0000021C5194E00F.png" style="display:inline-block; margin:4px;width:15.399cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000021C5194E00F.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048C0000021C5194E00F.png" width="582" height="270" style="display:inline-block; margin:4px;width:15.399cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000021C5194E00F.png" /></td></tr></table>
 
 <ul>
   <li>aller sur le site de  <b>SpringSource Tool Suite</b> (STS) [1], pour télécharger la version courante de STS [2A] [2B],
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C500000118202EF169.png" style="display:inline-block; margin:4px;width:16.154cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C500000118202EF169.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C500000118202EF169.png" width="611" height="140" style="display:inline-block; margin:4px;width:16.154cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C500000118202EF169.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055200000244714F08D4.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.664cm;" class="odt-zoomable" data-zoom-src="images/100000000000055200000244714F08D4.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055200000244714F08D4.png" width="680" height="290" style="display:inline-block; margin:4px;width:17.999cm;height:7.664cm;" class="odt-zoomable" data-zoom-src="images/100000000000055200000244714F08D4.png" /></td></tr></table>
 
 <ul>
   <li>le fichier téléchargé est un installateur qui crée l&#x27;arborescence de fichiers [3A] [3B]. En [4], on lance l&#x27;exécutable,
@@ -814,7 +814,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020B0000009CEAFE8AE7.png" style="display:inline-block; margin:4px;width:6.92cm;height:2.064cm;" class="odt-zoomable" data-zoom-src="images/100000000000020B0000009CEAFE8AE7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020B0000009CEAFE8AE7.png" width="262" height="78" style="display:inline-block; margin:4px;width:6.92cm;height:2.064cm;" class="odt-zoomable" data-zoom-src="images/100000000000020B0000009CEAFE8AE7.png" /></td></tr></table>
 
 <ul>
   <li>en [7], la fenêtre des serveurs. Un serveur est enregistré. C&#x27;est un serveur VMware compatible Tomcat.
@@ -822,7 +822,7 @@
 </ul>
 
 <p>Il faut indiquer à STS le dossier d&#x27;installation de Maven :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005480000021C0CD032C3.png" style="display:inline-block; margin:4px;width:17.886cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/10000000000005480000021C0CD032C3.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005480000021C0CD032C3.png" width="676" height="270" style="display:inline-block; margin:4px;width:17.886cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/10000000000005480000021C0CD032C3.png" /></td></tr></table>
 
 <ul>
   <li>en [1-2], on configure STS ;
@@ -831,7 +831,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005370000021C003F3CE0.png" style="display:inline-block; margin:4px;width:17.662cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/10000000000005370000021C003F3CE0.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005370000021C003F3CE0.png" width="668" height="270" style="display:inline-block; margin:4px;width:17.662cm;height:7.144cm;" class="odt-zoomable" data-zoom-src="images/10000000000005370000021C003F3CE0.png" /></td></tr></table>
 
 <ul>
   <li>en [5], on désigne le dossier d&#x27;installation de Maven ;
@@ -842,7 +842,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037400000304D3A11D58.png" style="display:inline-block; margin:4px;width:11.695cm;height:10.213cm;" class="odt-zoomable" data-zoom-src="images/100000000000037400000304D3A11D58.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037400000304D3A11D58.png" width="442" height="386" style="display:inline-block; margin:4px;width:11.695cm;height:10.213cm;" class="odt-zoomable" data-zoom-src="images/100000000000037400000304D3A11D58.png" /></td></tr></table>
 
 <ul>
   <li>en [8-9], on vérifie le dépôt local de Maven, le dossier où il mettra les dépendances qu&#x27;il téléchargera et où STS mettra les artifacts qui seront construits ;
@@ -852,17 +852,17 @@
 <p><a id="refheading256717779844303"></a></p>
 <h2 id="94-installation-dun-serveur-tomcat">9.4. Installation d&#x27;un serveur Tomcat</h2>
 <p>Les serveurs Tomcat sont disponibles à l&#x27;URL [<a href="http://tomcat.apache.org/download-80.cgi">http://tomcat.apache.org/download-80.cgi</a>]. Les exemples de ce document ont été testés avec la version 8.0.9 disponible à l&#x27;URL [<a href="http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/">http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/</a>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000472000001C117418743.png" style="display:inline-block; margin:4px;width:15.055cm;height:5.941cm;" class="odt-zoomable" data-zoom-src="images/1000000000000472000001C117418743.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000472000001C117418743.png" width="569" height="225" style="display:inline-block; margin:4px;width:15.055cm;height:5.941cm;" class="odt-zoomable" data-zoom-src="images/1000000000000472000001C117418743.png" /></td></tr></table>
 
 <p>On télécharge [1] le zip qui convient au poste de travail. Une fois dézippé on obtient l&#x27;arborescence [2]. Ceci fait, on peut ajouter ce serveur aux serveurs de STS :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E2000002C7DCD7D3AC.png" style="display:inline-block; margin:4px;width:13.15cm;height:9.407cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E2000002C7DCD7D3AC.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E2000002C7DCD7D3AC.png" width="497" height="356" style="display:inline-block; margin:4px;width:13.15cm;height:9.407cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E2000002C7DCD7D3AC.png" /></td></tr></table>
 
 <ul>
   <li>en [1-3], on ajoute un nouveau serveur dans STS ; (pour avoir la feneêtre des serveurs faire Window / Show view / Other / Server / Servers) ;
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000521000001EA75FE7CCC.png" style="display:inline-block; margin:4px;width:17.371cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/1000000000000521000001EA75FE7CCC.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000521000001EA75FE7CCC.png" width="657" height="245" style="display:inline-block; margin:4px;width:17.371cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/1000000000000521000001EA75FE7CCC.png" /></td></tr></table>
 
 <ul>
   <li>en [5], choisir un serveur Tomcat 8 ;
@@ -875,7 +875,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000536000002195B1731A7.png" style="display:inline-block; margin:4px;width:17.648cm;height:7.105cm;" class="odt-zoomable" data-zoom-src="images/1000000000000536000002195B1731A7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000536000002195B1731A7.png" width="667" height="269" style="display:inline-block; margin:4px;width:17.648cm;height:7.105cm;" class="odt-zoomable" data-zoom-src="images/1000000000000536000002195B1731A7.png" /></td></tr></table>
 
 <ul>
   <li>en [11-12], lancer le serveur Tomcat 8 ;
@@ -889,7 +889,7 @@
 <p><a id="refheading256719779844303"></a></p>
 <h2 id="95-installation-de-wampserver">9.5. Installation de [WampServer]</h2>
 <p><a id="refheading78368566070260"></a>[WampServer] est <a id="wampserver"></a>un ensemble de logiciels pour développer en PHP / MySQL / Apache sur une machine Windows. Nous l&#x27;utiliserons uniquement pour le SGBD MySQL.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001B8858E2AC6.png" style="display:inline-block; margin:4px;width:16.986cm;height:5.821cm;" class="odt-zoomable" data-zoom-src="images/1000000000000504000001B8858E2AC6.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001B8858E2AC6.png" width="642" height="220" style="display:inline-block; margin:4px;width:16.986cm;height:5.821cm;" class="odt-zoomable" data-zoom-src="images/1000000000000504000001B8858E2AC6.png" /></td></tr></table>
 
 <ul>
   <li>sur le site de [WampServer] [1], choisir la version qui convient [2],
@@ -898,7 +898,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000241000001B29F9F0384.png" style="display:inline-block; margin:4px;width:7.634cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/1000000000000241000001B29F9F0384.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000241000001B29F9F0384.png" width="289" height="217" style="display:inline-block; margin:4px;width:7.634cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/1000000000000241000001B29F9F0384.png" /></td></tr></table>
 
 <ul>
   <li>en [4], l&#x27;icône de [WampServer] s&#x27;installe dans la barre des tâches en bas et à droite de l&#x27;écran [4],
@@ -909,7 +909,7 @@
   </li>
 </ul>
 
-<p><img src="images/10000000000003C600000186DE03B7E4.png" style="width:17.729cm;height:7.156cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C600000186DE03B7E4.png" /></p>
+<p><img src="images/10000000000003C600000186DE03B7E4.png" width="670" height="270" style="width:17.729cm;height:7.156cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C600000186DE03B7E4.png" /></p>
 <p>Nous donnerons ici peu de détails sur l&#x27;utilisation de [PhpMyAdmin]. Le document donne les informations à connaître lorsque c&#x27;est nécessaire.</p>
 <p><a id="refheading179814779844303"></a></p>
 <h2 id="96-installation-du-plugin-chrome-advanced-rest-client">9.6. Installation du plugin Chrome [Advanced Rest Client]</h2>
@@ -922,21 +922,21 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
   <li>l&#x27;application est alors disponible au téléchargement :
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
 
 <ul>
   <li>pour l&#x27;obtenir, il vous faudra créer un compte Google. [Google Web Store] demande ensuite confirmation [1] :
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050900000222BD991AFC.png" style="display:inline-block; margin:4px;width:17.053cm;height:7.223cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000222BD991AFC.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050900000222BD991AFC.png" width="645" height="273" style="display:inline-block; margin:4px;width:17.053cm;height:7.223cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000222BD991AFC.png" /></td></tr></table>
 
 <ul>
   <li>en [2], l&#x27;extension ajoutée est disponible dans l&#x27;option [Applications] [3]. Cette option est affichée sur chaque nouvel onglet que vous créez (CTRL-T) dans le navigateur.
@@ -956,28 +956,28 @@
 </ul>
 
 <p>Les deux méthodes sont susceptibles de lancer une <em>IOException</em>. Voici un exemple.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D5000000EFB3DEB6F9.png" style="display:inline-block; margin:4px;width:3.941cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D5000000EFB3DEB6F9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D5000000EFB3DEB6F9.png" width="149" height="167" style="display:inline-block; margin:4px;width:3.941cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D5000000EFB3DEB6F9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le projet ci-dessus est un projet Maven avec le fichier [pom.xml] suivant ;</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span>
-<span class="odt-code-line">         <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
-<span class="odt-code-line">         <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.pam</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">json</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">1.0-SNAPSHOT</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">com.fasterxml.jackson.core</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">jackson-databind</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.3.3</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.pam</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">json</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">1.0-SNAPSHOT</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">com.fasterxml.jackson.core</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">jackson-databind</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.3.3</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -987,74 +987,74 @@
 
 <p>La classe [Personne] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Personne {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// data</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String nom;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String prenom;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> age;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructeurs</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne() {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne(String nom, String prénom, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> âge) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.nom = nom;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.prenom = prénom;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.age = âge;</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// signature</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> String.format(</span><span style="color:#2a00ff">&quot;Personne[%s, %s, %d]&quot;</span><span style="color:#000000">, nom, prenom, age);</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters et setters</span></span>
-<span class="odt-code-line">...</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Personne {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// data</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String prenom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> age;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// constructeurs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne(String nom, String prénom, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> âge) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.nom = nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.prenom = prénom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.age = âge;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// signature</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> String.format(</span><span style="color:#2a00ff">&quot;Personne[%s, %s, %d]&quot;</span><span style="color:#000000">, nom, prenom, age);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// getters et setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>La classe [Main] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.databind.ObjectMapper;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.IOException;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.HashMap;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Main {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// l&#x27;outil de sérialisation / désérialisation</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> ObjectMapper mapper = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ObjectMapper();</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String[] args) </span><span style="font-weight:bold;color:#7f0055">throws</span><span style="color:#000000"> IOException {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// création d&#x27;une personne</span></span>
-<span class="odt-code-line"><span style="color:#000000">    Personne paul = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Denis&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Paul&quot;</span><span style="color:#000000">, 40);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage jSON</span></span>
-<span class="odt-code-line">    String json = mapper.writeValueAsString(paul);</span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json=&quot;</span><span style="color:#000000"> + json);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// instanciation Personne à partir du Json</span></span>
-<span class="odt-code-line"><span style="color:#000000">    Personne p = mapper.readValue(json, Personne.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage personne</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Personne=&quot;</span><span style="color:#000000"> + p);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// un tableau</span></span>
-<span class="odt-code-line"><span style="color:#000000">    Personne virginie = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Radot&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Virginie&quot;</span><span style="color:#000000">, 20);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    Personne[] personnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne[]{paul, virginie};</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage Json</span></span>
-<span class="odt-code-line">    json = mapper.writeValueAsString(personnes);</span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json personnes=&quot;</span><span style="color:#000000"> + json);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// dictionnaire</span></span>
-<span class="odt-code-line"><span style="color:#000000">    Map&lt;String, Personne&gt; hpersonnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashMap&lt;String, Personne&gt;();</span></span>
-<span class="odt-code-line"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, paul);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;2&quot;</span><span style="color:#000000">, virginie);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// affichage Json</span></span>
-<span class="odt-code-line">    json = mapper.writeValueAsString(hpersonnes);</span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json hpersonnes=&quot;</span><span style="color:#000000"> + json);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.databind.ObjectMapper;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.IOException;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.HashMap;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Main {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// l&#x27;outil de sérialisation / désérialisation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> ObjectMapper mapper = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ObjectMapper();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String[] args) </span><span style="font-weight:bold;color:#7f0055">throws</span><span style="color:#000000"> IOException {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// création d&#x27;une personne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne paul = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Denis&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Paul&quot;</span><span style="color:#000000">, 40);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// affichage jSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    String json = mapper.writeValueAsString(paul);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// instanciation Personne à partir du Json</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne p = mapper.readValue(json, Personne.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// affichage personne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Personne=&quot;</span><span style="color:#000000"> + p);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// un tableau</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne virginie = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Radot&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Virginie&quot;</span><span style="color:#000000">, 20);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne[] personnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne[]{paul, virginie};</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// affichage Json</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    json = mapper.writeValueAsString(personnes);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json personnes=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// dictionnaire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Map&lt;String, Personne&gt; hpersonnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashMap&lt;String, Personne&gt;();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, paul);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;2&quot;</span><span style="color:#000000">, virginie);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// affichage Json</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    json = mapper.writeValueAsString(hpersonnes);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json hpersonnes=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p>L&#x27;exécution de cette classe produit l&#x27;affichage écran suivant :</p>
@@ -1089,18 +1089,18 @@
 <h3 id="982-installation-de-loutil-bower">9.8.2. Installation de l&#x27;outil [bower]</h3>
 <p><span style="color: #000000"><a id="refheading1633432067866943"></a>L&#x27;installation de l&#x27;outil [bower] qui va permettre le téléchargement des bibliothèques Javascript peut se faire de différentes façons. Nous allons la faire à partir de la console :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line">C:\Users\Serge Tahé&gt;<span style="color:#ff3333">npm install -g bower</span></span>
-<span class="odt-code-line">C:\Users\Serge Tahé\AppData\Roaming\npm\bower -&gt; C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower\bin\bower</span>
-<span class="odt-code-line">bower@1.3.7 C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower</span>
-<span class="odt-code-line">├── stringify-object@0.2.1</span>
-<span class="odt-code-line">├── is-root@0.1.0</span>
-<span class="odt-code-line">├── junk@0.3.0</span>
-<span class="odt-code-line">...</span>
-<span class="odt-code-line">├── insight@0.3.1 (object-assign@0.1.2, async@0.2.10, lodash.debounce@2.4.1, req</span>
-<span class="odt-code-line">uest@2.27.0, configstore@0.2.3, inquirer@0.4.1)</span>
-<span class="odt-code-line">├── mout@0.9.1</span>
-<span class="odt-code-line">└── inquirer@0.5.1 (readline2@0.1.0, mute-stream@0.0.4, through@2.3.4, async@0.8</span>
-<span class="odt-code-line">.0, lodash@2.4.1, cli-color@0.3.2)</span>
+<span class="odt-code-line"><span class="odt-code-line-content">C:\Users\Serge Tahé&gt;<span style="color:#ff3333">npm install -g bower</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">C:\Users\Serge Tahé\AppData\Roaming\npm\bower -&gt; C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower\bin\bower</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">bower@1.3.7 C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── stringify-object@0.2.1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── is-root@0.1.0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── junk@0.3.0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── insight@0.3.1 (object-assign@0.1.2, async@0.2.10, lodash.debounce@2.4.1, req</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">uest@2.27.0, configstore@0.2.3, inquirer@0.4.1)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── mout@0.9.1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">└── inquirer@0.5.1 (readline2@0.1.0, mute-stream@0.0.4, through@2.3.4, async@0.8</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">.0, lodash@2.4.1, cli-color@0.3.2)</span></span>
 </code></pre></div>
 
 <ul>
@@ -1112,15 +1112,15 @@
 <h3 id="983-installation-de-git">9.8.3. Installation de [Git]</h3>
 <p><span style="color: #000000"><a id="refheading1633452067866943"></a>Git est un système de gestion de versions de logiciel. Il existe une version windows appelée [msysgit] et disponible à l&#x27;URL [<a href="http://msysgit.github.io/">http://msysgit.github.io/</a>]. Nous n&#x27;allons pas utiliser [msysgit] pour gérer des versions de notre application mais simplement pour télécharger des bibliothèques JS qui se trouvent sur des sites de type [https://github.com] qui nécessitent un protocole d&#x27;accès spécial et qui est fourni par le client [msysgit]</span></p>
 <p><span style="color: #000000">L&#x27;assistant d&#x27;installation propose différentes étapes dont les suivantes :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D1000000F3D98AAFA0.png" style="display:inline-block; margin:4px;width:8.64cm;height:4.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D1000000F3D98AAFA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE000000E12ECC76E3.png" style="display:inline-block; margin:4px;width:7.96cm;height:4.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE000000E12ECC76E3.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D1000000F3D98AAFA0.png" width="327" height="170" style="display:inline-block; margin:4px;width:8.64cm;height:4.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D1000000F3D98AAFA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE000000E12ECC76E3.png" width="301" height="158" style="display:inline-block; margin:4px;width:7.96cm;height:4.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE000000E12ECC76E3.png" /></td></tr></table>
 
 <p><span style="color: #000000">Pour les autres étapes de l&#x27;installation, vous pouvez accepter les valeurs par défaut proposées.</span></p>
 <p><span style="color: #000000">Une fois, l&#x27;installation de Git terminée, vérifiez que l&#x27;exécutable est dans le PATH de votre machine : [Panneau de configuration / Système et sécurité / Système / Paramètres systèmes avancés] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C000001DAAECF1C48.png" style="display:inline-block; margin:4px;width:7.331cm;height:8.781cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C000001DAAECF1C48.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A000000A2C58A797A.png" style="display:inline-block; margin:4px;width:6.699cm;height:3cm;" class="odt-zoomable" data-zoom-src="images/100000000000016A000000A2C58A797A.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C000001DAAECF1C48.png" width="277" height="332" style="display:inline-block; margin:4px;width:7.331cm;height:8.781cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C000001DAAECF1C48.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A000000A2C58A797A.png" width="253" height="113" style="display:inline-block; margin:4px;width:6.699cm;height:3cm;" class="odt-zoomable" data-zoom-src="images/100000000000016A000000A2C58A797A.png" /></td></tr></table>
 
 <p><span style="color: #000000">La variable PATH ressemble à ceci :</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">D:\Programs\devjava\java\jdk1.7.0\bin;D:\Programs\ActivePerl\Perl64\site\bin;D:\Programs\ActivePerl\Perl64\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\server\bin;...;<span style="color:#ff3333">D:\Programs\javascript\node.js\;D:\Programs\utilitaires\Git\cmd</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">D:\Programs\devjava\java\jdk1.7.0\bin;D:\Programs\ActivePerl\Perl64\site\bin;D:\Programs\ActivePerl\Perl64\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\server\bin;...;<span style="color:#ff3333">D:\Programs\javascript\node.js\;D:\Programs\utilitaires\Git\cmd</span></span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Vérifiez que :</span></p>
@@ -1134,9 +1134,9 @@
 <p><a id="refheading2471151020423450"></a></p>
 <h3 id="984-configuration-de-webstorm">9.8.4. Configuration de [Webstorm]</h3>
 <p><span style="color: #000000"><a id="refheading1633472067866943"></a>Vérifions maintenant la configuration de [Webstorm]</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F000001D0C3812AD7.png" style="display:inline-block; margin:4px;width:8.64cm;height:6.971cm;" class="odt-zoomable" data-zoom-src="images/100000000000023F000001D0C3812AD7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000EE0387A516.png" style="display:inline-block; margin:4px;width:5.791cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000EE0387A516.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F000001D0C3812AD7.png" width="327" height="263" style="display:inline-block; margin:4px;width:8.64cm;height:6.971cm;" class="odt-zoomable" data-zoom-src="images/100000000000023F000001D0C3812AD7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000EE0387A516.png" width="219" height="167" style="display:inline-block; margin:4px;width:5.791cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000EE0387A516.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000533000001D872716BAF.png" style="display:inline-block; margin:4px;width:17.609cm;height:6.244cm;" class="odt-zoomable" data-zoom-src="images/1000000000000533000001D872716BAF.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000533000001D872716BAF.png" width="666" height="236" style="display:inline-block; margin:4px;width:17.609cm;height:6.244cm;" class="odt-zoomable" data-zoom-src="images/1000000000000533000001D872716BAF.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ci-dessus, sélectionnez l&#x27;option [1]. La liste des modules [node.js] déjà installés apparaît en [2]. Cette liste ne devrait contenir que la ligne [3] du module [bower] si vous avez suivi le processus d&#x27;installation précédent.</span></p>
 <p><a id="refheading2503261296810485"></a></p>
@@ -1144,9 +1144,9 @@
 <p><a id="refheading454551405398942"></a>Les émulateurs fournis avec le SDK d&#x27;Android sont lents ce qui décourage de les utiliser. L&#x27;entreprise [<a href="http://www.genymotion.com/features/">Genymotion</a>] offre un émulateur beaucoup plus performant. Celui-ci est disponible à l&#x27;URL [<a href="https://cloud.genymotion.com/page/launchpad/download/">https://cloud.genymotion.com/page/launchpad/download/</a>] </p>
 <p>(février 2014).</p>
 <p>Vous aurez à vous enregistrer pour obtenir une version à usage personnel. Téléchargez le produit [Genymotion] avec la machine virtuelle VirtualBox ;</p>
-<p><img src="images/10000000000002D9000000C41915058C.png" style="width:13.501cm;height:3.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D9000000C41915058C.png" /></p>
+<p><img src="images/10000000000002D9000000C41915058C.png" width="510" height="137" style="width:13.501cm;height:3.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D9000000C41915058C.png" /></p>
 <p>Installez puis lancez [Genymotion]. Téléchargez ensuite une image pour une tablette ou un téléphone :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005310000017E3344E618.png" style="display:inline-block; margin:4px;width:17.582cm;height:5.054cm;" class="odt-zoomable" data-zoom-src="images/10000000000005310000017E3344E618.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005310000017E3344E618.png" width="665" height="191" style="display:inline-block; margin:4px;width:17.582cm;height:5.054cm;" class="odt-zoomable" data-zoom-src="images/10000000000005310000017E3344E618.png" /></td></tr></table>
 
 <ul>
   <li>en [1], ajoutez un terminal virtuel ;
@@ -1155,7 +1155,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022900000194343E06BE.png" style="display:inline-block; margin:4px;width:7.317cm;height:5.345cm;" class="odt-zoomable" data-zoom-src="images/100000000000022900000194343E06BE.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022900000194343E06BE.png" width="277" height="202" style="display:inline-block; margin:4px;width:7.317cm;height:5.345cm;" class="odt-zoomable" data-zoom-src="images/100000000000022900000194343E06BE.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">une fois le téléchargement terminé, vous obtenez en [5] la liste des terminaux virtuels dont vous disposez pour tester vos applications Android ;</span>
@@ -1196,13 +1196,13 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
-        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
-        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
-        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+        Ce cours-tutoriel rédigé par <strong>Serge Tahé</strong> est mis à la disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d'utilisation commerciale –
+        Partage dans les mêmes conditions 3.0 non modifiée</em>.
 
       </div>
 
